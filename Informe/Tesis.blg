@@ -1,0 +1,85 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Tesis.aux
+A level-1 auxiliary file: Cascaras/cover.aux
+A level-1 auxiliary file: Cascaras/dedicatoria.aux
+A level-1 auxiliary file: Cascaras/agradecimientos.aux
+A level-1 auxiliary file: Cascaras/resumen.aux
+A level-1 auxiliary file: TeXiS/TeXiS_toc.aux
+A level-1 auxiliary file: Capitulos/Parte1.aux
+A level-1 auxiliary file: Capitulos/01Capitulo1.aux
+A level-1 auxiliary file: Capitulos/01Capitulo2.aux
+A level-1 auxiliary file: Capitulos/01Capitulo3.aux
+A level-1 auxiliary file: Capitulos/Parte2.aux
+A level-1 auxiliary file: Capitulos/02Capitulo1.aux
+A level-1 auxiliary file: Capitulos/02Capitulo2.aux
+A level-1 auxiliary file: Capitulos/Parte3.aux
+A level-1 auxiliary file: Capitulos/03Capitulo0.aux
+A level-1 auxiliary file: Capitulos/03Capitulo1.aux
+A level-1 auxiliary file: Capitulos/03Capitulo2.aux
+A level-1 auxiliary file: Capitulos/Parte4.aux
+A level-1 auxiliary file: Capitulos/04Capitulo1.aux
+A level-1 auxiliary file: Apendices/ParteApendices.aux
+A level-1 auxiliary file: Apendices/01ApendiceA.aux
+A level-1 auxiliary file: Cascaras/bibliografia.aux
+The style file: abbrv.bst
+A level-1 auxiliary file: TeXiS/TeXiS_acron.aux
+A level-1 auxiliary file: Apendices/ParteAnexos.aux
+Database file #1: deeplearning.bib
+You're missing a field name---line 395 of file deeplearning.bib
+ : 
+ : %  title={Regularization of neural networks using dropconnect},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Database file #2: spark.bib
+Database file #3: eeg.bib
+Database file #4: learninspy.bib
+Warning--empty journal in abaitua2012procesado
+Warning--empty booktitle in ferrado2016filtering
+Warning--empty journal in forslund2003neural
+Warning--can't use both volume and number fields in kohavi1995study
+Warning--can't use both volume and number fields in nesterov1983method
+Warning--empty journal in powers2011evaluation
+Warning--empty journal in van2014analysis
+You've used 67 entries,
+            2118 wiz_defined-function locations,
+            889 strings with 15817 characters,
+and the built_in function-call counts, 22480 in all, are:
+= -- 2220
+> -- 1033
+< -- 18
++ -- 419
+- -- 340
+* -- 1415
+:= -- 3641
+add.period$ -- 209
+call.type$ -- 67
+change.case$ -- 361
+chr.to.int$ -- 0
+cite$ -- 74
+duplicate$ -- 861
+empty$ -- 1803
+format.name$ -- 340
+if$ -- 4774
+int.to.chr$ -- 0
+int.to.str$ -- 67
+missing$ -- 60
+newline$ -- 340
+num.names$ -- 134
+pop$ -- 468
+preamble$ -- 1
+purify$ -- 300
+quote$ -- 0
+skip$ -- 682
+stack$ -- 0
+substring$ -- 1357
+swap$ -- 221
+text.length$ -- 18
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 256
+warning$ -- 7
+while$ -- 217
+width$ -- 69
+write$ -- 708
+(There was 1 error message)

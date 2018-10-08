@@ -1,0 +1,179 @@
+%---------------------------------------------------------------------
+%
+%                          Capítulo 1
+%
+%---------------------------------------------------------------------
+
+\chapter{Introducción}
+
+\begin{FraseCelebre}
+	\begin{Frase}
+		Es increíble la cantidad de energía que se tiene en cuanto hay un plan.
+	\end{Frase}
+	\begin{Fuente}
+		Daniel Handler
+	\end{Fuente}
+\end{FraseCelebre}
+
+
+\begin{resumen}
+En este capítulo se detallan los elementos que dan origen a este proyecto y componen la especificación del mismo. Se hace una reseña de la motivación del proyecto y cómo se justifica el trabajo realizado, aclarando los objetivos planteados y las restricciones tenidas en cuenta para el alcance y las tecnologías utilizadas. %Por último, se mencionan los posibles pasos que puede tener en un futuro el software desarrollado en este %trabajo.
+\end{resumen}
+
+
+%-------------------------------------------------------------------
+\section{Motivación}
+%-------------------------------------------------------------------
+\label{cap1:sec:motivation}
+
+La Ingeniería en Informática abarca muchas y diferentes áreas de estudio, por lo que existen diversas opciones a la hora de decidir que temática abordar para realizar el proyecto final de carrera. A lo largo de años de cursado, trabajos prácticos y evaluaciones, los estudiantes transitan por diferentes materias que ayudan a marcar el perfil del futuro profesional, según los campos de interés o preferencias. Por dar algunos ejemplos, se incorporan conocimientos en programación y desarrollo en diferentes paradigmas, Ingeniería del Software, Algorítmos y Estructuras de Datos, Redes y Comunicaciones, Mecánica Computacional, Procesamiento digital de señales e imágenes, Inteligencia Computacional, etc.
+
+El auge de las aplicaciones para dispositivos móviles incorporando procesamiento de datos, utilizando inteligencia artificial, ha influído en gran medida en la decisión de desarrollar una aplicación utilizando visión computacional y aprendizaje maquinal. La evolución de los teléfonos inteligentes y su uso masivo, hicieron que empresas de desarrollo de software se acoplen a esta demanda, ofrenciendo productos y servicios para que todas las personas puedan utilizarlos en sus propios dispositívos. El área que comprende el procesamiento de imágenes y el aprendizaje maquinal no escapa a esta ola tecnológica, por lo que bibliotecas que permiten el procesamiento de imágenes empezaron a estar disponibles para su uso y adaptabilidad. A continuación, se listan algunas aplicaciones destacadas que utilizan procesamiento de imágenes e inteligencia computacional:
+
+\begin{itemize}
+	
+	\item Google entrenó una red neuronal profunda que logró reconocer con buena precisión tanto rostros y cuerpos humanos como también  gatos en videos de YouTube, lo cual se obtuvo de forma no supervisada sin utilizar información de clases (es decir, nunca se le daba información de lo que estaba aprendiendo) \cite{le2013building}. 
+	
+	\item El sistema DeepFace de Facebook alcanzó una precisión de 97.35\% con redes neuronales profundas sobre el conjunto de datos \textit{Labeled Faces in the Wild} (LFW), reduciendo el error del actual estado del arte en más de un 27\% y acercándose a la precisión de un humano en reconocimiento de rostros (que es de aproximadamente un 97.53\%) \cite{taigman2014deepface}.
+	
+	\item Google, a través de su producto \textit{Google Photos}, ofrece una solución denominada \textit{Organize}, la cual realiza tareas de organización sobre las imágenes de sus usuarios. Ésta proporciona distintos conjuntos de imágenes basándose en características u objetos que tengan en común, como pueden ser perros, autos, el cielo, etc\cite{organize2017google}.
+	
+	\item La aplicación fotos, perteneciente al sistema operativo Windows 10, permite buscar texto en las imágenes. La misma utiliza una tecnología denominada OCR (reconocimiento óptico de caracteres), la cual permite detectar el lugar y la palabra misma, dentro de una imágen. 
+	
+	
+\end{itemize}
+
+
+
+%Dado que comprende una técnica popular y muy estudiada en los últimos años, actualmente existen varias herramientas que proveen utilidades para desarrollar algoritmos con aprendizaje profundo. Algunos de las más conocidos (y utilizados también por el autor de este proyecto) que además ofrecen paralelización del cómputo son: Caffe, Deeplearning4j, H2O, TensorFlow, Neon. Más adelante se mencionan características de los mismos, y es preciso destacar que debido a la dificultad presentada en personalizar estas herramientas durante su uso (principalmente las primeras tres mencionadas) fue que surgió la idea de originar el framework creado en este proyecto.
+
+
+%\begin{itemize} 
+%	\item Quizás acá iría el análisis de algunos frameworks actuales que son similares a Learninspy (H2O, Deeplearning4j, Caffe, OpenDeep, TensorFlow). Acá sirve mucho este muy buen review \cite{bahrampour2015comparative}.
+%\end{itemize}
+
+
+
+%-------------------------------------------------------------------
+\section{Justificación}
+%-------------------------------------------------------------------
+\label{cap1:sec:justificacion}
+
+Lo que se busca en este proyecto es implementar una aplicación que asista al usuario en la tarea de organizar las imágenes de su dispositivo. Como etapa inicial, se obtiene una estructura de directorios mediante una metodología basada en algoritmos de visión computacional, formando grupos de imágenes según el grado de similitud que comparten. Luego, una vez realizado el procesamiento, el usuario podrá tomar la decisión que desee interactuando con el resultado (e.g eliminar un grupo obtenido, renombrar carpetas, ingresar en un grupo y eliminar alguna imagen en particular, etc.).
+
+
+La aplicación es Open Source, con el fin de poder agregar valor a la comunidad del software libre y que pueda ser continuamente mejorada o versionada y personalizada en base a distintos desarrolladores que presenten interés por la misma. Se propone además que sea On Premise (i.e. el proceso se realiza únicamente en el
+dispositivo móvil) en lugar de ser un servicio Cloud. De esta manera se puede asegurar la confidencialidad de los datos que se manejan, al mismo tiempo lograr que el despliegue y mantenimiento del sistema sean aspectos más sencillos y económicos. 
+
+Por último, será implementada para la plataforma Android, dado que es un sistema operativo muy popular y gratuito. Esta decisión se basa en que, a nivel mundial, Android es el líder indiscutido por cantidad de usuarios, y lo mismo sucede en la Argentina, ya que se encuentra en el 85\% de los equipos, según datos del mercado \cite{hoffmann2008efficient}. Además, es destacable que se trata de una plataforma de código abierto que brinda a los desarrolladores un amplio conjunto de herramientas de desarrollo y librerías a su disposición, las cuales a su vez cuentan con extensa documentación de respaldo.
+
+%Dado que el software obtenido pretende tener utilidad en resolución de
+%problemáticas, se definen casos de aplicación para analizar su desempeño y potencialidad. Por lo tanto se incluye en el alcance de este proyecto el tratamiento de problemas de clasificación sobre señales de electroencefalografía. Dicha aplicación específica es un tema de amplio estudio debido, entre otras cosas, a su utilidad en construcción de sistemas de interfaz cerebro-computadora (\acs{ICC}). Estos últimos se encargan de traducir la actividad cerebral en comandos para una computadora o dispositivo, lo cual podría implicar una importante utilidad para personas con discapacidades en la comunicación \cite{hoffmann2008efficient}. Un objetivo muy perseguido (y difícil de alcanzar) en ICC es conseguir comunicación confiable utilizando épocas únicas (del inglés
+%\textit{single-trial}), con el fin de maximizar la tasa de transferencia de información entre el usuario y el dispositivo o computadora a utilizar \cite{blankertz2002classifying}. Diversos fenómenos fisiológicos pueden ser utilizados para generar la actividad cerebral que la ICC debe reconocer, los cuales
+%determinan distintas problemáticas a tratar. 
+
+%En el proyecto se planea hacer una elección de algunas de las problemáticas disponibles a tratar. A priori, una de las problemáticas más relevantes en la actualidad es la del habla imaginada, en la cual en la señal de EEG se busca detectar los efectos producidos debido a la imaginación de pronunciar palabras o vocales sin realizar movimientos. Es un fenómeno fisiológico estudiado en la actualidad con enfoque de aprendizaje maquinal pero no profundo, por lo cual este proyecto podría establecer una tendencia para el análisis del estado del arte.
+
+%-------------------------------------------------------------------
+\section{Objetivos}
+%-------------------------------------------------------------------
+\label{cap1:sec:objetivos}
+Para desarrollar este proyecto, se plantearon los siguientes objetivos:
+
+\subsection{Objetivos generales}
+\begin{itemize}
+	\item Desarrollar una aplicación móvil sobre la plataforma Android que, a partir de	imágenes almacenadas en el dispositivo, sugiera una estructura de directorios para organizar el conjunto, según una medida de similitud calculada entre los elementos.
+	\item Proveer al sistema funcionalidades que le permitan al usuario la interacción con el resultado, para desempeñar distintas tareas de administración sobre el almacenamiento comprendido por las imágenes?.
+\end{itemize}
+
+\subsection{Objetivos específicos}
+\begin{itemize}
+	\item Analizar distintos algoritmos y métodos tanto para la extracción de características de las imágenes como para el clustering de las mismas.
+	\item Definir la función o noción de similitud que se deba computar entre las imágenes a agrupar.
+	\item Definir un conjunto de imágenes a utilizar en experimentos, que sea lo más fiel posible a la problemática tratada en el marco de dispositivos móviles.
+	\item Desarrollar un protocolo de experimentación en base al conjunto de datos definido, para evaluar el desempeño de las técnicas investigadas.
+	\item Llevar adelante las pruebas definidas en el protocolo de experimentación.
+	\item Analizar y definir la metodología de visión artificial a implementar en el sistema, priorizando las técnicas según su desempeño en la experimentación así como la posibilidad de ajustarse a los recursos con los que cuentan la mayoría de los dispositivos.
+	\item Lograr una interfaz de usuario sobre la cual podrá elegir el directorio/directorios a procesar, y que sea suficiente para la administración e interacción necesaria con el resultado del clustering.
+\end{itemize}
+
+%-------------------------------------------------------------------
+\section{Alcance}
+%-------------------------------------------------------------------
+\label{cap1:sec:alcance}
+Se definen las siguientes cuestiones para el alcance de este proyecto:
+\begin{itemize}
+	\item Se implementará el algoritmo de preprocesamiento y extracción de características de las imágenes, utilizando las ventajas y funcionalidades que provee la biblioteca TensorFlow para Android.
+	\item La aplicación será desarrollada sobre la plataforma Android, contemplando en lo posible aquellas versiones que se encuentren instaladas en la mayoría de los dispositivos móviles actuales.
+	\item La aplicación no realizará las tareas de administración de forma autónoma. Ésta asistirá al usuario brindando una estructura de directorios en la que las imágenes serán ordenadas por grado de similitud o contexto, para luego facilitar opciones de administración sobre los mismos.
+\end{itemize}
+
+%-------------------------------------------------------------------
+\section{Tecnologías utilizadas}
+%-------------------------------------------------------------------
+\label{cap1:sec:tecnologias}
+%-------------------------------------------------------------------
+\subsection{Restricciones}
+%-------------------------------------------------------------------
+\label{cap1:subsec:restricciones}
+
+Se realizó la documentación de la Especificación de Requisitos del Software (ERS) siguiendo el estándar IEEE 830-1998 (ver Anexo), y en la misma se encuentra la especificación completa de las tecnologías utilizadas. No obstante, se listan a continuación:
+\begin{itemize}
+	\item \textbf{Sistema operativo}: Android
+	\item \textbf{Versiones}: Android KitKat (4.4) en adelante
+	\item \textbf{Lenguaje de programación}: JAVA 1.8.0
+	\item \textbf{Paradigmas de programación}: 
+	\begin{itemize}
+		\item Orientado a objetos
+		\item Funcional
+		\item Imperativo
+	\end{itemize}
+	%\item \textbf{IDE}: PyCharm 4.5
+	\item \textbf{Dependencias externas}:
+	\begin{itemize}
+		\item TensorFlow Lite 0.1.7
+		%\item \spark v1.4+/2.0.1
+		\item Storage Chooser 2.0 ! \footnote{\url{https://github.com/codekidX/storage-chooser}}
+		\item Apache Commons\footnote{\url{http://commons.apache.org/}}:
+		\begin{itemize}
+			\item Maths 3.6.1
+			\item IO 2.4
+		\end{itemize}
+		\item Efficient Java Matrix Library\footnote{\url{http://ejml.org/wiki/index.php?title=Main_Page}} 0.33
+		\item Snatik Storage\footnote{\url{https://github.com/sromku/android-storage}} 2.1.0
+		\item ZGallery\footnote{\url{https://github.com/mzelzoghbi/ZGallery}} 0.3
+		\item NumberProgressBar\footnote{\url{https://github.com/daimajia/NumberProgressBar}} 1.4
+	\end{itemize}
+	\item \textbf{Interfaz de usuario}: XML 1.1
+	%\item \textbf{Testeo e integración continua}: Nose, Coveralls, Travis CI.
+	\item \textbf{Control de versiones}: Git v2.7.4
+	%\item \textbf{Documentación}: Sphinx v1.2.3
+\end{itemize}
+
+%-------------------------------------------------------------------
+\subsection{Evolución previsible}
+%-------------------------------------------------------------------
+\label{cap1:subsec:evolucion}
+
+Se prevén las siguientes cuestiones tecnológicas a mejorar o integrar en el futuro del producto:
+\begin{itemize}
+	\item Elección semi-automática de híper-parámetros en el modelado de redes neuronales mediante computación evolutiva (e.g. algoritmos genéticos, BSO, etc.).
+	\item Administración de trabajos o \textit{scheduler} para automatizar la ejecución de experimentos en el modelado.
+	\item Interfaz gráfica con mejor experiencia de usuario (por ejemplo, con CherryPy y/o Apache Zeppelin).
+	\item Integración con tecnologías referidas a administración de clúster (como Apache Mesos y YARN).
+	\item Integración con tecnologías referidas a almacenamiento de datos (como Apache Cassandra y HDFS).
+	\item Adaptación a una imagen en Docker para despliegue del framework en entornos virtualizados.
+	\item Incorporación de otras técnicas complementarias de aprendizaje maquinal (e.g. K-means, DBN, redes recurrentes, etc.).
+	\item Mejora de los módulos que realizan cálculos algebraicos, integrando nuevas soluciones que paralelicen dicho cómputo (e.g. librerías eficientes a nivel CPU, módulos que realicen cómputos en GPU).
+\end{itemize}
+
+% TODO!!! Anexar el anteproyecto entregado.
+% Usar el export en PDF de read the docs para adjuntar la documentación
+
+% Variable local para emacs, para  que encuentre el fichero maestro de
+% compilación y funcionen mejor algunas teclas rápidas de AucTeX
+%%%
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../Tesis.tex"
+%%% End:
