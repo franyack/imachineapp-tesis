@@ -1,0 +1,31 @@
+%-- Libros
+
+
+
+%-- Papers
+@inproceedings{le2013building,
+	title={Building high-level features using large scale unsupervised learning},
+	author={Le, Quoc V},
+	booktitle={Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE International Conference on},
+	pages={8595--8598},
+	year={2013},
+	organization={IEEE}
+}
+
+@inproceedings{taigman2014deepface,
+	title={Deepface: Closing the gap to human-level performance in face verification},
+	author={Taigman, Yaniv and Yang, Ming and Ranzato, Marc'Aurelio and Wolf, Lior},
+	booktitle={Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition},
+	pages={1701--1708},
+	year={2014}
+}
+
+
+%-- Articulos
+
+@misc{organize2017google,
+	title = {How Google Photos uses machine learning to create customized albums},
+	author = {Max Lewontin},
+	howpublished = {\url{https://www.csmonitor.com/Technology/2016/0324/How-Google-Photos-uses-machine-learning-to-create-customized-albums/}},
+	note = {Accedido: 02/10/2018}
+}

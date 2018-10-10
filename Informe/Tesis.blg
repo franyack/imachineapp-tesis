@@ -26,11 +26,6 @@ The style file: abbrv.bst
 A level-1 auxiliary file: TeXiS/TeXiS_acron.aux
 A level-1 auxiliary file: Apendices/ParteAnexos.aux
 Database file #1: deeplearning.bib
-You're missing a field name---line 395 of file deeplearning.bib
- : 
- : %  title={Regularization of neural networks using dropconnect},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Database file #2: spark.bib
 Database file #3: eeg.bib
 Database file #4: learninspy.bib
@@ -41,45 +36,45 @@ Warning--can't use both volume and number fields in kohavi1995study
 Warning--can't use both volume and number fields in nesterov1983method
 Warning--empty journal in powers2011evaluation
 Warning--empty journal in van2014analysis
-You've used 67 entries,
+You've used 68 entries,
             2118 wiz_defined-function locations,
-            889 strings with 15817 characters,
-and the built_in function-call counts, 22480 in all, are:
-= -- 2220
-> -- 1033
+            894 strings with 15876 characters,
+and the built_in function-call counts, 22772 in all, are:
+= -- 2252
+> -- 1040
 < -- 18
-+ -- 419
-- -- 340
-* -- 1415
-:= -- 3641
-add.period$ -- 209
-call.type$ -- 67
-change.case$ -- 361
++ -- 422
+- -- 342
+* -- 1434
+:= -- 3690
+add.period$ -- 212
+call.type$ -- 68
+change.case$ -- 365
 chr.to.int$ -- 0
-cite$ -- 74
-duplicate$ -- 861
-empty$ -- 1803
-format.name$ -- 340
-if$ -- 4774
+cite$ -- 75
+duplicate$ -- 872
+empty$ -- 1829
+format.name$ -- 342
+if$ -- 4834
 int.to.chr$ -- 0
-int.to.str$ -- 67
-missing$ -- 60
-newline$ -- 340
-num.names$ -- 134
-pop$ -- 468
+int.to.str$ -- 68
+missing$ -- 61
+newline$ -- 345
+num.names$ -- 136
+pop$ -- 470
 preamble$ -- 1
-purify$ -- 300
+purify$ -- 303
 quote$ -- 0
-skip$ -- 682
+skip$ -- 689
 stack$ -- 0
-substring$ -- 1357
-swap$ -- 221
+substring$ -- 1387
+swap$ -- 222
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 256
+type$ -- 260
 warning$ -- 7
-while$ -- 217
-width$ -- 69
-write$ -- 708
-(There was 1 error message)
+while$ -- 221
+width$ -- 70
+write$ -- 719
+(There were 7 warnings)
