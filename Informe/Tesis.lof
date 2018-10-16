@@ -7,39 +7,39 @@
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Tipos de ajuste que puede lograr un modelo sobre los datos que utiliza para su entrenamiento.\relax }}{17}{figure.caption.8}
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Modelo matem\'atico de una neurona.\relax }}{19}{figure.caption.10}
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Arquitectura b\'asica de un MLP con 4 capas.\relax }}{20}{figure.caption.11}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Visualizaci\'on de las funciones de activaci\'on para $-3 \leq z \leq 3$.\relax }}{22}{figure.caption.12}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Figura tomada de , donde se representa la anulaci\'on de las salidas de cada neurona donde se aplic\'o dropout.\relax }}{27}{figure.caption.14}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Red neuronal est\'andar}}}{27}{subfigure.6.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Luego de aplicar Dropout}}}{27}{subfigure.6.2}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Arquitectura b\'asica de un autocodificador.\relax }}{29}{figure.caption.15}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Construcci\'on de un autocodificador apilado.\relax }}{30}{figure.caption.16}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Visualizaci\'on de las funciones de activaci\'on para $-3 \leq z \leq 3$.\relax }}{21}{figure.caption.12}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Figura tomada de , donde se representa la anulaci\'on de las salidas de cada neurona donde se aplic\'o dropout.\relax }}{26}{figure.caption.14}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Red neuronal est\'andar}}}{26}{subfigure.6.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Luego de aplicar Dropout}}}{26}{subfigure.6.2}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Arquitectura b\'asica de un autocodificador.\relax }}{28}{figure.caption.15}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Construcci\'on de un autocodificador apilado.\relax }}{29}{figure.caption.16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Pila de producci\'on usada por Google aprox. en 2015.\relax }}{36}{figure.caption.18}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Comparaci\'on de esquema convencional MapReduce con su versi\'on iterativa implementada en Iterative MapReduce.\relax }}{44}{figure.caption.19}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Pila de producci\'on usada por Google aprox. en 2015.\relax }}{35}{figure.caption.18}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Comparaci\'on de esquema convencional MapReduce con su versi\'on iterativa implementada en Iterative MapReduce.\relax }}{43}{figure.caption.19}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Logo del framework desarrollado.\relax }}{47}{figure.caption.20}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{54}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{54}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{54}{subfigure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{54}{subfigure.2.3}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Logo del framework desarrollado.\relax }}{46}{figure.caption.20}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{53}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{53}{subfigure.2.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{53}{subfigure.2.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{53}{subfigure.2.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Captura de pantalla del README publicado en GitHub, donde se muestran los badges que certifican la aplicaci\'on correcta del esquema dado.\relax }}{62}{figure.caption.22}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Comparaci\'on de frameworks de aprendizaje profundo en t\'erminos de la duraci\'on para realizar distintos tipos de salida, restringiendo la ejecuci\'on a 1 hilo de procesamiento \relax }}{64}{figure.caption.23}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparaci\'on de frameworks de aprendizaje profundo en t\'erminos de la duraci\'on para realizar distintos tipos de salida, restringiendo la ejecuci\'on a 12 hilos de procesamiento \relax }}{64}{figure.caption.24}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Reconstrucci\'on de las im\'agenes de MNIST mediante un autocodificador. Arriba las im\'agenes originales, y abajo las reconstruidas.\relax }}{66}{figure.caption.26}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Duraci\'on del modelado en \'epocas variando la configuraci\'on de su optimizaci\'on, donde se distingue el paralelismo P utilizado y el tipo de duraci\'on\relax }}{67}{figure.caption.27}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Duraci\'on del modelado por cada \'epoca en forma global, variando la configuraci\'on de su optimizaci\'on\relax }}{68}{figure.caption.28}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Captura de pantalla del README publicado en GitHub, donde se muestran los badges que certifican la aplicaci\'on correcta del esquema dado.\relax }}{61}{figure.caption.22}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Comparaci\'on de frameworks de aprendizaje profundo en t\'erminos de la duraci\'on para realizar distintos tipos de salida, restringiendo la ejecuci\'on a 1 hilo de procesamiento \relax }}{63}{figure.caption.23}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparaci\'on de frameworks de aprendizaje profundo en t\'erminos de la duraci\'on para realizar distintos tipos de salida, restringiendo la ejecuci\'on a 12 hilos de procesamiento \relax }}{63}{figure.caption.24}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Reconstrucci\'on de las im\'agenes de MNIST mediante un autocodificador. Arriba las im\'agenes originales, y abajo las reconstruidas.\relax }}{65}{figure.caption.26}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Duraci\'on del modelado en \'epocas variando la configuraci\'on de su optimizaci\'on, donde se distingue el paralelismo P utilizado y el tipo de duraci\'on\relax }}{66}{figure.caption.27}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Duraci\'on del modelado por cada \'epoca en forma global, variando la configuraci\'on de su optimizaci\'on\relax }}{67}{figure.caption.28}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Diagrama en bloques del funcionamiento de un BCI.\relax }}{72}{figure.caption.30}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Diagrama en bloques del funcionamiento de un BCI.\relax }}{71}{figure.caption.30}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Configuraci\'on de 8 electrodos elegida para los experimentos en P300\relax }}{75}{figure.caption.31}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Promediado de las ondas del electrodo Pz. Arriba, para los sujetos con discapacidad (S1-S4). Abajo, sujetos sin discapacidad (S6-S9)\relax }}{75}{figure.caption.31}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Imagenes usadas para evocar el potencial P300 durante el registro de se\~nales de EEG.\relax }}{76}{figure.caption.32}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Ajuste fino del modelo SAE con OCC sobre el Sujeto 4, en t\'erminos de la medida F1-Score.\relax }}{81}{figure.caption.36}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Configuraci\'on de 8 electrodos elegida para los experimentos en P300\relax }}{74}{figure.caption.31}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Promediado de las ondas del electrodo Pz. Arriba, para los sujetos con discapacidad (S1-S4). Abajo, sujetos sin discapacidad (S6-S9)\relax }}{74}{figure.caption.31}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Imagenes usadas para evocar el potencial P300 durante el registro de se\~nales de EEG.\relax }}{75}{figure.caption.32}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Ajuste fino del modelo SAE con OCC sobre el Sujeto 4, en t\'erminos de la medida F1-Score.\relax }}{80}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Secuencia presentada en pantalla para la adquisici\'on de registros del habla imaginada\relax }}{84}{figure.caption.37}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Ajuste del AE-211 sobre los datos de todos los sujetos durante el entrenamiento, en t\'erminos del coeficiente $R^2$.\relax }}{87}{figure.caption.38}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Diagramas de caja y bigotes para cada m\'etrica de clasificaci\'on utilizada, construidos en base a todos los resultados de modelar redes neuronales por cada sujeto sobre los datos con mayor reducci\'on de dimensionalidad.\relax }}{88}{figure.caption.41}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Secuencia presentada en pantalla para la adquisici\'on de registros del habla imaginada\relax }}{83}{figure.caption.37}
+\contentsline {figure}{\numberline {8.2}{\ignorespaces Ajuste del AE-211 sobre los datos de todos los sujetos durante el entrenamiento, en t\'erminos del coeficiente $R^2$.\relax }}{86}{figure.caption.38}
+\contentsline {figure}{\numberline {8.3}{\ignorespaces Diagramas de caja y bigotes para cada m\'etrica de clasificaci\'on utilizada, construidos en base a todos los resultados de modelar redes neuronales por cada sujeto sobre los datos con mayor reducci\'on de dimensionalidad.\relax }}{87}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Gr\'afico de torta con las contribuciones de cada \'area curricular hacia el proyecto desarrollado.\relax }}{91}{figure.caption.42}
+\contentsline {figure}{\numberline {9.1}{\ignorespaces Gr\'afico de torta con las contribuciones de cada \'area curricular hacia el proyecto desarrollado.\relax }}{90}{figure.caption.42}
 \addvspace {10\p@ }

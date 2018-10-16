@@ -29,6 +29,7 @@ Database file #1: deeplearning.bib
 Database file #2: spark.bib
 Database file #3: eeg.bib
 Database file #4: learninspy.bib
+Database file #5: citasCapitulo2.bib
 Warning--empty journal in abaitua2012procesado
 Warning--empty booktitle in ferrado2016filtering
 Warning--empty journal in forslund2003neural
@@ -36,45 +37,45 @@ Warning--can't use both volume and number fields in kohavi1995study
 Warning--can't use both volume and number fields in nesterov1983method
 Warning--empty journal in powers2011evaluation
 Warning--empty journal in van2014analysis
-You've used 68 entries,
+You've used 72 entries,
             2118 wiz_defined-function locations,
-            894 strings with 15876 characters,
-and the built_in function-call counts, 22772 in all, are:
-= -- 2252
-> -- 1040
+            916 strings with 16375 characters,
+and the built_in function-call counts, 23628 in all, are:
+= -- 2332
+> -- 1068
 < -- 18
-+ -- 422
-- -- 342
-* -- 1434
-:= -- 3690
-add.period$ -- 212
-call.type$ -- 68
-change.case$ -- 365
++ -- 434
+- -- 350
+* -- 1460
+:= -- 3838
+add.period$ -- 226
+call.type$ -- 72
+change.case$ -- 379
 chr.to.int$ -- 0
-cite$ -- 75
-duplicate$ -- 872
-empty$ -- 1829
-format.name$ -- 342
-if$ -- 4834
+cite$ -- 79
+duplicate$ -- 910
+empty$ -- 1917
+format.name$ -- 350
+if$ -- 5020
 int.to.chr$ -- 0
-int.to.str$ -- 68
-missing$ -- 61
-newline$ -- 345
-num.names$ -- 136
-pop$ -- 470
+int.to.str$ -- 72
+missing$ -- 65
+newline$ -- 367
+num.names$ -- 144
+pop$ -- 506
 preamble$ -- 1
-purify$ -- 303
+purify$ -- 315
 quote$ -- 0
-skip$ -- 689
+skip$ -- 711
 stack$ -- 0
-substring$ -- 1387
-swap$ -- 222
+substring$ -- 1407
+swap$ -- 226
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 260
+type$ -- 272
 warning$ -- 7
-while$ -- 221
-width$ -- 70
-write$ -- 719
+while$ -- 229
+width$ -- 74
+write$ -- 761
 (There were 7 warnings)

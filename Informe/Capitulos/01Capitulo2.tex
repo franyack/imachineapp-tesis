@@ -8,105 +8,157 @@
 
 \begin{FraseCelebre}
 \begin{Frase}
-Todas las teorías son legítimas y ninguna \\ tiene importancia. Lo que importa \\ es lo que se hace con ellas.
+Uno de los grandes descubrimientos que un hombre puede hacer, una de sus grandes sorpresas, es encontrar que puede hacer lo que temía que no podía hacer.
 \end{Frase}
 \begin{Fuente}
-Jorge Luis Borges
+Henry Ford
 \end{Fuente}
 \end{FraseCelebre}
 
 \begin{resumen}
-Este capítulo pretende refrescar conocimientos, e introducir otros, para entender las bases teóricas utilizadas en todo el trabajo realizado. Inicialmente, se exhibe la noción de aprendizaje maquinal en sistemas de regresión y clasificación, desde la forma supervisada hasta la no supervisada, y cómo las redes neuronales se utilizan para componer dichos sistemas. Finalmente se profundiza en aspectos del aprendizaje profundo, lo cual en conjunto con todos los fundamentos presentados abarcan las características implementadas para este trabajo.
+%Este capítulo pretende refrescar conocimientos, e introducir otros, para entender las bases teóricas utilizadas en todo el trabajo realizado. Inicialmente, se exhibe la noción de aprendizaje maquinal en sistemas de regresión y clasificación, desde la forma supervisada hasta la no supervisada, y cómo las redes neuronales se utilizan para componer dichos sistemas. Finalmente se profundiza en aspectos del aprendizaje profundo, lo cual en conjunto con todos los fundamentos presentados abarcan las características implementadas para este trabajo.
+En este capítulo se presentará al sistema operativo Android, plataforma donde se llevará el despliegue de la aplicación. También, se expondrán los fundamentos del aprendizaje profundo, más específicamente aquel utilizado para problemas de visión computacional, herramienta principal en lo que corresponde al procesamiento de las imágenes. Por último, se introducirá sobre algoritmos de clustering, en especial conceptos que abarcan las características del algoritmo implementado para este trabajo.
 
 \end{resumen}
 
-En los últimos años, el ``aprendizaje maquinal'' (mejor conocido en inglés como \textit{machine learning}) adquirió bastante popularidad, presentando algoritmos que aproximan en diversas tareas el concepto de inteligencia artificial \cite{bengio2009learning}. Este campo estudia técnicas para construir sistemas capaces de aprender a partir de datos a realizar diversos tipos de tareas sin requerir que se les indique cómo hacerlas. Esto se emplea en una gran cantidad de aplicaciones en donde no es factible diseñar y programar de forma explícita algoritmos para realizar tareas complejas, como visión computacional, motores de búsqueda, reconocimiento de voz, predicción de fraudes, etc. 
+%En los últimos años, el ``aprendizaje maquinal'' (mejor conocido en inglés como \textit{machine learning}) adquirió bastante popularidad, presentando algoritmos que aproximan en diversas tareas el concepto de inteligencia artificial \cite{bengio2009learning}. Este campo estudia técnicas para construir sistemas capaces de aprender a partir de datos a realizar diversos tipos de tareas sin requerir que se les indique cómo hacerlas. Esto se emplea en una gran cantidad de aplicaciones en donde no es factible diseñar y programar de forma explícita algoritmos para realizar tareas complejas, como visión computacional, motores de búsqueda, reconocimiento de voz, predicción de fraudes, etc. 
+%
+%Los tipos de sistemas que se diseñan para realizar estas tareas mencionadas por lo general siguen dos tipos de aprendizaje: supervisado, y no supervisado \cite{bishop2006pattern}. A su vez, dichas tareas a realizar sobre datos se suelen clasificar típicamente en las siguientes categorías: a) clasificación, donde el sistema aprende de forma supervisada a asignar clases; b) regresión, aprendiendo supervisadamente a predecir una variable continua; c) agrupamiento o \textit{clustering}, para dividir los datos en grupos pero de forma no supervisada; d) reducción de dimensiones, mapeando los datos de entrada en un espacio de menor dimensión. En la siguiente sección de este capítulo se detallan los contenidos referidos a la construcción de estos sistemas, para conocer cómo se implementan los algoritmos de aprendizaje maquinal a partir de un conjunto de datos.
 
-Los tipos de sistemas que se diseñan para realizar estas tareas mencionadas por lo general siguen dos tipos de aprendizaje: supervisado, y no supervisado \cite{bishop2006pattern}. A su vez, dichas tareas a realizar sobre datos se suelen clasificar típicamente en las siguientes categorías: a) clasificación, donde el sistema aprende de forma supervisada a asignar clases; b) regresión, aprendiendo supervisadamente a predecir una variable continua; c) agrupamiento o \textit{clustering}, para dividir los datos en grupos pero de forma no supervisada; d) reducción de dimensiones, mapeando los datos de entrada en un espacio de menor dimensión. En la siguiente sección de este capítulo se detallan los contenidos referidos a la construcción de estos sistemas, para conocer cómo se implementan los algoritmos de aprendizaje maquinal a partir de un conjunto de datos.
 
-
-
-%------------------------------------------------------------------
-\section{Aprendizaje supervisado}
-%-------------------------------------------------------------------
-\label{cap2:sec:supervisado}
-A continuación se procede a detallar la implementación de un sistema con aprendizaje maquinal en forma supervisada para realizar tareas de regresión y clasificación, con el fin de hacer familiar el tratamiento de funciones objetivo, computando sus gradientes y optimizando los objetivos sobre un conjunto de parámetros. Estas herramientas básicas van a formar la base para los algoritmos implementados en el presente trabajo.
 
 %------------------------------------------------------------------
-\subsection{Sistemas de regresión y clasificación}
+\section{Programación en dispositivos móviles}
 %-------------------------------------------------------------------
-\label{cap2:subsec:reg-clasif}
+\label{cap2:sec:dispositivos-moviles}
+%A continuación se procede a detallar la implementación de un sistema con aprendizaje maquinal en forma supervisada para realizar tareas de regresión y clasificación, con el fin de hacer familiar el tratamiento de funciones objetivo, computando sus gradientes y optimizando los objetivos sobre un conjunto de parámetros. Estas herramientas básicas van a formar la base para los algoritmos implementados en el presente trabajo.
 
-En una \emph{regresión lineal} el objetivo es predecir un valor deseado $y$ partiendo de un vector de entrada $x\in\Re^{n}$ (que por lo general representa las ``características'' que describen el fenómeno analizado). Para ello, lo usual es contar con un conjunto de patrones o ejemplos donde cada uno de ellos tiene asociado un vector con características $x^{(i)}$  y su predicción correspondiente o ``etiqueta'' $y^{(i)}$, y con ello se busca modelar de forma supervisada (i.e. explicitando la salida deseada) una función $y=h(x)$ tal que $y^{(i)}\approx h(x^{(i)}) $ para cada $i$-ésimo ejemplo de entrenamiento. Teniendo una cantidad suficiente de patrones, se espera que $h(x)$ sea un buen predictor incluso cuando se le presente un nuevo vector de características donde su correspondiente etiqueta no se conoce.
+%------------------------------------------------------------------
+\subsection{Plataforma Android}
+%-------------------------------------------------------------------
+\label{cap2:subsec:plataforma-android}
+Es un sistema operativo diseñado para dispositivos móviles, desarrollado inicialmente por \textit{Android Inc.}, una empresa comprada por Google en 2005. El lanzamiento se realizó el 5 de noviembre de 2007 y Google liberó la mayoría de código Android bajo licencia Apache, conocida por ser libre y de código abierto\cite{android2008programmers}.
 
-Para modelar la hipótesis $h(x)$, en cualquier tipo de sistema, se deben definir dos cuestiones: i) cómo se representa la hipótesis y ii) cómo se mide su error de aproximación respecto a la función deseada $y$. En el caso de la regresión lineal, se define: $h_{\theta}(x)=\sum_j \theta_j x_j$, donde $h_{\theta}(x)$ representa una gran familia de funciones parametrizadas por $\theta$. Por lo tanto, para encontrar una elección de $\theta$ que aproxime $h_{\theta}(x^{(i)})$ lo mayor posible a $y^{(i)}$, se busca minimizar una función de ``costo'' o ``penalización'', la cual mide el error cometido en la predicción. Un ejemplo de esta función es utilizar como medida el \emph{Error Cuadrático Medio} (o MSE, del inglés \emph{Mean Squared Error}), la cual se define como:
+Actualmente, se pueden encontrar más de 2.500.000 de aplicaciones desarrolladas para esta plataforma\cite{numberAndroidApps}. 
 
-\begin{equation}
-	\label{eq:mse}
-	L_i(\theta)=\frac{1}{2}\sum_j (h_{\theta}(x_j^{(i)})-y_j^{(i)})^2
-\end{equation}
+Además, provee de un entorno de desarrollo integrado oficial (IDE), denominado \textit{Android Studio}. El mismo fue anunciado en mayo de 2013 y reemplazó a Eclipse como IDE oficial para el desarrollo de aplicaciones Android.
 
-El valor resultante de esta función corresponde al error de aproximación de $h_{\theta}(x^{(i)})$ para un i-ésimo ejemplo dado, y para conocer el error total sobre todo el conjunto de N ejemplos disponibles se promedian todos los errores cometidos tal que $L(\theta) = \frac{1}{N}\sum_i^{N} L_i(\theta)$.
-La elección de $\theta$ que minimiza esta función de costo se puede encontrar mediante algoritmos de optimización (e.g.\ gradiente descendiente) que, por lo general, requieren que se compute tanto $L_i(\theta)$ como su gradiente $\nabla_{\theta} L_i(\theta)$ (detallado más adelante en la Sección \ref{cap2:subsec:optimizacion}). En este caso, al diferenciar la función de costo respecto al parámetro $\theta$, al aplicar la regla de la cadena el gradiente queda:
+A continuación, se mencionan algunas de las características más destacables de la plataforma de desarrollo Android:
 
-\begin{equation}
-	\label{eq:d_mse}
-	\frac{\partial L_i(\theta)}{\partial \theta}= x^{(i)} \odot (h_{\theta}(x^{(i)})-y^{(i)})
-\end{equation}
+\begin{itemize}
+	\item Java es el lenguaje de programación en el que están escritas todas las aplicaciones Android nativas.
+	
+	\item A la hora de establecer prioridades, el sistema operativo no hace diferencia entre las aplicaciones instaladas por defecto en el dispositivo y aquellas implementadas por otros desarrolladores. Lo cual, hace posible que se puedan crear aplicaciones que tengan tanta importancia para el sistema operativo del teléfono como las que vienen de fábrica\cite{learningAndroid}. 
+	
+	\item Provee de renderizado en tiempo real.
+	
+	\item Consola de desarrollador: consejos de optimización, ayuda para la traducción, estadísticas de uso.
+	
+	\item Dispositivo virtual de Android que se utiliza para ejecutar y probar aplicaciones. 
+\end{itemize}
 
-Notar que la constante $\frac{1}{2}$ utilizada en la Ecuación \ref{eq:mse} es agregada para que sea cancelada al ser derivada dicha función, y con ello se ahorra el cómputo de multiplicar todos los valores del vector dado en la Ecuación \ref{eq:d_mse}. 
+%------------------------------------------------------------------
+\subsection{Componentes básicos de una aplicación Android}
+%-------------------------------------------------------------------
+\label{cap2:subsec:componentes-basicos-app-android}
 
-En el caso de la regresión lineal, los valores a predecir son continuos. Cuando se tratan problemas de clasificación, la predicción se realiza sobre una variable discreta que puede tomar sólo determinados valores. Para ello, lo que se intenta es predecir la probabilidad de que un ejemplo dado pertenezca a una clase contra la posibilidad de que pertenezca a otra/s. En una \emph{regresión logística} la clasificación se realiza mediante la predicción de etiquetas binarias, por lo cual $y^{(i)}\in \{0,1\}$. Llamando $z = \theta^\top x$ a la salida lineal, específicamente se trata de aprender una función de la forma:
+Existen cinco componentes con los que se puede crear una aplicación Android, y ellos son: Activities, Services, Intents, Content Provider y Broadcast Receivers. Android facilita la creación de aplicaciones gracias al uso de un conjunto de componentes de software reutilizables. A continuación, se detallará que función cumple cada uno de ellos:
 
-\begin{equation}
-	\begin{split}
-		P(y=1 \mid x) &= h_{\theta}(x) = \frac{1}{1+\exp(-z)}\equiv \sigma(z), \\ 	
-		P(y=0 \mid x) &= 1 - P(y=1 \mid x) = 1 - h_{\theta}(x) 	
-	\end{split}
-\end{equation}
-
-La función $\sigma (z) $ es denominada ``función logística'' o ``sigmoidea'' (desarrollada en la Sección \ref{cap2:subsec:funactiv}), y su imagen cae en el rango $[0,1]$ por lo que $ h_{\theta}(x)$ puede interpretarse como una probabilidad. Por lo general este tipo de regresión se asocia con otra función de costo denominada \textit{Entropía Cruzada}, la cual se define mediante la siguiente expresión:
-
-% VER http://neuralnetworksanddeeplearning.com/chap3.html
-
-$$L_i(\theta)=- \left(y^{(i)}\log(h_\theta (x^{(i)})) + (1-y^{(i)}) \log(1 - h_\theta (x^{(i)})) \right)$$
-
-A partir de ello, se puede clasificar un nuevo patrón chequeando cuál de las dos clases resulta con mayor probabilidad. 
-Cuando se deben manejar más de dos clases, la \emph{regresión softmax} es utilizada como clasificador para tratar con etiquetas $y^{(i)}\in \{1, \dots , K \}$, donde $K$ es el número de clases.
-
-Dado un vector de entrada $x$, se busca estimar la probabilidad que $P(y=k \mid x)$ para cada valor de $k = 1, \dots , K$. Entonces, la hipótesis debe resultar en un vector de dimensión $K$ cuyos elementos sean las probabilidades estimadas (y sumen uno). Concretamente, la función $h_\theta (x)$ toma la forma:
-
-\begin{align*}
-h_\theta(x) =
-\begin{bmatrix}
-P(y = 1 | x; \theta) \\
-P(y = 2 | x; \theta) \\
-\vdots \\
-P(y = K | x; \theta)
-\end{bmatrix}
-=
-\frac{1}{ \sum_{j=1}^{K}{\exp(z^{(j)}) }}
-\begin{bmatrix}
-\exp(z^{(1)}) \\
-\exp(z^{(2)}) \\
-\vdots \\
-\exp(z^{(K)}) \\
-\end{bmatrix}
-\end{align*}
-
-Notar que por cada $ k \in \{1, \dots, K\} $ existe un $z^{(k)} = \theta^{(k)\top} x $ para cada parámetro $\theta^{(k)}$ del modelo, y el término $\frac{1}{ \sum_{j=1}^{K}{\exp(z^{(j)}) }}$ normaliza la distribución para que sume uno en total. En cuanto a la función de costo, es similar a la definida para la regresión logística excepto que se debe sumar sobre los K diferentes valores de las clases posibles. Para ello, se puede expresar cada etiqueta $y^{(i)}$ de forma ``binarizada'' como un vector de dimensión K, que esté compuesto de ceros excepto en la posición correspondiente a la clase apuntada por $y^{(i)}$. Llamando $t^{(i)}_k$ a este vector, donde para un patrón $i$ está compuesto de ceros excepto en la posición $k$ que vale 1, y recordando que $h_\theta (x^{(i)})$ es un vector también de dimensión K (por ser la salida de la función \textit{softmax}), se tiene:
-
-\begin{equation}
-	L_i(\theta)=- \sum_k \left(t^{(i)}_k \cdot \log(h_\theta (x^{(i)})) \right)
-\end{equation}
-
-Notar que esto compone un clasificador lineal, ya que las predicciones sólo se basan en el logaritmo de una distribución de probabilidades \cite{van2014analysis}. En cuanto al gradiente de dicha función, se puede demostrar que mediante la regla de la cadena se llega a la siguiente expresión simple:
-
-\begin{equation}
-	\nabla_{z} L_i(\theta)= h_\theta (x^{(i)}) - t^{(i)}_K
-\end{equation}
-
-Recordar que $\nabla_{z} L_i(\theta)$ resulta en un vector por ser la derivada de la función de costo $L_i(\theta)$ (que es un escalar) respecto a la salida lineal $z$, y como ya se dijo ambos se utilizan para la optimización del parámetro $\theta$ mediante algoritmos basados en gradientes. También es preciso aclarar que a esta función se le pueden adicionar otros términos que sirvan para agregar penalizaciones al modelo a optimizar, como pueden ser algunas normas regularizadoras (que más adelante se detallan en la Sección \ref{cap2:subsubsec:reg-pesos}) las cuales deben tener un gradiente asociado para la optimización mencionada.
+\begin{itemize}
+	\item \textbf{Activity:} componente principal de la interfaz gráfica de una aplicación. A cada Activity se le asigna una ventana en la cual se dibuja la interfaz de usuario, con la cual éste podrá interaccionar para realizar las diversas acciones que hayamos contemplado en la aplicación. 
+	
+	Para construir la interfaz gráfica, existen componentes denominados Views (vistas) con los que se dispone de numerosos controles básicos, como por ejemplo, botones, listas desplegables o cuadros de texto, pudiendo extender la funcionalidad de estos controles o crear otros personalizados.
+	
+	Por lo general, una aplicación está formada por diferentes Activities, que están más o menos relacionadas entre sí. Siempre existe la \textit{actividad principal}, quien es la encargada de iniciar la aplicación. Para crear una nueva actividad, se debe crear una nueva clase la cual heredará de la clase Activity, definiendo su propia interfaz de usuario y las funcionalidades que esta aportará a la aplicación.
+	
+	Por último, es importante mencionar que existen componentes que funcionan dentro del ámbito de una Activity, denominados \textit{Fragments}, los cuales amplían y enriquecen las posibilidades de interacción con el usuario.
+	
+	\item \textbf{Service:} componente sin interfaz gráfica que se ejecuta en segundo plano. Son llamados a través de otro componente, como puede ser una Activity, y seguirán ejecutándose en segundo plano aunque la Activity haya finalizado o, incluso, aunque se haya salido de la aplicación. Un ejemplo es una aplicación para reproducir música, la cual sigue funcionando mientras el usuario navega por otras aplicaciones.
+	
+	\item \textbf{Intent:} Un intent es el elemento básico de comunicación entre los componentes que estamos describiendo, es decir, mediante este objeto se puede llamar a un Activity, iniciar un servicio, enviar un mensaje broadcast, incluso se podría iniciar otra aplicación si así se necesitara.
+	
+	El uso más importante es para iniciar Activities, por lo que puede considerarse como la \textit{unión} entre ellas.
+	
+	Las intent están formados por un paquete de información. Contienen detalle de interés para el componente que las recibe, como la acción que será ejecutada y los datos necesarios, más información de interés para el sistema Android, como la categoría del componente que maneja el intent y las intrucciones de cómo lanzar la Activity.
+	
+	\item \textbf{Content Provider:} es un objeto destinado a compartir datos entre aplicaciones. Dichos datos pueden ser almacenados en el sistema de archivos, en una base de datos o en cualquier otro lugar que sea accesible desde la aplicación.
+	
+	Un ejemplo de Content Provider es el que utiliza Android para gestionar la información de un contacto, mediante el cual cualquier otra aplicación podrá acceder a ellos haciendo una petición sobre la interfaz que gestiona dicha herramienta (\textit{ContentResolver})
+	
+	\item \textbf{Broadcast Receiver:} es un componente que detecta y reacciona frente a mensajes globales del sistema, como puede ser batería baja, SMS recibido, llamada perdida, etc. Además de esto, una aplicación puede iniciar un Broadcast Receiver (por ejemplo, para saber si se han descargado datos al dispositivo y poder ser usados por esa aplicación).
+	
+	Al igual que ocurre con los Services, un Broadcast Receiver tampoco muestra ninguna interfaz gráfica.
+\end{itemize}
+%En una \emph{regresión lineal} el objetivo es predecir un valor deseado $y$ partiendo de un vector de entrada $x\in\Re^{n}$ (que por lo general representa las ``características'' que describen el fenómeno analizado). Para ello, lo usual es contar con un conjunto de patrones o ejemplos donde cada uno de ellos tiene asociado un vector con características $x^{(i)}$  y su predicción correspondiente o ``etiqueta'' $y^{(i)}$, y con ello se busca modelar de forma supervisada (i.e. explicitando la salida deseada) una función $y=h(x)$ tal que $y^{(i)}\approx h(x^{(i)}) $ para cada $i$-ésimo ejemplo de entrenamiento. Teniendo una cantidad suficiente de patrones, se espera que $h(x)$ sea un buen predictor incluso cuando se le presente un nuevo vector de características donde su correspondiente etiqueta no se conoce.
+%
+%Para modelar la hipótesis $h(x)$, en cualquier tipo de sistema, se deben definir dos cuestiones: i) cómo se representa la hipótesis y ii) cómo se mide su error de aproximación respecto a la función deseada $y$. En el caso de la regresión lineal, se define: $h_{\theta}(x)=\sum_j \theta_j x_j$, donde $h_{\theta}(x)$ representa una gran familia de funciones parametrizadas por $\theta$. Por lo tanto, para encontrar una elección de $\theta$ que aproxime $h_{\theta}(x^{(i)})$ lo mayor posible a $y^{(i)}$, se busca minimizar una función de ``costo'' o ``penalización'', la cual mide el error cometido en la predicción. Un ejemplo de esta función es utilizar como medida el \emph{Error Cuadrático Medio} (o MSE, del inglés \emph{Mean Squared Error}), la cual se define como:
+%
+%\begin{equation}
+%	\label{eq:mse}
+%	L_i(\theta)=\frac{1}{2}\sum_j (h_{\theta}(x_j^{(i)})-y_j^{(i)})^2
+%\end{equation}
+%
+%El valor resultante de esta función corresponde al error de aproximación de $h_{\theta}(x^{(i)})$ para un i-ésimo ejemplo dado, y para conocer el error total sobre todo el conjunto de N ejemplos disponibles se promedian todos los errores cometidos tal que $L(\theta) = \frac{1}{N}\sum_i^{N} L_i(\theta)$.
+%La elección de $\theta$ que minimiza esta función de costo se puede encontrar mediante algoritmos de optimización (e.g.\ gradiente descendiente) que, por lo general, requieren que se compute tanto $L_i(\theta)$ como su gradiente $\nabla_{\theta} L_i(\theta)$ (detallado más adelante en la Sección \ref{cap2:subsec:optimizacion}). En este caso, al diferenciar la función de costo respecto al parámetro $\theta$, al aplicar la regla de la cadena el gradiente queda:
+%
+%\begin{equation}
+%	\label{eq:d_mse}
+%	\frac{\partial L_i(\theta)}{\partial \theta}= x^{(i)} \odot (h_{\theta}(x^{(i)})-y^{(i)})
+%\end{equation}
+%
+%Notar que la constante $\frac{1}{2}$ utilizada en la Ecuación \ref{eq:mse} es agregada para que sea cancelada al ser derivada dicha función, y con ello se ahorra el cómputo de multiplicar todos los valores del vector dado en la Ecuación \ref{eq:d_mse}. 
+%
+%En el caso de la regresión lineal, los valores a predecir son continuos. Cuando se tratan problemas de clasificación, la predicción se realiza sobre una variable discreta que puede tomar sólo determinados valores. Para ello, lo que se intenta es predecir la probabilidad de que un ejemplo dado pertenezca a una clase contra la posibilidad de que pertenezca a otra/s. En una \emph{regresión logística} la clasificación se realiza mediante la predicción de etiquetas binarias, por lo cual $y^{(i)}\in \{0,1\}$. Llamando $z = \theta^\top x$ a la salida lineal, específicamente se trata de aprender una función de la forma:
+%
+%\begin{equation}
+%	\begin{split}
+%		P(y=1 \mid x) &= h_{\theta}(x) = \frac{1}{1+\exp(-z)}\equiv \sigma(z), \\ 	
+%		P(y=0 \mid x) &= 1 - P(y=1 \mid x) = 1 - h_{\theta}(x) 	
+%	\end{split}
+%\end{equation}
+%
+%La función $\sigma (z) $ es denominada ``función logística'' o ``sigmoidea'' (desarrollada en la Sección \ref{cap2:subsec:funactiv}), y su imagen cae en el rango $[0,1]$ por lo que $ h_{\theta}(x)$ puede interpretarse como una probabilidad. Por lo general este tipo de regresión se asocia con otra función de costo denominada \textit{Entropía Cruzada}, la cual se define mediante la siguiente expresión:
+%
+%% VER http://neuralnetworksanddeeplearning.com/chap3.html
+%
+%$$L_i(\theta)=- \left(y^{(i)}\log(h_\theta (x^{(i)})) + (1-y^{(i)}) \log(1 - h_\theta (x^{(i)})) \right)$$
+%
+%A partir de ello, se puede clasificar un nuevo patrón chequeando cuál de las dos clases resulta con mayor probabilidad. 
+%Cuando se deben manejar más de dos clases, la \emph{regresión softmax} es utilizada como clasificador para tratar con etiquetas $y^{(i)}\in \{1, \dots , K \}$, donde $K$ es el número de clases.
+%
+%Dado un vector de entrada $x$, se busca estimar la probabilidad que $P(y=k \mid x)$ para cada valor de $k = 1, \dots , K$. Entonces, la hipótesis debe resultar en un vector de dimensión $K$ cuyos elementos sean las probabilidades estimadas (y sumen uno). Concretamente, la función $h_\theta (x)$ toma la forma:
+%
+%\begin{align*}
+%h_\theta(x) =
+%\begin{bmatrix}
+%P(y = 1 | x; \theta) \\
+%P(y = 2 | x; \theta) \\
+%\vdots \\
+%P(y = K | x; \theta)
+%\end{bmatrix}
+%=
+%\frac{1}{ \sum_{j=1}^{K}{\exp(z^{(j)}) }}
+%\begin{bmatrix}
+%\exp(z^{(1)}) \\
+%\exp(z^{(2)}) \\
+%\vdots \\
+%\exp(z^{(K)}) \\
+%\end{bmatrix}
+%\end{align*}
+%
+%Notar que por cada $ k \in \{1, \dots, K\} $ existe un $z^{(k)} = \theta^{(k)\top} x $ para cada parámetro $\theta^{(k)}$ del modelo, y el término $\frac{1}{ \sum_{j=1}^{K}{\exp(z^{(j)}) }}$ normaliza la distribución para que sume uno en total. En cuanto a la función de costo, es similar a la definida para la regresión logística excepto que se debe sumar sobre los K diferentes valores de las clases posibles. Para ello, se puede expresar cada etiqueta $y^{(i)}$ de forma ``binarizada'' como un vector de dimensión K, que esté compuesto de ceros excepto en la posición correspondiente a la clase apuntada por $y^{(i)}$. Llamando $t^{(i)}_k$ a este vector, donde para un patrón $i$ está compuesto de ceros excepto en la posición $k$ que vale 1, y recordando que $h_\theta (x^{(i)})$ es un vector también de dimensión K (por ser la salida de la función \textit{softmax}), se tiene:
+%
+%\begin{equation}
+%	L_i(\theta)=- \sum_k \left(t^{(i)}_k \cdot \log(h_\theta (x^{(i)})) \right)
+%\end{equation}
+%
+%Notar que esto compone un clasificador lineal, ya que las predicciones sólo se basan en el logaritmo de una distribución de probabilidades \cite{van2014analysis}. En cuanto al gradiente de dicha función, se puede demostrar que mediante la regla de la cadena se llega a la siguiente expresión simple:
+%
+%\begin{equation}
+%	\nabla_{z} L_i(\theta)= h_\theta (x^{(i)}) - t^{(i)}_K
+%\end{equation}
+%
+%Recordar que $\nabla_{z} L_i(\theta)$ resulta en un vector por ser la derivada de la función de costo $L_i(\theta)$ (que es un escalar) respecto a la salida lineal $z$, y como ya se dijo ambos se utilizan para la optimización del parámetro $\theta$ mediante algoritmos basados en gradientes. También es preciso aclarar que a esta función se le pueden adicionar otros términos que sirvan para agregar penalizaciones al modelo a optimizar, como pueden ser algunas normas regularizadoras (que más adelante se detallan en la Sección \ref{cap2:subsubsec:reg-pesos}) las cuales deben tener un gradiente asociado para la optimización mencionada.
 
 %-------------------------------------------------------------------
 \subsection{Optimización}

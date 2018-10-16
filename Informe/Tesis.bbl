@@ -6,6 +6,12 @@ T.~Abaitua et~al.
   (bci).
 \newblock 2012.
 
+\bibitem{numberAndroidApps}
+AppBrain.
+\newblock Number of android apps on google play.
+\newblock \url{https://www.appbrain.com/stats/number-of-android-apps}.
+\newblock Accedido: 15/10/2018.
+
 \bibitem{arora2015deep}
 A.~Arora, A.~Candel, J.~Lanford, E.~LeDell, and V.~Parmar.
 \newblock Deep learning with h2o, 2015.
@@ -90,6 +96,11 @@ T.~Dettmers.
   \url{https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training/}.
 \newblock Accedido: 22-02-2016.
 
+\bibitem{android2008programmers}
+J.~DiMarzio.
+\newblock {\em Android, a programmer's guide}.
+\newblock McGraw Hill Professional, 2008.
+
 \bibitem{ds2016deepdive}
 D.~D. Dive.
 \newblock Optimization of gradient descent.
@@ -144,6 +155,11 @@ M.~Fowler.
 \newblock Continous integration.
 \newblock \url{http://martinfowler.com/articles/continuousIntegration.html}.
 \newblock Accedido: 05-10-2016.
+
+\bibitem{learningAndroid}
+M.~Gargenta.
+\newblock {\em Learning Android}.
+\newblock O'REILLY, 2011.
 
 \bibitem{glorot2010understanding}
 X.~Glorot and Y.~Bengio.
@@ -257,6 +273,13 @@ C.~P. Marc' Aurelio~Ranzato, S.~Chopra, and Y.~LeCun.
 \newblock Efficient learning of sparse representations with an energy-based
   model.
 \newblock In {\em Proceedings of NIPS}, 2007.
+
+\bibitem{androidVSios}
+L.~Nacion.
+\newblock Android vs ios: ¿quien gana la batalla?
+\newblock
+  \url{https://www.lanacion.com.ar/1900814-android-vs-ios-quien-gana-la-batalla}.
+\newblock Accedido: 07/04/2017.
 
 \bibitem{nesterov1983method}
 Y.~Nesterov.
