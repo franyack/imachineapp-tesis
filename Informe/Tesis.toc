@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{Agradecimientos}{\es@scroman {vii}}{chapter*.1}
 \contentsline {chapter}{Resumen}{\es@scroman {viii}}{chapter*.2}
 \contentsline {part}{I\hspace {1em}Conceptos b\'asicos}{1}{part.1}
