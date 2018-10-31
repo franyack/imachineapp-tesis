@@ -3,23 +3,23 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2.1}{\ignorespaces Medidas de evaluaci\'on en problemas de clasificaci\'on multi-clases.\relax }}{14}{table.caption.7}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Esquema de matriz de confusi\'on para evaluar predicciones sobre 3 clases.\relax }}{14}{table.2.2}
-\contentsline {table}{\numberline {2.3}{\ignorespaces Diferencias entre cerebro humano y computadora convencional\relax }}{18}{table.caption.9}
-\contentsline {table}{\numberline {2.4}{\ignorespaces Funciones de activaci\'on desarrolladas, detallando para cada una tanto su expresi\'on la de su respectiva derivada anal\IeC {\'\i }tica.\relax }}{22}{table.caption.13}
+\contentsline {table}{\numberline {2.1}{\ignorespaces Medidas de evaluaci\'on en problemas de clasificaci\'on multi-clases.\relax }}{17}{table.caption.9}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Esquema de matriz de confusi\'on para evaluar predicciones sobre 3 clases.\relax }}{18}{table.2.2}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Diferencias entre cerebro humano y computadora convencional\relax }}{21}{table.caption.11}
+\contentsline {table}{\numberline {2.4}{\ignorespaces Funciones de activaci\'on desarrolladas, detallando para cada una tanto su expresi\'on la de su respectiva derivada anal\IeC {\'\i }tica.\relax }}{25}{table.caption.15}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Grilla vs cl\'uster vs nube.\relax }}{34}{table.caption.17}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Resultados de clasificaci\'on con datos de MNIST.\relax }}{64}{table.caption.25}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados obtenidos variando las funciones de consenso para la optimizaci\'on del modelo\relax }}{67}{table.caption.29}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Grilla vs cl\'uster vs nube.\relax }}{37}{table.caption.19}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {7.1}{\ignorespaces Descripci\'on b\'asica de los conjuntos de datos utilizados para obtener el modelo clasificador de P300.\relax }}{76}{table.caption.33}
-\contentsline {table}{\numberline {7.2}{\ignorespaces Resultados obtenidos por cada sujeto al modelar un SAE con OCC, discriminando por clase en cada m\'etrica utilizada.\relax }}{79}{table.caption.34}
-\contentsline {table}{\numberline {7.3}{\ignorespaces Resultados obtenidos por cada sujeto utilizando distintos modelos.\relax }}{79}{table.caption.35}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Resultados de clasificaci\'on con datos de MNIST.\relax }}{67}{table.caption.27}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Resultados obtenidos variando las funciones de consenso para la optimizaci\'on del modelo\relax }}{70}{table.caption.31}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {8.1}{\ignorespaces Resultados de clasificaci\'on, en promedio de todos los sujetos, obtenidos de modelar una regresi\'on softmax sobre los datos en distintas dimensionalidas logradas por PCA y AE\relax }}{86}{table.caption.39}
-\contentsline {table}{\numberline {8.2}{\ignorespaces Resultados de clasificaci\'on, promediando por sujetos, obtenidos por la red neuronal a partir de los datos reducidos a 135 dimensiones con un AE\relax }}{86}{table.caption.40}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.1}{\ignorespaces Descripci\'on b\'asica de los conjuntos de datos utilizados para obtener el modelo clasificador de P300.\relax }}{79}{table.caption.35}
+\contentsline {table}{\numberline {7.2}{\ignorespaces Resultados obtenidos por cada sujeto al modelar un SAE con OCC, discriminando por clase en cada m\'etrica utilizada.\relax }}{82}{table.caption.36}
+\contentsline {table}{\numberline {7.3}{\ignorespaces Resultados obtenidos por cada sujeto utilizando distintos modelos.\relax }}{82}{table.caption.37}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {8.1}{\ignorespaces Resultados de clasificaci\'on, en promedio de todos los sujetos, obtenidos de modelar una regresi\'on softmax sobre los datos en distintas dimensionalidas logradas por PCA y AE\relax }}{89}{table.caption.41}
+\contentsline {table}{\numberline {8.2}{\ignorespaces Resultados de clasificaci\'on, promediando por sujetos, obtenidos por la red neuronal a partir de los datos reducidos a 135 dimensiones con un AE\relax }}{89}{table.caption.42}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

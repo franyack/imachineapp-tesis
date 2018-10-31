@@ -57,6 +57,28 @@ A continuación, se mencionan algunas de las características más destacables de l
 	\item Dispositivo virtual de Android que se utiliza para ejecutar y probar aplicaciones. 
 \end{itemize}
 
+
+%------------------------------------------------------------------
+\subsection{Entorno ejecución Android Runtime}
+%-------------------------------------------------------------------
+\label{cap2:subsec:maquinavirtual-ART}
+Android Runtime (ART) es el entorno actual de ejecución de aplicaciones utilizado por el sistema operativo móvil Android. ART reemplaza a Dalvik, que es la máquina virtual utilizada originalmente por Android, y lleva a cabo la transformación de la aplicación en instrucciones de máquina, que luego son ejecutadas por el entorno de ejecución nativo del dispositivo (CITAR).
+
+A diferencia de Dalvik, que utiliza \textit{just- in-time} (JIT) para compilar el código cada vez que se inicia una aplicación, ART introduce el uso de \textit{ahead-of-time} (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación. Este archivo es utilizado al abrir la aplicación, por lo que se evita que la aplicación se compile continuamente, cada vez que ésta es ejecutada. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería. Al mismo tiempo, ART trae mejoras en el rendimiento, tales como la recolección de basura, aplicaciones de depuración y perfilado.?
+
+Para mantener la compatibilidad con versiones anteriores, ART utiliza el mismo código de bytes de entrada que Dalvik.
+
+En la Figura \ref{fig:dalvikvsART} (TODO: COMO HAGO PARA QUE LA IMAGEN APAREZCA DEBAJO DE ESTE PARRAFO?) se pueden apreciar las diferencias que existe entre la compilación que se hacía con la maquina virtual \textit{Dalvik} y como se hace hoy en día con \textit{Android Runtime}
+
+\begin{figure}[t]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]%
+		{Imagenes/Bitmap/DalvikVSART}
+		\caption{Compilación con Dalvik-VM y compilación con ART-VM}
+		\label{fig:dalvikvsART}
+	\end{center}
+\end{figure}
+
 %------------------------------------------------------------------
 \subsection{Componentes básicos de una aplicación Android}
 %-------------------------------------------------------------------
@@ -89,6 +111,61 @@ Existen cinco componentes con los que se puede crear una aplicación Android, y e
 	
 	Al igual que ocurre con los Services, un Broadcast Receiver tampoco muestra ninguna interfaz gráfica.
 \end{itemize}
+
+
+%------------------------------------------------------------------
+\subsection{Aplicaciones: actividades y ciclo de vida}
+%-------------------------------------------------------------------
+\label{cap2:subsec:activity-lifecycle}
+
+En Android, el tiempo de vida de las aplicaciones está generalmente controlado por el sistema operativo y no por el usuario como es usual. Cada aplicación se ejecuta en un proceso y si el sistema operativo lo cree necesario lo elimina, como por ejemplo si necesita liberar memoria(CITAR).
+
+Como se dijo en la sección anterior, una \textit{activity} es un componente de la aplicación que contiene una pantalla con la que los usuarios pueden interactuar. A cada actividad se le asigna una ventana en la que puede "dibujar" su interfaz de usuario.
+
+Una aplicación generalmente consiste en múltiples actividades vinculadas de forma flexible entre sí. Normalmente, una actividad en una aplicación se especifica como la "principal", lo que significa que se presentará al usuario cuando éste inicia la aplicación por primera vez. Cada una de ellas puede a su vez iniciar otra actividad para poder realizar diferentes acciones. Cada vez que se inicia una nueva, se detiene la actividad anterior, pero el sistema las conserva en una pila (la "pila de actividades"). Cuando se inicia una actividad nueva, se la incluye en la pila y capta el foco del usuario. La pila de actividades cumple con el mecanismo de pila \textit{LIFO}: el último en entrar es el primero en salir, por lo que, cuando el usuario termina de interactuar con la actividad actual y presiona el botón Atrás, se quita de la pila (y se destruye) y se reanuda la actividad anterior.
+
+Administrar el ciclo de vida de las actividades mediante la implementación de métodos \textit{callbacks}(CITAR) es fundamental para desarrollar aplicaciones potentes y flexibles. El ciclo de vida de una actividad se ve directamente afectado por su asociación con otras actividades, con sus tareas y con la pila de actividades.
+
+Una actividad puede existir básicamente en tres estados:
+\begin{itemize}
+	\item \textbf{Reanudada:} La actividad se encuentra en el primer plano de la pantalla y tiene la atención del usuario. (A veces, este estado también se denomina "en ejecución").
+	
+	\item \textbf{Pausada:} Otra actividad se encuentra en el primer plano y tiene la atención del usuario, pero ésta todavía está visible. Es decir, otra actividad está por encima de ésta y esa actividad es parcialmente transparente o no cubre toda la pantalla. Una actividad pausada está completamente "viva" (el objeto \textit{activity} se conserva en la memoria, mantiene toda la información de estado y miembro y continúa anexado al administrador de ventanas), pero el sistema puede eliminarla en situaciones en que la memoria sea extremadamente baja.
+	
+	\item \textbf{Detenida:} La actividad está completamente opacada por otra (se encuentra en "segundo plano"). Una actividad detenida también permanece "viva" (el objeto se conserva en memoria, mantiene toda la información de estado y miembro, pero no está anexado al administrador de ventanas). Sin embargo, ya no está visible para el usuario y el sistema puede eliminarla.
+\end{itemize}
+
+Cuando una actividad entra y sale de los diferentes estados que se describieron más arriba, esto se notifica a través de diferentes métodos \textit{callback}. En conjunto, estos métodos definen el ciclo de vida completo de una actividad, como se puede observar en la figura \ref{fig:activity-lifecycle}.
+
+\begin{figure}[t]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]%
+		{Imagenes/Bitmap/activity_lifecycle}
+		\caption{Ciclo de vida de una actividad.}
+		\label{fig:activity-lifecycle}
+	\end{center}
+\end{figure}
+
+A continuación, se explicarán brevemente cada uno de estos métodos:
+
+\begin{itemize}
+	\item \textbf{onCreate:} se llama cuando se crea la actividad por primera vez. El siguiente método es onStart.
+	
+	\item \textbf{onRestart:} se llama después de que ha parado la actividad y antes de volver a comenzarla. El próximo método es onStart.
+	
+	\item \textbf{onStart:} se llama cuando la actividad debe ser visible para el usuario. El próximo método será onResume u onStop.
+	
+	\item \textbf{onResume:} se llama antes de que la actividad comience a interactuar con el usuario. El método que le sigue es onPause.
+	
+	\item \textbf{onPause:} se llama cuando el sistema quiere ejecutar otra actividad como principal. El siguiente método será onResume u onStop.
+	
+	\item \textbf{onStop:} este método es llamdo cuando la actividad deja de estar visible para el usuario. El siguiente método es onStart u onDestroy.
+	
+	\item \textbf{onDestroy:} se llama cuando se desea destruir la actividad. Es el último método que recibe la actividad.
+\end{itemize}
+
+
+
 %En una \emph{regresión lineal} el objetivo es predecir un valor deseado $y$ partiendo de un vector de entrada $x\in\Re^{n}$ (que por lo general representa las ``características'' que describen el fenómeno analizado). Para ello, lo usual es contar con un conjunto de patrones o ejemplos donde cada uno de ellos tiene asociado un vector con características $x^{(i)}$  y su predicción correspondiente o ``etiqueta'' $y^{(i)}$, y con ello se busca modelar de forma supervisada (i.e. explicitando la salida deseada) una función $y=h(x)$ tal que $y^{(i)}\approx h(x^{(i)}) $ para cada $i$-ésimo ejemplo de entrenamiento. Teniendo una cantidad suficiente de patrones, se espera que $h(x)$ sea un buen predictor incluso cuando se le presente un nuevo vector de características donde su correspondiente etiqueta no se conoce.
 %
 %Para modelar la hipótesis $h(x)$, en cualquier tipo de sistema, se deben definir dos cuestiones: i) cómo se representa la hipótesis y ii) cómo se mide su error de aproximación respecto a la función deseada $y$. En el caso de la regresión lineal, se define: $h_{\theta}(x)=\sum_j \theta_j x_j$, donde $h_{\theta}(x)$ representa una gran familia de funciones parametrizadas por $\theta$. Por lo tanto, para encontrar una elección de $\theta$ que aproxime $h_{\theta}(x^{(i)})$ lo mayor posible a $y^{(i)}$, se busca minimizar una función de ``costo'' o ``penalización'', la cual mide el error cometido en la predicción. Un ejemplo de esta función es utilizar como medida el \emph{Error Cuadrático Medio} (o MSE, del inglés \emph{Mean Squared Error}), la cual se define como:
