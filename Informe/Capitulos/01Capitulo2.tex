@@ -426,16 +426,40 @@ Para comenzar, se debe definir claramente de que se está hablando cuando se menc
 
 La inteligencia artificial nació en los años 1950s, cuando un conjunto de pioneros dedicados al campo de las ciencias de la computación se comenzaron a preguntar como las computadoras podrían ser hechas para "pensar". Una concisa definición del campo podría ser la que sigue: \textit(el esfuerzo de automatizar tareas intelectuales normalmente realizadas por humanos). Como tal, la \textbf{AI} es un campo general que incluye al aprendizaje maquinal y al profundo, pero que también incluye muchos más conceptos que no involucran ningún \textit(aprendizaje). Los primeros juegos de ajedrez por computadora, por ejemplo, sólo envolvían un montón de reglas preestablecidas escritas por programadores con un alto nivel de conocimiento y de ayuda proveniente de expertos en la materia. Este concepto es conocido como \textit(inteligencia artificial simbólica), y fue muy popular entre los años 50 y 80 gracias al boom de los sistemas expertos creados en esos años.
 
-Aunque la AI simbólica provee buenas resoluciones para problemas bien definidos, lógicos, tales como el ajedrez, estos no sirven para obtener buenas aproximaciones a problemas relacionados a la clasificación de imágenes, reconocimiento del habla y traducción de lenguaje, entre otros. Por lo que una nueva aproximación tomó el lugar de la AI simbólica: el aprendizaje maquinal.
+Aunque la AI simbólica provee buenas resoluciones para problemas bien definidos, lógicos, tales como el ajedrez, estos no sirven para obtener buenas aproximaciones a problemas relacionados a la clasificación de imágenes, reconocimiento del habla y traducción de lenguaje, entre otros. Por lo que una nueva aproximación tomó el lugar de la AI simbólica: el aprendizaje maquinal \textit{Machine Learning}.
 
 %-------------------------------------------------------------------
-\subsection{Comenzando con redes neuronales}
+\subsubsection{Aprendizaje Maquinal}
+%-------------------------------------------------------------------
+\label{cap2:subsec:aprendizaje-maquinal}
+
+El aprendizaje maquinal surge a partir de esta pregunta: ¿puede una computadora ir mas allá "de lo que los humanos saben" con el objetivo de conseguir mejores resultados y aprender por ella misma como mejorar tareas concretas, sin que se le especifique cómo hacerlo?
+
+Esta pregunta abrió la puerta a un nuevo paradigma de programación. En la programación clásica, como por ejemplo la inteligencia artificial simbólica, el humano escribe todas las reglas (a través de sus programas) y los datos se procesan acorde a lo que ellas dicen, y luego se obtiene una posible respuesta (VER FIGURA PAG 5). En cambio, con el \textit{machine learning}, los datos de entrada por parte de los humanos son tan bien conocidos como la respuesta esperada por ellos, por lo que verdaderamente importa son las reglas que se obtienen, ya que estas serán aplicadas a nuevos datos de entrada para producir respuestas originales.
+
+%TODO imagen!!!
+
+Un sistema realizado bajo el paradigma del aprendizaje maquinal es \textit{entrenado} más que explícitamente programado. Es decir, se le presentan un montón de ejemplos relevantes a una tarea, y él por sus propios medios encontrará la estructura estadística más acorde para obtener la respuesta esperada a ellos. Por lo tanto, una vez que ya se encuentra bien entrenado, permitirá resolver tareas de ese tipo de manera automática.
+
+Un ejemplo podría ser automatizar la tarea de etiquetar aquellas imágenes que se corresponden a unas vacaciones. Lo que se debe hacer es presentar al sistema de aprendizaje maquinal un montón de imágenes que ya fueron etiquetadas por humanos, y éste aprendería reglas estadísticas para asociar aquellas que se corresponden a este tipo de imágenes diferenciando de aquellas que no se corresponderían a este grupo.
+
+%-------------------------------------------------------------------
+\subsubsection{Aprendizaje Profundo}
+%-------------------------------------------------------------------
+\label{cap2:subsec:aprendizaje-profundo}
+
+El \textit{deep learning} es un subcampo específico del aprendizaje maquinal: una nueva manera de aprender representación desde los datos poniendo énfasis en sucesivas \textit{capas} desde las cuales se van obteniendo representaciones cada vez más significativas. Lo profundo (\textit{deep}) en este subcampo del aprendizaje maquinal no hace referencia a ningún tipo de entendimiento profundo logrado por este enfoque, sino que está por la idea de sucesivas capaz de representación por las que van pasando los datos. Modelos actuales envuelven entre diez o incluso miles de capaz sucesivas de representación y todas ellas aprenden de manera automática a partir de ser expuestas a los datos de entrada.
+
+Estas capas de representación están conformadas por modelos llamados \textit{redes neuronales}. Este término está referenciado en la neurobiología, pero aunque algunos de los conceptos centrales en el aprendizaje profundo fueran desarrollados en parte tomando como inspiración el entendimiento humano del cerebro, los modelos \textit{deep learning} no son modelos del cerebro. No existe evidencia de que el cerebro humano implemente algo parecido a lo que se hace en esta ciencia de la computación.
+
+%-------------------------------------------------------------------
+\subsubsection{Redes neuronales}
 %-------------------------------------------------------------------
 \label{cap2:subsec:redes-neuronales}
 
-Dentro del campo científico de la Inteligencia Artificial, las \textit{Redes Neuronales Artificiales} (\textbf{RNA}) comprenden una rama antigua pero destacada, especialmente en la actualidad luego del surgimiento del aprendizaje produndo. Se entiende como \textbf{RNA} a un sistema con elementos que procesan información de cuyas interacciones locales depende su comportamiento global \cite{gonzalez1995redes}. Este sistema trata de emular el comportamiento del cerebro humano, adquiriendo conocimiento de su entorno mediante un proceso de aprendizaje y almacenándolo para disponer de su uso \cite{haykin2004comprehensive}.
+Las \textit{Redes Neuronales Artificiales} (\textbf{RNA}) comprenden una rama antigua pero destacada, especialmente en la actualidad luego del surgimiento del aprendizaje produndo. Se entiende como \textbf{RNA} a un sistema con elementos que procesan información de cuyas interacciones locales depende su comportamiento global \cite{gonzalez1995redes}. Este sistema trata de emular el comportamiento del cerebro humano, adquiriendo conocimiento de su entorno mediante un proceso de aprendizaje y almacenándolo para disponer de su uso \cite{haykin2004comprehensive}.
 
-Las \textbf{RNA}s son implementadas en computadoras, tanto en programas de software como en arquitecturas de hardware, por lo cual se utilizan para componer un sistema de aprendizaje maquinal. No obstante, sólo consiste en una aproximación debido a que existen diferencias significativas con respecto a la manera que utiliza el cerebro humano para procesar la información que va adquiriendo. Si bien el término \textit{redes neuronales} está referenciado en la neurobiología y muchos conceptos son utilizados a modo de inspiración en la resolución de problemas, no existe evidencia de que el cerebro utilice mecanismos de aprendizajes como se usan en las técnicas implementadas con redes neuronales.
+Las \textbf{RNA}s son implementadas en computadoras, tanto en programas de software como en arquitecturas de hardware, por lo cual se utilizan para componer un sistema de aprendizaje maquinal. 
 
 \begin{figure}[t]
 	\begin{center}
@@ -447,6 +471,19 @@ Las \textbf{RNA}s son implementadas en computadoras, tanto en programas de softw
 \end{figure}
 
 Para modelar el comportamiento de las neuronas, la idea es que las sinápsis que producen puedan controlarse mediante \textit{pesos sinápticos} que definan una magnitud de la influencia que ejerce una con otra (y también dirección, al poder excitar o inhibir mediante pesos positivos o negativos, correspondientemente). Los pesos sinápticos $w_0$ multiplican las señales de entrada $x_0$ para ejercer una suma ponderada en el soma, y si el resultado supera un cierto umbral la neurona se ``activa'' enviando un estímulo hacia su salida. Dicha suma puede incorporar además un término de sesgo $b$ que participa sin multiplicarse por la entrada. En este modelo se considera que no interesa conocer el preciso tiempo en que se activa la neurona sino la frecuencia en que ocurre, por lo cual ello es representado mediante una \textit{función de activación} \cite{haykin2004comprehensive}. En la Figura \ref{fig:neurona_modelo} se representa gráficamente el modelo explicado, el cual constituye lo que se denomina como ``perceptrón simple'. 
+
+Para modelar una red neuronal artificial las neuronas se agrupan en capas, de forma tal que todas las unidades de una capa se conectan con todas las neuronas de sus capas próximas para formar una estructura interconectada. En la forma más simple, se tiene una capa de entrada que proyecta la señal entrante en una capa de salida. Cuando se incorporan capas intermedias (denominadas capas ocultas), la red adquiere más niveles de procesamiento entre su entrada y salida, y lo que se forma es un ``perceptrón multicapa'' (conocido en inglés como \textit{Multi Layer Perceptron} o \acs{MLP}) \cite{haykin2004comprehensive}. En esta configuración, para producir la salida de la red se computan sucesivamente todas las activaciones una capa tras otra, donde puede notarse que una red con $n$ capas equivale a tener $n$ perceptrones simples en cascada, donde la salida del primero es la entrada del segundo y así sucesivamente. Además, cada capa puede tener diferente número de neuronas, e incluso distinta función de activación. 
+
+\begin{figure}[t]
+	\begin{center}
+		\includegraphics[width=0.85\textwidth]%
+		{Imagenes/Bitmap/arq-mlp}
+		\caption{Arquitectura básica de un MLP con 4 capas.}
+		\label{fig:mlp}
+	\end{center}
+\end{figure}
+
+Siguiendo el modelo matemático de un perceptrón simple, los pesos sinápticos ahora pueden expresarse en conjunto de forma vectorial como matrices, así como también el sesgo se representa como un vector. Por lo tanto, dada un vector de entrada $x$, la suma ponderada efectuada en una capa se expresa como un producto entre la matriz de pesos sinápticos $W$ y dicha entrada $x$, en la cual también se suma el vector de sesgo o \textit{bias} $b$. Al resultado de esto se le aplica la función de activación, con lo cual se produce la salida final de la capa. En la Figura \ref{fig:mlp} se representa la arquitectura de un perceptrón multicapa, mostrando las interacciones que tienen sus unidades desde la entrada hasta su salida. 
 
 
 %DEEEEEEEP LEARNING
