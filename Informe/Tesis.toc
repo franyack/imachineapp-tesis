@@ -1,4 +1,4 @@
-\select@language {spanish}
+\babel@toc {spanish}{}
 \contentsline {chapter}{Agradecimientos}{\es@scroman {vii}}{chapter*.1}
 \contentsline {chapter}{Resumen}{\es@scroman {viii}}{chapter*.2}
 \contentsline {part}{I\hspace {1em}Conceptos b\'asicos}{1}{part.1}
@@ -21,71 +21,70 @@
 \contentsline {section}{\numberline {2.2}Fundamentos del aprendizaje profundo}{12}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}Ingeligencia Artificial, aprendizaje maquinal y aprendizaje profundo}{12}{subsection.2.2.1}
 \contentsline {subsubsection}{\numberline {2.2.1.1}Ingeligencia Artificial}{13}{subsubsection.2.2.1.1}
-\contentsline {subsubsection}{\numberline {2.2.1.2}Aprendizaje Maquinal}{13}{subsubsection.2.2.1.2}
+\contentsline {subsubsection}{\numberline {2.2.1.2}Aprendizaje Maquinal}{14}{subsubsection.2.2.1.2}
 \contentsline {subsubsection}{\numberline {2.2.1.3}Aprendizaje Profundo}{14}{subsubsection.2.2.1.3}
-\contentsline {subsubsection}{\numberline {2.2.1.4}Redes neuronales}{14}{subsubsection.2.2.1.4}
-\contentsline {subsection}{\numberline {2.2.2}Tratamiento sobre los pesos sin\'apticos}{17}{subsection.2.2.2}
-\contentsline {subsubsection}{\numberline {2.2.2.1}Inicializaci\'on}{17}{subsubsection.2.2.2.1}
-\contentsline {subsubsection}{\numberline {2.2.2.2}Regularizaci\'on}{18}{subsubsection.2.2.2.2}
-\contentsline {subsection}{\numberline {2.2.3}Aprendizaje no supervisado}{20}{subsection.2.2.3}
-\contentsline {subsection}{\numberline {2.2.4}Autocodificadores}{21}{subsection.2.2.4}
-\contentsline {chapter}{\numberline {3}C\'omputo distribuido}{24}{chapter.3}
-\contentsline {section}{\numberline {3.1}Introducci\'on}{24}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Caracter\IeC {\'\i }sticas}{25}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Infraestructura}{27}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}Antecedentes}{28}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}MapReduce}{29}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Apache Hadoop}{30}{subsection.3.2.2}
-\contentsline {section}{\numberline {3.3}Apache Spark}{31}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Funcionalidades}{31}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Integridad de tecnolog\IeC {\'\i }as}{33}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Aplicaciones en aprendizaje profundo}{33}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Procesamiento de datos}{34}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Optimizaci\'on de modelos}{35}{subsection.3.4.2}
-\contentsline {part}{II\hspace {1em}Learninspy}{37}{part.2}
-\contentsline {chapter}{\numberline {4}Descripci\'on del sistema}{38}{chapter.4}
-\contentsline {section}{\numberline {4.1}Estructura}{38}{section.4.1}
-\contentsline {section}{\numberline {4.2}Caracter\IeC {\'\i }sticas}{41}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Explotaci\'on del c\'omputo distribuido}{43}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Entrenamiento distribuido}{43}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Funciones de consenso}{45}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Criterios de corte}{45}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Esquemas similares}{47}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Evaluaci\'on de desempe\~no}{49}{chapter.5}
-\contentsline {section}{\numberline {5.1}Configuraciones}{49}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}Rendimiento en Spark}{50}{subsection.5.1.1}
-\contentsline {section}{\numberline {5.2}Materiales utilizados}{51}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Recursos computacionales}{51}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Bases de datos}{52}{subsection.5.2.2}
-\contentsline {section}{\numberline {5.3}Validaci\'on del framework}{52}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Testeo en integraci\'on continua}{53}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Experimentos de validaci\'on}{54}{subsection.5.3.2}
-\contentsline {part}{III\hspace {1em}Aplicaci\'on en electroencefalograf\IeC {\'\i }a}{61}{part.3}
-\contentsline {chapter}{\numberline {6}Electroencefalograf\IeC {\'\i }a}{62}{chapter.6}
-\contentsline {section}{\numberline {6.1}Se\~nales de electroencefalograma}{62}{section.6.1}
-\contentsline {section}{\numberline {6.2}Interfaces Cerebro-Computadora}{63}{section.6.2}
-\contentsline {chapter}{\numberline {7}Potencial P300}{65}{chapter.7}
-\contentsline {section}{\numberline {7.1}Conceptos b\'asicos}{65}{section.7.1}
-\contentsline {section}{\numberline {7.2}Corpus de datos}{67}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Registro}{67}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}Procesamiento de datos}{68}{subsection.7.2.2}
-\contentsline {section}{\numberline {7.3}Experimentos}{69}{section.7.3}
-\contentsline {section}{\numberline {7.4}Resultados}{71}{section.7.4}
-\contentsline {section}{\numberline {7.5}Conclusiones}{72}{section.7.5}
-\contentsline {chapter}{\numberline {8}Habla imaginada}{74}{chapter.8}
-\contentsline {section}{\numberline {8.1}Antecedentes}{74}{section.8.1}
-\contentsline {section}{\numberline {8.2}Corpus de datos}{75}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Registro}{75}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}Procesamiento de datos}{76}{subsection.8.2.2}
-\contentsline {section}{\numberline {8.3}Experimentos}{77}{section.8.3}
-\contentsline {section}{\numberline {8.4}Resultados}{78}{section.8.4}
-\contentsline {section}{\numberline {8.5}Conclusiones}{80}{section.8.5}
-\contentsline {part}{IV\hspace {1em}Conclusiones y discusi\'on}{81}{part.4}
-\contentsline {chapter}{\numberline {9}Conclusiones generales}{82}{chapter.9}
-\contentsline {section}{\numberline {9.1}Corolarios del proyecto}{82}{section.9.1}
-\contentsline {section}{\numberline {9.2}Trabajos futuros}{84}{section.9.2}
-\contentsline {part}{V\hspace {1em}Ap\'endices}{85}{part.5}
-\contentsline {chapter}{\numberline {A}Algoritmos}{86}{appendix.Alph1}
-\contentsline {part}{Bibliograf\IeC {\'\i }a}{88}{appendix*.39}
-\contentsline {chapter}{Lista de acr\'onimos}{93}{section*.40}
-\contentsline {part}{VI\hspace {1em}Anexos}{94}{part.6}
+\contentsline {subsubsection}{\numberline {2.2.1.4}Redes neuronales}{15}{subsubsection.2.2.1.4}
+\contentsline {section}{\numberline {2.3}Aprendizaje profundo aplicado en problemas de visi\'on computacional}{17}{section.2.3}
+\contentsline {section}{\numberline {2.4}An\'alisis de agrupamiento}{18}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Agrupamiento basado en grafos}{18}{subsection.2.4.1}
+\contentsline {subsection}{\numberline {2.4.2}Algor\IeC {\'\i }tmo de agrupamiento de Markov}{19}{subsection.2.4.2}
+\contentsline {chapter}{\numberline {3}C\'omputo distribuido}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Introducci\'on}{21}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Caracter\IeC {\'\i }sticas}{22}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Infraestructura}{24}{subsection.3.1.2}
+\contentsline {section}{\numberline {3.2}Antecedentes}{25}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}MapReduce}{26}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Apache Hadoop}{27}{subsection.3.2.2}
+\contentsline {section}{\numberline {3.3}Apache Spark}{28}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Funcionalidades}{28}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Integridad de tecnolog\IeC {\'\i }as}{30}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Aplicaciones en aprendizaje profundo}{30}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Procesamiento de datos}{31}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Optimizaci\'on de modelos}{32}{subsection.3.4.2}
+\contentsline {part}{II\hspace {1em}Learninspy}{34}{part.2}
+\contentsline {chapter}{\numberline {4}Descripci\'on del sistema}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Estructura}{35}{section.4.1}
+\contentsline {section}{\numberline {4.2}Caracter\IeC {\'\i }sticas}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Explotaci\'on del c\'omputo distribuido}{40}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Entrenamiento distribuido}{40}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Funciones de consenso}{42}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Criterios de corte}{42}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Esquemas similares}{44}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Evaluaci\'on de desempe\~no}{46}{chapter.5}
+\contentsline {section}{\numberline {5.1}Configuraciones}{46}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Rendimiento en Spark}{47}{subsection.5.1.1}
+\contentsline {section}{\numberline {5.2}Materiales utilizados}{48}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Recursos computacionales}{48}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Bases de datos}{49}{subsection.5.2.2}
+\contentsline {section}{\numberline {5.3}Validaci\'on del framework}{49}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Testeo en integraci\'on continua}{50}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Experimentos de validaci\'on}{51}{subsection.5.3.2}
+\contentsline {part}{III\hspace {1em}Aplicaci\'on en electroencefalograf\IeC {\'\i }a}{58}{part.3}
+\contentsline {chapter}{\numberline {6}Electroencefalograf\IeC {\'\i }a}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Se\~nales de electroencefalograma}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Interfaces Cerebro-Computadora}{60}{section.6.2}
+\contentsline {chapter}{\numberline {7}Potencial P300}{62}{chapter.7}
+\contentsline {section}{\numberline {7.1}Conceptos b\'asicos}{62}{section.7.1}
+\contentsline {section}{\numberline {7.2}Corpus de datos}{64}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Registro}{64}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}Procesamiento de datos}{65}{subsection.7.2.2}
+\contentsline {section}{\numberline {7.3}Experimentos}{66}{section.7.3}
+\contentsline {section}{\numberline {7.4}Resultados}{68}{section.7.4}
+\contentsline {section}{\numberline {7.5}Conclusiones}{69}{section.7.5}
+\contentsline {chapter}{\numberline {8}Habla imaginada}{71}{chapter.8}
+\contentsline {section}{\numberline {8.1}Antecedentes}{71}{section.8.1}
+\contentsline {section}{\numberline {8.2}Corpus de datos}{72}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Registro}{72}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}Procesamiento de datos}{73}{subsection.8.2.2}
+\contentsline {section}{\numberline {8.3}Experimentos}{74}{section.8.3}
+\contentsline {section}{\numberline {8.4}Resultados}{75}{section.8.4}
+\contentsline {section}{\numberline {8.5}Conclusiones}{77}{section.8.5}
+\contentsline {part}{IV\hspace {1em}Conclusiones y discusi\'on}{78}{part.4}
+\contentsline {chapter}{\numberline {9}Conclusiones generales}{79}{chapter.9}
+\contentsline {section}{\numberline {9.1}Corolarios del proyecto}{79}{section.9.1}
+\contentsline {section}{\numberline {9.2}Trabajos futuros}{81}{section.9.2}
+\contentsline {part}{V\hspace {1em}Ap\'endices}{82}{part.5}
+\contentsline {chapter}{\numberline {A}Algoritmos}{83}{appendix.Alph1}
+\contentsline {part}{Bibliograf\IeC {\'\i }a}{85}{appendix*.41}
+\contentsline {chapter}{Lista de acr\'onimos}{90}{section*.42}
+\contentsline {part}{VI\hspace {1em}Anexos}{91}{part.6}
