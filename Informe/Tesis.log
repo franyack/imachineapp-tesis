@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  14 NOV 2018 18:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  20 NOV 2018 07:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2472,7 +2472,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 62.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 62.
-<Imagenes/Bitmap/DalvikVSART.png, id=712, 803.0pt x 731.73375pt>
+<Imagenes/Bitmap/DalvikVSART.png, id=721, 803.0pt x 731.73375pt>
 File: Imagenes/Bitmap/DalvikVSART.png Graphic file (type png)
 <use Imagenes/Bitmap/DalvikVSART.png>
 Package pdftex.def Info: Imagenes/Bitmap/DalvikVSART.png  used on input line 76
@@ -2583,7 +2583,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 128.
  [10]
-<Imagenes/Bitmap/activity_lifecycle.png, id=728, 514.92375pt x 665.48625pt>
+<Imagenes/Bitmap/activity_lifecycle.png, id=737, 514.92375pt x 665.48625pt>
 File: Imagenes/Bitmap/activity_lifecycle.png Graphic file (type png)
 <use Imagenes/Bitmap/activity_lifecycle.png>
 Package pdftex.def Info: Imagenes/Bitmap/activity_lifecycle.png  used on input 
@@ -2645,7 +2645,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 418.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 418.
-<Imagenes/Bitmap/ai-ml-dl.png, id=735, 1124.2pt x 1119.18124pt>
+<Imagenes/Bitmap/ai-ml-dl.png, id=744, 1124.2pt x 1119.18124pt>
 File: Imagenes/Bitmap/ai-ml-dl.png Graphic file (type png)
 <use Imagenes/Bitmap/ai-ml-dl.png>
 Package pdftex.def Info: Imagenes/Bitmap/ai-ml-dl.png  used on input line 427.
@@ -2704,7 +2704,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 448.
  [13 <./Imagenes/Bitmap/ai-ml-dl.png>]
-<Imagenes/Bitmap/machinelearningnewparadigm.png, id=749, 375.4025pt x 141.52875
+<Imagenes/Bitmap/machinelearningnewparadigm.png, id=758, 375.4025pt x 141.52875
 pt>
 File: Imagenes/Bitmap/machinelearningnewparadigm.png Graphic file (type png)
 <use Imagenes/Bitmap/machinelearningnewparadigm.png>
@@ -2738,7 +2738,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 474.
  [14 <./Imagenes/Bitmap/machinelearningnewparadigm.png>]
-<Imagenes/Bitmap/neuron_model.png, id=758, 661.47125pt x 377.41pt>
+<Imagenes/Bitmap/neuron_model.png, id=767, 661.47125pt x 377.41pt>
 File: Imagenes/Bitmap/neuron_model.png Graphic file (type png)
 <use Imagenes/Bitmap/neuron_model.png>
 Package pdftex.def Info: Imagenes/Bitmap/neuron_model.png  used on input line 4
@@ -2775,7 +2775,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 497.
 [15 <./Imagenes/Bitmap/neuron_model.png>]
-<Imagenes/Bitmap/arq-mlp.png, id=770, 890.32625pt x 611.28375pt>
+<Imagenes/Bitmap/arq-mlp.png, id=780, 890.32625pt x 611.28375pt>
 File: Imagenes/Bitmap/arq-mlp.png Graphic file (type png)
 <use Imagenes/Bitmap/arq-mlp.png>
 Package pdftex.def Info: Imagenes/Bitmap/arq-mlp.png  used on input line 501.
@@ -2851,7 +2851,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 529.
  [17]
-<Imagenes/Bitmap/convolutionalneuralnetwork.png, id=783, 409.7709pt x 166.10056
+<Imagenes/Bitmap/convolutionalneuralnetwork.png, id=792, 409.7709pt x 166.10056
 pt>
 File: Imagenes/Bitmap/convolutionalneuralnetwork.png Graphic file (type png)
 <use Imagenes/Bitmap/convolutionalneuralnetwork.png>
@@ -2909,7 +2909,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 553.
  [18 <./Imagenes/Bitmap/convolutionalneuralnetwork.png>]
-<Imagenes/Bitmap/cluster-graph.png, id=789, 361.35pt x 361.35pt>
+<Imagenes/Bitmap/cluster-graph.png, id=798, 361.35pt x 361.35pt>
 File: Imagenes/Bitmap/cluster-graph.png Graphic file (type png)
 <use Imagenes/Bitmap/cluster-graph.png>
 Package pdftex.def Info: Imagenes/Bitmap/cluster-graph.png  used on input line 
@@ -2954,7 +2954,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 574.
  [19 <./Imagenes/Bitmap/cluster-graph.png>]
-<Imagenes/Bitmap/mcl.png, id=796, 566.115pt x 132.495pt>
+<Imagenes/Bitmap/mcl.png, id=805, 566.115pt x 132.495pt>
 File: Imagenes/Bitmap/mcl.png Graphic file (type png)
 <use Imagenes/Bitmap/mcl.png>
 Package pdftex.def Info: Imagenes/Bitmap/mcl.png  used on input line 578.
@@ -3161,7 +3161,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 178.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 178.
-<Imagenes/Bitmap/google_production_stack.png, id=829, 626.34pt x 364.36125pt>
+<Imagenes/Bitmap/google_production_stack.png, id=838, 626.34pt x 364.36125pt>
 File: Imagenes/Bitmap/google_production_stack.png Graphic file (type png)
 <use Imagenes/Bitmap/google_production_stack.png>
 Package pdftex.def Info: Imagenes/Bitmap/google_production_stack.png  used on i
@@ -3490,7 +3490,7 @@ Overfull \hbox (12.12181pt too wide) in paragraph at lines 419--419
  / cloudera / strata-[]hadoop-[]world-[]2012-[]knitting-[]boar$[]| 
  []
 
-<Imagenes/Bitmap/mapreduce_v_iterative.png, id=902, 639.38875pt x 441.65pt>
+<Imagenes/Bitmap/mapreduce_v_iterative.png, id=910, 639.38875pt x 441.65pt>
 File: Imagenes/Bitmap/mapreduce_v_iterative.png Graphic file (type png)
 <use Imagenes/Bitmap/mapreduce_v_iterative.png>
 Package pdftex.def Info: Imagenes/Bitmap/mapreduce_v_iterative.png  used on inp
@@ -3585,7 +3585,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 7.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 7.
-<Imagenes/Bitmap/Learninspy-logo_grande.png, id=914, 803.0pt x 602.25pt>
+<Imagenes/Bitmap/Learninspy-logo_grande.png, id=922, 803.0pt x 602.25pt>
 File: Imagenes/Bitmap/Learninspy-logo_grande.png Graphic file (type png)
 <use Imagenes/Bitmap/Learninspy-logo_grande.png>
 Package pdftex.def Info: Imagenes/Bitmap/Learninspy-logo_grande.png  used on in
@@ -3868,19 +3868,19 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 244.
  [41]
-<Imagenes/Bitmap/Rplot-funcons-avg.png, id=975, 455.7025pt x 362.35374pt>
+<Imagenes/Bitmap/Rplot-funcons-avg.png, id=983, 455.7025pt x 362.35374pt>
 File: Imagenes/Bitmap/Rplot-funcons-avg.png Graphic file (type png)
 <use Imagenes/Bitmap/Rplot-funcons-avg.png>
 Package pdftex.def Info: Imagenes/Bitmap/Rplot-funcons-avg.png  used on input l
 ine 271.
 (pdftex.def)             Requested size: 131.10168pt x 104.245pt.
-<Imagenes/Bitmap/Rplot-funcons-w_avg.png, id=976, 455.7025pt x 362.35374pt>
+<Imagenes/Bitmap/Rplot-funcons-w_avg.png, id=984, 455.7025pt x 362.35374pt>
 File: Imagenes/Bitmap/Rplot-funcons-w_avg.png Graphic file (type png)
 <use Imagenes/Bitmap/Rplot-funcons-w_avg.png>
 Package pdftex.def Info: Imagenes/Bitmap/Rplot-funcons-w_avg.png  used on input
  line 274.
 (pdftex.def)             Requested size: 131.10168pt x 104.245pt.
-<Imagenes/Bitmap/Rplot-funcons-log_avg.png, id=977, 455.7025pt x 362.35374pt>
+<Imagenes/Bitmap/Rplot-funcons-log_avg.png, id=985, 455.7025pt x 362.35374pt>
 File: Imagenes/Bitmap/Rplot-funcons-log_avg.png Graphic file (type png)
 <use Imagenes/Bitmap/Rplot-funcons-log_avg.png>
 Package pdftex.def Info: Imagenes/Bitmap/Rplot-funcons-log_avg.png  used on inp
@@ -4267,7 +4267,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 233.
  [50]
-<Imagenes/Bitmap/badges.png, id=1067, 428.60126pt x 474.77374pt>
+<Imagenes/Bitmap/badges.png, id=1075, 428.60126pt x 474.77374pt>
 File: Imagenes/Bitmap/badges.png Graphic file (type png)
 <use Imagenes/Bitmap/badges.png>
 Package pdftex.def Info: Imagenes/Bitmap/badges.png  used on input line 243.
@@ -4369,7 +4369,7 @@ Package babel Info: Redefining spanish shorthand "?
 LaTeX Warning: Reference `cap2:subsec:reg-clasif' on page 54 undefined on input
  line 467.
 
-<Imagenes/Bitmap/mnist2.png, id=1093, 566.115pt x 228.855pt>
+<Imagenes/Bitmap/mnist2.png, id=1101, 566.115pt x 228.855pt>
 File: Imagenes/Bitmap/mnist2.png Graphic file (type png)
 <use Imagenes/Bitmap/mnist2.png>
 Package pdftex.def Info: Imagenes/Bitmap/mnist2.png  used on input line 512.
@@ -4401,13 +4401,13 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 528.
 [54]
-<Imagenes/Bitmap/opt-global_vs_local.png, id=1101, 578.16pt x 433.62pt>
+<Imagenes/Bitmap/opt-global_vs_local.png, id=1109, 578.16pt x 433.62pt>
 File: Imagenes/Bitmap/opt-global_vs_local.png Graphic file (type png)
 <use Imagenes/Bitmap/opt-global_vs_local.png>
 Package pdftex.def Info: Imagenes/Bitmap/opt-global_vs_local.png  used on input
  line 546.
 (pdftex.def)             Requested size: 241.49895pt x 181.12006pt.
-<Imagenes/Bitmap/opt-tiempo_vs_local.png, id=1102, 578.16pt x 433.62pt>
+<Imagenes/Bitmap/opt-tiempo_vs_local.png, id=1110, 578.16pt x 433.62pt>
 File: Imagenes/Bitmap/opt-tiempo_vs_local.png Graphic file (type png)
 <use Imagenes/Bitmap/opt-tiempo_vs_local.png>
 Package pdftex.def Info: Imagenes/Bitmap/opt-tiempo_vs_local.png  used on input
@@ -4645,7 +4645,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 57.
 [60]
-<Imagenes/Bitmap/diagrama-bci.png, id=1146, 803.0pt x 351.3125pt>
+<Imagenes/Bitmap/diagrama-bci.png, id=1154, 803.0pt x 351.3125pt>
 File: Imagenes/Bitmap/diagrama-bci.png Graphic file (type png)
 <use Imagenes/Bitmap/diagrama-bci.png>
 Package pdftex.def Info: Imagenes/Bitmap/diagrama-bci.png  used on input line 6
@@ -4739,14 +4739,14 @@ Package babel Info: Redefining spanish shorthand "?
 
 
 ]
-<Imagenes/Bitmap/P300/p300-8electrodos.png, id=1171, 530.98375pt x 551.05875pt>
+<Imagenes/Bitmap/P300/p300-8electrodos.png, id=1179, 530.98375pt x 551.05875pt>
 
 File: Imagenes/Bitmap/P300/p300-8electrodos.png Graphic file (type png)
 <use Imagenes/Bitmap/P300/p300-8electrodos.png>
 Package pdftex.def Info: Imagenes/Bitmap/P300/p300-8electrodos.png  used on inp
 ut line 48.
 (pdftex.def)             Requested size: 131.09756pt x 136.05742pt.
-<Imagenes/Bitmap/P300/p300-wave.png, id=1172, 710.655pt x 613.29124pt>
+<Imagenes/Bitmap/P300/p300-wave.png, id=1180, 710.655pt x 613.29124pt>
 File: Imagenes/Bitmap/P300/p300-wave.png Graphic file (type png)
 <use Imagenes/Bitmap/P300/p300-wave.png>
 Package pdftex.def Info: Imagenes/Bitmap/P300/p300-wave.png  used on input line
@@ -4791,7 +4791,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 62.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 62.
-<Imagenes/Bitmap/P300/images-p300.png, id=1182, 467.49657pt x 457.71pt>
+<Imagenes/Bitmap/P300/images-p300.png, id=1190, 467.49657pt x 457.71pt>
 File: Imagenes/Bitmap/P300/images-p300.png Graphic file (type png)
 <use Imagenes/Bitmap/P300/images-p300.png>
 Package pdftex.def Info: Imagenes/Bitmap/P300/images-p300.png  used on input li
@@ -4982,7 +4982,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Imagenes/Bitmap/P300/fitting_sae_ftS4.png, id=1221, 578.16pt x 433.62pt>
+<Imagenes/Bitmap/P300/fitting_sae_ftS4.png, id=1229, 578.16pt x 433.62pt>
 File: Imagenes/Bitmap/P300/fitting_sae_ftS4.png Graphic file (type png)
 <use Imagenes/Bitmap/P300/fitting_sae_ftS4.png>
 Package pdftex.def Info: Imagenes/Bitmap/P300/fitting_sae_ftS4.png  used on inp
@@ -5190,7 +5190,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 100.
  [72]
-<Imagenes/Bitmap/ImgSpeech/protocolo-imgspeech.png, id=1256, 1204.5pt x 256.96p
+<Imagenes/Bitmap/ImgSpeech/protocolo-imgspeech.png, id=1264, 1204.5pt x 256.96p
 t>
 File: Imagenes/Bitmap/ImgSpeech/protocolo-imgspeech.png Graphic file (type png)
 
@@ -5305,7 +5305,7 @@ Package babel Info: Redefining spanish shorthand "?
 LaTeX Warning: Reference `cap2:subsec:metricas' on page 75 undefined on input l
 ine 193.
 
-<Imagenes/Bitmap/ImgSpeech/fitting-ae211.png, id=1278, 578.16pt x 433.62pt>
+<Imagenes/Bitmap/ImgSpeech/fitting-ae211.png, id=1286, 578.16pt x 433.62pt>
 File: Imagenes/Bitmap/ImgSpeech/fitting-ae211.png Graphic file (type png)
 <use Imagenes/Bitmap/ImgSpeech/fitting-ae211.png>
 Package pdftex.def Info: Imagenes/Bitmap/ImgSpeech/fitting-ae211.png  used on i
@@ -5338,7 +5338,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 208.
 [75]
-<Imagenes/Bitmap/ImgSpeech/imgspeech-dnn-boxplot.png, id=1284, 578.16pt x 433.6
+<Imagenes/Bitmap/ImgSpeech/imgspeech-dnn-boxplot.png, id=1292, 578.16pt x 433.6
 2pt>
 File: Imagenes/Bitmap/ImgSpeech/imgspeech-dnn-boxplot.png Graphic file (type pn
 g)
@@ -5783,162 +5783,162 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 1.
 LaTeX Font Info:    Font shape `OMS/cmr/m/it' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 39.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 79.
+(babel)             in language  on input line 71.
  [85
 
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 93--98
-[]\T1/cmr/m/n/10 T. Dett-mers.  Deep lear-ning in a nuts-hell: His-tory and
+Underfull \hbox (badness 10000) in paragraph at lines 135--141
+[]\T1/cmr/m/n/10 V. Gon-za-lez.  A brief his-tory of ma-chi-ne lear-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 93--98
-\T1/cmr/m/n/10 trai-ning.  []$\T1/cmtt/m/n/10 https : / / devblogs . nvidia . c
-om / parallelforall /
+Underfull \hbox (badness 10000) in paragraph at lines 135--141
+\T1/cmr/m/n/10 ning.  []$\T1/cmtt/m/n/10 http : / / www . synergicpartners . co
+m / en /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--110
-\T1/cmtt/m/n/10 blogspot . com / 2016 / 03 / optimizations-[]of-[]gradient-[]de
-scent . html$[]\T1/cmr/m/n/10 .
+Underfull \hbox (badness 2426) in paragraph at lines 135--141
+\T1/cmtt/m/n/10 espanol-[]una-[]breve-[]historia-[]del-[]machine-[]learning$[]\
+T1/cmr/m/n/10 , 2018.  On-li-
  []
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 170.
+(babel)             in language  on input line 168.
 [86]
-Overfull \hbox (39.7417pt too wide) in paragraph at lines 256--261
+Overfull \hbox (39.7417pt too wide) in paragraph at lines 176--181
 \T1/cmtt/m/n/10 How-[]Google-[]Photos-[]uses-[]machine-[]learning-[]to-[]create
 -[]customized-[]albums/$[]\T1/cmr/m/n/10 .
  []
 
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 261.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 261.
-[87]
-Underfull \hbox (badness 10000) in paragraph at lines 278--283
+
+Underfull \hbox (badness 7631) in paragraph at lines 187--193
+\T1/cmr/m/n/10 ney for it.  []$\T1/cmtt/m/n/10 https : / / www . nytimes . com 
+/ 2016 / 10 / 17 / technology /
+ []
+
+
+Overfull \hbox (23.21844pt too wide) in paragraph at lines 187--193
+\T1/cmtt/m/n/10 ibm-[]is-[]counting-[]on-[]its-[]bet-[]on-[]watson-[]and-[]payi
+ng-[]big-[]money-[]for-[]it .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--201
+[]\T1/cmr/m/n/10 M. Mal-ho-tra.  How ar-ti-fi-cial in-te-lli-gen-ce (ai) is tra
+ns-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 195--201
+\T1/cmr/m/n/10 for-ming mo-bi-le tech-no-logy?  []$\T1/cmtt/m/n/10 https : / / 
+hackernoon . com /
+ []
+
+
+Overfull \hbox (86.48016pt too wide) in paragraph at lines 195--201
+\T1/cmtt/m/n/10 how-[]artificial-[]intelligence-[]ai-[]is-[]transforming-[]mobi
+le-[]technology-[]9f810d734d35$[]\T1/cmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--208
 \T1/cmtt/m/n/10 lanacion . com . ar / 1900814-[]android-[]vs-[]ios-[]quien-[]ga
 na-[]la-[]batalla$[]\T1/cmr/m/n/10 .
  []
 
 
-Underfull \hbox (badness 4967) in paragraph at lines 295--298
-[]\T1/cmr/m/n/10 M. A. Niel-sen.  Neu-ral net-works and deep lear-ning.  \T1/cm
-r/m/it/10 URL:
- []
-
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 352.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 352.
-[88]
-Underfull \hbox (badness 4954) in paragraph at lines 377--382
+Underfull \hbox (badness 4954) in paragraph at lines 256--261
 []\T1/cmr/m/n/10 D. Wang and J. Huang.  Tu-ning ja-va gar-ba-ge co-llec-tion fo
 r
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--382
+Underfull \hbox (badness 10000) in paragraph at lines 256--261
 \T1/cmr/m/n/10 spark ap-pli-ca-tions.  []$\T1/cmtt/m/n/10 https : / / databrick
 s . com / blog / 2015 / 05 / 28 /
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 377--382
+Underfull \hbox (badness 10000) in paragraph at lines 256--261
 \T1/cmtt/m/n/10 tuning-[]java-[]garbage-[]collection-[]for-[]spark-[]applicatio
 ns . html$[]\T1/cmr/m/n/10 .
  []
 
-))
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 261.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 261.
+[87]))
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 166.
 Package babel Info: Redefining spanish shorthand >>
@@ -5963,7 +5963,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 166.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 166.
- [89]
+ [88]
 \openout2 = `TeXiS/TeXiS_acron.aux'.
 
  (./TeXiS/TeXiS_acron.tex
@@ -6009,7 +6009,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 195.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 195.
- [90
+ [89
 
 
 
@@ -6053,7 +6053,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 42.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 42.
- [91
+ [90
 
 
 
@@ -6089,10 +6089,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
  ) 
 Here is how much of TeX's memory you used:
- 45248 strings out of 492982
- 1012627 string characters out of 6134895
- 1168685 words of memory out of 5000000
- 47304 multiletter control sequences out of 15000+600000
+ 45143 strings out of 492982
+ 1009950 string characters out of 6134895
+ 1168268 words of memory out of 5000000
+ 47226 multiletter control sequences out of 15000+600000
  557896 words of font info for 84 fonts, out of 8000000 for 9000
  1379 hyphenation exceptions out of 8191
  73i,19n,110p,10385b,2269s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -6123,10 +6123,10 @@ ype1/public/cm-super/sfti1000.pfb></usr/share/texmf/fonts/type1/public/cm-super
 share/texmf/fonts/type1/public/cm-super/sftt1000.pfb></usr/share/texmf/fonts/ty
 pe1/public/cm-super/sfxc0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/
 sfxc1000.pfb>
-Output written on Tesis.pdf (105 pages, 3170017 bytes).
+Output written on Tesis.pdf (104 pages, 3163513 bytes).
 PDF statistics:
- 1612 PDF objects out of 1728 (max. 8388607)
- 1413 compressed objects within 15 object streams
- 385 named destinations out of 1000 (max. 500000)
+ 1580 PDF objects out of 1728 (max. 8388607)
+ 1383 compressed objects within 14 object streams
+ 358 named destinations out of 1000 (max. 500000)
  881 words of extra memory for PDF output out of 10000 (max. 10000000)
 

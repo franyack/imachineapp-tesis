@@ -22,11 +22,6 @@ S.~Bahrampour, N.~Ramakrishnan, L.~Schott, and M.~Shah.
   learning.
 \newblock {\em arXiv preprint arXiv:1511.06435}, 2015.
 
-\bibitem{baldi2014dropout}
-P.~Baldi and P.~Sadowski.
-\newblock The dropout learning algorithm.
-\newblock {\em Artificial intelligence}, 210:78--122, 2014.
-
 \bibitem{bayer2016climin}
 J.~Bayer, C.~Osendorfer, S.~Diot-Girard, T.~R{\"u}ckstiess, and S.~Urban.
 \newblock climin - a pythonic framework for gradient-based function
@@ -39,27 +34,11 @@ Y.~Bengio.
 \newblock {\em Foundations and trends{\textregistered} in Machine Learning},
   2(1):1--127, 2009.
 
-\bibitem{bergstra2012random}
-J.~Bergstra and Y.~Bengio.
-\newblock Random search for hyper-parameter optimization.
-\newblock {\em The Journal of Machine Learning Research}, 13(1):281--305, 2012.
-
-\bibitem{bishop2006pattern}
-C.~M. Bishop.
-\newblock Pattern recognition.
-\newblock {\em Machine Learning}, 128, 2006.
-
 \bibitem{frameworkMClifton}
 M.~Clifton.
 \newblock What is a framework?
 \newblock \url{http://www.codeproject.com/Articles/5381/What-Is-A-Framework}.
 \newblock Accedido: 04-01-2016.
-
-\bibitem{cotter2011better}
-A.~Cotter, O.~Shamir, N.~Srebro, and K.~Sridharan.
-\newblock Better mini-batch algorithms via accelerated gradient methods.
-\newblock In {\em Advances in neural information processing systems}, pages
-  1647--1655, 2011.
 
 \bibitem{coulourisdistributed}
 G.~Coulouris, J.~Dollimore, and T.~Kindberg.
@@ -89,30 +68,10 @@ J.~Dean and S.~Ghemawat.
 \newblock Mapreduce: simplified data processing on large clusters.
 \newblock {\em Communications of the ACM}, 51(1):107--113, 2008.
 
-\bibitem{dettmers2015deep}
-T.~Dettmers.
-\newblock Deep learning in a nutshell: History and training.
-\newblock
-  \url{https://devblogs.nvidia.com/parallelforall/deep-learning-nutshell-history-training/}.
-\newblock Accedido: 22-02-2016.
-
 \bibitem{android2008programmers}
 J.~DiMarzio.
 \newblock {\em Android, a programmer's guide}.
 \newblock McGraw Hill Professional, 2008.
-
-\bibitem{ds2016deepdive}
-D.~D. Dive.
-\newblock Optimization of gradient descent.
-\newblock
-  \url{http://dsdeepdive.blogspot.com/2016/03/optimizations-of-gradient-descent.html}.
-\newblock Accedido: 19-10-2016.
-
-\bibitem{donoho2000high}
-D.~L. Donoho et~al.
-\newblock High-dimensional data analysis: The curses and blessings of
-  dimensionality.
-\newblock {\em AMS Math Challenges Lecture}, pages 1--32, 2000.
 
 \bibitem{erhan2010does}
 D.~Erhan, Y.~Bengio, A.~Courville, P.-A. Manzagol, P.~Vincent, and S.~Bengio.
@@ -161,52 +120,29 @@ M.~Gargenta.
 \newblock {\em Learning Android}.
 \newblock O'REILLY, 2011.
 
-\bibitem{glorot2010understanding}
-X.~Glorot and Y.~Bengio.
-\newblock Understanding the difficulty of training deep feedforward neural
-  networks.
-\newblock In {\em International conference on artificial intelligence and
-  statistics}, pages 249--256, 2010.
-
 \bibitem{gonzalez1995redes}
 J.~R.~H. Gonz{\'a}lez and V.~J.~M. Hernando.
 \newblock {\em Redes neuronales artificiales: fundamentos, modelos y
   aplicaciones}.
 \newblock Ra-ma, 1995.
 
+\bibitem{gonzalezWoods}
+R.~C. Gonz{\'a}lez and R.~E.Woods.
+\newblock {\em Digital Image Processing, 3rd. ed.}
+\newblock Prentice-Hall, 2008.
+
+\bibitem{historyML}
+V.~Gonzalez.
+\newblock A brief history of machine learning.
+\newblock
+  \url{http://www.synergicpartners.com/en/espanol-una-breve-historia-del-machine-learning},
+  2018.
+\newblock Online, Accedido: 15/09/2018.
+
 \bibitem{haykin2004comprehensive}
 S.~Haykin and N.~Network.
 \newblock A comprehensive foundation.
 \newblock {\em Neural Networks}, 2(2004), 2004.
-
-\bibitem{he2015delving}
-K.~He, X.~Zhang, S.~Ren, and J.~Sun.
-\newblock Delving deep into rectifiers: Surpassing human-level performance on
-  imagenet classification.
-\newblock In {\em Proceedings of the IEEE International Conference on Computer
-  Vision}, pages 1026--1034, 2015.
-
-\bibitem{hinton2006reducing}
-G.~E. Hinton and R.~R. Salakhutdinov.
-\newblock Reducing the dimensionality of data with neural networks.
-\newblock {\em Science}, 313(5786):504--507, 2006.
-
-\bibitem{hinton2012improving}
-G.~E. Hinton, N.~Srivastava, A.~Krizhevsky, I.~Sutskever, and R.~R.
-  Salakhutdinov.
-\newblock Improving neural networks by preventing co-adaptation of feature
-  detectors.
-\newblock {\em arXiv preprint arXiv:1207.0580}, 2012.
-
-\bibitem{hochreiter2001gradient}
-S.~Hochreiter, Y.~Bengio, P.~Frasconi, and J.~Schmidhuber.
-\newblock Gradient flow in recurrent nets: the difficulty of learning long-term
-  dependencies, 2001.
-
-\bibitem{hochreiter1997long}
-S.~Hochreiter and J.~Schmidhuber.
-\newblock Long short-term memory.
-\newblock {\em Neural computation}, 9(8):1735--1780, 1997.
 
 \bibitem{hoffmann2008efficient}
 U.~Hoffmann, J.-M. Vesin, T.~Ebrahimi, and K.~Diserens.
@@ -230,27 +166,11 @@ S.~S. Khan and M.~G. Madden.
 \newblock In {\em Irish conference on Artificial Intelligence and Cognitive
   Science}, pages 188--197. Springer, 2009.
 
-\bibitem{kingma2013auto}
-D.~P. Kingma and M.~Welling.
-\newblock Auto-encoding variational bayes.
-\newblock {\em arXiv preprint arXiv:1312.6114}, 2013.
-
-\bibitem{kohavi1995study}
-R.~Kohavi et~al.
-\newblock A study of cross-validation and bootstrap for accuracy estimation and
-  model selection.
-\newblock In {\em Ijcai}, volume~14, pages 1137--1145, 1995.
-
 \bibitem{le2013building}
 Q.~V. Le.
 \newblock Building high-level features using large scale unsupervised learning.
 \newblock In {\em Acoustics, Speech and Signal Processing (ICASSP), 2013 IEEE
   International Conference on}, pages 8595--8598. IEEE, 2013.
-
-\bibitem{lehmann2006theory}
-E.~L. Lehmann and G.~Casella.
-\newblock {\em Theory of point estimation}.
-\newblock Springer Science \& Business Media, 2006.
 
 \bibitem{organize2017google}
 M.~Lewontin.
@@ -263,16 +183,21 @@ M.~Lewontin.
 F.-F. Li and A.~Karpathy.
 \newblock Cs231n: Convolutional neural networks for visual recognition, 2015.
 
-\bibitem{lopez2008redes}
-R.~F. L{\'o}pez and J.~M.~F. Fernandez.
-\newblock {\em Las redes neuronales artificiales}.
-\newblock Netbiblo, 2008.
+\bibitem{boomML}
+S.~Lohr.
+\newblock Ibm is counting on its bet on watson, and paying big money for it.
+\newblock
+  \url{https://www.nytimes.com/2016/10/17/technology/ibm-is-counting-on-its-bet-on-watson-and-paying-big-money-for-it.html},
+  2016.
+\newblock Online, Accedido: 01/11/2018.
 
-\bibitem{marc2007efficient}
-C.~P. Marc' Aurelio~Ranzato, S.~Chopra, and Y.~LeCun.
-\newblock Efficient learning of sparse representations with an energy-based
-  model.
-\newblock In {\em Proceedings of NIPS}, 2007.
+\bibitem{AImobileTechnology}
+M.~Malhotra.
+\newblock How artificial intelligence (ai) is transforming mobile technology?
+\newblock
+  \url{https://hackernoon.com/how-artificial-intelligence-ai-is-transforming-mobile-technology-9f810d734d35},
+  2018.
+\newblock Online, Accedido: 13/08/2018.
 
 \bibitem{androidVSios}
 L.~Nacion.
@@ -281,26 +206,9 @@ L.~Nacion.
   \url{https://www.lanacion.com.ar/1900814-android-vs-ios-quien-gana-la-batalla}.
 \newblock Accedido: 07/04/2017.
 
-\bibitem{nesterov1983method}
-Y.~Nesterov.
-\newblock A method for unconstrained convex minimization problem with the rate
-  of convergence o (1/k2).
-\newblock In {\em Doklady an SSSR}, volume 269, pages 543--547, 1983.
-
 \bibitem{ng2012ufldl}
 A.~Ng, J.~Ngiam, C.~Y. Foo, Y.~Mai, and C.~Suen.
 \newblock Ufldl tutorial, 2012.
-
-\bibitem{nielsen2015neural}
-M.~A. Nielsen.
-\newblock Neural networks and deep learning.
-\newblock {\em URL: http://neuralnetworksanddeeplearning.com}, 2015.
-
-\bibitem{powers2011evaluation}
-D.~M. Powers.
-\newblock Evaluation: from precision, recall and f-measure to roc,
-  informedness, markedness and correlation.
-\newblock 2011.
 
 \bibitem{coretto2016imaginada}
 G.~Pressel and L.~Rufiner.
@@ -321,12 +229,6 @@ B.~Recht, C.~Re, S.~Wright, and F.~Niu.
 O.~Rojo.
 \newblock Introducci{\'o}n a los sistemas distribuidos, 2003.
 
-\bibitem{ruder2016optimization}
-S.~Ruder.
-\newblock An overview of gradient descent optimization algorithms.
-\newblock \url{http://sebastianruder.com/optimizing-gradient-descent/}.
-\newblock Accedido: 19-10-2016.
-
 \bibitem{ocr2007recognition}
 R.~Smith.
 \newblock An overview of the tesseract ocr engine.
@@ -336,18 +238,6 @@ R.~Smith.
 M.~Snir.
 \newblock {\em MPI--the Complete Reference: The MPI core}, volume~1.
 \newblock MIT press, 1998.
-
-\bibitem{sokolova2009systematic}
-M.~Sokolova and G.~Lapalme.
-\newblock A systematic analysis of performance measures for classification
-  tasks.
-\newblock {\em Information Processing \& Management}, 45(4):427--437, 2009.
-
-\bibitem{srivastava2014dropout}
-N.~Srivastava, G.~Hinton, A.~Krizhevsky, I.~Sutskever, and R.~Salakhutdinov.
-\newblock Dropout: A simple way to prevent neural networks from overfitting.
-\newblock {\em The Journal of Machine Learning Research}, 15(1):1929--1958,
-  2014.
 
 \bibitem{suppes1997brain}
 P.~Suppes, Z.-L. Lu, and B.~Han.
@@ -362,17 +252,6 @@ Y.~Taigman, M.~Yang, M.~Ranzato, and L.~Wolf.
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 1701--1708, 2014.
 
-\bibitem{van2014analysis}
-J.~van Doorn.
-\newblock Analysis of deep convolutional neural network architectures.
-\newblock 2014.
-
-\bibitem{vincent2008extracting}
-P.~Vincent, H.~Larochelle, Y.~Bengio, and P.-A. Manzagol.
-\newblock Extracting and composing robust features with denoising autoencoders.
-\newblock In {\em Proceedings of the 25th international conference on Machine
-  learning}, pages 1096--1103. ACM, 2008.
-
 \bibitem{tuningJavaGCspark}
 D.~Wang and J.~Huang.
 \newblock Tuning java garbage collection for spark applications.
@@ -385,34 +264,11 @@ T.~White.
 \newblock {\em Hadoop: The definitive guide}.
 \newblock " O ' Reilly Media, Inc.", 2012.
 
-\bibitem{williams1986learning}
-D.~R. G. H.~R. Williams and G.~Hinton.
-\newblock Learning representations by back-propagating errors.
-\newblock {\em Nature}, 323:533--536, 1986.
-
 \bibitem{wolpaw2004control}
 J.~R. Wolpaw and D.~J. McFarland.
 \newblock Control of a two-dimensional movement signal by a noninvasive
   brain-computer interface in humans.
 \newblock {\em Proceedings of the National Academy of Sciences of the United
   States of America}, 101(51):17849--17854, 2004.
-
-\bibitem{yang1999re}
-Y.~Yang and X.~Liu.
-\newblock A re-examination of text categorization methods.
-\newblock In {\em Proceedings of the 22nd annual international ACM SIGIR
-  conference on Research and development in information retrieval}, pages
-  42--49. ACM, 1999.
-
-\bibitem{zeiler2012adadelta}
-M.~D. Zeiler.
-\newblock Adadelta: an adaptive learning rate method.
-\newblock {\em arXiv preprint arXiv:1212.5701}, 2012.
-
-\bibitem{zou2005regularization}
-H.~Zou and T.~Hastie.
-\newblock Regularization and variable selection via the elastic net.
-\newblock {\em Journal of the Royal Statistical Society: Series B (Statistical
-  Methodology)}, 67(2):301--320, 2005.
 
 \end{thebibliography}

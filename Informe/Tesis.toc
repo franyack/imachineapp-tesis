@@ -86,5 +86,5 @@
 \contentsline {part}{V\hspace {1em}Ap\'endices}{82}{part.5}
 \contentsline {chapter}{\numberline {A}Algoritmos}{83}{appendix.Alph1}
 \contentsline {part}{Bibliograf\IeC {\'\i }a}{85}{appendix*.41}
-\contentsline {chapter}{Lista de acr\'onimos}{90}{section*.42}
-\contentsline {part}{VI\hspace {1em}Anexos}{91}{part.6}
+\contentsline {chapter}{Lista de acr\'onimos}{89}{section*.42}
+\contentsline {part}{VI\hspace {1em}Anexos}{90}{part.6}
