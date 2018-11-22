@@ -1,10 +1,11 @@
 \begin{thebibliography}{10}
 
-\bibitem{abaitua2012procesado}
-T.~Abaitua et~al.
-\newblock Procesado de se{\~n}ales eeg para un interfaz cerebro-m{\'a}quina
-  (bci).
-\newblock 2012.
+\bibitem{appsLifeCycle}
+Android.
+\newblock Actividades.
+\newblock \url{https://developer.android.com/guide/components/activities},
+  2018.
+\newblock Online, Accedido: 26/10/2018.
 
 \bibitem{androidRuntimeART}
 Android.
@@ -31,88 +32,26 @@ AppBrain.
 \newblock \url{https://www.appbrain.com/stats/number-of-android-apps}.
 \newblock Accedido: 15/10/2018.
 
-\bibitem{bahrampour2015comparative}
-S.~Bahrampour, N.~Ramakrishnan, L.~Schott, and M.~Shah.
-\newblock Comparative study of caffe, neon, theano, and torch for deep
-  learning.
-\newblock {\em arXiv preprint arXiv:1511.06435}, 2015.
+\bibitem{androidStudioOficial}
+A.~Bermudez.
+\newblock {Android Studio 2.0 ya es oficial}.
+\newblock
+  \url{https://andro4all.com/2016/04/android-studio-2-0-novedades-caracteristicas},
+  2016.
+\newblock Online, Accedido: 26/10/2017.
 
-\bibitem{bayer2016climin}
-J.~Bayer, C.~Osendorfer, S.~Diot-Girard, T.~R{\"u}ckstiess, and S.~Urban.
-\newblock climin - a pythonic framework for gradient-based function
-  optimization.
-\newblock {\em TUM Tech Report}, 2016.
-
-\bibitem{bengio2009learning}
-Y.~Bengio.
-\newblock Learning deep architectures for ai.
-\newblock {\em Foundations and trends{\textregistered} in Machine Learning},
-  2(1):1--127, 2009.
-
-\bibitem{frameworkMClifton}
-M.~Clifton.
-\newblock What is a framework?
-\newblock \url{http://www.codeproject.com/Articles/5381/What-Is-A-Framework}.
-\newblock Accedido: 04-01-2016.
-
-\bibitem{d2009toward}
-M.~D'~Zmura, S.~Deng, T.~Lappas, S.~Thorpe, and R.~Srinivasan.
-\newblock Toward eeg sensing of imagined speech.
-\newblock In {\em International Conference on Human-Computer Interaction},
-  pages 40--48. Springer, 2009.
-
-\bibitem{dasalla2009single}
-C.~S. DaSalla, H.~Kambara, M.~Sato, and Y.~Koike.
-\newblock Single-trial classification of vowel speech imagery using common
-  spatial patterns.
-\newblock {\em Neural Networks}, 22(9):1334--1339, 2009.
+\bibitem{programacionMobile}
+C.~Casado.
+\newblock Alternativas en la programacion para dispositivos moviles.
+\newblock
+  \url{http://multimedia.uoc.edu/blogs/fem/es/alternativas-en-la-programacion-para-dispositivos-moviles/},
+  2017.
+\newblock Online, Accedido: 30/09/2018.
 
 \bibitem{android2008programmers}
 J.~DiMarzio.
 \newblock {\em Android, a programmer's guide}.
 \newblock McGraw Hill Professional, 2008.
-
-\bibitem{erhan2010does}
-D.~Erhan, Y.~Bengio, A.~Courville, P.-A. Manzagol, P.~Vincent, and S.~Bengio.
-\newblock Why does unsupervised pre-training help deep learning?
-\newblock {\em Journal of Machine Learning Research}, 11(Feb):625--660, 2010.
-
-\bibitem{farwell1988talking}
-L.~A. Farwell and E.~Donchin.
-\newblock Talking off the top of your head: toward a mental prosthesis
-  utilizing event-related brain potentials.
-\newblock {\em Electroencephalography and clinical Neurophysiology},
-  70(6):510--523, 1988.
-
-\bibitem{farwell1991truth}
-L.~A. Farwell and E.~Donchin.
-\newblock The truth will out: Interrogative polygraphy (``lie detection'') with
-  event-related brain potentials.
-\newblock {\em Psychophysiology}, 28(5):531--547, 1991.
-
-\bibitem{fayad1997object}
-M.~Fayad and D.~C. Schmidt.
-\newblock Object-oriented application frameworks.
-\newblock {\em Communications of the ACM}, 40(10):32--38, 1997.
-
-\bibitem{ferrado2016filtering}
-L.~Ferrado and M.~Cuenca-Acuna.
-\newblock Filtrando eventos de seguridad en forma conservativa mediante deep
-  learning.
-\newblock pages 94--101. 45 JAIIO, 2016.
-\newblock {ISSN:} 2451--7585.
-
-\bibitem{forslund2003neural}
-P.~Forslund.
-\newblock A neural network based brain-computer interface for classification of
-  movement related eeg.
-\newblock 2003.
-
-\bibitem{CIMFowler}
-M.~Fowler.
-\newblock Continous integration.
-\newblock \url{http://martinfowler.com/articles/continuousIntegration.html}.
-\newblock Accedido: 05-10-2016.
 
 \bibitem{gonzalez1995redes}
 J.~R.~H. Gonz{\'a}lez and V.~J.~M. Hernando.
@@ -143,11 +82,6 @@ S.~Haykin and N.~Network.
 \newblock A comprehensive foundation.
 \newblock {\em Neural Networks}, 2(2004), 2004.
 
-\bibitem{hoffmann2008efficient}
-U.~Hoffmann, J.-M. Vesin, T.~Ebrahimi, and K.~Diserens.
-\newblock Esto es una prueba.
-\newblock {\em Journal of Neuroscience methods}, 167(1):115--125, 2008.
-
 \bibitem{nativeApplications}
 O.~Hosting.
 \newblock Ventajas y desventajas de las aplicaciones moviles nativas.
@@ -155,17 +89,6 @@ O.~Hosting.
   \url{https://okhosting.com/blog/ventajas-desventajas-de-las-aplicaciones-moviles-nativas},
   2017.
 \newblock Online, Accedido: 22/01/2018.
-
-\bibitem{karau2015learning}
-H.~Karau, A.~Konwinski, P.~Wendell, and M.~Zaharia.
-\newblock {\em Learning Spark: Lightning-Fast Big Data Analysis}.
-\newblock O ' Reilly Media, Inc., 2015.
-
-\bibitem{khan2009survey}
-S.~S. Khan and M.~G. Madden.
-\newblock A survey of recent trends in one class classification.
-\newblock In {\em Irish conference on Artificial Intelligence and Cognitive
-  Science}, pages 188--197. Springer, 2009.
 
 \bibitem{le2013building}
 Q.~V. Le.
@@ -179,10 +102,6 @@ M.~Lewontin.
 \newblock
   \url{https://www.csmonitor.com/Technology/2016/0324/How-Google-Photos-uses-machine-learning-to-create-customized-albums/}.
 \newblock Accedido: 02/10/2018.
-
-\bibitem{li2015cs231n}
-F.-F. Li and A.~Karpathy.
-\newblock Cs231n: Convolutional neural networks for visual recognition, 2015.
 
 \bibitem{boomML}
 S.~Lohr.
@@ -207,28 +126,10 @@ L.~Nacion.
   \url{https://www.lanacion.com.ar/1900814-android-vs-ios-quien-gana-la-batalla}.
 \newblock Accedido: 07/04/2017.
 
-\bibitem{ng2012ufldl}
-A.~Ng, J.~Ngiam, C.~Y. Foo, Y.~Mai, and C.~Suen.
-\newblock Ufldl tutorial, 2012.
-
-\bibitem{coretto2016imaginada}
-G.~Pressel and L.~Rufiner.
-\newblock Dise{\~n}o y elaboraci{\'o}n de una base de datos p{\'u}blica de
-  registros electroencefalogr{\'a}ficos orientados a la clasificaci{\'o}n de
-  habla imaginada.
-\newblock {\em Proyecto Final de Bioingenier{\'\i}a, FIUNER, Oro Verde, Entre
-  R{\'\i}os}, 2016.
-
 \bibitem{ocr2007recognition}
 R.~Smith.
 \newblock An overview of the tesseract ocr engine.
 \newblock {\em Document Analysis and Recognition, IEEE}, 2:629--633, 2007.
-
-\bibitem{suppes1997brain}
-P.~Suppes, Z.-L. Lu, and B.~Han.
-\newblock Brain wave recognition of words.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  94(26):14965--14969, 1997.
 
 \bibitem{taigman2014deepface}
 Y.~Taigman, M.~Yang, M.~Ranzato, and L.~Wolf.
@@ -236,19 +137,5 @@ Y.~Taigman, M.~Yang, M.~Ranzato, and L.~Wolf.
   verification.
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 1701--1708, 2014.
-
-\bibitem{tuningJavaGCspark}
-D.~Wang and J.~Huang.
-\newblock Tuning java garbage collection for spark applications.
-\newblock
-  \url{https://databricks.com/blog/2015/05/28/tuning-java-garbage-collection-for-spark-applications.html}.
-\newblock Accedido: 18-12-2015.
-
-\bibitem{wolpaw2004control}
-J.~R. Wolpaw and D.~J. McFarland.
-\newblock Control of a two-dimensional movement signal by a noninvasive
-  brain-computer interface in humans.
-\newblock {\em Proceedings of the National Academy of Sciences of the United
-  States of America}, 101(51):17849--17854, 2004.
 
 \end{thebibliography}

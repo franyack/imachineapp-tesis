@@ -2,24 +2,11 @@ This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: Tesis.aux
 A level-1 auxiliary file: Cascaras/cover.aux
-A level-1 auxiliary file: Cascaras/dedicatoria.aux
-A level-1 auxiliary file: Cascaras/agradecimientos.aux
 A level-1 auxiliary file: Cascaras/resumen.aux
 A level-1 auxiliary file: TeXiS/TeXiS_toc.aux
 A level-1 auxiliary file: Capitulos/Parte1.aux
 A level-1 auxiliary file: Capitulos/01Capitulo1.aux
 A level-1 auxiliary file: Capitulos/01Capitulo2.aux
-A level-1 auxiliary file: Capitulos/Parte2.aux
-A level-1 auxiliary file: Capitulos/02Capitulo1.aux
-A level-1 auxiliary file: Capitulos/02Capitulo2.aux
-A level-1 auxiliary file: Capitulos/Parte3.aux
-A level-1 auxiliary file: Capitulos/03Capitulo0.aux
-A level-1 auxiliary file: Capitulos/03Capitulo1.aux
-A level-1 auxiliary file: Capitulos/03Capitulo2.aux
-A level-1 auxiliary file: Capitulos/Parte4.aux
-A level-1 auxiliary file: Capitulos/04Capitulo1.aux
-A level-1 auxiliary file: Apendices/ParteApendices.aux
-A level-1 auxiliary file: Apendices/01ApendiceA.aux
 A level-1 auxiliary file: Cascaras/bibliografia.aux
 The style file: abbrv.bst
 A level-1 auxiliary file: TeXiS/TeXiS_acron.aux
@@ -29,48 +16,44 @@ Database file #2: spark.bib
 Database file #3: eeg.bib
 Database file #4: learninspy.bib
 Database file #5: citasCapitulo2.bib
-Warning--empty journal in abaitua2012procesado
-Warning--empty booktitle in ferrado2016filtering
-Warning--empty journal in forslund2003neural
-You've used 41 entries,
+You've used 21 entries,
             2118 wiz_defined-function locations,
-            764 strings with 11558 characters,
-and the built_in function-call counts, 12260 in all, are:
-= -- 1213
-> -- 545
-< -- 5
-+ -- 223
-- -- 176
-* -- 702
-:= -- 2040
-add.period$ -- 139
-call.type$ -- 41
-change.case$ -- 205
+            631 strings with 7521 characters,
+and the built_in function-call counts, 5328 in all, are:
+= -- 531
+> -- 181
+< -- 2
++ -- 78
+- -- 54
+* -- 210
+:= -- 885
+add.period$ -- 77
+call.type$ -- 21
+change.case$ -- 86
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 449
-empty$ -- 1023
-format.name$ -- 176
-if$ -- 2599
+cite$ -- 21
+duplicate$ -- 210
+empty$ -- 507
+format.name$ -- 54
+if$ -- 1170
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 31
-newline$ -- 220
-num.names$ -- 82
-pop$ -- 300
+int.to.str$ -- 21
+missing$ -- 12
+newline$ -- 121
+num.names$ -- 42
+pop$ -- 166
 preamble$ -- 1
-purify$ -- 169
+purify$ -- 69
 quote$ -- 0
-skip$ -- 337
+skip$ -- 160
 stack$ -- 0
-substring$ -- 642
-swap$ -- 88
-text.length$ -- 5
+substring$ -- 213
+swap$ -- 45
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 154
-warning$ -- 3
-while$ -- 117
-width$ -- 43
-write$ -- 447
-(There were 3 warnings)
+type$ -- 76
+warning$ -- 0
+while$ -- 50
+width$ -- 23
+write$ -- 240

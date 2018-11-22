@@ -32,16 +32,16 @@ En este capítulo se presenta al sistema operativo Android, plataforma en la que 
 %-------------------------------------------------------------------
 \label{cap2:sec:dispositivos-moviles}
 
-Uno de los ámbitos multimedia con más crecimiento en los últimos años ha sido el de los dispositivos móviles. La llegada de los \textit{smartphones} disparó en su momento la creación de aplicaciones móviles que aprovechan la capacidad multimedia de estos dispositivos. La aparición y el despegue poco después de las tabletas ha convertido el desarrollo de aplicaciones para dispositivos móviles en un pilar de la industria multimedia.
+[DONE]Uno de los ámbitos multimedia con más crecimiento en los últimos años ha sido el de los dispositivos móviles. La llegada de los \textit{smartphones} disparó en su momento la creación de aplicaciones móviles que aprovechan la capacidad multimedia de estos dispositivos. La aparición y el despegue poco después de las tabletas ha convertido el desarrollo de aplicaciones para dispositivos móviles en un pilar de la industria multimedia.
 
-Existen lenguajes o \textit{frameworks} que nos permiten la creación de programas multidispositivo (se programa una vez y se ejecuta en cualquier dispositivo), pero para aplicaciones complejas que requieren un gran rendimiento, la programación suele hacerse en los lenguajes nativos de cada sistema operativo, con lo que debe reescribirse la aplicación para cada sistema operativo. Como se ha dicho anteriormente, para la realización de este trabajo el desarrollo de la aplicación se hizo sobre el lenguaje nativo del sistema operativo Android.
+[DONE]Existen lenguajes o \textit{frameworks} que nos permiten la creación de programas multidispositivo (se programa una vez y se ejecuta en cualquier dispositivo), pero para aplicaciones complejas que requieren un gran rendimiento, la programación suele hacerse en los lenguajes nativos de cada sistema operativo, con lo que debe reescribirse la aplicación para cada uno de ellos\cite{programacionMobile}. Como se ha dicho anteriormente, para la realización de este trabajo el desarrollo de la aplicación se hizo sobre el lenguaje nativo del sistema operativo Android.
 %------------------------------------------------------------------
 \subsection{Plataforma Android}
 %-------------------------------------------------------------------
 \label{cap2:subsec:plataforma-android}
-Es un sistema operativo diseñado para dispositivos móviles, desarrollado inicialmente por \textit{Android Inc.}, una empresa comprada por Google en 2005. El lanzamiento se realizó el 5 de noviembre de 2007 y Google liberó la mayoría de código Android bajo licencia Apache, conocida por ser libre y de código abierto\cite{android2008programmers}.
+[DONE]Es un sistema operativo diseñado para dispositivos móviles, desarrollado inicialmente por \textit{Android Inc.}, una empresa comprada por Google en 2005. El lanzamiento se realizó el 5 de noviembre de 2007 y Google liberó la mayoría de código Android bajo licencia Apache, conocida por ser libre y de código abierto\cite{android2008programmers}.
 
-Actualmente, se pueden encontrar más de 2.500.000 de aplicaciones desarrolladas para esta plataforma\cite{numberAndroidApps}. Además, cuenta con un entorno de desarrollo integrado oficial (IDE), denominado \textit{Android Studio} realizado por la empresa JetBrain. El mismo fue anunciado en mayo de 2013 y reemplazó a Eclipse como IDE oficial para el desarrollo de aplicaciones.
+[DONE]Actualmente, se pueden encontrar más de 2.500.000 de aplicaciones desarrolladas para esta plataforma\cite{numberAndroidApps}. Además, cuenta con un entorno de desarrollo integrado oficial (IDE), denominado \textit{Android Studio}, realizado por la empresa JetBrain. El mismo fue anunciado en mayo de 2013 y reemplazó a Eclipse como IDE oficial para el desarrollo de aplicaciones\cite{androidStudioOficial}.
 
 A continuación, se mencionan algunas de las características más destacables de la plataforma de desarrollo:
 
@@ -68,13 +68,11 @@ A continuación, se mencionan algunas de las características más destacables de l
 %-------------------------------------------------------------------
 \label{cap2:subsec:maquinavirtual-ART}
 
-Android Runtime (ART) es el entorno actual de ejecución de aplicaciones utilizado por el sistema operativo móvil Android. ART reemplaza a Dalvik, que es la máquina virtual utilizada originalmente por Android, y lleva a cabo la transformación de la aplicación en instrucciones de máquina, que luego son ejecutadas por el entorno de ejecución nativo del dispositivo.
+[DONE]Android Runtime (ART) es el entorno actual de ejecución de aplicaciones utilizado por el sistema operativo móvil Android. ART reemplaza a Dalvik, que es la máquina virtual utilizada originalmente por Android, y lleva a cabo la transformación de la aplicación en instrucciones de máquina, que luego son ejecutadas por el entorno de ejecución nativo del dispositivo.
 
-A diferencia de Dalvik, que utiliza \textit{just- in-time} (JIT) para compilar el código cada vez que se inicia una aplicación, ART introduce el uso de \textit{ahead-of-time} (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación. Este archivo es utilizado al abrir la aplicación, por lo que se evita que la aplicación se compile continuamente, cada vez que ésta es ejecutada. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería. Al mismo tiempo, ART trae mejoras en el rendimiento, tales como la recolección de basura, aplicaciones de depuración y perfilado\cite{androidRuntimeART}.
+[DONE]A diferencia de Dalvik, que utiliza \textit{just- in-time} (JIT) para compilar el código cada vez que se inicia una aplicación, ART introduce el uso de \textit{ahead-of-time} (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación. Este archivo es utilizado al abrir la aplicación, por lo que se evita que la aplicación se compile continuamente, cada vez que ésta es ejecutada. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería. Al mismo tiempo, ART trae mejoras en el rendimiento, tales como la recolección de basura, aplicaciones de depuración y perfilado\cite{androidRuntimeART}.
 
-Para mantener la compatibilidad con versiones anteriores, ART utiliza el mismo código de bytes de entrada que Dalvik.
-
-En la Figura \ref{fig:dalvikvsART} se pueden apreciar las diferencias que existe entre la compilación que se hacía con la maquina virtual \textit{Dalvik} y como se hace hoy en día con \textit{Android Runtime}
+[DONE]Para mantener la compatibilidad con versiones anteriores, ART utiliza el mismo código de bytes de entrada que Dalvik. En la Figura \ref{fig:dalvikvsART} se pueden apreciar las diferencias que existe entre la compilación que se hacía con la maquina virtual \textit{Dalvik} y como se hace hoy en día con \textit{Android Runtime}
 
 \begin{figure}[t]
 	\begin{center}
@@ -86,7 +84,7 @@ En la Figura \ref{fig:dalvikvsART} se pueden apreciar las diferencias que existe
 \end{figure}
 
 %------------------------------------------------------------------
-\subsection{Componentes básicos de una aplicación Android}
+\subsection{[DONE]Componentes básicos de una aplicación Android}
 %-------------------------------------------------------------------
 \label{cap2:subsec:componentes-basicos-app-android}
 
@@ -97,15 +95,13 @@ Existen cinco componentes con los que se puede crear una aplicación Android, y e
 	
 	Para construir la interfaz gráfica, existen componentes denominados Views (vistas) con los que se dispone de numerosos controles básicos, como por ejemplo, botones, listas desplegables o cuadros de texto, pudiendo extender la funcionalidad de estos controles o crear otros personalizados.
 	
-	Por lo general, una aplicación está formada por diferentes Activities, que están más o menos relacionadas entre sí. Siempre existe la \textit{actividad principal}, quien es la encargada de iniciar la aplicación. Para crear una nueva actividad, se debe crear una nueva clase la cual heredará de la clase Activity, definiendo su propia interfaz de usuario y las funcionalidades que esta aportará a la aplicación.
+	Por lo general, una aplicación está formada por diferentes \textit{activities}, que están más o menos relacionadas entre sí. Siempre existe la Actividad Principal, quien es la encargada de iniciar la aplicación. Para crear una nueva actividad, se debe crear una nueva clase la cual heredará de la clase Activity, definiendo su propia interfaz de usuario y las funcionalidades que esta aportará a la aplicación.
 	
 	Por último, es importante mencionar que existen componentes que funcionan dentro del ámbito de una Activity, denominados \textit{Fragments}, los cuales amplían y enriquecen las posibilidades de interacción con el usuario.
 	
 	\item \textbf{Service:} componente sin interfaz gráfica que se ejecuta en segundo plano. Son llamados a través de otro componente, como puede ser una Activity, y seguirán ejecutándose en segundo plano aunque la Activity haya finalizado o, incluso, aunque se haya salido de la aplicación. Un ejemplo es una aplicación para reproducir música, la cual sigue funcionando mientras el usuario navega por otras aplicaciones.
 	
-	\item \textbf{Intent:} Un intent es el elemento básico de comunicación entre los componentes que estamos describiendo, es decir, mediante este objeto se puede llamar a un Activity, iniciar un servicio, enviar un mensaje broadcast, incluso se podría iniciar otra aplicación si así se necesitara.
-	
-	El uso más importante es para iniciar Activities, por lo que puede considerarse como la \textit{unión} entre ellas.
+	\item \textbf{Intent:} Un intent es el elemento básico de comunicación entre los componentes que estamos describiendo, es decir, mediante este objeto se puede llamar a un Activity, iniciar un servicio, enviar un mensaje broadcast, incluso se podría iniciar otra aplicación si así se necesitara. El uso más importante de este componente es el de iniciar Activities, por lo que puede considerarse como la \textit{unión} entre ellas.
 	
 	Las intent están formados por un paquete de información. Contienen detalle de interés para el componente que las recibe, como la acción que será ejecutada y los datos necesarios, más información de interés para el sistema Android, como la categoría del componente que maneja el intent y las intrucciones de cómo lanzar la Activity.
 	
@@ -113,14 +109,12 @@ Existen cinco componentes con los que se puede crear una aplicación Android, y e
 	
 	Un ejemplo de Content Provider es el que utiliza Android para gestionar la información de un contacto, mediante el cual cualquier otra aplicación podrá acceder a ellos haciendo una petición sobre la interfaz que gestiona dicha herramienta (\textit{ContentResolver})
 	
-	\item \textbf{Broadcast Receiver:} es un componente que detecta y reacciona frente a mensajes globales del sistema, como puede ser batería baja, SMS recibido, llamada perdida, etc. Además de esto, una aplicación puede iniciar un Broadcast Receiver (por ejemplo, para saber si se han descargado datos al dispositivo y poder ser usados por esa aplicación).
-	
-	Al igual que ocurre con los Services, un Broadcast Receiver tampoco muestra ninguna interfaz gráfica.
+	\item \textbf{Broadcast Receiver:} es un componente que detecta y reacciona frente a mensajes globales del sistema, como puede ser batería baja, SMS recibido, llamada perdida, etc. Además de esto, una aplicación puede iniciar un Broadcast Receiver (por ejemplo, para saber si se han descargado datos al dispositivo y poder ser usados por esa aplicación). Al igual que ocurre con los Services, un Broadcast Receiver tampoco muestra ninguna interfaz gráfica.
 \end{itemize}
 
 
 %------------------------------------------------------------------
-\subsection{Aplicaciones: actividades y ciclo de vida}
+\subsection{[DONE]Aplicaciones: actividades y ciclo de vida}
 %-------------------------------------------------------------------
 \label{cap2:subsec:activity-lifecycle}
 
@@ -128,9 +122,9 @@ En Android, el tiempo de vida de las aplicaciones está generalmente controlado p
 
 Como se dijo en la sección anterior, una \textit{activity} es un componente de la aplicación que contiene una pantalla con la que los usuarios pueden interactuar. A cada actividad se le asigna una ventana en la que puede "dibujar" su interfaz de usuario.
 
-Una aplicación generalmente consiste en múltiples actividades vinculadas de forma flexible entre sí. Normalmente, una actividad en una aplicación se especifica como la "principal", lo que significa que se presentará al usuario cuando éste inicia la aplicación por primera vez. Cada una de ellas puede a su vez iniciar otra actividad para poder realizar diferentes acciones. Cada vez que se inicia una nueva, se detiene la actividad anterior, pero el sistema las conserva en una pila (la "pila de actividades"). Cuando se inicia una actividad nueva, se la incluye en la pila y capta el foco del usuario. La pila de actividades cumple con el mecanismo de pila \textit{LIFO}: el último en entrar es el primero en salir, por lo que, cuando el usuario termina de interactuar con la actividad actual y presiona el botón Atrás, se quita de la pila (se destruye) y se reanuda la actividad anterior.
+Una aplicación generalmente consiste en múltiples actividades vinculadas de forma flexible entre sí. Normalmente, una actividad en una aplicación se especifica como la "principal", lo que significa que se presentará al usuario cuando éste inicia la aplicación por primera vez. Cada una de ellas puede a su vez iniciar otra actividad para poder realizar diferentes acciones. Cada vez que se inicia una nueva, se detiene la actividad anterior, pero el sistema las conserva en una pila (la "pila de actividades"). Cuando se inicia una actividad nueva, se la incluye en la pila y capta el foco del usuario. La pila de actividades cumple con el mecanismo \textit{LIFO}: el último en entrar es el primero en salir, por lo que, cuando el usuario termina de interactuar con la actividad actual y presiona el botón Atrás, se quita de la pila (se destruye) y se reanuda la actividad anterior.
 
-Administrar el ciclo de vida de las actividades mediante la implementación de métodos \textit{callbacks}(CITAR) es fundamental para desarrollar aplicaciones potentes y flexibles. El ciclo de vida de una actividad se ve directamente afectado por su asociación con otras actividades, con sus tareas y con la pila de actividades.
+Administrar el ciclo de vida de las actividades mediante la implementación de métodos \textit{callbacks} es fundamental para desarrollar aplicaciones potentes y flexibles. El ciclo de vida de una actividad se ve directamente afectado por su asociación con otras actividades, con sus tareas y con la pila de actividades\cite{appsLifeCycle}.
 
 Una actividad puede existir básicamente en tres estados:
 \begin{itemize}
