@@ -42,12 +42,12 @@ El auge de las aplicaciones para dispositivos móviles ha traído consigo la neces
 	
 	\item Google, a través de su producto \textit{Google Photos}, ofrece una solución denominada \textit{Organize}, la cual realiza tareas de organización sobre las imágenes de sus usuarios. Ésta proporciona distintos conjuntos de imágenes basándose en características u objetos que tengan en común, como pueden ser perros, autos, el cielo, etc\cite{organize2017google}.
 	
-	\item La aplicación fotos, perteneciente al sistema operativo Windows 10, permite buscar texto en las imágenes. La misma utiliza una tecnología denominada OCR\cite{ocr2007recognition} (reconocimiento óptico de caracteres), la cual permite detectar no solo a la palabra, sino también encuentra la posición de la que tiene en la imagen. 
+	\item La aplicación fotos, perteneciente al sistema operativo Windows 10, permite buscar texto en las imágenes. La misma utiliza una tecnología denominada OCR\cite{ocr2007recognition} (reconocimiento óptico de caracteres), la cual permite detectar no sólo a la palabra, sino también la posición tiene en la imagen. 
 	
 	
 \end{itemize}
 
-Todos los ejemplos enumerados y la gran mayoría de soluciones, realizan el procesamiento de la información (texto, imágenes o videos) aprovechando los recursos que ofrece la "nuble" (\textit{cloud}). Para el usuario final, esto tiene un costo no menor, el cual significa aceptar que su información será compartida (y quizás utilizada) con la compañía que le esté brindando el servicio. Es por ello que una restricción principal para este proyecto fue decidir que la mismas será \textit{on premise}, lo que significa que el procesamiento de la información se realizará exclusivamente en el dispositivo, sin la necesidad de establecer una conexión a Internet para poder aprovechar alguna de sus funcionalidades.
+Todos los ejemplos enumerados y la gran mayoría de soluciones, realizan el procesamiento de la información (texto, imágenes o videos) aprovechando los recursos que ofrece la "nuble" (\textit{cloud}). Para el usuario final, esto tiene un costo no menor, el cual significa aceptar que su información será compartida (y quizás utilizada) con la compañía que le esté brindando el servicio. Es por ello que una restricción principal para este proyecto fue decidir que la misma será \textit{on premise}, lo que significa que el procesamiento de la información se realizará exclusivamente en el dispositivo, sin la necesidad de establecer una conexión a Internet para poder aprovechar alguna de sus funcionalidades.
 
 %-------------------------------------------------------------------
 \section{Justificación}
@@ -131,9 +131,8 @@ Se realizó la documentación de la Especificación de Requisitos del Software (ERS
 		\item NumberProgressBar\footnote{Repositorio oficial: \url{https://github.com/daimajia/NumberProgressBar}} 1.4
 	\end{itemize}
 	\item \textbf{Interfaz de usuario}: XML 1.1
-	%\item \textbf{Testeo e integración continua}: Nose, Coveralls, Travis CI.
 	\item \textbf{Control de versiones}: Git v2.7.4
-	%\item \textbf{Documentación}: Sphinx v1.2.3
+
 \end{itemize}
 
 %-------------------------------------------------------------------
@@ -142,16 +141,7 @@ Se realizó la documentación de la Especificación de Requisitos del Software (ERS
 \label{cap1:subsec:evolucion}
 
 Se prevén las siguientes cuestiones tecnológicas a mejorar o integrar en el futuro del producto:
-%\begin{itemize}
-%	\item Elección semi-automática de híper-parámetros en el modelado de redes neuronales mediante computación evolutiva (e.g. algoritmos genéticos, BSO, etc.).
-%	\item Administración de trabajos o \textit{scheduler} para automatizar la ejecución de experimentos en el modelado.
-%	\item Interfaz gráfica con mejor experiencia de usuario (por ejemplo, con CherryPy y/o Apache Zeppelin).
-%	\item Integración con tecnologías referidas a administración de clúster (como Apache Mesos y YARN).
-%	\item Integración con tecnologías referidas a almacenamiento de datos (como Apache Cassandra y HDFS).
-%	\item Adaptación a una imagen en Docker para despliegue del framework en entornos virtualizados.
-%	\item Incorporación de otras técnicas complementarias de aprendizaje maquinal (e.g. K-means, DBN, redes recurrentes, etc.).
-%	\item Mejora de los módulos que realizan cálculos algebraicos, integrando nuevas soluciones que paralelicen dicho cómputo (e.g. librerías eficientes a nivel CPU, módulos que realicen cómputos en GPU).
-%\end{itemize}
+
 \begin{itemize}
 	\item Incorporar otras características que complementen la descripción de las imágenes para el procesamiento, afín de que ayuden a obtener mejores resultados de agrupamiento. 
 	\item Agilizar la reorganización de imágenes en los grupos obtenidos, agregando nuevas funcionalidades a la hora de tratar el resultado final las cuales mejoren la experiencia de usuario.

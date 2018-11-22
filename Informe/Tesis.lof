@@ -2,43 +2,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Compilaci\'on con Dalvik-VM y compilaci\'on con ART-VM\relax }}{9}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Ciclo de vida de una actividad.\relax }}{12}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Inteligencia artificial, aprendizaje maquinal, y aprendizaje profundo\relax }}{13}{figure.caption.8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Aprendizaje maquinal: nuevo paradigma de programaci\'on\relax }}{14}{figure.caption.9}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Modelo matem\'atico de una neurona.\relax }}{15}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Arquitectura b\'asica de un MLP con 4 capas.\relax }}{16}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Red neuronal convolucional (CNN)\relax }}{18}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Agrupamiento basado en grafos\relax }}{19}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Representaci\'on gr\'afica del algoritmo de Markov\relax }}{20}{figure.caption.14}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Pila de producci\'on usada por Google aprox. en 2015.\relax }}{25}{figure.caption.16}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Comparaci\'on de esquema convencional MapReduce con su versi\'on iterativa implementada en Iterative MapReduce.\relax }}{33}{figure.caption.17}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Logo del framework desarrollado.\relax }}{36}{figure.caption.18}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{43}{figure.caption.19}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{43}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{43}{subfigure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{43}{subfigure.2.3}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Captura de pantalla del README publicado en GitHub, donde se muestran los badges que certifican la aplicaci\'on correcta del esquema dado.\relax }}{51}{figure.caption.20}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Comparaci\'on de frameworks de aprendizaje profundo en t\'erminos de la duraci\'on para realizar distintos tipos de salida, restringiendo la ejecuci\'on a 1 hilo de procesamiento \relax }}{53}{figure.caption.21}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Comparaci\'on de frameworks de aprendizaje profundo en t\'erminos de la duraci\'on para realizar distintos tipos de salida, restringiendo la ejecuci\'on a 12 hilos de procesamiento \relax }}{53}{figure.caption.22}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Reconstrucci\'on de las im\'agenes de MNIST mediante un autocodificador. Arriba las im\'agenes originales, y abajo las reconstruidas.\relax }}{55}{figure.caption.24}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Duraci\'on del modelado en \'epocas variando la configuraci\'on de su optimizaci\'on, donde se distingue el paralelismo P utilizado y el tipo de duraci\'on\relax }}{56}{figure.caption.25}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Duraci\'on del modelado por cada \'epoca en forma global, variando la configuraci\'on de su optimizaci\'on\relax }}{57}{figure.caption.26}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Diagrama en bloques del funcionamiento de un BCI.\relax }}{61}{figure.caption.28}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Configuraci\'on de 8 electrodos elegida para los experimentos en P300\relax }}{64}{figure.caption.29}
-\contentsline {figure}{\numberline {7.2}{\ignorespaces Promediado de las ondas del electrodo Pz. Arriba, para los sujetos con discapacidad (S1-S4). Abajo, sujetos sin discapacidad (S6-S9)\relax }}{64}{figure.caption.29}
-\contentsline {figure}{\numberline {7.3}{\ignorespaces Imagenes usadas para evocar el potencial P300 durante el registro de se\~nales de EEG.\relax }}{65}{figure.caption.30}
-\contentsline {figure}{\numberline {7.4}{\ignorespaces Ajuste fino del modelo SAE con OCC sobre el Sujeto 4, en t\'erminos de la medida F1-Score.\relax }}{70}{figure.caption.34}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {8.1}{\ignorespaces Secuencia presentada en pantalla para la adquisici\'on de registros del habla imaginada\relax }}{73}{figure.caption.35}
-\contentsline {figure}{\numberline {8.2}{\ignorespaces Ajuste del AE-211 sobre los datos de todos los sujetos durante el entrenamiento, en t\'erminos del coeficiente $R^2$.\relax }}{76}{figure.caption.36}
-\contentsline {figure}{\numberline {8.3}{\ignorespaces Diagramas de caja y bigotes para cada m\'etrica de clasificaci\'on utilizada, construidos en base a todos los resultados de modelar redes neuronales por cada sujeto sobre los datos con mayor reducci\'on de dimensionalidad.\relax }}{77}{figure.caption.39}
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {9.1}{\ignorespaces Gr\'afico de torta con las contribuciones de cada \'area curricular hacia el proyecto desarrollado.\relax }}{80}{figure.caption.40}
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Compilaci\'on con Dalvik-VM y compilaci\'on con ART-VM. Recuperado de: \url {https://es.wikipedia.org/wiki/Android_Runtime}\relax }}{9}{figure.caption.5}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Ciclo de vida de una actividad. Recuperado de: \url {https://developer.android.com/guide/components/activities}\relax }}{12}{figure.caption.6}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Inteligencia artificial, aprendizaje maquinal, y aprendizaje profundo\relax }}{13}{figure.caption.7}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Aprendizaje maquinal: nuevo paradigma de programaci\'on\relax }}{14}{figure.caption.8}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Modelo matem\'atico de una neurona.\relax }}{16}{figure.caption.9}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Arquitectura b\'asica de un MLP con 4 capas.\relax }}{17}{figure.caption.10}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Red neuronal convolucional (CNN)\relax }}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Agrupamiento basado en grafos\relax }}{19}{figure.caption.12}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Representaci\'on gr\'afica del algoritmo de Markov\relax }}{20}{figure.caption.13}

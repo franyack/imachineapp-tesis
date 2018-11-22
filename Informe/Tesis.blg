@@ -9,7 +9,6 @@ A level-1 auxiliary file: TeXiS/TeXiS_toc.aux
 A level-1 auxiliary file: Capitulos/Parte1.aux
 A level-1 auxiliary file: Capitulos/01Capitulo1.aux
 A level-1 auxiliary file: Capitulos/01Capitulo2.aux
-A level-1 auxiliary file: Capitulos/01Capitulo3.aux
 A level-1 auxiliary file: Capitulos/Parte2.aux
 A level-1 auxiliary file: Capitulos/02Capitulo1.aux
 A level-1 auxiliary file: Capitulos/02Capitulo2.aux
@@ -33,45 +32,45 @@ Database file #5: citasCapitulo2.bib
 Warning--empty journal in abaitua2012procesado
 Warning--empty booktitle in ferrado2016filtering
 Warning--empty journal in forslund2003neural
-You've used 46 entries,
+You've used 41 entries,
             2118 wiz_defined-function locations,
-            782 strings with 12241 characters,
-and the built_in function-call counts, 14580 in all, are:
-= -- 1421
-> -- 691
-< -- 8
-+ -- 281
-- -- 228
-* -- 889
-:= -- 2403
-add.period$ -- 147
-call.type$ -- 46
-change.case$ -- 243
+            764 strings with 11558 characters,
+and the built_in function-call counts, 12260 in all, are:
+= -- 1213
+> -- 545
+< -- 5
++ -- 223
+- -- 176
+* -- 702
+:= -- 2040
+add.period$ -- 139
+call.type$ -- 41
+change.case$ -- 205
 chr.to.int$ -- 0
-cite$ -- 49
-duplicate$ -- 536
-empty$ -- 1186
-format.name$ -- 228
-if$ -- 3080
+cite$ -- 44
+duplicate$ -- 449
+empty$ -- 1023
+format.name$ -- 176
+if$ -- 2599
 int.to.chr$ -- 0
-int.to.str$ -- 46
-missing$ -- 39
-newline$ -- 238
-num.names$ -- 92
-pop$ -- 347
+int.to.str$ -- 41
+missing$ -- 31
+newline$ -- 220
+num.names$ -- 82
+pop$ -- 300
 preamble$ -- 1
-purify$ -- 204
+purify$ -- 169
 quote$ -- 0
-skip$ -- 412
+skip$ -- 337
 stack$ -- 0
-substring$ -- 796
-swap$ -- 116
-text.length$ -- 8
+substring$ -- 642
+swap$ -- 88
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 170
+type$ -- 154
 warning$ -- 3
-while$ -- 137
-width$ -- 48
-write$ -- 487
+while$ -- 117
+width$ -- 43
+write$ -- 447
 (There were 3 warnings)

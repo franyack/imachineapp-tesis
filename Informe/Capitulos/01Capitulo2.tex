@@ -17,10 +17,10 @@ Henry Ford
 
 \begin{resumen}
 %Este capítulo pretende refrescar conocimientos, e introducir otros, para entender las bases teóricas utilizadas en todo el trabajo realizado. Inicialmente, se exhibe la noción de aprendizaje maquinal en sistemas de regresión y clasificación, desde la forma supervisada hasta la no supervisada, y cómo las redes neuronales se utilizan para componer dichos sistemas. Finalmente se profundiza en aspectos del aprendizaje profundo, lo cual en conjunto con todos los fundamentos presentados abarcan las características implementadas para este trabajo.
-En este capítulo se presenta al sistema operativo Android, plataforma donde se llevará el despliegue de la aplicación. También, se expondrán los fundamentos del aprendizaje profundo, más específicamente aquel utilizado para problemas de visión computacional, herramienta principal en lo que corresponde al procesamiento de las imágenes. Por último, se introducirá sobre algoritmos de clustering, en especial conceptos que abarcan las características del algoritmo implementado para este trabajo.
+En este capítulo se presenta al sistema operativo Android, plataforma en la que se realizó el desarrollo y despliegue de la aplicación. También, se expondrán los fundamentos del aprendizaje profundo referido al enfoque utilizado en este proyecto respecto a visión computacional. Por último, se introducirán contenidos acerca de algoritmos de clustering, en especial conceptos que abarcan las características del algoritmo implementado para este trabajo.
 
 \end{resumen}
-
+ 
 %En los últimos años, el ``aprendizaje maquinal'' (mejor conocido en inglés como \textit{machine learning}) adquirió bastante popularidad, presentando algoritmos que aproximan en diversas tareas el concepto de inteligencia artificial \cite{bengio2009learning}. Este campo estudia técnicas para construir sistemas capaces de aprender a partir de datos a realizar diversos tipos de tareas sin requerir que se les indique cómo hacerlas. Esto se emplea en una gran cantidad de aplicaciones en donde no es factible diseñar y programar de forma explícita algoritmos para realizar tareas complejas, como visión computacional, motores de búsqueda, reconocimiento de voz, predicción de fraudes, etc. 
 %
 %Los tipos de sistemas que se diseñan para realizar estas tareas mencionadas por lo general siguen dos tipos de aprendizaje: supervisado, y no supervisado \cite{bishop2006pattern}. A su vez, dichas tareas a realizar sobre datos se suelen clasificar típicamente en las siguientes categorías: a) clasificación, donde el sistema aprende de forma supervisada a asignar clases; b) regresión, aprendiendo supervisadamente a predecir una variable continua; c) agrupamiento o \textit{clustering}, para dividir los datos en grupos pero de forma no supervisada; d) reducción de dimensiones, mapeando los datos de entrada en un espacio de menor dimensión. En la siguiente sección de este capítulo se detallan los contenidos referidos a la construcción de estos sistemas, para conocer cómo se implementan los algoritmos de aprendizaje maquinal a partir de un conjunto de datos.
@@ -31,24 +31,29 @@ En este capítulo se presenta al sistema operativo Android, plataforma donde se l
 \section{Programación en dispositivos móviles}
 %-------------------------------------------------------------------
 \label{cap2:sec:dispositivos-moviles}
-%A continuación se procede a detallar la implementación de un sistema con aprendizaje maquinal en forma supervisada para realizar tareas de regresión y clasificación, con el fin de hacer familiar el tratamiento de funciones objetivo, computando sus gradientes y optimizando los objetivos sobre un conjunto de parámetros. Estas herramientas básicas van a formar la base para los algoritmos implementados en el presente trabajo.
 
+Uno de los ámbitos multimedia con más crecimiento en los últimos años ha sido el de los dispositivos móviles. La llegada de los \textit{smartphones} disparó en su momento la creación de aplicaciones móviles que aprovechan la capacidad multimedia de estos dispositivos. La aparición y el despegue poco después de las tabletas ha convertido el desarrollo de aplicaciones para dispositivos móviles en un pilar de la industria multimedia.
+
+Existen lenguajes o \textit{frameworks} que nos permiten la creación de programas multidispositivo (se programa una vez y se ejecuta en cualquier dispositivo), pero para aplicaciones complejas que requieren un gran rendimiento, la programación suele hacerse en los lenguajes nativos de cada sistema operativo, con lo que debe reescribirse la aplicación para cada sistema operativo. Como se ha dicho anteriormente, para la realización de este trabajo el desarrollo de la aplicación se hizo sobre el lenguaje nativo del sistema operativo Android.
 %------------------------------------------------------------------
 \subsection{Plataforma Android}
 %-------------------------------------------------------------------
 \label{cap2:subsec:plataforma-android}
 Es un sistema operativo diseñado para dispositivos móviles, desarrollado inicialmente por \textit{Android Inc.}, una empresa comprada por Google en 2005. El lanzamiento se realizó el 5 de noviembre de 2007 y Google liberó la mayoría de código Android bajo licencia Apache, conocida por ser libre y de código abierto\cite{android2008programmers}.
 
-Actualmente, se pueden encontrar más de 2.500.000 de aplicaciones desarrolladas para esta plataforma\cite{numberAndroidApps}. 
-
-Además, provee de un entorno de desarrollo integrado oficial (IDE), denominado \textit{Android Studio}. El mismo fue anunciado en mayo de 2013 y reemplazó a Eclipse como IDE oficial para el desarrollo de aplicaciones.
+Actualmente, se pueden encontrar más de 2.500.000 de aplicaciones desarrolladas para esta plataforma\cite{numberAndroidApps}. Además, cuenta con un entorno de desarrollo integrado oficial (IDE), denominado \textit{Android Studio} realizado por la empresa JetBrain. El mismo fue anunciado en mayo de 2013 y reemplazó a Eclipse como IDE oficial para el desarrollo de aplicaciones.
 
 A continuación, se mencionan algunas de las características más destacables de la plataforma de desarrollo:
 
 \begin{itemize}
-	\item Java es el lenguaje de programación en el que están escritas todas las aplicaciones Android nativas.
 	
-	\item A la hora de establecer prioridades, el sistema operativo no hace diferencia entre las aplicaciones instaladas por defecto en el dispositivo y aquellas implementadas por otros desarrolladores. Lo cual, hace posible que se puedan crear aplicaciones que tengan tanta importancia para el sistema operativo del teléfono como las que vienen de fábrica\cite{learningAndroid}. 
+	\item Java es el lenguaje de programación en el que están escritas todas las aplicaciones Android nativas\cite{nativeApplications}.
+	
+	\item Es Open Source, por lo que no es necesario pagar ninguna licencia para poder utilizar la plataforma.
+	
+	\item Existe una gran comunidad activa en comparación al desarrollo en otros sistemas operativos móviles, por lo que cuenta con mantenimiento y actualizaciones continuas.  
+	
+	\item Las aplicaciones se proveen a través de los \textit{Android Application Package} (APK), similar a los archivos con extensión .exe en Windows. Las mismas deben ser firmadas digitalmente antes de poder ser desplegadas pero no tienen ninguna restricción en comparación a las que tienen otros sistemas operativos, agilizando en términos de desarrollo y testing ya que una opción es firmar la aplicación en modo depuración\cite{appSigning}.
 	
 	\item Provee de renderizado en tiempo real.
 	
@@ -62,19 +67,20 @@ A continuación, se mencionan algunas de las características más destacables de l
 \subsection{Entorno ejecución Android Runtime}
 %-------------------------------------------------------------------
 \label{cap2:subsec:maquinavirtual-ART}
-Android Runtime (ART) es el entorno actual de ejecución de aplicaciones utilizado por el sistema operativo móvil Android. ART reemplaza a Dalvik, que es la máquina virtual utilizada originalmente por Android, y lleva a cabo la transformación de la aplicación en instrucciones de máquina, que luego son ejecutadas por el entorno de ejecución nativo del dispositivo (CITAR).
 
-A diferencia de Dalvik, que utiliza \textit{just- in-time} (JIT) para compilar el código cada vez que se inicia una aplicación, ART introduce el uso de \textit{ahead-of-time} (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación. Este archivo es utilizado al abrir la aplicación, por lo que se evita que la aplicación se compile continuamente, cada vez que ésta es ejecutada. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería. Al mismo tiempo, ART trae mejoras en el rendimiento, tales como la recolección de basura, aplicaciones de depuración y perfilado.(CITAR)
+Android Runtime (ART) es el entorno actual de ejecución de aplicaciones utilizado por el sistema operativo móvil Android. ART reemplaza a Dalvik, que es la máquina virtual utilizada originalmente por Android, y lleva a cabo la transformación de la aplicación en instrucciones de máquina, que luego son ejecutadas por el entorno de ejecución nativo del dispositivo.
+
+A diferencia de Dalvik, que utiliza \textit{just- in-time} (JIT) para compilar el código cada vez que se inicia una aplicación, ART introduce el uso de \textit{ahead-of-time} (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación. Este archivo es utilizado al abrir la aplicación, por lo que se evita que la aplicación se compile continuamente, cada vez que ésta es ejecutada. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería. Al mismo tiempo, ART trae mejoras en el rendimiento, tales como la recolección de basura, aplicaciones de depuración y perfilado\cite{androidRuntimeART}.
 
 Para mantener la compatibilidad con versiones anteriores, ART utiliza el mismo código de bytes de entrada que Dalvik.
 
-En la Figura \ref{fig:dalvikvsART} (TODO: COMO HAGO PARA QUE LA IMAGEN APAREZCA DEBAJO DE ESTE PARRAFO?) se pueden apreciar las diferencias que existe entre la compilación que se hacía con la maquina virtual \textit{Dalvik} y como se hace hoy en día con \textit{Android Runtime}
+En la Figura \ref{fig:dalvikvsART} se pueden apreciar las diferencias que existe entre la compilación que se hacía con la maquina virtual \textit{Dalvik} y como se hace hoy en día con \textit{Android Runtime}
 
 \begin{figure}[t]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]%
 		{Imagenes/Bitmap/DalvikVSART}
-		\caption{Compilación con Dalvik-VM y compilación con ART-VM}
+		\caption{Compilación con Dalvik-VM y compilación con ART-VM. Recuperado de: \url{https://es.wikipedia.org/wiki/Android_Runtime}}
 		\label{fig:dalvikvsART}
 	\end{center}
 \end{figure}
@@ -84,7 +90,7 @@ En la Figura \ref{fig:dalvikvsART} (TODO: COMO HAGO PARA QUE LA IMAGEN APAREZCA 
 %-------------------------------------------------------------------
 \label{cap2:subsec:componentes-basicos-app-android}
 
-Existen cinco componentes con los que se puede crear una aplicación Android, y ellos son: Activities, Services, Intents, Content Provider y Broadcast Receivers. Android facilita la creación de aplicaciones gracias al uso de un conjunto de componentes de software reutilizables. A continuación, se detallará que función cumple cada uno de ellos:
+Existen cinco componentes con los que se puede crear una aplicación Android, y ellos son: Activities, Services, Intents, Content Provider y Broadcast Receivers\cite{appFundamentals}. Android facilita la creación de aplicaciones gracias al uso de un conjunto de componentes de software reutilizables. A continuación, se detallará que función cumple cada uno de ellos:
 
 \begin{itemize}
 	\item \textbf{Activity:} componente principal de la interfaz gráfica de una aplicación. A cada Activity se le asigna una ventana en la cual se dibuja la interfaz de usuario, con la cual éste podrá interaccionar para realizar las diversas acciones que hayamos contemplado en la aplicación. 
@@ -118,7 +124,7 @@ Existen cinco componentes con los que se puede crear una aplicación Android, y e
 %-------------------------------------------------------------------
 \label{cap2:subsec:activity-lifecycle}
 
-En Android, el tiempo de vida de las aplicaciones está generalmente controlado por el sistema operativo y no por el usuario como es usual. Cada aplicación se ejecuta en un proceso y si el sistema operativo lo cree necesario lo elimina, como por ejemplo si necesita liberar memoria(CITAR).
+En Android, el tiempo de vida de las aplicaciones está generalmente controlado por el sistema operativo y no por el usuario como es usual. Cada aplicación se ejecuta en un proceso y si el sistema operativo lo cree necesario lo elimina, como por ejemplo si necesita liberar memoria\cite{haseman2009android}.
 
 Como se dijo en la sección anterior, una \textit{activity} es un componente de la aplicación que contiene una pantalla con la que los usuarios pueden interactuar. A cada actividad se le asigna una ventana en la que puede "dibujar" su interfaz de usuario.
 
@@ -135,13 +141,13 @@ Una actividad puede existir básicamente en tres estados:
 	\item \textbf{Detenida:} La actividad está completamente opacada por otra (se encuentra en "segundo plano"). Una actividad detenida también permanece "viva" (el objeto se conserva en memoria, mantiene toda la información de estado y miembro, pero no está anexado al administrador de ventanas). Sin embargo, ya no está visible para el usuario y el sistema puede eliminarla.
 \end{itemize}
 
-Cuando una actividad entra y sale de los diferentes estados que se describieron arriba, esto se notifica a través de diferentes métodos \textit{callback}. En conjunto, estos métodos definen el ciclo de vida completo de una actividad, como se puede observar en la figura \ref{fig:activity-lifecycle}.
+Cuando una actividad entra y sale de los diferentes estados que se describieron arriba, esto se notifica a través de diferentes métodos \textit{callback}. En conjunto, estos métodos definen el ciclo de vida completo de una actividad, como se puede observar en la Figura \ref{fig:activity-lifecycle}.
 
 \begin{figure}[t]
 	\begin{center}
 		\includegraphics[width=0.8\textwidth]%
 		{Imagenes/Bitmap/activity_lifecycle}
-		\caption{Ciclo de vida de una actividad.}
+		\caption{Ciclo de vida de una actividad. Recuperado de: \url{https://developer.android.com/guide/components/activities}}
 		\label{fig:activity-lifecycle}
 	\end{center}
 \end{figure}
