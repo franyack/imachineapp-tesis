@@ -405,12 +405,12 @@ A continuación, se explicarán brevemente cada uno de estos métodos:
 
 
 %-------------------------------------------------------------------
-\section{Fundamentos del aprendizaje profundo}
+\section{[WIP]Fundamentos del aprendizaje profundo}
 %-------------------------------------------------------------------
 \label{cap2:sec:deeplearning}
 
 %A partir de la introducción sobre  \textit{deep learning} realizada en la sección Resumen de este trabajo, así como los antecedentes de sus aplicaciones exitosas mencionados en la Sección \ref{cap1:sec:background}, en los siguiente apartados se procede a profundizar acerca de las características que ofrece en el modelado a diferencia de las redes neuronales básicas ya detalladas. 
-En la siguiente sección, se realizará una introducción sobre conceptos relacionados a redes neuronales, aprendizaje maquinal y aprendizaje profundo, conceptos que pertenecen a la inteligencia artificial. El último de ellos, en particular, fue fundamental en el desarrollo de este proyecto, ya que a partir de uno de estos algoritmos se logra la caracterización de cada imagen.
+En la siguiente sección, se realizará una introducción sobre conceptos relacionados a redes neuronales, aprendizaje maquinal y aprendizaje profundo, conceptos que pertenecen a la inteligencia artificial. El último de ellos, en particular, fue fundamental en el desarrollo de este proyecto, ya que a partir de uno de sus conceptos se logra la caracterización las imágenes en la aplicación.
 
 %ya hace un tiempo estuvo tomando relevancia en el mundo informático gracias al constante avance que se logra en la resolución de problemas relacionados al reconocimiento e interpretación de imágenes.
 
@@ -419,7 +419,7 @@ En la siguiente sección, se realizará una introducción sobre conceptos relaciona
 %-------------------------------------------------------------------
 \label{cap2:subsec:ai-ml-dl}
 
-Para comenzar, se debe definir claramente de que se está hablando cuando se menciona a la inteligencia artificial. ¿De que se tratan los conceptos de inteligencia artificial (\textbf{AI}), aprendizaje maquinal (\textbf{ML}) y aprendizaje profundo (\textbf{DL}) (ver imagen \ref{fig:ai-ml-dl})? ¿Cómo están relacionados entre ellos?
+Para comenzar, se debe definir claramente de que se está hablando cuando se menciona a la inteligencia artificial. ¿De que se tratan los conceptos de inteligencia artificial (\textbf{AI}, del inglés \textit{``Artificial Intelligence''}), aprendizaje maquinal (\textbf{ML}) y aprendizaje profundo (\textbf{DL}, del inglés \textit{``Deep Learning''}) (ver Figura \ref{fig:ai-ml-dl})? ¿Cómo están relacionados entre ellos?
 
 \begin{figure}[t]
 	\begin{center}
@@ -435,7 +435,7 @@ Para comenzar, se debe definir claramente de que se está hablando cuando se menc
 %-------------------------------------------------------------------
 \label{cap2:subsec:inteligencia-artificial}
 
-La inteligencia artificial nació en los años 1950s, cuando un conjunto de pioneros dedicados al campo de las ciencias de la computación se comenzaron a preguntar como las computadoras podrían ser hechas para "pensar". Una concisa definición del campo podría ser la que sigue: \textit{el esfuerzo de automatizar tareas intelectuales, normalmente realizadas por humanos}. Como tal, la AI es un campo general que incluye al aprendizaje maquinal y al profundo, pero que también incluye muchos más conceptos que no involucran ningún \textit{aprendizaje}. Los primeros juegos de ajedrez por computadora, por ejemplo, sólo envolvían un montón de reglas preestablecidas escritas por programadores con un alto nivel de conocimiento y de ayuda proveniente de expertos en la materia. Este concepto es conocido como ``inteligencia artificial simbólica'', y fue muy popular entre los años 50 y 80 gracias al boom de los sistemas expertos creados en esos años.
+La inteligencia artificial nació en los años 1950s, cuando un conjunto de pioneros dedicados al campo de las ciencias de la computación se comenzaron a preguntar como las computadoras podrían ser hechas para "pensar". Una concisa definición del campo podría ser la que sigue: \textit{el esfuerzo de automatizar tareas intelectuales, normalmente realizadas por humanos}. Como tal, la AI es un campo general que incluye al aprendizaje maquinal y al profundo, pero que también incluye muchos más conceptos que no involucran ningún \textit{aprendizaje}. Los primeros juegos de ajedrez por computadora, por ejemplo, sólo envolvían un montón de reglas preestablecidas escritas por programadores con un alto nivel de conocimiento y de ayuda proveniente de expertos en la materia. Este concepto es conocido como ``inteligencia artificial simbólica'', y fue muy popular entre los años 50 y 80 gracias al boom de los sistemas expertos creados en esos años.\cite{chollet2017deep}
 
 Aunque la AI simbólica provee buenas resoluciones para problemas bien definidos, lógicos, tales como el ajedrez, estos no sirven para obtener buenas aproximaciones a problemas relacionados a la clasificación de imágenes, reconocimiento del habla y traducción de lenguaje, entre otros. Por lo que una nueva aproximación tomó el lugar de la AI simbólica: el aprendizaje maquinal (en ingles: \textit{Machine Learning}).
 
@@ -446,7 +446,7 @@ Aunque la AI simbólica provee buenas resoluciones para problemas bien definidos,
 
 El aprendizaje maquinal surge a partir de esta pregunta: ¿puede una computadora ir mas allá ``de lo que los humanos saben'' con el objetivo de conseguir mejores resultados y aprender por ella misma como mejorar tareas concretas, sin que se le especifique cómo hacerlo?
 
-Esta pregunta abrió la puerta a un nuevo paradigma de programación. En la programación clásica, como por ejemplo la inteligencia artificial simbólica, el humano escribe todas las reglas (a través de sus programas) y los datos se procesan acorde a lo que ellas dicen, y luego se obtiene una posible respuesta (Ver \ref{fig:machinelearningnewparadigm}). En cambio, con el \textit{machine learning}, los datos de entrada por parte de los humanos son tan bien conocidos como la respuesta esperada por ellos, por lo que verdaderamente importa son las reglas que se obtienen, ya que estas serán aplicadas a nuevos datos de entrada para producir respuestas originales.
+Esta pregunta abrió la puerta a un nuevo paradigma de programación. En la programación clásica, como por ejemplo la inteligencia artificial simbólica, el humano escribe todas las reglas (a través de sus programas) y los datos se procesan acorde a lo que ellas dicen, y luego se obtiene una posible respuesta (ver Figura \ref{fig:machinelearningnewparadigm}). En cambio, con el \textit{machine learning}, los datos de entrada por parte de los humanos son tan bien conocidos como la respuesta esperada por ellos, por lo que verdaderamente importa son las reglas que se obtienen, ya que estas serán aplicadas a nuevos datos de entrada para producir respuestas originales.\cite{chollet2017deep}
 
 \begin{figure}[t]
 	\begin{center}
@@ -464,6 +464,8 @@ Un sistema realizado bajo el paradigma del aprendizaje maquinal es \textit{entre
 
 Un ejemplo podría ser automatizar la tarea de etiquetar aquellas imágenes que se corresponden a unas vacaciones. Lo que se debe hacer es presentar al sistema de aprendizaje maquinal un montón de imágenes que ya fueron etiquetadas por humanos, y éste aprendería reglas estadísticas para asociar aquellas que se corresponden a este tipo de imágenes diferenciando de aquellas que no se corresponderían a este grupo.
 
+La tarea descripta arriba es un claro ejemplo de un problema de \textbf{clasificación}, altamente relacionado a la problemática tratada en este proyecto donde el ML encuadra perfectamente como opción de resolución. Otros ejemplos de aplicación podrían ser problemas de Regresión, Aprendizaje no Supervisado, \textit{Reinforcement Learning}, etc.\cite{alpaydin2009introduction}
+
 %-------------------------------------------------------------------
 \subsubsection{Aprendizaje Profundo}
 %-------------------------------------------------------------------
@@ -471,7 +473,7 @@ Un ejemplo podría ser automatizar la tarea de etiquetar aquellas imágenes que se
 
 El \textit{deep learning} es un subcampo específico del aprendizaje maquinal: una nueva manera de aprender representación desde los datos poniendo énfasis en sucesivas \textit{capas} desde las cuales se van obteniendo representaciones cada vez más significativas. Lo profundo (\textit{deep}) en este subcampo del aprendizaje maquinal no hace referencia a ningún tipo de entendimiento profundo logrado por este enfoque, sino que está por la idea de sucesivas capas de representación por las que van pasando los datos. Modelos actuales envuelven entre diez o incluso miles de capaz sucesivas de representación y todas ellas aprenden de manera automática a partir de ser expuestas a los datos de entrada.
 
-Estas capas de representación están conformadas por modelos llamados \textit{redes neuronales}. Este término está referenciado en la neurobiología, pero aunque algunos de los conceptos centrales en el aprendizaje profundo fueran desarrollados en parte tomando como inspiración el entendimiento humano del cerebro, los modelos \textit{deep learning} no son modelos del cerebro. No existe evidencia de que el cerebro humano implemente algo parecido a lo que se hace en esta ciencia de la computación.
+Estas capas de representación están conformadas por modelos llamados \textit{redes neuronales}. Este término está referenciado en la neurobiología, pero aunque algunos de los conceptos centrales en el aprendizaje profundo fueran desarrollados en parte tomando como inspiración el entendimiento humano del cerebro, los modelos \textit{deep learning} no son modelos del cerebro. No existe evidencia de que el cerebro humano implemente algo parecido a lo que se hace en esta ciencia de la computación.\cite{chollet2017deep}
 
 %-------------------------------------------------------------------
 \subsubsection{Redes neuronales}
@@ -491,7 +493,7 @@ Las \textbf{RNA}s son implementadas en computadoras, tanto en programas de softw
 	\end{center}
 \end{figure}
 
-Para modelar el comportamiento de las neuronas, la idea es que las sinápsis que producen puedan controlarse mediante \textit{pesos sinápticos} que definan una magnitud de la influencia que ejerce una con otra (y también dirección, al poder excitar o inhibir mediante pesos positivos o negativos, correspondientemente). Los pesos sinápticos $w_0$ multiplican las señales de entrada $x_0$ para ejercer una suma ponderada en el soma, y si el resultado supera un cierto umbral la neurona se ``activa'' enviando un estímulo hacia su salida. Dicha suma puede incorporar además un término de sesgo $b$ que participa sin multiplicarse por la entrada. En este modelo se considera que no interesa conocer el preciso tiempo en que se activa la neurona sino la frecuencia en que ocurre, por lo cual ello es representado mediante una \textit{función de activación} \cite{haykin2004comprehensive}. En la Figura \ref{fig:neurona_modelo} se representa gráficamente el modelo explicado, el cual constituye lo que se denomina como ``perceptrón simple'. 
+Para modelar el comportamiento de las neuronas, la idea es que las sinápsis que producen puedan controlarse mediante \textit{pesos sinápticos} que definan una magnitud de la influencia que ejerce una con otra (y también dirección, al poder excitar o inhibir mediante pesos positivos o negativos, correspondientemente). Los pesos sinápticos $w_0$ multiplican las señales de entrada $x_0$ para ejercer una suma ponderada en el soma, y si el resultado supera un cierto umbral la neurona se ``activa'' enviando un estímulo hacia su salida. Dicha suma puede incorporar además un término de sesgo $b$ que participa sin multiplicarse por la entrada \cite{learninspy2016tesis}. En este modelo se considera que no interesa conocer el preciso tiempo en que se activa la neurona sino la frecuencia en que ocurre, por lo cual ello es representado mediante una \textit{función de activación} \cite{haykin2004comprehensive}. En la Figura \ref{fig:neurona_modelo} se representa gráficamente el modelo explicado, el cual constituye lo que se denomina como ``perceptrón simple'. 
 
 Para modelar una red neuronal artificial las neuronas se agrupan en capas, de forma tal que todas las unidades de una capa se conectan con todas las neuronas de sus capas próximas para formar una estructura interconectada. En la forma más simple, se tiene una capa de entrada que proyecta la señal entrante en una capa de salida. Cuando se incorporan capas intermedias (denominadas capas ocultas), la red adquiere más niveles de procesamiento entre su entrada y salida, y lo que se forma es un ``perceptrón multicapa'' (conocido en inglés como \textit{Multi Layer Perceptron} o \acs{MLP}) \cite{haykin2004comprehensive}. En esta configuración, para producir la salida de la red se computan sucesivamente todas las activaciones una capa tras otra, donde puede notarse que una red con $n$ capas equivale a tener $n$ perceptrones simples en cascada, donde la salida del primero es la entrada del segundo y así sucesivamente. Además, cada capa puede tener diferente número de neuronas, e incluso distinta función de activación. 
 
@@ -504,28 +506,37 @@ Para modelar una red neuronal artificial las neuronas se agrupan en capas, de fo
 	\end{center}
 \end{figure}
 
-Siguiendo el modelo matemático de un perceptrón simple, los pesos sinápticos ahora pueden expresarse en conjunto de forma vectorial como matrices, así como también el sesgo se representa como un vector. Por lo tanto, dada un vector de entrada $x$, la suma ponderada efectuada en una capa se expresa como un producto entre la matriz de pesos sinápticos $W$ y dicha entrada $x$, en la cual también se suma el vector de sesgo o \textit{bias} $b$. Al resultado de esto se le aplica la función de activación, con lo cual se produce la salida final de la capa. En la Figura \ref{fig:mlp} se representa la arquitectura de un perceptrón multicapa, mostrando las interacciones que tienen sus unidades desde la entrada hasta su salida. 
+Siguiendo el modelo matemático de un perceptrón simple, los pesos sinápticos ahora pueden expresarse en conjunto de forma vectorial como matrices, así como también el sesgo se representa como un vector. Por lo tanto, dada un vector de entrada $x$, la suma ponderada efectuada en una capa se expresa como un producto entre la matriz de pesos sinápticos $W$ y dicha entrada $x$, en la cual también se suma el vector de sesgo o \textit{bias} $b$. Al resultado de esto se le aplica la función de activación, con lo cual se produce la salida final de la capa. En la Figura \ref{fig:mlp} se representa la arquitectura de un perceptrón multicapa, mostrando las interacciones que tienen sus unidades desde la entrada hasta su salida \cite{learninspy2016tesis}. 
 
 %-------------------------------------------------------------------
-\section{Aprendizaje profundo aplicado en problemas de visión computacional}
+\section{[WIP]Aprendizaje profundo aplicado en problemas de visión computacional}
 %-------------------------------------------------------------------
 \label{cap2:sec:deeplearning-for-computer-vision}
 
 A partir de la introducción sobre \textit{computer vision} realizada en la sección Motivación de este documento, así como los antecedentes de sus aplicaciones exitosas mencionados allí también, se procede a profundizar acerca de las diferencias que ofrece la resolución de problemas de visión computacional aplicando técnicas de aprendizaje profundo, en comparación con las metodologías convencionales y utilizadas para el procesamiento digital de imágenes.
 
-El proceso entero es llamado \textbf{extracción de características}, y la elegancia del procesamiento de señales y procesamiento digital de imágenes es que los algoritmos han sido diseñados para extraer características de las imágenes, tal como contornos, bordes, texturas, etc. Existen una gran variedad de ellos, tanto libres como privativos: SIFT y SURF los cuales se encuentran bajo patente, y otros como ORB, FAST y BRISK los cuales son libres. Todos ellos, describen cada imagen y son usados como entrada para algoritmos de aprendizaje maquinal, por los cuales se hará la creación de funciones hipótesis (modelos), que luego pueden ser utilizados para resolver ejemplos diferentes a los que se usaron como entrenamiento. 
+El proceso se conoce como \textbf{extracción de características}, y la elegancia del procesamiento de señales y procesamiento digital de imágenes es que los algoritmos han sido diseñados para adquirir y extraer características de las imágenes, tal como contornos, bordes, texturas, etc. Existen una gran variedad de técnicas y algoritmos, tanto libres como con licencia. Por ejemplo: SIFT y SURF los cuales se encuentran bajo patente, y ORB, FAST y BRISK los cuales son libres \cite{karami2017image}. Todos ellos, describen de alguna manera a las imágenes y son usados como entrada para algoritmos de aprendizaje maquinal, por los cuales se hará la creación de funciones hipótesis (modelos), que luego pueden ser utilizados para resolver ejemplos diferentes a los que se usaron como entrenamiento. 
 
-Por otra parte, los algoritmos de visión computacional que aplican aprendizaje profundo, transforman las imágenes digitales en representaciones que son diferentes a la imagen original e incrementan la información acerca del resultado final. Se puede pensar a una red profunda como una operación de muchas etapas donde la información se va destilando, ya que los datos pasan a través de sucesivos filtros y sale \textit{purificada}.%TODO: Imagen 1.6 pagina 9
+Por otro lado, los algoritmos de visión computacional que aplican aprendizaje profundo, transforman las imágenes digitales en representaciones que son diferentes a la imagen original e incrementan la información acerca del resultado final. Se puede pensar a una red profunda como una operación de muchas etapas donde la información se va destilando, ya que los datos pasan a través de sucesivos filtros y sale \textit{purificada} (ver Figura \ref{fig:deepRepresentation}) \cite{chollet2017deep}.
 
-Estas redes se denominan convolucionales (\textbf{CNN}) y actualmente son el estado del arte en lo que refiere a problemas de clasificación de imágenes. CNN aplica una serie de filtros sobre los datos crudos de las imágenes (píxeles) para extraer y aprender características, las cuales luego el modelo usará para clasificar. Estas redes está compuestas por tres componentes:
+\begin{figure}[t]
+	\begin{center}
+		\includegraphics[width=0.8\textwidth]%
+		{Imagenes/Bitmap/deepRepresentation}
+		\caption{Representación de un modelo de aprendizaje profundo, para clasificación de dígitos manuscritos. Recuperado de \cite{chollet2017deep}}
+		\label{fig:deepRepresentation}
+	\end{center}
+\end{figure}
+
+Estas redes se denominan convolucionales (\textbf{CNN}) y actualmente son el estado del arte en lo que refiere a problemas de clasificación de imágenes \cite{introCNN}. CNN aplica una serie de filtros sobre los datos crudos de las imágenes (píxeles) para extraer y aprender características, las cuales luego el modelo usará para clasificar. Estas redes está compuestas por tres componentes:
 
 \begin{itemize}
 	\item \textbf{Capas convolucionales:} son las encargadas de aplicar una serie de filtros en la imagen. Para cada subregión de la misma, se aplican un conjunto de operaciones matemáticas que producen un valor único por cada una de ellas.
-	\item \textbf{Capas pooling(no encontre una buena traduccion):} obtienen los datos extraídos por las capas convolucionales con el objetivo de reducir la dimensión en orden de acortar los tiempos de proceso.
+	\item \textbf{Capas pooling:} obtienen los datos extraídos por las capas convolucionales con el objetivo de reducir la dimensión en orden de acortar los tiempos de proceso.
 	\item \textbf{Capas densas (totalmente conectadas):} realizan la clasificación de las características extraídas por las capas convolucionales y reducidas por las capas de pooling. En una capa densa, cada nodo de la capa está conectado a cada nodo de la capa anterior.
 \end{itemize}
 
-Normalmente, una CNN se compone de una pila de módulos convolucionales que realizan la extracción de características. Cada módulo consta de una capa convolucional seguida de una capa de pooling. El último módulo convolucional es seguido por una o más capas densas que realizan la clasificación. La última capa densa en una CNN contiene un solo nodo para cada clase de objetivo en el modelo (todas las clases posibles que el modelo puede predecir), la cual a través de una función de activación genera un valor entre 0-1 para cada nodo (la suma de todos estos valores es igual a 1), lo cual representa en que porcentaje se corresponde a cada clase (Ver \ref{fig:cnn}). 
+Normalmente, una CNN se compone de una pila de módulos convolucionales que realizan la extracción de características. Cada módulo consta de una capa convolucional seguida de una capa de pooling. El último módulo convolucional es seguido por una o más capas densas que realizan la clasificación. La última capa densa en una CNN contiene un solo nodo para cada clase de objetivo en el modelo (todas las clases posibles que el modelo puede predecir), la cual a través de una función de activación genera un valor entre 0-1 para cada nodo (la suma de todos estos valores es igual a 1), lo cual representa en que porcentaje se corresponde a cada clase (ver Figura \ref{fig:cnn}) \cite{introCNN}. 
 
 \begin{figure}[t]
 	\begin{center}
@@ -535,6 +546,21 @@ Normalmente, una CNN se compone de una pila de módulos convolucionales que reali
 		\label{fig:cnn}
 	\end{center}
 \end{figure}
+
+Hoy en día el \textit{Deep Learning} sigue en constante crecimiento. Al ser un concepto relativamente nuevo, la gran cantidad de recursos que existen puede ser un punto abrumador, para aquellos que buscan entrar en el campo. Una buena manera de mantenerse al día con las últimas tendencias es interactuar con la comunidad, y saber qué herramientas la industria brinda a desarrolladores para poder llevar adelante sus propios proyectos y desafíos \cite{DLOpenSourceLibraries}. 
+
+A continuación, se presentará la biblioteca TensorFlow, la cual fue utilizada en esta tesis como herramienta principal para la descripción y extracción de características de las imágenes que se procesarán en los dispositivos móviles.
+
+\subsection{TensorFlow}
+
+Es una biblioteca de código abierto para aprendizaje automático a través de un rango de tareas. Fue desarrollada por Google para satisfacer sus necesidades de sistemas capaces de construir y entrenar redes neuronales para detectar y descifrar patrones y correlaciones, análogos al aprendizaje y razonamiento usados por los humanos. Actualmente es utilizado tanto en la investigación como en los productos de Google. Fue originalmente desarrollado por el equipo de Google Brain para uso interno en Google antes de ser publicado bajo la licencia de código abierto Apache 2.0 el 9 de noviembre de 2015 \cite{abadi2016tensorflow}. TensorFlow es multiplataforma, funcionando tanto en GPUs como CPUs -incluyendo plataformas móviles y embebidas- e incluso unidades de procesamiento tensorial (TPUs), que son un hardware especializado en realizar cálculos tensoriales. 
+
+Entre sus soluciones se puede encontrar TensorFlow Lite, la cual es de gran utilidad a la hora de correr modelos de ML en dispositivos móviles o embebidos, sin la necesidad de contar con una conexión a Internet, ya que utiliza técnicas para lograr baja latencia, performance y modelos que ocupan poco almacenamiento. Uno de los modelos propuestos por la librería fue utilizado para este proyecto final de carrera, y se denomina \textit{MobileNets} \cite{TFliteOverview}.
+
+\subsubsection{MobileNets}
+
+Son una familia de modelos de visión computacional diseñados para maximizar la precisión de forma efectiva, teniendo en cuenta los recursos restringidos para una aplicación integrada en un dispositivo. Son modelos pequeños, de baja latencia y baja potencia, parametrizados para satisfacer las limitaciones de recursos de una gran variedad de casos de uso. Se pueden utilizar para la clasificación, detección, incrustación y segmentación de imágenes \cite{howard2017mobilenets}. Las MobileNet están basadas en los modelos Inception V3, pero son más pequeñas y con una exactitud un poco más baja. Estos modelos pueden ser descargados y ajustados a proyectos de manera libre y gratuita, y existen diferentes tipos, variando sobretodo en la optimización que se necesite para cada caso de aplicación.
+
 
 %-------------------------------------------------------------------
 \section{Análisis de agrupamiento}

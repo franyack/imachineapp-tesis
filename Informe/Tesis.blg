@@ -12,48 +12,53 @@ The style file: abbrv.bst
 A level-1 auxiliary file: TeXiS/TeXiS_acron.aux
 A level-1 auxiliary file: Apendices/ParteAnexos.aux
 Database file #1: deeplearning.bib
+Repeated entry---line 1097 of file deeplearning.bib
+ : @article{abadi2016tensorflow
+ :                             ,
+I'm skipping whatever remains of this entry
 Database file #2: spark.bib
 Database file #3: eeg.bib
 Database file #4: learninspy.bib
 Database file #5: citasCapitulo2.bib
-You've used 21 entries,
+You've used 30 entries,
             2118 wiz_defined-function locations,
-            631 strings with 7521 characters,
-and the built_in function-call counts, 5328 in all, are:
-= -- 531
-> -- 181
-< -- 2
-+ -- 78
-- -- 54
-* -- 210
-:= -- 885
-add.period$ -- 77
-call.type$ -- 21
-change.case$ -- 86
+            675 strings with 9191 characters,
+and the built_in function-call counts, 8042 in all, are:
+= -- 782
+> -- 342
+< -- 4
++ -- 143
+- -- 110
+* -- 370
+:= -- 1360
+add.period$ -- 107
+call.type$ -- 30
+change.case$ -- 138
 chr.to.int$ -- 0
-cite$ -- 21
-duplicate$ -- 210
-empty$ -- 507
-format.name$ -- 54
-if$ -- 1170
+cite$ -- 30
+duplicate$ -- 307
+empty$ -- 706
+format.name$ -- 110
+if$ -- 1728
 int.to.chr$ -- 0
-int.to.str$ -- 21
-missing$ -- 12
-newline$ -- 121
-num.names$ -- 42
-pop$ -- 166
+int.to.str$ -- 30
+missing$ -- 19
+newline$ -- 169
+num.names$ -- 60
+pop$ -- 242
 preamble$ -- 1
-purify$ -- 69
+purify$ -- 114
 quote$ -- 0
-skip$ -- 160
+skip$ -- 231
 stack$ -- 0
-substring$ -- 213
-swap$ -- 45
-text.length$ -- 2
+substring$ -- 290
+swap$ -- 65
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 76
+type$ -- 108
 warning$ -- 0
-while$ -- 50
-width$ -- 23
-write$ -- 240
+while$ -- 71
+width$ -- 32
+write$ -- 339
+(There was 1 error message)
