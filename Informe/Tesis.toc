@@ -26,9 +26,18 @@
 \contentsline {section}{\numberline {2.3}[WIP]Aprendizaje profundo aplicado en problemas de visi\'on computacional}{17}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}TensorFlow}{19}{subsection.2.3.1}
 \contentsline {subsubsection}{\numberline {2.3.1.1}MobileNets}{19}{subsubsection.2.3.1.1}
-\contentsline {section}{\numberline {2.4}An\'alisis de agrupamiento}{20}{section.2.4}
+\contentsline {section}{\numberline {2.4}[WIP] An\'alisis de agrupamiento}{20}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Agrupamiento basado en grafos}{20}{subsection.2.4.1}
-\contentsline {subsection}{\numberline {2.4.2}Algor\IeC {\'\i }tmo de agrupamiento de Markov}{20}{subsection.2.4.2}
-\contentsline {part}{Bibliograf\IeC {\'\i }a}{23}{appendix*.15}
-\contentsline {chapter}{Lista de acr\'onimos}{26}{section*.16}
-\contentsline {part}{II\hspace {1em}Anexos}{27}{part.2}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Algor\IeC {\'\i }tmo de agrupamiento de Markov}{20}{subsubsection.2.4.1.1}
+\contentsline {part}{II\hspace {1em}IMachineApp}{23}{part.2}
+\contentsline {chapter}{\numberline {3}Descripci\'on del sistema}{24}{chapter.3}
+\contentsline {section}{\numberline {3.1}Estructura}{24}{section.3.1}
+\contentsline {section}{\numberline {3.2}Caracter\IeC {\'\i }sticas}{27}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Explotaci\'on del c\'omputo distribuido}{29}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Entrenamiento distribuido}{29}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Funciones de consenso}{30}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Criterios de corte}{32}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Esquemas similares}{33}{subsection.3.3.3}
+\contentsline {part}{Bibliograf\IeC {\'\i }a}{35}{appendix*.17}
+\contentsline {chapter}{Lista de acr\'onimos}{38}{section*.18}
+\contentsline {part}{III\hspace {1em}Anexos}{39}{part.3}
