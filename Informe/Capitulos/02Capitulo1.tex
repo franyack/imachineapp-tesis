@@ -9,50 +9,109 @@
 
 \begin{FraseCelebre}
 	\begin{Frase}
-		Inteligencia es hacer artificiales los objetos, especialmente las herramientas para hacer herramientas.
+		La manera de empezar es dejar de hablar y empezar a hacer.
 	\end{Frase}
 	\begin{Fuente}
-		Henri Bergson
+		Walt Disney
 	\end{Fuente}
 \end{FraseCelebre}
 
 \begin{resumen}
-En este capítulo se describe en primer lugar el diseño elegido para el sistema, explicando cada uno de sus componentes y justificando su composición. A continuación, se presenta la metodología de trabajo utilizada para llevar adelante el desarrollo de la aplicación. Luego, se explican las técnicas utilizadas tanto para la caracterización de las imágenes cómo para medir la similitud entre ellas. Después, se expone como fue aplicado el algoritmo MCL para obtener los grupos finales, y por último se presentan las herramientas con las que cuenta el usuario para administrar dicho resultado final.
+En este capítulo se describe en primer lugar el diseño elegido para el sistema, explicando cada uno de sus componentes y justificando su composición. Luego, se explican todas las cuestiones técnicas relacionadas al motor de procesamiento, como por ejemplo la manera en que se caracterizan las imágenes, como se mide la similitud entre ellas, como se aplica el algoritmo MCL para obtener los grupos finales, etc. Por último, se presentan las herramientas con las que cuenta el usuario tanto para su experiencia durante la utilización de la aplicación como para administrar el resultado final.
 \end{resumen}
-
-El producto desarrollado en este proyecto se identifica como \emph{Learninspy}, haciendo referencia en su nombre a las técnicas de aprendizaje profundo (o \textit{deep learning}) en redes neuronales y al uso de la tecnología Spark con Python (así también como al apodo del autor de este framework). En la Figura \ref{fig:learninspy-logo} se presenta su logo, el cual quizás visualiza mejor el significado mencionado. 
-
-Una elección hecha para el desarrollo de este sistema fue realizar toda el codigo fuente en inglés. Esto se hizo con el fin de ser fiel a la terminología original de todas las técnicas, y para que sea entendible por cualquier desarrollador y no sólo los de habla hispana. No obstante, toda la documentación se encuentra en español aunque próximamente se planea mantener dos versiones de ella en ambos lenguajes.
-
 
 \begin{figure}[t]
 	\begin{center}
 		\scalebox{0.7}{
 			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/Learninspy-logo_grande}
+			{Imagenes/Bitmap/imachineapp-logo}
 		}
-		\caption{Logo del framework desarrollado.}
-		\label{fig:learninspy-logo}
+		\caption{Ícono de la aplicación desarrollada.}
+		\label{fig:imachinapp-logo}
 	\end{center}
 \end{figure}
 
+El producto desarrollado en este proyecto se identifica como \emph{IMachineApp}, donde la I al inicio de su nombre simboliza las imágenes a procesar, la palabra \textit{Machine} hace referencia a la ``Máquina'' por la cual pasan las mismas para poder obtener el resultado. Por último, la sigla App deja en claro que el producto está destinado a ser desplegado en dispositivos móviles (ver Figura \ref{fig:imachinapp-logo}).
+
+
+
+
 
 %-------------------------------------------------------------------
-\section{Estructura}
+\section{Diseño del sistema}
 %-------------------------------------------------------------------
 \label{cap4:sec:estructura}
 
-En este trabajo de tesis se desarrolló un software estructurado como \emph{framework}. Este tipo de sistema provee conceptos, criterios y prácticas para enfrentar un determinado tipo de problemática en base a un enfoque dado. La idea de implementar este tipo de sistema surgió debido a la dificultad de personalizar ciertos frameworks de aprendizaje profundo existentes, planteándose además el desafío de combinar la flexibilidad para crear o modificar funcionalidades y la escalabilidad en términos computacionales.
+En esta tesis se desarrolló un software que se conoce como aplicación móvil. La misma fue diseñada para ser ejecutada en teléfonos inteligentes y \textit{tablets}, y permite al usuario elegir un directorio (o un conjunto de ellos) con imágenes y luego de un procesamiento por el que pasan las mismas, sugerirle una estructura organizacional, basándose en el rango de similitud o contexto que tengan entre ellas. A su vez, cuando finaliza el proceso, tiene la posibilidad de administrar el resultado, según su criterio para obtener así el resultado esperado, o bien deshacer todos los cambios y volver las imágenes hacia su estado original.
 
-Para ello, un framework permite las siguientes ventajas \cite{frameworkMClifton}:
+La aplicación, fue diseñada para que todo el proceso ocurra en 4 etapas:
+
+\begin{enumerate}
+	\item \underline{Elección del/los directorio/s a procesar:} consiste en elegir algún directorio del dispositivo que cuente con imágenes a procesar, como por ejemplo donde quedan alojadas aquellas fotos que fueron tomadas por las cámaras de dispositivo.
+	
+	\item \underline{Procesamiento de las imágenes a través del motor:} esta etapa cuenta con una serie de pasos que se encarga de extraer las características de las imágenes, procesar las mismas afín de medir su similitud y poder obtener un conjunto de grupos donde en cada uno de ellos estarán las imágenes que más relación tengan entre sí. Esta  etapa constituye el \textit{core} de la aplicación.
+	
+	\item \underline{Administración del resultado arrojado por el procesamiento:} una vez que el motor terminó con el proceso de las imágenes y encontró una estructura de organización sugerida, en esta etapa el usuario podrá realizar tareas típicas como eliminar, mover o copiar imágenes entre directorios, o bien eliminar un directorio completo, moverlo hacia otra ubicación, etc.
+	
+	\item \underline{Administración del resultado final:} luego de que la etapa de administracón de las carpetas sugeridas por el proceso ha finalizado, el usuario tendrá la posibilidad de tomar diferentes decisiones respecto al resultado obtenido: descartar todos los cambios y volver las imágenes a su versión original, moverlas hacia una nueva carpeta creada por el programa, o copiarlas y mantenerla en dos lugares diferentes.
+\end{enumerate}
+
+\subsection{Metodología de trabajo}
+
+Para el cumplimiento óptimo de todos los objetivos del proyecto, se implementó el ciclo de vida del software siguiendo un modelo iterativo denominado Desarrollo Rápido de Aplicaciones (\textbf{RAD} del inglés, \textit{Rapid Application Development}). Fue creado en 1980 por James Martin, siguiendo el modelo tradicional de desarrollo de software en cascada \cite{beynon1999rapid}. El modelo está compuesto por cuatro etapas, donde en la primera de ellas se realiza la definición de requerimientos, siguiendo por el diseño del sistema, el desarrollo del mismo y por último la etapa donde el producto está listo para ser enviado a producción. Si bien tiene un grado de similitud al modelo en cascada, en las etapas de diseño e implementación se trabaja de forma iterativa e incremental hasta cumplir con los criterios de aceptación dispuestos (ver Figura \ref{fig:rad-model}).
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/rad-model}
+		}
+		\caption{Modelo RAD (IMAGEN A CAMBIAR)}
+		\label{fig:rad-model}
+	\end{center}
+\end{figure}
+
+Se consideró a RAD el tipo de metodología que mejor se adaptaba al proyecto, en base a las diferentes etapas que lo conformaban y a la manera en que se trabajaría en cada una de ellas. Esta decisión se debe a que el proyecto tuvo una componente fundamental que fue la experiencia de usuario, y como se ha podido observar en publicaciones académicas que comparan diferentes metodologías para llevar adelante proyectos de software, se considera que aquellas de desarrollo lineal (como el modelo en cascada, por ejemplo) no son apropiadas \cite{burns1985selecting}. Esto se debe a que los requerimientos de diseño se cumplieron de forma iterativa e incremental y no estrictamente en una única fase del proyecto, a fin de verdaderamente hacer lo que se solicitaba. En base a los estudios señalados anteriormente, los componentes relacionados a la experiencia de usuario se fueron incorporando y mejorando de forma iterativa gracias a la retroalimentación o \textit{feedback} que se obtuvo por parte de los \textit{stakeholders}. 
+ 
+Una vez definida la ERS (Especificación de los requerimientos del software), el producto se realizó en cuatro versiones de manera incremental, donde en cada una de ellas se entregaron avances, sujetos a lo especificado en el documento predefinido. Al término de cada versión, se obtuvo un prototipo del producto, para luego poder refinar y evaluar qué cosas eran necesarias cambiar, agregar o quitar, con el objetivo de que se cumplan exitosamente los criterios de aceptación de los entregables que conformaban el proyecto. Cada versión estaba compuesta por una parte de diseño, implementación y testeo, y son denominadas por la metodología como \textit{time boxing} \cite{beynon1999rapid}. La finalización de todas las versiones conformó el producto buscado.
+
+A continuación, se explicitan cada uno de los prototipos que conformaron la realización del proyecto, especificando lo que se realizó en cada una de ellos. Cabe aclarar una vez más que el producto cuenta con dos bloques principales a diseñar e implementar. El primero de ellos es la parte encargada de la extracción de características de las imágenes, procesamiento de las mismas y agrupamiento, y el otro bloque está conformado por la aplicación, encargada de realizar la gestión y administración del resultado obtenido luego del procesamiento.
+
 \begin{itemize}
-	\item Facilita trabajar con tecnologías complejas.
-	\item Reúne un conjunto de componentes aislados en algo mucho más útil.
-	\item Obliga a implementar el código de una forma que promueva una programación consistente, menos bugs, y aplicaciones más flexibles.
-	\item Cualquiera puede fácilmente testear y depurar el código, incluso si no fue quien lo escribió. 
+	\item \textbf{Prototipo 1:} Integración inicial de tecnologías y componentes de desarrollo.
+	\begin{itemize}
+		\item \underline{Sistema Android:} La tarea que debió cumplir fue mostrar al usuario un conjunto de directorios, pero siempre eligiendo uno por defecto. Este directorio ingresaba al motor de procesamiento. Después de que se ejecutaba el motor, debía mostrar por pantalla que el proceso había sido exitoso.
+		
+		\item \underline{Motor de procesamiento:} debía levantar la biblioteca TensorFlow y leer las imágenes ingresadas por la aplicación, devolviendo una simulación de grupos resultado para el conjunto de imágenes procesadas.
+	\end{itemize}
+	
+	\item \textbf{Prototipo 2:} Agregación de nuevas características al sistema e implementación de la metodología de clustering en el motor.
+	\begin{itemize}
+		\item \underline{Sistema Android:} se agregó a lo ya realizado la opción de elegir un directorio determinado. Luego del proceso, debía crear directorios en el dispositivo y copiar cada imagen al directorio correspondiente.
+		
+		\item \underline{Motor de procesamiento:} se aplicó las metodologías definidas para realizar el procesamiento, devolviendo al sistema a qué grupo debía ir cada una de las imágenes.
+	\end{itemize}
+	
+	\item \textbf{Prototipo 3:} Continuación del desarrollo de nuevas funcionalidades y presentación formal del motor de procesamiento.
+	\begin{itemize}
+		\item \underline{Sistema Android:} debía permitir la utilización de las diferentes tareas de administración una vez que el procesamiento fue realizado. Además, se agregó la opción de guardar el resultado final o eliminarlo y volver todo al estado original.
+		
+		\item \underline{Motor de procesamiento:} sufrió modificaciones a fin de lograr mejores resultados, además se trabajó en tareas de optimización.
+	\end{itemize}
+
+
+	\item \textbf{Prototipo 4:} Finalización del desarrollo e integración final de todos los componentes.
+	\begin{itemize}
+		\item \underline{Sistema Android:} debía presentar todas las interfaces de usuario terminadas y listas para utilizar, el ícono que distingue a la aplicación y la aprobación de todas las pruebas de validación.
+		
+		\item \underline{Motor de procesamiento:} sufrió modificaciones a fin de lograr mejores resultados. Debió superar las pruebas presentadas en el protocolo de experimentación.
+	\end{itemize}
 \end{itemize}
 
-Tal como se aclaró en la Sección \ref{cap1:subsec:restricciones}, el código fuente de Learninspy sigue un Diseño Orientado a Objetos (\acs{DOO}) que permite en un framework los siguientes beneficios para desarrolladores \cite{fayad1997object}:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Tal como se aclaró en la Sección \ref{cap1:subsec:restricciones}, el código fuente de IMachineApp sigue un Diseño Orientado a Objetos (\acs{DOO}) el cual cuenta con los siguientes beneficios para desarrolladores \cite{fayad1997object}:
 \begin{itemize}
 	\item \emph{Modularidad}, al encapsular detalles de la implementación detrás de interfaces estables y sencillas de utilizar.
 	\item \emph{Reutilización}, definiendo componentes genéricos que pueden ser reaplicados para crear nuevas aplicaciones. Con ello se aprovecha el dominio de conocimiento y el esfuerzo previo de desarrolladores experimentados para evitar rehacer y revalidar soluciones ya existentes.

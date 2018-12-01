@@ -13,8 +13,9 @@
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Agrupamiento basado en grafos\relax }}{21}{figure.caption.13}
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Representaci\'on gr\'afica del algoritmo de Markov\relax }}{21}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Logo del framework desarrollado.\relax }}{25}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{32}{figure.caption.16}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{32}{subfigure.2.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{32}{subfigure.2.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{32}{subfigure.2.3}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \'Icono de la aplicaci\'on desarrollada.\relax }}{25}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Modelo RAD (IMAGEN A CAMBIAR)\relax }}{26}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{34}{figure.caption.17}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{34}{subfigure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{34}{subfigure.3.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{34}{subfigure.3.3}

@@ -29,13 +29,14 @@
 \BOOKMARK [2][-]{subsection.2.4.1}{Agrupamiento basado en grafos}{section.2.4}% 29
 \BOOKMARK [-1][-]{part.2}{II IMachineApp}{}% 30
 \BOOKMARK [0][-]{chapter.3}{Descripci\363n del sistema}{part.2}% 31
-\BOOKMARK [1][-]{section.3.1}{Estructura}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.2}{Caracter\355sticas}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.2.1}{Explotaci\363n del c\363mputo distribuido}{section.3.2}% 34
-\BOOKMARK [1][-]{section.3.3}{Entrenamiento distribuido}{chapter.3}% 35
-\BOOKMARK [2][-]{subsection.3.3.1}{Funciones de consenso}{section.3.3}% 36
-\BOOKMARK [2][-]{subsection.3.3.2}{Criterios de corte}{section.3.3}% 37
-\BOOKMARK [2][-]{subsection.3.3.3}{Esquemas similares}{section.3.3}% 38
-\BOOKMARK [-1][-]{appendix*.17}{Bibliograf\355a}{}% 39
-\BOOKMARK [0][-]{section*.18}{Lista de acr\363nimos}{appendix*.17}% 40
-\BOOKMARK [-1][-]{part.3}{III Anexos}{}% 41
+\BOOKMARK [1][-]{section.3.1}{Dise\361o del sistema}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.1.1}{Metodolog\355a de trabajo}{section.3.1}% 33
+\BOOKMARK [1][-]{section.3.2}{Caracter\355sticas}{chapter.3}% 34
+\BOOKMARK [2][-]{subsection.3.2.1}{Explotaci\363n del c\363mputo distribuido}{section.3.2}% 35
+\BOOKMARK [1][-]{section.3.3}{Entrenamiento distribuido}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.3.1}{Funciones de consenso}{section.3.3}% 37
+\BOOKMARK [2][-]{subsection.3.3.2}{Criterios de corte}{section.3.3}% 38
+\BOOKMARK [2][-]{subsection.3.3.3}{Esquemas similares}{section.3.3}% 39
+\BOOKMARK [-1][-]{appendix*.18}{Bibliograf\355a}{}% 40
+\BOOKMARK [0][-]{section*.19}{Lista de acr\363nimos}{appendix*.18}% 41
+\BOOKMARK [-1][-]{part.3}{III Anexos}{}% 42

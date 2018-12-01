@@ -45,6 +45,17 @@ A.~Bermudez.
   2016.
 \newblock Online, Accedido: 26/10/2017.
 
+\bibitem{beynon1999rapid}
+P.~Beynon-Davies, C.~Carne, H.~Mackay, and D.~Tudhope.
+\newblock Rapid application development (rad): an empirical review.
+\newblock {\em European Journal of Information Systems}, 8(3):211--223, 1999.
+
+\bibitem{burns1985selecting}
+R.~N. Burns and A.~R. Dennis.
+\newblock Selecting the appropriate application development methodology.
+\newblock {\em ACM SIGMIS Database: the DATABASE for Advances in Information
+  Systems}, 17(1):19--23, 1985.
+
 \bibitem{programacionMobile}
 C.~Casado.
 \newblock Alternativas en la programacion para dispositivos moviles.
@@ -65,6 +76,11 @@ D.~Clark.
   \url{https://www.kdnuggets.com/2018/04/top-16-open-source-deep-learning-libraries.html},
   2018.
 \newblock Online, Accedido: 28/08/2018.
+
+\bibitem{fayad1997object}
+M.~Fayad and D.~C. Schmidt.
+\newblock Object-oriented application frameworks.
+\newblock {\em Communications of the ACM}, 40(10):32--38, 1997.
 
 \bibitem{learninspy2016tesis}
 L.~Ferrado.
