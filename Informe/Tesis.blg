@@ -16,53 +16,51 @@ A level-1 auxiliary file: Apendices/ParteAnexos.aux
 Database file #1: citasCapitulo1.bib
 Database file #2: citasCapitulo2.bib
 Warning--I didn't find a database entry for "ocr2007recognition"
-Warning--I didn't find a database entry for "android2008programmers"
-Warning--I didn't find a database entry for "numberAndroidApps"
 Warning--I didn't find a database entry for "gonzalez1995redes"
 Warning--I didn't find a database entry for "haykin2004comprehensive"
 Warning--I didn't find a database entry for "bayer2016climin"
 Warning--I didn't find a database entry for "ng2012ufldl"
 Warning--I didn't find a database entry for "li2015cs231n"
 Warning--empty school in van2000graph
-You've used 30 entries,
+You've used 33 entries,
             2118 wiz_defined-function locations,
-            690 strings with 9470 characters,
-and the built_in function-call counts, 8256 in all, are:
-= -- 808
-> -- 358
+            702 strings with 9880 characters,
+and the built_in function-call counts, 8915 in all, are:
+= -- 870
+> -- 385
 < -- 4
-+ -- 147
-- -- 116
-* -- 412
-:= -- 1397
-add.period$ -- 106
-call.type$ -- 30
-change.case$ -- 141
++ -- 158
+- -- 124
+* -- 432
+:= -- 1507
+add.period$ -- 116
+call.type$ -- 33
+change.case$ -- 154
 chr.to.int$ -- 0
-cite$ -- 31
-duplicate$ -- 309
-empty$ -- 709
-format.name$ -- 116
-if$ -- 1761
+cite$ -- 34
+duplicate$ -- 330
+empty$ -- 775
+format.name$ -- 124
+if$ -- 1905
 int.to.chr$ -- 0
-int.to.str$ -- 30
+int.to.str$ -- 33
 missing$ -- 18
-newline$ -- 168
-num.names$ -- 60
-pop$ -- 233
+newline$ -- 184
+num.names$ -- 66
+pop$ -- 263
 preamble$ -- 1
-purify$ -- 117
+purify$ -- 127
 quote$ -- 0
-skip$ -- 232
+skip$ -- 251
 stack$ -- 0
-substring$ -- 326
-swap$ -- 65
+substring$ -- 341
+swap$ -- 68
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 110
+type$ -- 122
 warning$ -- 1
-while$ -- 75
-width$ -- 32
-write$ -- 339
-(There were 9 warnings)
+while$ -- 81
+width$ -- 35
+write$ -- 369
+(There were 7 warnings)

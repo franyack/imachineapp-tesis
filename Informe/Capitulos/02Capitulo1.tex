@@ -47,7 +47,7 @@ En esta tesis se desarrolló un software que se conoce como aplicación móvil. La 
 La aplicación, fue diseñada para que todo el proceso ocurra en 4 etapas:
 
 \begin{enumerate}
-	\item \underline{Elección del/los directorio/s a procesar:} consiste en elegir algún directorio del dispositivo que cuente con imágenes a procesar, como por ejemplo donde quedan alojadas aquellas fotos que fueron tomadas por las cámaras de dispositivo.
+	\item \underline{Elección del/los directorio/s a procesar:} consiste en elegir algún directorio del dispositivo que cuente con imágenes a procesar, como por ejemplo donde quedan alojadas aquellas fotos que fueron tomadas por las cámaras del dispositivo.
 	
 	\item \underline{Procesamiento de las imágenes a través del motor:} esta etapa cuenta con una serie de pasos que se encarga de extraer las características de las imágenes, procesar las mismas afín de medir su similitud y poder obtener un conjunto de grupos donde en cada uno de ellos estarán las imágenes que más relación tengan entre sí. Esta  etapa constituye el \textit{core} de la aplicación.
 	
@@ -108,8 +108,51 @@ A continuación, se explicitan cada uno de los prototipos que conformaron la real
 	\end{itemize}
 \end{itemize}
 
+\subsection{Patrón de programación seleccionado}
+
+Como se dijo en la Sección \ref{cap2:sec:dispositivos-moviles}, la aplicación será desarrollada para el sistema operativo Android, de manera nativa, afín de aprovechar todas las ventajas que las librerías proveen para los desarrolladores. El framework Android, no recomienda ninguna forma específica de diseñar aplicaciones. Eso, de alguna manera, hace a los desarrolladores más poderosos y vulnerables, al mismo tiempo \cite{mvp2017guide}.
+
+Las aplicaciones pasan por muchos ciclos de vida donde se van agregando/extrayendo características, ocasionando estragos si la misma no se diseña adecuadamente con una ``separación de preocupaciones''. No es una buena práctica cargar de lógica a las actividades que se encargan de interactuar con el usuario, sino mas bien deberían ser clases por las cuales simplemente la información que interactúa entre el sistema y el usuario fluye, desligándose de cualquier tipo de lógica de negocio. Es por ello, que se decidió seguir el desarrollo de la aplicación bajo un patrón de diseño Modelo-Vista-Presentador (\textbf{MVP}).
+
+\subsubsection{Modelo-Vista-Presentador}
+
+Este patrón de diseño es un conjunto de pautas que, si se siguen de manera correcta, desacoplan el código para su reutilización y testeabilidad. Básicamente, divide los componentes de la aplicación basados en su función, denominado \textit{separación de preocupaciones}, es decir, MVP divide a la aplicación en tres componentes básicos \cite{mvp2017guide}:
+
+\begin{enumerate}
+	\item \textbf{Modelo:} es el responsable de manejar todo lo que corresponda a la lógica de negocio de la aplicación, procesando la información y tomando decisiones.
+	
+	\item \textbf{Vista:} es la responsable presentar las vistas al usuario e interactuar con el mismo.
+	
+	\item \textbf{Presentador:} es un puente que conecta al modelo con la vista. Además, actúa como un instructor para la vista.
+\end{enumerate}
+
+Definidos cada uno de los componentes, MVP establece algunas reglas básicas para ellos:
+
+\begin{itemize}
+	\item La única responsabilidad de una Vista, es dibujar la interfaz de usuario según las instrucciones del Presentador. Es la parte ``tonta'' de la aplicación.
+	\item La Vista delega todas las interacciones con el usuario hacia el Presentador.
+	\item La Vista \textbf{nunca} se comunica con el Modelo directamente.
+	\item El Presentador es el responsable de delegar los requerimientos de la vista hacia el Modelo, y instruir a la Vista con acciones para eventos específicos.
+	\item El Modelo es el responsable de realizar toda la lógica de negocio requerida, como por ejemplo obtener los datos desde el servidor, la base de datos o el sistema de archivos.
+\end{itemize}
+
+A modo de resumen, cada Vista tendrá una relación 1 a 1 con un Presentador, el cual se encargará de llevar y traer toda la información, indicándole a la Vista que acción y en qué momento debe ejecutar. Dicha comunicación se establece a través de Interfaces, las cuales servirán como \textit{contratos} para dejar pre-establecidos que medios de comunicación existirán entre ellos. De manera similar y bajo el mismo criterio, el Presentador se comunicará con el Modelo a través de Interfaces, pero sin la necesidad de que la relación entre ellos sea estrictamente 1 a 1, ya que el modelo podría modularizarse tanto como se requiera. De esta manera, el Modelo se desentiende de los eventos y sólo es llamado cuando se lo requiere (ver Figura \ref{fig:mvp-pattern}).
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/mvp-pattern}
+		}
+		\caption{Patrón de diseño Modelo-Vista-Controlador}
+		\label{fig:mvp-pattern}
+	\end{center}
+\end{figure}
+
+Como conclusión y aprendizaje, la arquitectura es la primer cosa en la que se debe trabajar para cualquier software. Una arquitectura cuidadosamente diseñada, minimizará muchas repeticiones en el futuro, a la vez que proporcionará la facilidad de escalabilidad. La mayor parte de proyectos se desarrollan hoy en día en equipo, por lo que la legibilidad y la modularidad del código deben considerarse como elementos sumamente importantes de la arquitectura. También, se depende en gran medida de bibliotecas de terceros, cambiando entre alternativas, debido a casos de uso, errores o soporte. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\section{Arranca lo de LEA}
 
 Tal como se aclaró en la Sección \ref{cap1:subsec:restricciones}, el código fuente de IMachineApp sigue un Diseño Orientado a Objetos (\acs{DOO}) el cual cuenta con los siguientes beneficios para desarrolladores \cite{fayad1997object}:
 \begin{itemize}

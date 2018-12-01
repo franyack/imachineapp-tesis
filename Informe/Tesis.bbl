@@ -6,6 +6,13 @@ M.~Abadi, P.~Barham, J.~Chen, Z.~Chen, A.~Davis, J.~Dean, M.~Devin,
 \newblock Tensorflow: a system for large-scale machine learning.
 \newblock In {\em OSDI}, volume~16, pages 265--283, 2016.
 
+\bibitem{mvp2017guide}
+J.~Ali.
+\newblock {Essential Guide For Designing Your Android App Architecture}.
+\newblock
+  \url{https://blog.mindorks.com/essential-guide-for-designing-your-android-app-architecture-mvp-part-1-74efaf1cda40}.
+\newblock Accedido: 02/04/2018.
+
 \bibitem{alpaydin2009introduction}
 E.~Alpaydin.
 \newblock {\em Introduction to machine learning}.
@@ -36,6 +43,12 @@ Android.
 \newblock Firmar tu aplicacion.
 \newblock \url{https://developer.android.com/studio/publish/app-signing}, 2018.
 \newblock Online, Accedido: 18/03/2018.
+
+\bibitem{numberAndroidApps}
+AppBrain.
+\newblock {Number of Android Apps on Google Play}.
+\newblock \url{https://www.appbrain.com/stats/number-of-android-apps}.
+\newblock Accedido: 15/10/2018.
 
 \bibitem{androidStudioOficial}
 A.~Bermudez.
@@ -76,6 +89,10 @@ D.~Clark.
   \url{https://www.kdnuggets.com/2018/04/top-16-open-source-deep-learning-libraries.html},
   2018.
 \newblock Online, Accedido: 28/08/2018.
+
+\bibitem{dimarzio2008programmer}
+J.~DiMarzio and A.~Android.
+\newblock Programmers guide, 2008.
 
 \bibitem{fayad1997object}
 M.~Fayad and D.~C. Schmidt.
