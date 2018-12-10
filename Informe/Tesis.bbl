@@ -50,6 +50,12 @@ AppBrain.
 \newblock \url{https://www.appbrain.com/stats/number-of-android-apps}.
 \newblock Accedido: 15/10/2018.
 
+\bibitem{WordNet}
+M.~Barning.
+\newblock {WordNet and ImageNet}.
+\newblock \url{https://www.web3.lu/wordnet-imagenet/}.
+\newblock Accedido: 13/12/2017.
+
 \bibitem{androidStudioOficial}
 A.~Bermudez.
 \newblock {Android Studio 2.0 ya es oficial}.
@@ -185,6 +191,12 @@ L.~redaccion.
 \newblock
   \url{https://www.lanacion.com.ar/1900814-android-vs-ios-quien-gana-la-batalla}.
 \newblock Accedido: 07/04/2017.
+
+\bibitem{ImageNet}
+{Standford Vision Lab, Standord University}.
+\newblock {ImageNet}.
+\newblock \url{http://image-net.org/about-overview}.
+\newblock Accedido: 12/12/2017.
 
 \bibitem{taigman2014deepface}
 Y.~Taigman, M.~Yang, M.~Ranzato, and L.~Wolf.

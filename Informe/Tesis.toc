@@ -35,13 +35,15 @@
 \contentsline {subsection}{\numberline {3.1.1}Metodolog\IeC {\'\i }a de trabajo}{25}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Patr\'on de programaci\'on seleccionado}{27}{subsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.2.1}Modelo-Vista-Presentador}{28}{subsubsection.3.1.2.1}
-\contentsline {section}{\numberline {3.2}Arranca lo de LEA}{29}{section.3.2}
-\contentsline {section}{\numberline {3.3}Caracter\IeC {\'\i }sticas}{31}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Explotaci\'on del c\'omputo distribuido}{33}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}Entrenamiento distribuido}{33}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Funciones de consenso}{34}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Criterios de corte}{36}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Esquemas similares}{37}{subsection.3.4.3}
-\contentsline {part}{Bibliograf\IeC {\'\i }a}{39}{appendix*.19}
-\contentsline {chapter}{Lista de acr\'onimos}{42}{section*.20}
-\contentsline {part}{III\hspace {1em}Anexos}{43}{part.3}
+\contentsline {section}{\numberline {3.2}Motor de procesamiento de las im\'agenes}{30}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Etapa 1: Pre-procesamiento y Extracci\'on de Caracter\IeC {\'\i }sticas}{30}{subsection.3.2.1}
+\contentsline {section}{\numberline {3.3}Arranca lo de LEA}{32}{section.3.3}
+\contentsline {section}{\numberline {3.4}Caracter\IeC {\'\i }sticas}{35}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Explotaci\'on del c\'omputo distribuido}{36}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}Entrenamiento distribuido}{37}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Funciones de consenso}{37}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Criterios de corte}{39}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Esquemas similares}{40}{subsection.3.5.3}
+\contentsline {part}{Bibliograf\IeC {\'\i }a}{42}{appendix*.23}
+\contentsline {chapter}{Lista de acr\'onimos}{45}{section*.24}
+\contentsline {part}{III\hspace {1em}Anexos}{46}{part.3}

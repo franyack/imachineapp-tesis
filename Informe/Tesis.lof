@@ -11,12 +11,16 @@
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Representaci\'on de un modelo de aprendizaje profundo, para clasificaci\'on de d\IeC {\'\i }gitos manuscritos. Recuperado de \cite {chollet2017deep}\relax }}{18}{figure.caption.11}
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Red neuronal convolucional (CNN)\relax }}{19}{figure.caption.12}
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Agrupamiento basado en grafos\relax }}{21}{figure.caption.13}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Representaci\'on gr\'afica del algoritmo de Markov\relax }}{21}{figure.caption.14}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces Representaci\'on gr\'afica del algoritmo de Markov\relax }}{22}{figure.caption.14}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces \'Icono de la aplicaci\'on desarrollada.\relax }}{25}{figure.caption.15}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Modelo RAD (IMAGEN A CAMBIAR)\relax }}{26}{figure.caption.16}
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Patr\'on de dise\~no Modelo-Vista-Controlador\relax }}{29}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{36}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{36}{subfigure.4.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{36}{subfigure.4.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{36}{subfigure.4.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Dise\~no de la aplicaci\'on IMachineApp\relax }}{29}{figure.caption.18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Dise\~no del motor de procesamiento\relax }}{31}{figure.caption.19}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de aplicaci\'on de una MobileNet\relax }}{32}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo del uso de etiquetas - WordNet\relax }}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{39}{figure.caption.22}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{39}{subfigure.8.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{39}{subfigure.8.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{39}{subfigure.8.3}

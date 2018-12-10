@@ -136,7 +136,7 @@ Definidos cada uno de los componentes, MVP establece algunas reglas básicas para
 	\item El Modelo es el responsable de realizar toda la lógica de negocio requerida, como por ejemplo obtener los datos desde el servidor, la base de datos o el sistema de archivos.
 \end{itemize}
 
-A modo de resumen, cada Vista tendrá una relación 1 a 1 con un Presentador, el cual se encargará de llevar y traer toda la información, indicándole a la Vista que acción y en qué momento debe ejecutar. Dicha comunicación se establece a través de Interfaces, las cuales servirán como \textit{contratos} para dejar pre-establecidos que medios de comunicación existirán entre ellos. De manera similar y bajo el mismo criterio, el Presentador se comunicará con el Modelo a través de Interfaces, pero sin la necesidad de que la relación entre ellos sea estrictamente 1 a 1, ya que el modelo podría modularizarse tanto como se requiera. De esta manera, el Modelo se desentiende de los eventos y sólo es llamado cuando se lo requiere (ver Figura \ref{fig:mvp-pattern}).
+A modo de resumen, cada Vista tendrá una relación 1 a 1 con un Presentador, el cual se encargará de llevar y traer toda la información, indicándole a la Vista que acción y en qué momento se debe ejecutar. Dicha comunicación se establece a través de Interfaces, las cuales servirán como \textit{contratos} para dejar pre-establecidos que medios de comunicación existirán entre ellos. De manera similar y bajo el mismo criterio, el Presentador se comunicará con el Modelo a través de Interfaces, pero sin la necesidad de que la relación entre ellos sea estrictamente 1 a 1, ya que el modelo podría modularizarse tanto como se requiera. De esta manera, el Modelo se desentiende de los eventos y sólo es llamado cuando se lo requiere (ver Figura \ref{fig:mvp-pattern}).
 
 \begin{figure}[t]
 	\begin{center}
@@ -149,8 +149,84 @@ A modo de resumen, cada Vista tendrá una relación 1 a 1 con un Presentador, el c
 	\end{center}
 \end{figure}
 
-Como conclusión y aprendizaje, la arquitectura es la primer cosa en la que se debe trabajar para cualquier software. Una arquitectura cuidadosamente diseñada, minimizará muchas repeticiones en el futuro, a la vez que proporcionará la facilidad de escalabilidad. La mayor parte de proyectos se desarrollan hoy en día en equipo, por lo que la legibilidad y la modularidad del código deben considerarse como elementos sumamente importantes de la arquitectura. También, se depende en gran medida de bibliotecas de terceros, cambiando entre alternativas, debido a casos de uso, errores o soporte. 
+La aplicación fue pensada en dos bloques diferentes. El primero se corresponde a la parte principal, donde se elige el directorio a procesar y se lleva adelante toda la lógica para lograr la sugerencia de organización de las imágenes. El segundo, ya tiene más que ver con las opciones de administración sobre el resultado, con la posibilidad de guardarlo, de mover todas las imágenes hacia un nuevo directorio final o bien descartar todos los cambios. En la Figura \ref{fig:IMachineAppMVP} se puede ver en lineas generales el diseño de la aplicación.
 
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/IMachineAppMVP}
+		}
+		\caption{Diseño de la aplicación IMachineApp}
+		\label{fig:IMachineAppMVP}
+	\end{center}
+\end{figure}
+
+Como conclusión y aprendizaje, la arquitectura es en lo primero que se debe trabajar para cualquier software. Una arquitectura cuidadosamente diseñada, minimizará muchas repeticiones en el futuro, a la vez que proporcionará la facilidad de escalabilidad. La mayor parte de proyectos se desarrollan hoy en día en equipo, por lo que la legibilidad y la modularidad del código deben considerarse como elementos sumamente importantes de la arquitectura. También, se depende en gran medida de bibliotecas de terceros, cambiando entre alternativas, debido a casos de uso, errores o soporte. 
+
+\section{Motor de procesamiento de las imágenes}
+
+En esta sección se detallará el paso a paso por el que transita el conjunto de imágenes para que se puedan obtener los grupos sugeridos por la aplicación, ordenándolas según el grado de similitud o contexto que tengan entre ellas.
+
+El motor de procesamiento de las imágenes se llama \textbf{CIEngine}. El nombre está compuesto por las letras C, haciendo referencia a la palabra \textit{Clustering} (agrupamiento en inglés), la letra I de \textit{Images}, y por último la palabra \textit{Engine}, que en inglés significa motor. El mismo fue pensado y realizado como un módulo aparte de la aplicación propiamente dicha, y agregado a través de un paquete. Esto tiene como beneficios que sea independiente, por lo que la mantenibilidad y testeo se realizan sin depender exclusivamente de la aplicación, además de que se puede pensar como trabajo a futuro en la adaptación a otros ambientes, como puede ser en un programa escritorio, un servicio alojado en la nube, una aplicación nativa para otros sistemas operativos utilizados en dispositivos móviles, etc.
+
+En la Figura \ref{fig:CIEngineStep-by-step} se puede observar el camino que recorren las imágenes dentro del motor, desde la lectura de todas ellas hasta la conformación de cada uno de los grupos resultantes. Las tareas fueron divididas en etapas, afín de que el trabajo esté estructurado y sea más entendible, localizando en cada una de ellas diferentes técnicas, relacionadas entre sí. A continuación, se describe en detalle cada uno de los pasos.
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/CIEngineStep-by-step}
+		}
+		\caption{Diseño del motor de procesamiento}
+		\label{fig:CIEngineStep-by-step}
+	\end{center}
+\end{figure}
+
+\subsection{Etapa 1: Pre-procesamiento y Extracción de Características}
+
+Como se dijo en el capítulo anterior, se utiliza la biblioteca TensorFlow, específicamente un modelo de red neuronal denominado MobileNet, para realizar la descripción y extracción de características de las imágenes. Se eligió este tipo de modelo ya que se encuentran preparados y optimizados para ser utilizados en dispositivos móviles, logrando buenos resultados en ambientes productivos ya que son hoy por hoy el estado del arte en lo que corresponde a problemas de clasificación de imágenes \cite{introCNN}. 
+
+La red utilizada en este proyecto fue entrenada con 1001 grupos pertenecientes a la base de datos de imágenes \textit{ImageNet}. Esta base pertenece a un proyecto que fue diseñado para el uso de sistemas relacionados al reconocimiento de objetos, ya que cuenta con más de 14 millones de URL's de imágenes que han sido anotadas a mano por personas para indicar qué son los objetos que se encuentran en cada una de las imágenes. La base de datos cuenta con más de 20.000 categorías, y si bien las anotaciones de las imágenes realizadas por los colaboradores está disponible de manera gratuita, las imágenes reales no son propiedad de \textit{ImageNet} \cite{ImageNet}.
+
+La forma de procesar que tiene la red es: a partir de una imagen de entrada, devolver el grado de similitud que tiene con los 1001 grupos con los que cuenta la red entrenada. Esto significa que por cada uno de los grupos, se obtendrá como salida un número entre 0 y 1, indicando el porcentaje de similitud. La suma de los 1001 resultados, será 1 (ver Figura \ref{fig:MobileNet}.
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/MobileNet}
+		}
+		\caption{Ejemplo de aplicación de una MobileNet}
+		\label{fig:MobileNet}
+	\end{center}
+\end{figure}
+
+A su vez, estos grupos están organizados acordes a la jerarquía de etiquetas o \textit{tags} que tiene \textit{WordNet}, una gran base de datos léxica para el idioma inglés, compuesta de sustantivos, verbos, adjetivos y adverbios que se agrupan en conjuntos, donde cada uno de ellos expresan un concepto distinto. Para el uso de \textit{ImageNet}, sólo se utilizaron \textit{tags} sustantivos, y los mismos están jerarquizados partiendo desde uno madre o genérico, bajando hacia aquellos que detallan en concreto el/los objetos que se encuentran en la imagen (ver Figura \ref{fig:WordNetExample}). Esta base también es libre y gratuita, enfocada principalmente en el procesamiento automático del lenguaje natural y en aplicaciones de inteligencia artificial \cite{WordNet}.
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/WordNetExample}
+		}
+		\caption{Ejemplo del uso de etiquetas - WordNet}
+		\label{fig:WordNetExample}
+	\end{center}
+\end{figure}
+
+Dichas anotaciones, tienen relación con una base de datos de etiquetas o \textit{tags} que fue organizada acorde a la jerarquía de palabras que se encuentran en la base de datos léxica WordNet. Cada una de las palabras que se encuentran allí están internacionalizadas por medio de relaciones conceptuales-semánticas y léxicas. Como sucede con ImageNet, esta base de datos también es libre y pública por lo que se encuentra disponible para su descarga.
+
+
+ 
+logrando un tamaño total de 16.9MB, ideal para el uso en una aplicación móvil, ya que se busca que la misma no ocupe tanto espacio, sumando la no necesidad de una conexión a Internet, haciendo todo el proceso explotando los recursos del dispositivo.
+
+ 
+
+
+El pre-procesamiento que se le realiza a las imágenes
+
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \section{Arranca lo de LEA}
 
