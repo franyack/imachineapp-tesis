@@ -22,45 +22,45 @@ Warning--I didn't find a database entry for "bayer2016climin"
 Warning--I didn't find a database entry for "ng2012ufldl"
 Warning--I didn't find a database entry for "li2015cs231n"
 Warning--empty school in van2000graph
-You've used 35 entries,
+You've used 39 entries,
             2118 wiz_defined-function locations,
-            714 strings with 10122 characters,
-and the built_in function-call counts, 9341 in all, are:
-= -- 912
-> -- 399
-< -- 4
-+ -- 164
-- -- 128
-* -- 442
-:= -- 1579
-add.period$ -- 124
-call.type$ -- 35
-change.case$ -- 162
+            732 strings with 10582 characters,
+and the built_in function-call counts, 10444 in all, are:
+= -- 1024
+> -- 443
+< -- 5
++ -- 182
+- -- 142
+* -- 490
+:= -- 1761
+add.period$ -- 140
+call.type$ -- 39
+change.case$ -- 181
 chr.to.int$ -- 0
-cite$ -- 36
-duplicate$ -- 344
-empty$ -- 819
-format.name$ -- 128
-if$ -- 1999
+cite$ -- 40
+duplicate$ -- 385
+empty$ -- 920
+format.name$ -- 142
+if$ -- 2244
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 18
-newline$ -- 196
-num.names$ -- 70
-pop$ -- 283
+int.to.str$ -- 39
+missing$ -- 19
+newline$ -- 219
+num.names$ -- 78
+pop$ -- 317
 preamble$ -- 1
-purify$ -- 133
+purify$ -- 148
 quote$ -- 0
-skip$ -- 261
+skip$ -- 291
 stack$ -- 0
-substring$ -- 351
-swap$ -- 70
-text.length$ -- 4
+substring$ -- 387
+swap$ -- 79
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 130
+type$ -- 146
 warning$ -- 1
-while$ -- 85
-width$ -- 37
-write$ -- 391
+while$ -- 96
+width$ -- 41
+write$ -- 439
 (There were 7 warnings)

@@ -185,24 +185,24 @@ En la Figura \ref{fig:CIEngineStep-by-step} se puede observar el camino que reco
 
 \subsection{Etapa 1: Pre-procesamiento y Extracción de Características}
 
-Como se dijo en el capítulo anterior, se utiliza la biblioteca TensorFlow, específicamente un modelo de red neuronal denominado MobileNet, para realizar la descripción y extracción de características de las imágenes. Se eligió este tipo de modelo ya que se encuentran preparados y optimizados para ser utilizados en dispositivos móviles, logrando buenos resultados en ambientes productivos ya que son hoy por hoy el estado del arte en lo que corresponde a problemas de clasificación de imágenes \cite{introCNN}. 
+Como se dijo en el capítulo anterior, se utiliza la biblioteca TensorFlow, específicamente un modelo de red neuronal denominado MobileNet, para realizar la descripción y extracción de características de las imágenes. Se eligió este tipo de modelo ya que se encuentran preparados y optimizados para ser utilizados en dispositivos móviles, logrando buenos resultados en ambientes productivos ya que son hoy por hoy el estado del arte en lo que corresponde a problemas de clasificación de imágenes \cite{introCNN}. El modelo tiene un tamaño total de 16.9MB, ideal para el uso en una aplicación móvil, ya que se busca que la misma no ocupe tanto espacio, destacando la no necesidad de una conexión a Internet, haciendo todo el proceso \textit{on premise}, es decir, explotando los recursos del dispositivo.
 
 La red utilizada en este proyecto fue entrenada con 1001 grupos pertenecientes a la base de datos de imágenes \textit{ImageNet}. Esta base pertenece a un proyecto que fue diseñado para el uso de sistemas relacionados al reconocimiento de objetos, ya que cuenta con más de 14 millones de URL's de imágenes que han sido anotadas a mano por personas para indicar qué son los objetos que se encuentran en cada una de las imágenes. La base de datos cuenta con más de 20.000 categorías, y si bien las anotaciones de las imágenes realizadas por los colaboradores está disponible de manera gratuita, las imágenes reales no son propiedad de \textit{ImageNet} \cite{ImageNet}.
-
-La forma de procesar que tiene la red es: a partir de una imagen de entrada, devolver el grado de similitud que tiene con los 1001 grupos con los que cuenta la red entrenada. Esto significa que por cada uno de los grupos, se obtendrá como salida un número entre 0 y 1, indicando el porcentaje de similitud. La suma de los 1001 resultados, será 1 (ver Figura \ref{fig:MobileNet}.
 
 \begin{figure}[t]
 	\begin{center}
 		\scalebox{0.7}{
 			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/MobileNet}
+			{Imagenes/Bitmap/MobileNet2}
 		}
 		\caption{Ejemplo de aplicación de una MobileNet}
 		\label{fig:MobileNet}
 	\end{center}
 \end{figure}
 
-A su vez, estos grupos están organizados acordes a la jerarquía de etiquetas o \textit{tags} que tiene \textit{WordNet}, una gran base de datos léxica para el idioma inglés, compuesta de sustantivos, verbos, adjetivos y adverbios que se agrupan en conjuntos, donde cada uno de ellos expresan un concepto distinto. Para el uso de \textit{ImageNet}, sólo se utilizaron \textit{tags} sustantivos, y los mismos están jerarquizados partiendo desde uno madre o genérico, bajando hacia aquellos que detallan en concreto el/los objetos que se encuentran en la imagen (ver Figura \ref{fig:WordNetExample}). Esta base también es libre y gratuita, enfocada principalmente en el procesamiento automático del lenguaje natural y en aplicaciones de inteligencia artificial \cite{WordNet}.
+La forma de procesar que tiene la red es: a partir de una imagen de entrada, devolver el grado de similitud que tiene con los 1001 grupos con los que cuenta la red entrenada. Esto significa que por cada uno de los grupos, se obtendrá como salida un número entre 0 y 1, indicando el porcentaje de similitud. La suma de los 1001 resultados, será 1 (ver Figura \ref{fig:MobileNet}.
+
+A su vez, estos grupos están organizados acordes a la jerarquía de etiquetas o \textit{tags} que tiene \textit{WordNet}, una gran base de datos léxica para el idioma inglés, compuesta de sustantivos, verbos, adjetivos y adverbios que se agrupan en conjuntos, donde cada uno de ellos expresan un concepto distinto. Para el uso de \textit{ImageNet}, sólo se utilizaron \textit{tags} sustantivos, y los mismos están jerarquizados partiendo desde uno madre o genérico, bajando hacia aquellos que detallan en concreto el/los objetos que se encuentran en la imagen (ver Figura \ref{fig:WordNetExample}). Un punto importante es que esta base también es libre y gratuita, enfocada principalmente en el procesamiento automático del lenguaje natural y en aplicaciones de inteligencia artificial \cite{WordNet}.
 
 \begin{figure}[t]
 	\begin{center}
@@ -217,16 +217,60 @@ A su vez, estos grupos están organizados acordes a la jerarquía de etiquetas o \
 
 Dichas anotaciones, tienen relación con una base de datos de etiquetas o \textit{tags} que fue organizada acorde a la jerarquía de palabras que se encuentran en la base de datos léxica WordNet. Cada una de las palabras que se encuentran allí están internacionalizadas por medio de relaciones conceptuales-semánticas y léxicas. Como sucede con ImageNet, esta base de datos también es libre y pública por lo que se encuentra disponible para su descarga.
 
+\subsubsection{Pre-procesamiento de las imágenes}
 
+
+%Se cargan las imagenes con menos resolucion (ocupando menos espacio en memoria)
+%Se escala la imagen para lograr la misma de 224 x 224
+%Se manda la imagen a extraer las caracteristicas (ver si es necesario explicar BitMap -> ByteBuffer)
+
+Para que las imágenes puedan ser interpretadas por la red neuronal, deben pasar por un pre-procesamiento. Debido a una restricción que se tuvo cuando entrenaron los distintos modelos que componen el grupo MobileNet, la red que obtiene mejores resultados en términos de clasificación fue entrenada con imágenes cuyo tamaño fue de 224x224 píxeles, por lo tanto, para poder utilizarla, las imágenes de entrada al motor de procesamiento deben tener este tamaño también. Para lograr ello, las imágenes son cargadas en memoria a través de un objeto que provee Android denominado Bitmap, el cual permite realizar distintas operaciones sobre ellas \cite{Bitmap}. Con el objetivo de reducir los recursos computacionales utilizados, las mismas son cargadas en memoria bajando su resolución a un tamaño en el cual su ancho y/o alto es de 224 píxeles, adaptando la otra medida afín de que la imágen siga siendo proporcional. Una vez realizado esto, luego si es estrictamente re-escalada al tamaño solicitado por la red. Entonces, una vez que ya se encuentra en memoria la imagen con una resolución de 224x224 píxeles lista para ser procesada por la CNN, se convierte en un objeto java denominado ByteBuffer \cite{ByteBuffer}, el cual es necesario en este formato ya que así lo solicita la red neuronal (ver Figura \ref{fig:preProcessing}).     
  
-logrando un tamaño total de 16.9MB, ideal para el uso en una aplicación móvil, ya que se busca que la misma no ocupe tanto espacio, sumando la no necesidad de una conexión a Internet, haciendo todo el proceso explotando los recursos del dispositivo.
-
  
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/preProcessing}
+		}
+		\caption{Pre-procesamiento de las imágenes}
+		\label{fig:preProcessing}
+	\end{center}
+\end{figure}
 
+\subsubsection{Extracción de características}
+%Se obtiene un resultado con los 5 (si existen) mayores tags resultado cuya correspondencia es > 0.05f
+%Se obtiene el resulado de los embeddings
+Una vez que la imagen pasa por la red neuronal, se obtienen como predicciones dos resultados:
 
-El pre-procesamiento que se le realiza a las imágenes
+\begin{enumerate}
+	\item \textbf{Resultado 1: etiquetas y probabilidades}
+	
+	La primer salida que se obtiene de la red es una lista de las 5 mayores etiquetas o \textit{tags} (en caso de que existan) cuya probabilidad de similitud sea mayor o igual a un umbral establecido. Una vez que se obtienen dichos \textit{tags}, se busca por cada uno de ellas las 4 etiquetas ``padres'' (utilizando la jerarquía definida por \textit{WordNet}) asignándoles la misma probabilidad que la etiqueta ``hija'' o inicial.
+	
+	\item \textbf{Resultado 2: caracterización de la imagen}
+	
+	La segunda salida que se obtiene de la red es un indicador sobre cómo se activó cada neurona en la última capa antes de que se realice la clasificación. Esta última capa tiene como nombre \textit{embeddings} y es utilizada en el proceso como una caracterización de la imagen por parte de la red. Los \textit{embeddings} son importantes para el aprendizaje maquinal, ya que se convierten datos a una representación de características donde ciertas propiedades pueden ser representadas por nociones de distancia. Un modelo entrenado para clasificar imágenes puede permitir convertir una imagen en un vector de números, de manera que otra imagen similar tenga una distancia (por ejemplo, euclidiana) pequeña \cite{Embeddings}.  
+\end{enumerate}
 
- 
+Como conclusión, se obtiene por cada una de las imágenes a procesar un conjunto de etiquetas y probabilidades de correspondencia, y un vector con valores numéricos que indica como la red neuronal caracterizó a la imagen. A continuación, se explicará la etapa 2, en donde se realiza la medición de similitudes entre las imágenes.
+
+\subsection{Medición de similitud entre las imágenes}
+
+Una vez que fue recolectada toda la información que se describió durante la sección anterior, se procede a medir el grado de similitud que existe entre cada par de imágenes basándose en las etiquetas y probabilidades que se obtuvo de cada una de ellas, como así también del vector de características provisto por la capa de \textit{embeddings}. Al final de esta etapa, se obtendrá una matriz ponderada por dos matrices de afinidad distintas, que se describen a continuación:
+
+\begin{enumerate}
+	\item \textbf{Matriz de afinidad gramatical:} 
+	
+	Esta matriz indica la afinidad gramatical que existe entre cada par de imágenes. Por lo tanto, se obtendrá una matriz de tamaño NxN, siendo N el número de imágenes a procesar, y la posición \textit{i,j} dentro de la matriz el grado de similitud gramatical que existe entre la imagen i y la imagen j.
+	
+	Para poder medir dicha similitud, lo que se hace en una primera instancia es obtener una especie de \textit{diccionario} con todos los \textit{tags} existentes, provistos por todas las imágenes incluidas en el proceso. Luego, por cada una de las imágenes, se confecciona un mapa que tiene como clave todos los \textit{tags} provistos por el diccionario y como valor la probabilidad de similitud obtenida en la sección anterior, en caso de que exista ocurrencia, sino directamente se le asigna como valor un 0. De esta manera, se logra un vector normalizado por cada una de las imágenes, por lo que resta medir la similitud que existe entre cada par de ellas. Para obtener dicha medida, se utiliza el \textbf{coeficiente de correlación de Pearson}, un índice estadístico que puede utilizarse para medir el grado de correlación que tienen dos vectores \cite{benesty2009pearson}. El valor puede variar entre [-1,1], indicando el signo el sentido de la relación, siendo 1 una correlación perfecta. El criterio que se tomó en este proyecto es quedarse solamente con aquellas correlaciones que superan un umbral de 0.65, y en cualquier otro caso directamente se toma como inexistente una correlación entre ambas imágenes. De esta manera, se llega a la obtención de la matriz de afinidad gramatical entre las imágenes.
+	
+	\item \textbf{Matriz de afinidad según embeddings:} 
+	
+	De manera similar a como se obtuvo la matriz de afinidad gramatical, se procesan cada uno de los vectores que se obtuvieron por caracterizar a la matriz gracias a la capa de \textit{embeddings}. De ella se obtiene por cada imagen un vector de 1024 números, el cual es normalizado y procesado de a pares a través del coeficiente de Pearson, con el objetivo de obtener una nueva matriz de NxN, similar a la obtenida anteriormente. 
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 \section{Arranca lo de LEA}
 

@@ -20,7 +20,8 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Dise\~no del motor de procesamiento\relax }}{31}{figure.caption.19}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de aplicaci\'on de una MobileNet\relax }}{32}{figure.caption.20}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo del uso de etiquetas - WordNet\relax }}{32}{figure.caption.21}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{39}{figure.caption.22}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{39}{subfigure.8.1}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{39}{subfigure.8.2}
-\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{39}{subfigure.8.3}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Pre-procesamiento de las im\'agenes\relax }}{33}{figure.caption.22}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Funci\'on que describe los pesos $w$ que ponderan a cada modelo r\'eplica en base a su valor $s$, suponiendo un dominio (0, 1] para dicho valor.\relax }}{41}{figure.caption.23}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Sin ponderaci\'on (constante)}}}{41}{subfigure.9.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {Ponderaci\'on lineal}}}{41}{subfigure.9.2}
+\contentsline {subfigure}{\numberline {(c)}{\ignorespaces {Ponderaci\'on logar\IeC {\'\i }tmica}}}{41}{subfigure.9.3}

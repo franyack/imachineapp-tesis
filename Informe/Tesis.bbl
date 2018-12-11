@@ -38,6 +38,13 @@ Android.
   2018.
 \newblock Online, Accedido: 30/03/2018.
 
+\bibitem{Bitmap}
+Android.
+\newblock Bitmap.
+\newblock
+  \url{https://developer.android.com/reference/android/graphics/Bitmap}, 2018.
+\newblock Online, Accedido: 13/04/2018.
+
 \bibitem{appSigning}
 Android.
 \newblock Firmar tu aplicacion.
@@ -55,6 +62,12 @@ M.~Barning.
 \newblock {WordNet and ImageNet}.
 \newblock \url{https://www.web3.lu/wordnet-imagenet/}.
 \newblock Accedido: 13/12/2017.
+
+\bibitem{benesty2009pearson}
+J.~Benesty, J.~Chen, Y.~Huang, and I.~Cohen.
+\newblock Pearson correlation coefficient.
+\newblock In {\em Noise reduction in speech processing}, pages 1--4. Springer,
+  2009.
 
 \bibitem{androidStudioOficial}
 A.~Bermudez.
@@ -145,6 +158,13 @@ A.~G. Howard, M.~Zhu, B.~Chen, D.~Kalenichenko, W.~Wang, T.~Weyand,
   applications.
 \newblock {\em arXiv preprint arXiv:1704.04861}, 2017.
 
+\bibitem{ByteBuffer}
+Java.
+\newblock Bytebuffer.
+\newblock \url{https://developer.android.com/reference/java/nio/ByteBuffer},
+  2018.
+\newblock Online, Accedido: 13/04/2018.
+
 \bibitem{karami2017image}
 E.~Karami, S.~Prasad, and M.~Shehata.
 \newblock Image matching using sift, surf, brief and orb: performance
@@ -204,6 +224,12 @@ Y.~Taigman, M.~Yang, M.~Ranzato, and L.~Wolf.
   verification.
 \newblock In {\em Proceedings of the IEEE Conference on Computer Vision and
   Pattern Recognition}, pages 1701--1708, 2014.
+
+\bibitem{Embeddings}
+{TensorFlow}.
+\newblock Embeddings.
+\newblock \url{https://www.tensorflow.org/guide/embedding}, 2018.
+\newblock Online, Accedido: 23/04/2018.
 
 \bibitem{introCNN}
 {TensorFlow}.
