@@ -42,4 +42,7 @@
 \contentsline {subsection}{\numberline {3.2.2}Etapa 2: Medici\'on de similitud entre las im\'agenes}{33}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}Etapa 3: Ejecuci\'on del algor\IeC {\'\i }tmo de clustering}{34}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Etapa 4: Post-proceso}{36}{subsection.3.2.4}
-\contentsline {part}{Bibliograf\IeC {\'\i }a}{37}{appendix*.23}
+\contentsline {section}{\numberline {3.3}Interfaces de usuario}{36}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Flujo principal}{36}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Manejo de excepciones}{39}{subsection.3.3.2}
+\contentsline {part}{Bibliograf\IeC {\'\i }a}{51}{appendix*.37}

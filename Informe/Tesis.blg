@@ -11,56 +11,51 @@ A level-1 auxiliary file: Capitulos/Parte2.aux
 A level-1 auxiliary file: Capitulos/02Capitulo1.aux
 A level-1 auxiliary file: Cascaras/bibliografia.aux
 The style file: abbrv.bst
-A level-1 auxiliary file: TeXiS/TeXiS_acron.aux
-A level-1 auxiliary file: Apendices/ParteAnexos.aux
 Database file #1: citasCapitulo1.bib
 Database file #2: citasCapitulo2.bib
 Warning--I didn't find a database entry for "ocr2007recognition"
 Warning--I didn't find a database entry for "gonzalez1995redes"
 Warning--I didn't find a database entry for "haykin2004comprehensive"
-Warning--I didn't find a database entry for "bayer2016climin"
-Warning--I didn't find a database entry for "ng2012ufldl"
-Warning--I didn't find a database entry for "li2015cs231n"
 Warning--empty school in van2000graph
 You've used 39 entries,
             2118 wiz_defined-function locations,
-            732 strings with 10582 characters,
-and the built_in function-call counts, 10444 in all, are:
-= -- 1024
-> -- 443
+            724 strings with 10456 characters,
+and the built_in function-call counts, 10344 in all, are:
+= -- 1010
+> -- 437
 < -- 5
-+ -- 182
-- -- 142
-* -- 490
-:= -- 1761
++ -- 180
+- -- 140
+* -- 474
+:= -- 1746
 add.period$ -- 140
 call.type$ -- 39
-change.case$ -- 181
+change.case$ -- 179
 chr.to.int$ -- 0
 cite$ -- 40
-duplicate$ -- 385
-empty$ -- 920
-format.name$ -- 142
-if$ -- 2244
+duplicate$ -- 386
+empty$ -- 917
+format.name$ -- 140
+if$ -- 2226
 int.to.chr$ -- 0
 int.to.str$ -- 39
-missing$ -- 19
+missing$ -- 20
 newline$ -- 219
 num.names$ -- 78
-pop$ -- 317
+pop$ -- 322
 preamble$ -- 1
-purify$ -- 148
+purify$ -- 147
 quote$ -- 0
-skip$ -- 291
+skip$ -- 289
 stack$ -- 0
-substring$ -- 387
+substring$ -- 368
 swap$ -- 79
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 146
+type$ -- 144
 warning$ -- 1
-while$ -- 96
+while$ -- 94
 width$ -- 41
-write$ -- 439
-(There were 7 warnings)
+write$ -- 438
+(There were 4 warnings)

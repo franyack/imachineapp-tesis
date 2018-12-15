@@ -37,4 +37,7 @@
 \BOOKMARK [2][-]{subsection.3.2.2}{Etapa 2: Medici\363n de similitud entre las im\341genes}{section.3.2}% 37
 \BOOKMARK [2][-]{subsection.3.2.3}{Etapa 3: Ejecuci\363n del algor\355tmo de clustering}{section.3.2}% 38
 \BOOKMARK [2][-]{subsection.3.2.4}{Etapa 4: Post-proceso}{section.3.2}% 39
-\BOOKMARK [-1][-]{appendix*.23}{Bibliograf\355a}{}% 40
+\BOOKMARK [1][-]{section.3.3}{Interfaces de usuario}{chapter.3}% 40
+\BOOKMARK [2][-]{subsection.3.3.1}{Flujo principal}{section.3.3}% 41
+\BOOKMARK [2][-]{subsection.3.3.2}{Manejo de excepciones}{section.3.3}% 42
+\BOOKMARK [-1][-]{appendix*.37}{Bibliograf\355a}{}% 43

@@ -17,7 +17,7 @@
 \end{FraseCelebre}
 
 \begin{resumen}
-En este capítulo se describe en primer lugar el diseño elegido para el sistema, explicando cada uno de sus componentes y justificando su composición. Luego, se explican todas las cuestiones técnicas relacionadas al motor de procesamiento, como por ejemplo la manera en que se caracterizan las imágenes, como se mide la similitud entre ellas, como se aplica el algoritmo MCL para obtener los grupos finales, etc. Por último, se presentan las herramientas con las que cuenta el usuario tanto para su experiencia durante la utilización de la aplicación como para administrar el resultado final.
+En este capítulo se describe en primer lugar el diseño elegido para el sistema, explicando cada uno de sus componentes y justificando su composición. Luego, se explican todas las cuestiones técnicas relacionadas al motor de procesamiento, ya que se trata del \textit{core} de la aplicación: como se caracterizan las imágenes, la manera en que se mide la similitud entre ellas, como se aplica el algoritmo MCL para obtener los grupos, etc. Por último, se presentan las interfaces de usuario y las herramientas con las que cuenta tanto para su experiencia durante la utilización de la aplicación como para administrar el resultado final.
 \end{resumen}
 
 \begin{figure}[t]
@@ -314,4 +314,182 @@ El procedimiento que se sigue para estos casos es el de detectar aquellas imágen
 
 En caso de no existir dentro de la matriz ninguna imagen con la que tenga afinidad, se pondrá dentro de una carpeta destinada a aquellas imágenes que no tengan ningún parecido, y así evitar agrupaciones con una sola imagen.
  
+\section{Interfaces de usuario}
 
+La interfaz de usuario (\textbf{UI}, del inglés \textit{User Interface}) es todo aquello que el usuario puede ver y todo aquello con lo que éste puede interactuar. En la programación de aplicaciones nativas Android, el diseño y la lógica de una pantalla se programan en archivos separados. Por un lado, se tiene el diseño de la pantalla definido como un archivo XML y por el otro, se encuentra el código Java que se encarga de toda la parte lógica. En los archivos XML se definen los elementos visuales que componen las distintas interfaces y se especifican las propiedades o atributos que permiten interactuar al programa con el usuario \cite{murphy2010android}.
+
+En el diseño de la aplicación se priorizó la simpleza de la interfaz gráfica y la facilidad de acceso a los contenidos por parte del usuario. Como se comentó en secciones anteriores, la ventaja de utilizar Android Studio como entorno de trabajo brinda entre otras cosas la posibilidad de desarrollar aplicaciones en base a plantillas predefinidas. A la hora de crear un proyecto, el IDE brinda plantillas de todo tipo y que soportan diversos componentes propios del lenguaje. Por ejemplo, pantallas de \textit{login, fullscreen, scrolleables}, entre otras.
+
+Particularmente para este proyecto se optó por utilizar plantillas XML en blanco, donde se fueron agregando componentes como imágenes, textos, cajas de chequeo y botones a medida que surgían ideas sobre características a tener en cuenta durante la etapa de diseño e implementación de las diferentes UI, con el avance de los prototipos explicados en el comienzo de este capítulo.
+
+\subsection{Flujo principal}
+
+Cuando se inicia la aplicación por primera vez en un dispositivo móvil, solicita permisos requeridos al usuario para poder obtener información sobre los archivos que se alojan allí. Un permiso es una restricción que limita el acceso a una parte del código o a datos en el dispositivo. La limitación se impone para proteger datos y códigos claves que podrían usarse incorrectamente para distorsionar o afectar la experiencia del usuario. Por lo tanto, si no estaría de acuerdo en darle los permisos pertinentes a la aplicación, la misma se cierra automáticamente.
+
+La pantalla inicial del sistema presenta la aplicación con una imagen y botones referidos a las diferentes opciones de uso que provee. El usuario puede decidir entre seleccionar una carpeta en específico, o las imágenes que se encuentran en la carpeta que contiene las fotos tomadas por la cámara del dispositivo, para ser enviadas a procesar. Además, se pueden visualizar resultados anteriores en caso de que no se haya finalizado con la edición aún de un lote de imagenes anterior. En la Figura \ref{fig:imachineapp1} se muestra la pantalla inicial del sistema.
+
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp1}
+		}
+		\caption{Pantalla inicial de la aplicación}
+		\label{fig:imachineapp1}
+	\end{center}
+\end{figure}
+
+En las Figuras \ref{fig:imachineapp2}, \ref{fig:imachineapp3} y \ref{fig:imachineapp4} se puede visualizar la secuencia de pantallas que van surgiendo cuando se opta por elegir una carpeta en específico. La primera de ellas muestra cómo se dá la opción de elegir entre el almacenamiento interno o externo del dispositivo (en este caso, contaba únicamente con almacenamiento interno). La segunda, muestra como se permite navegar por los diferentes directorios y seleccionar el que se busca, y por último, una vez seleccionado, se vuelve a la pantalla inicial mostrando la ruta que se eligió para que se procesen las imágenes que allí se encuentran.
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp2}
+		}
+		\caption{Selección de la memoria interna o externa}
+		\label{fig:imachineapp2}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp3}
+		}
+		\caption{Selección de la carpeta a procesar}
+		\label{fig:imachineapp3}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp4}
+		}
+		\caption{Carpeta seleccionada, listo para procesar}
+		\label{fig:imachineapp4}
+	\end{center}
+\end{figure}
+
+En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge después de pulsar el botón de procesar (Figura \ref{fig:imachineapp4}), la cual estará presente el tiempo que dure el motor de procesamiento en agrupar todas las imágenes, mostrando y actualizando el porcentaje de progreso. Una vez finalizada esta etapa, en la Figura \ref{fig:imachineapp6} se puede ver la pantalla que surge cuando el proceso termina. Lo que hace el proceso es crear una carpeta temporal donde se aloja el resultado. Desde aquí en adelante, en caso de que el usuario lo necesite, comienzan las tareas de administración y edición, tanto de las carpetas como de los archivos. Se puede ver en las Figuras \ref{fig:imachineapp7} y \ref{fig:imachineapp8}, diferentes opciones que se pueden realizar sobre las carpetas y en la Figura \ref{fig:imachineapp9} se visualiza como se muestra el conjunto de imágenes agrupadas por el proceso dentro de una carpeta. Al hacer clic sobre una de las imágenes, se ve en pantalla (Figura \ref{fig:imachineapp10}). Por último, en la Figura \ref{fig:imachineapp11}, se pueden ver las diferentes opciones de administración que se permite realizar a cada una de las imágenes resultantes.
+
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp5}
+		}
+		\caption{Pantalla que muestra el progreso del procesamiento de las imágenes}
+		\label{fig:imachineapp5}
+	\end{center}
+\end{figure}
+
+
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp6}
+		}
+		\caption{Visualización de las diferentes carpetas obtenidas del proceso}
+		\label{fig:imachineapp6}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp7}
+		}
+		\caption{Opciones de administración de carpetas}
+		\label{fig:imachineapp7}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp8}
+		}
+		\caption{Ejemplo donde se renombra una carpeta}
+		\label{fig:imachineapp8}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp9}
+		}
+		\caption{Visualización de las diferentes imágenes dentro de una carpeta seleccionada}
+		\label{fig:imachineapp9}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp10}
+		}
+		\caption{Visualización de una imagen en la aplicación}
+		\label{fig:imachineapp10}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp11}
+		}
+		\caption{Opciones de administración sobre una imagen}
+		\label{fig:imachineapp11}
+	\end{center}
+\end{figure}
+
+En la Figura \ref{fig:imachineapp12}, se percibe el evento que surge de pulsar el botón \textbf{+}, presente durante todas las interfaces de administración. Allí, además de poder crear una nueva carpeta y seguir con la administración, se puede salir de la edición y pasar a la pantalla representada en la Figura \ref{fig:imachineapp13}. Ahí la aplicación permite decidir qué hacer con el resultado final, ya sea confirmando los resultados, descartándolos, o bien volver a la edición de carpetas. Si se decide confirmar los resultados (Figura \ref{fig:imachineapp14}) se puede ver que el sistema permite o bien mover el resultado final (esto significa eliminar las imágenes de su ubicación original para que pasen a una ubicación nueva, brindada por la aplicación), o bien copiarlo, simplemente creando un nuevo directorio con toda la estructura tal cual quedo en la etapa de edición.
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp12}
+		}
+		\caption{Visualización de las diferentes imágenes dentro de una carpeta seleccionada}
+		\label{fig:imachineapp12}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp13}
+		}
+		\caption{Visualización de una imagen en la aplicación}
+		\label{fig:imachineapp13}
+	\end{center}
+\end{figure}
+
+\begin{figure}[t]
+	\begin{center}
+		\scalebox{0.7}{
+			\includegraphics[width=0.8\textwidth]%
+			{Imagenes/Bitmap/imachineapp14}
+		}
+		\caption{Opciones de administración sobre una imagen}
+		\label{fig:imachineapp14}
+	\end{center}
+\end{figure}
+
+\subsection{Manejo de excepciones}

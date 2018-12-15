@@ -113,11 +113,6 @@ D.~Clark.
 J.~DiMarzio and A.~Android.
 \newblock Programmers guide, 2008.
 
-\bibitem{fayad1997object}
-M.~Fayad and D.~C. Schmidt.
-\newblock Object-oriented application frameworks.
-\newblock {\em Communications of the ACM}, 40(10):32--38, 1997.
-
 \bibitem{learninspy2016tesis}
 L.~Ferrado.
 \newblock {\em {Implementacion de un framework para la construccion de redes
@@ -204,6 +199,11 @@ M.~Malhotra.
   \url{https://hackernoon.com/how-artificial-intelligence-ai-is-transforming-mobile-technology-9f810d734d35},
   2018.
 \newblock Online, Accedido: 13/08/2018.
+
+\bibitem{murphy2010android}
+M.~L. Murphy.
+\newblock {\em Android programming tutorials}.
+\newblock CommonsWare, Llc, 2010.
 
 \bibitem{androidVSios}
 L.~redaccion.
