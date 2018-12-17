@@ -25,6 +25,14 @@ Android.
   2018.
 \newblock Online, Accedido: 26/10/2018.
 
+\bibitem{AndroidLayouts}
+Android.
+\newblock Agregar codigo desde una plantilla.
+\newblock
+  \url{https://developer.android.com/studio/projects/templates?hl=es-419},
+  2018.
+\newblock Online, Accedido: 02/05/2018.
+
 \bibitem{androidRuntimeART}
 Android.
 \newblock {ART and Dalvik}.
@@ -44,6 +52,12 @@ Android.
 \newblock
   \url{https://developer.android.com/reference/android/graphics/Bitmap}, 2018.
 \newblock Online, Accedido: 13/04/2018.
+
+\bibitem{Gradle}
+Android.
+\newblock Configurar tu compilacion.
+\newblock \url{https://developer.android.com/studio/build/?hl=es-419}, 2018.
+\newblock Online, Accedido: 15/02/2018.
 
 \bibitem{appSigning}
 Android.
@@ -211,6 +225,11 @@ L.~redaccion.
 \newblock
   \url{https://www.lanacion.com.ar/1900814-android-vs-ios-quien-gana-la-batalla}.
 \newblock Accedido: 07/04/2017.
+
+\bibitem{ocr2007recognition}
+R.~Smith.
+\newblock An overview of the tesseract ocr engine.
+\newblock {\em Document Analysis and Recognition, IEEE}, 2:629--633, 2007.
 
 \bibitem{ImageNet}
 {Standford Vision Lab, Standord University}.

@@ -13,49 +13,48 @@ A level-1 auxiliary file: Cascaras/bibliografia.aux
 The style file: abbrv.bst
 Database file #1: citasCapitulo1.bib
 Database file #2: citasCapitulo2.bib
-Warning--I didn't find a database entry for "ocr2007recognition"
 Warning--I didn't find a database entry for "gonzalez1995redes"
 Warning--I didn't find a database entry for "haykin2004comprehensive"
 Warning--empty school in van2000graph
-You've used 39 entries,
+You've used 42 entries,
             2118 wiz_defined-function locations,
-            724 strings with 10456 characters,
-and the built_in function-call counts, 10344 in all, are:
-= -- 1010
-> -- 437
+            737 strings with 10807 characters,
+and the built_in function-call counts, 11072 in all, are:
+= -- 1086
+> -- 458
 < -- 5
-+ -- 180
-- -- 140
-* -- 474
-:= -- 1746
-add.period$ -- 140
-call.type$ -- 39
-change.case$ -- 179
++ -- 190
+- -- 146
+* -- 505
+:= -- 1869
+add.period$ -- 151
+call.type$ -- 42
+change.case$ -- 191
 chr.to.int$ -- 0
-cite$ -- 40
-duplicate$ -- 386
-empty$ -- 917
-format.name$ -- 140
-if$ -- 2226
+cite$ -- 43
+duplicate$ -- 411
+empty$ -- 987
+format.name$ -- 146
+if$ -- 2382
 int.to.chr$ -- 0
-int.to.str$ -- 39
-missing$ -- 20
-newline$ -- 219
-num.names$ -- 78
-pop$ -- 322
+int.to.str$ -- 42
+missing$ -- 21
+newline$ -- 236
+num.names$ -- 84
+pop$ -- 340
 preamble$ -- 1
-purify$ -- 147
+purify$ -- 156
 quote$ -- 0
-skip$ -- 289
+skip$ -- 308
 stack$ -- 0
-substring$ -- 368
-swap$ -- 79
+substring$ -- 409
+swap$ -- 82
 text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 144
+type$ -- 156
 warning$ -- 1
-while$ -- 94
-width$ -- 41
-write$ -- 438
-(There were 4 warnings)
+while$ -- 102
+width$ -- 44
+write$ -- 473
+(There were 3 warnings)

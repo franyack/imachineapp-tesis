@@ -32,17 +32,19 @@
 \contentsline {part}{II\hspace {1em}IMachineApp}{23}{part.2}
 \contentsline {chapter}{\numberline {3}Descripci\'on del sistema}{24}{chapter.3}
 \contentsline {section}{\numberline {3.1}Dise\~no del sistema}{24}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Metodolog\IeC {\'\i }a de trabajo}{25}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Patr\'on de programaci\'on seleccionado}{27}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.1}[DONE] Metodolog\IeC {\'\i }a de trabajo}{25}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}[WIP] Patr\'on de programaci\'on seleccionado}{27}{subsection.3.1.2}
 \contentsline {subsubsection}{\numberline {3.1.2.1}Modelo-Vista-Presentador}{28}{subsubsection.3.1.2.1}
-\contentsline {section}{\numberline {3.2}Motor de procesamiento de las im\'agenes}{30}{section.3.2}
+\contentsline {section}{\numberline {3.2}[WIP] Motor de procesamiento de las im\'agenes}{30}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Etapa 1: Pre-procesamiento y Extracci\'on de Caracter\IeC {\'\i }sticas}{30}{subsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.1.1}Pre-procesamiento de las im\'agenes}{32}{subsubsection.3.2.1.1}
 \contentsline {subsubsection}{\numberline {3.2.1.2}Extracci\'on de caracter\IeC {\'\i }sticas}{33}{subsubsection.3.2.1.2}
-\contentsline {subsection}{\numberline {3.2.2}Etapa 2: Medici\'on de similitud entre las im\'agenes}{33}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Etapa 3: Ejecuci\'on del algor\IeC {\'\i }tmo de clustering}{34}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.2}Etapa 2: Medici\'on de similitud entre las im\'agenes}{34}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Etapa 3: Ejecuci\'on del algor\IeC {\'\i }tmo de clustering}{35}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Etapa 4: Post-proceso}{36}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}Interfaces de usuario}{36}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Flujo principal}{36}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Manejo de excepciones}{39}{subsection.3.3.2}
-\contentsline {part}{Bibliograf\IeC {\'\i }a}{51}{appendix*.37}
+\contentsline {section}{\numberline {3.3}[WIP] Aplicaci\'on Android}{36}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Estructura del proyecto}{37}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Interfaz de Usuario}{38}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Flujo principal}{40}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Otras caracter\IeC {\'\i }sticas de la aplicaci\'on}{42}{subsubsection.3.3.2.2}
+\contentsline {part}{Bibliograf\IeC {\'\i }a}{50}{appendix*.42}
