@@ -115,17 +115,14 @@ F.~Chollet.
 \newblock {\em Deep learning with python}.
 \newblock Manning Publications Co., 2017.
 
-\bibitem{DLOpenSourceLibraries}
-D.~Clark.
-\newblock {Top 16 Open Source Deep Learning Libraries and Platforms}.
-\newblock
-  \url{https://www.kdnuggets.com/2018/04/top-16-open-source-deep-learning-libraries.html},
-  2018.
-\newblock Online, Accedido: 28/08/2018.
-
 \bibitem{dimarzio2008programmer}
 J.~DiMarzio and A.~Android.
 \newblock Programmers guide, 2008.
+
+\bibitem{estivill2002so}
+V.~Estivill-Castro.
+\newblock Why so many clustering algorithms: a position paper.
+\newblock {\em ACM SIGKDD explorations newsletter}, 4(1):65--75, 2002.
 
 \bibitem{learninspy2016tesis}
 L.~Ferrado.
@@ -133,6 +130,12 @@ L.~Ferrado.
   neuronales con aprendizaje profundo. Caso de aplicacion: clasificacion de
   seniales cerebrales}}.
 \newblock {Degree} dissertation, Universidad Nacional del Litoral, 2016.
+
+\bibitem{gonzalez1995redes}
+J.~R.~H. Gonz{\'a}lez and V.~J.~M. Hernando.
+\newblock {\em Redes neuronales artificiales: fundamentos, modelos y
+  aplicaciones}.
+\newblock Ra-ma, 1995.
 
 \bibitem{gonzalezWoods}
 R.~C. Gonz{\'a}lez and R.~E.Woods.
@@ -151,6 +154,11 @@ V.~Gonzalez.
 C.~Haseman.
 \newblock {\em Android Essentials}.
 \newblock Apress, 2009.
+
+\bibitem{haykin2004comprehensive}
+S.~Haykin and N.~Network.
+\newblock A comprehensive foundation.
+\newblock {\em Neural Networks}, 2(2004), 2004.
 
 \bibitem{nativeApplications}
 O.~Hosting.
@@ -214,6 +222,12 @@ M.~Malhotra.
   2018.
 \newblock Online, Accedido: 13/08/2018.
 
+\bibitem{meyer2004comparison}
+A.~d.~S. Meyer, A.~A.~F. Garcia, A.~P.~d. Souza, and C.~L.~d. Souza~Jr.
+\newblock Comparison of similarity coefficients used for cluster analysis with
+  dominant markers in maize (zea mays l).
+\newblock {\em Genetics and Molecular Biology}, 27(1):83--91, 2004.
+
 \bibitem{murphy2010android}
 M.~L. Murphy.
 \newblock {\em Android programming tutorials}.
@@ -226,10 +240,41 @@ L.~redaccion.
   \url{https://www.lanacion.com.ar/1900814-android-vs-ios-quien-gana-la-batalla}.
 \newblock Accedido: 07/04/2017.
 
+\bibitem{rosenberg2007v}
+A.~Rosenberg and J.~Hirschberg.
+\newblock V-measure: A conditional entropy-based external cluster evaluation
+  measure.
+\newblock In {\em Proceedings of the 2007 joint conference on empirical methods
+  in natural language processing and computational natural language learning
+  (EMNLP-CoNLL)}, 2007.
+
+\bibitem{rousseeuw1987silhouettes}
+P.~J. Rousseeuw.
+\newblock Silhouettes: a graphical aid to the interpretation and validation of
+  cluster analysis.
+\newblock {\em Journal of computational and applied mathematics}, 20:53--65,
+  1987.
+
+\bibitem{schaeffer2007graph}
+S.~E. Schaeffer.
+\newblock Graph clustering.
+\newblock {\em Computer science review}, 1(1):27--64, 2007.
+
 \bibitem{ocr2007recognition}
 R.~Smith.
 \newblock An overview of the tesseract ocr engine.
 \newblock {\em Document Analysis and Recognition, IEEE}, 2:629--633, 2007.
+
+\bibitem{sokolova2009systematic}
+M.~Sokolova and G.~Lapalme.
+\newblock A systematic analysis of performance measures for classification
+  tasks.
+\newblock {\em Information Processing \& Management}, 45(4):427--437, 2009.
+
+\bibitem{sommerville2007software}
+I.~Sommerville et~al.
+\newblock {\em Software engineering}.
+\newblock Addison-wesley, 2007.
 
 \bibitem{ImageNet}
 {Standford Vision Lab, Standord University}.
@@ -262,9 +307,20 @@ Y.~Taigman, M.~Yang, M.~Ranzato, and L.~Wolf.
 \newblock \url{https://www.tensorflow.org/lite/overview}, 2018.
 \newblock Online, Accedido: 11/06/2018.
 
+\bibitem{MobileNetInceptionV3}
+{TensorFlow}.
+\newblock {TF Lite Developer Guide}.
+\newblock \url{https://www.tensorflow.org/lite/devguide}, 2018.
+\newblock Online, Accedido: 08/04/2018.
+
 \bibitem{van2000graph}
 S.~M. Van~Dongen.
 \newblock {\em Graph clustering by flow simulation}.
 \newblock PhD thesis, 2000.
+
+\bibitem{wagstaff2001constrained}
+K.~Wagstaff, C.~Cardie, S.~Rogers, S.~Schr{\"o}dl, et~al.
+\newblock Constrained k-means clustering with background knowledge.
+\newblock In {\em ICML}, volume~1, pages 577--584, 2001.
 
 \end{thebibliography}

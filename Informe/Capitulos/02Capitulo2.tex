@@ -1,6 +1,6 @@
 %---------------------------------------------------------------------
 %
-%                          Capítulo 5
+%                          Capítulo 4
 %
 %---------------------------------------------------------------------
 
@@ -9,487 +9,116 @@
 
 \begin{FraseCelebre}
 	\begin{Frase}
-		Todas las cosas son buenas \\ o malas por comparación.
+		Son nuestras elecciones las que muestran lo que somos, mucho mas que nuestras habilidades.
 	\end{Frase}
 	\begin{Fuente}
-		Edgar Allan Poe
+		Albus Dumbledore
 	\end{Fuente}
 \end{FraseCelebre}
 
 \begin{resumen}
-En este capítulo se describen las acciones ejecutadas para validar el correcto funcionamiento del framework implementado. Para ello, se realizan comparaciones de desempeño respecto a otras herramientas similares, y también algunos experimentos para validar ciertas funcionalidades desarrolladas en este trabajo. Se detallan los recursos utilizados y las configuraciones implementadas sobre ellos para llevar a cabo estas tareas de evaluación.
+En este capítulo se describen las acciones ejecutadas para validar el correcto funcionamiento del motor de procesamiento y de la aplicación. Para ello, se llevan adelante distintos protocolos donde se definieron experimentos y validaciones sobre ciertas funcionalidades desarrolladas en este trabajo. Se detallan los recursos utilizados y las configuraciones implementadas sobre ellos para llevar a cabo estas tareas de evaluación.
 \end{resumen}
 
+\section{Conjuntos de datos para experimentación}
+
+Con el objetivo de validar la utilidad y potencialidad del software, se define un conjunto de base de datos de prueba compuesto por diversas imágenes que provienen de lugares diferentes y bajo normativas distintas. La primera de ellas consiste en la carpeta de imágenes de WhatsApp del ejecutor del proyecto, que contando con un total de 1600 imágenes aproximadamente, se considera representativa para cualquier usuario promedio. La segunda, 2000 imágenes pertenecientes al portal de internet 9GAG\footnote{\url{https://9gag.com/}}, sitio donde la comunidad participe sube imágenes de todo tipo de temática, todos los días. Por último, se utilizó también una base de datos denominada VOC\footnote{\url{http://host.robots.ox.ac.uk/pascal/VOC}}, la cual cuenta con diversos grupos de imágenes estandarizadas y se utiliza para medir algoritmos de clasificación de imágenes en diferentes competencias que se realizan año a año, sumarizando más de 17.000 imágenes.
+
+Sumando todos los directorios, se contabilizan más de 19.000 imágenes pertenecientes a la base de datos de prueba.
 
 %-------------------------------------------------------------------
-\section{Configuraciones}
+\section{Protocolo de Experimentación}
 %-------------------------------------------------------------------
-\label{cap5:sec:configuraciones}
 
-La mejor forma de conocer cómo se utiliza Learninspy es siguiendo los ejemplos provistos en el directorio \textit{examples}. Allí se muestran aplicaciones con bases de datos públicas cubriendo gran parte de las funcionalidades que se proveen.
+El objetivo de esta sección es especificar las pruebas que fueron ejecutadas sobre el motor de procesamiento, con el fin de validar que la calidad de agrupamiento de imágenes obtenida en su uso es aceptable como para ser de utilidad en la tarea de organización de las mismas.
 
-Para poner en funcionamiento el framework, se ofrecen algunas configuraciones por defecto referidas al motor utilizado. Las mismas pueden ser modificadas desde el código fuente, o bien omitidas al inicializar una instancia de SparkContext en forma aparte a la que se crea por Learninspy. En caso de que se prefiera que el framework se encargue de eso, se debe tener en cuenta que para lograr que el mismo se conecte a un clúster en modo \textit{standalone} se debe configurar la dirección IP del nodo maestro y el puerto a utilizar mediante las variables de entorno \texttt{SPARK\_MASTER\_IP} y \texttt{SPARK\_MASTER\_PORT} correspondientemente. Además, como en la mayor parte de las aplicaciones en Spark, se debe asegurar que el módulo \textit{pyspark} puede importarse  desde Python. Una explicación para lograr ello, en conjunto con la instalación de Spark, es provista con Learninspy en el archivo de texto \textit{install\_spark.md}. Allí se especifica cómo configurar la variable de entorno \texttt{PYTHONPATH}, de forma que incluya los módulos necesarios para el funcionamiento de PySpark (para detalles adicionales, se puede consultar la guía de programación de Spark)
+Como fue definido en la Especificación de Requisitos del Software (ERS), la experimentación abarcó diferentes aspectos:
 
-
-%Para ello se configura la variable de entorno \texttt{PYTHONPATH}, a la cual se adiciona la dirección absoluta del subdirectorio \textit{python} que posee el directorio raíz de Spark y también la ubicación del programa \textit{py4j} (traductor Java - Python) que posee dicho subdirectorio en una carpeta llamada \textit{lib} (ver detalles en la guía de programación de Spark).
-%-------------------------------------------------------------------
-\subsection{Rendimiento en Spark}
-%-------------------------------------------------------------------
-\label{cap5:subsec:rendimiento-spark}
-
-Para lograr un mejor desempeño de las aplicaciones en Learninspy, se utiliza una configuración por defecto en el script \textit{context} que se introdujo en la Sección \ref{cap4:sec:estructura} donde se establecen cuestiones referidas a Spark y la JVM:
 \begin{itemize}
-	\item \textbf{Serializador}: Cuando Spark transfiere datos entre nodos de ejecución, se necesita serializar los objectos correspondientes en formato binario. En Learninspy se configura el uso de Kryo \footnote{Repositorio: \url{https://github.com/EsotericSoftware/kryo}}(versión 2), que es significativamente más rápido y con una representación binaria hasta 10 veces más compacta que el serializador por defecto (\texttt{ObjectOutputStream} de Java), por lo cual se recomienda en la mayoría de las aplicaciones con Spark \cite{karau2015learning}.
-	
-	\item \textbf{Recolector de basura en Java}: Durante el entrenamiento distribuido de Learninspy, en cada época se deshechan modelos auxiliares para lograr uno optimizado. Un modelo deshechado queda como un objeto de Java que debe tratarse correctamente por el recolector de basura para hacer eficiente el uso de memoria. Es por ello que se configura la JVM con la bandera \texttt{-XX:+UseG1GC} para elegir el recolector G1 que es conocido por tener mejor desempeño en aplicaciones de Spark \cite{tuningJavaGCspark}. Además, durante el entrenamiento en Learninspy se opera manualmente el recolector de basura de Python para que tampoco almacene objetos grandes que se dejan de utilizar durante cada iteración.
-	
-	\item En caso de disponer de menos de 32 GB de RAM, se agrega a la JVM la bandera \texttt{-XX:+UseCompressedOops} para que maneje punteros de cuatro bytes en lugar de ocho, y con ello se optimiza el manejo de memoria.
-	
-	%\item ver \texttt{MEMORY\_ONLY\_SER.} http://0x0fff.com/spark-memory-management/
-	
-\end{itemize}
-
-
-Para obtener información del desempeño de Learninspy en una aplicación, se recomienda utilizar la herramienta de monitoreo mediante interfaz web que provee Spark. Para acceder a ella, se debe ingresar desde un navegador web a:
-\begin{itemize}
-	\item en modo local, a \texttt{http://localhost:4040}.
-	\item en modo clúster, a \texttt{http://<url del master>:4040}.
-\end{itemize}
-
-Allí se presenta información acerca del entorno correspondiente, de los ejecutores de Spark y sus tareas asignadas, y un resumen de la memoria utilizada por los RDDs, entre otras. Es preciso aclarar que esta herramienta es únicamente accesible mientras se encuentra en ejecución una aplicación en Learninspy. Para más información, se puede acceder a la documentación de Spark en la sección correspondiente \footnote{\url{http://spark.apache.org/docs/latest/monitoring.html}}.
-
-Para aplicaciones en modo clúster, se debe corroborar que cada uno de los nodos del mismo tenga instalado el package de Python \textit{learninspy}, o bien se puede enviarles el mismo en forma de Python Egg (archivo .egg) mediante el script \textit{spark-submit} de Spark. Como aclaración, en el caso de que el clúster se implemente en modo \textit{standalone} de Spark, se puede configurar toda la implementación (e.g. nodos, memoria a usar por cada uno, etc) mediante los scripts \textit{slaves.sh} y \textit{spark\_env.sh} que se encuentran provistos en el directorio de Spark. Se puede encontrar una explicación detallada de todo esto en la guía de programación de Spark ya mencionada anteriormente.
-
-%ver http://blog.cloudera.com/blog/2016/01/how-cigna-tuned-its-spark-streaming-app-for-real-time-processing-with-apache-kafka/
-
-
-%------------------------------------------------------------------
-\section{Materiales utilizados}
-%-------------------------------------------------------------------
-\label{cap5:sec:materiales}
-
-
-Se detallan a continuación los recursos disponibles para llevar a cabo las tareas de validación, los cuales se escogieron a fin de poder corroborar el desempeño esperado de todas las funcionalidades del software desarrollado.
-
-%------------------------------------------------------------------
-\subsection{Recursos computacionales}
-%-------------------------------------------------------------------
-\label{cap5:subsec:estructura}
- 
-%- Ejemplo de captura de pantalla del 4040 con el cluster
-
-%- Nombrar algo del unitesting? Ahí es el unico momento que uso Iris.
-
-
-Para llevar a cabo los experimentos mencionados, se cuentan con tres formas de equipamiento computacional: un ordenador personal para evaluar el desempeño en forma local para estaciones de trabajo, un servidor de altas prestaciones para realizar una evaluación local más intensiva y con mayor paralelismo, y una estructura de clúster para experimentar en forma distribuida. A continuación, los detalles de cada uno:
-
-\begin{enumerate}
-	\item \textbf{Ordenador personal:} Computadora del tipo notebook, la cual es propiedad del autor de este trabajo y posee las siguientes características:
-	% Usar esto: http://www.binarytides.com/linux-check-processor/
-	
+	\item \underline{Datos:} se utilizaron 959 imágenes, obtenidas de las diferentes bases de datos definidas con anterioridad, como lo son:
 		\begin{itemize}
-			\item Linux Mint 3.16.0-4-amd64 1 SMP Debian 3.16.7 (2016-01-17)
-			\item Arquitectura x86\_64 (64 bits)
-			\item \underline{CPUs}: 2 núcleos, con 2 hilos cada uno
-			\item \underline{Modelo}: Intel(R) Core(TM) i5-3230M CPU @ 2.60GHz
-			\item \underline{Memoria RAM}: 6GB DDR3
-			\item \underline{Disco duro}: SATA 750GB %5400RPM	
+			\item Carpeta de imágenes de WhatsApp del ejecutor del proyecto, obtenidas entre febrero y septiembre de 2017: 649 imágenes.
+			
+			\item Imágenes descargadas del sitio 9GAG (con el objetivo de detectar posibles imágenes catalogadas como ``memes''): 100 imágenes.
+			
+			\item Base de datos VOC, muy popular ya que cuenta con diversos grupos de imágenes proveniente de distintas categorías, utilizadas para medir algoritmos de clasificación de imágenes en diferentes competencias: 210 imágenes.
 		\end{itemize}
 	
-	\item \textbf{Servidor:} Computadora de alta gama, que actualmente constituye una estructura de clúster (como la descripta en la Sección \ref{cap3:subsec:infraestructura}) pero en esta oportunidad se utilizó de forma aislada. La misma fue provista en forma gratuita por el centro \textit{Argentina Software Design Center} (ASDC) que conforma la compañía \textit{Intel Security}, y se caracteriza de la siguiente manera:
+	\item \underline{Métricas:} debido a que los datos de prueba se encuentran relacionados a clases (e.g perro, memes, comida, etc.), se aprovechó dicha información para poder validar los experimentos de manera supervisada, planteando un problema de clasificación para poder considerar medidas como la tasa de aciertos en el análisis y complementar a las medidas de calidad de los clusters en la evaluación del desempeño.
 	
+	La tarea que se realizó para poder clasificar a las imágenes, una vez que se consigue la sugerencia de organización por parte del proceso, fue obtener la moda de las clases comprendidas por cada conjunto resultado. Luego, a partir de una conglomeración o unión de aquellos grupos donde la búsqueda anterior arroja que pertenecen a la misma clase, se obtienen tantos grupos ``resultado'' como clases ``reales'' existen, y a partir de allí, se está en condiciones de llevar a cabo las diferentes medidas de clasificación y agrupamiento que se listan a continuación:
 		\begin{itemize}
-			\item Linux 4.4.0-38-generic \#57-Ubuntu 16.04.1 LTS xenial (2016-09-06)
-			\item Arquitectura x86\_64 (64 bits)
-			\item \underline{CPUs}: 48 núcleos, con 2 hilos cada uno
-			\item \underline{Modelo}: Intel(R) Xeon(R) CPU E5-2670 v3 @ 2.30GHz
-			\item \underline{Memoria RAM}: 189GB DDR4
-			\item \underline{Disco duro}: SATA 1300GB
+			\item  Las métricas elegidas para medir de manera supervisada la \underline{Clasificación} por parte del motor son \cite{sokolova2009systematic}:
+				\begin{itemize}
+					\item \textbf{F1-Score:} computado como la media armónica de los valores de ``precision'' y ``recall'' en la clasificación, extendido para soportar múltiples clases mediante ``macro-averaging''. El valor resultante varía entre 0 (clasificación pésima) y 1 (clasificación perfecta).
+					
+					\item \textbf{Accuracy:} calculada como la exactitud de la clasificación, dada por la cantidad de aciertos sobre el total. El valor resultante varía entre 0 (clasificación pésima) y 1 (clasificación perfecta).
+				\end{itemize}
+			\item Para poder tener noción sobre qué tan bien se obtienen los diferentes grupos, las métricas de \underline{Clustering} elegidas son \cite{rosenberg2007v}:
+				\begin{itemize}
+					\item \textbf{Sorensen-Dice:} Este coeficiente estadístico fue seleccionado como indicador ya que puede ser interpretado como una medida cuantitativa sobre el resultado final del agrupamiento, comparando la similitud de cada clase ``real'' contra la clase ``resultante'' que más se le parezca. La operación que realiza para poder medir qué tan parecidos son dos conjuntos es la media armónica de la proporción o ratio que existe entre ellos, arrojando un número entre 0 y 1, siendo 0 un pobre resultado de agrupamiento y 1 el mejor que se pueda alcanzar \cite{meyer2004comparison}.
+					
+					\item \textbf{Silhouette:} medida de cuán similares son los ítems dentro de un cluster (cohesión) comparados con los de otros clusters (separación). El valor resultante varía entre -1 (clustering pésimo) y 1 (clustering perfecto), donde un valor de 0 indica solapamiento entre clusters \cite{rousseeuw1987silhouettes}. 
+				\end{itemize}
 		\end{itemize}
-
-	\item 
-	\textbf{Clúster:}
-		Tanto maestro como esclavos son instancias virtualizadas creadas en un servicio de ``nube'' denominado ``Intel Cloud'' (también brindado por \textit{Intel Security}) basadas en un SO Linux 3.16.0-40-generic \#54-Ubuntu 14.04.1 LTS trusty (2015-06-10) sobre una arquitectura x86\_64 (64 bits). Particularmente, se distinguen por los recursos de la siguiente forma:
-		
+%	\item \underline{Configuraciones:} en base a un protocolo de pruebas ejecutado durante la etapa de desarrollo y especificado en la ERS, se llegó a la conclusión de que la configuración que dá mejores resultados es la definida en el capítulo anterior:
+%	\begin{itemize}
+%		\item Potencia de expansión: 2
+%		\item Potencia de inflación: 3
+%		\item Máxima cantidad de iteraciones: 100
+%		\item 
+%	\end{itemize}
+	\item \underline{Desempeño computacional:} se midió el tiempo utilizado por cada prueba ejecutada. Los dispositivos móviles con los que se contó para realizar la experimentación son:
 		\begin{itemize}
-			\item Maestro (1 instancia):
-			
-			+ \underline{CPUs}: 8 núcleos, con 1 hilo cada uno
-			
-			+ \underline{Memoria RAM}: 16GB
-			
-			\item Esclavos (10 instancias):
-			
-			+ \underline{CPUs}: 4 núcleos, con 1 hilo cada uno
-			
-			+ \underline{Memoria RAM}: 8GB
-			
-			\item \textbf{Total:}
-			
-			+ \underline{CPUs}: 48 núcleos
-			
-			+ \underline{Memoria RAM}: 96GB
+			\item Dispositivo 1: Motorola Moto G4 PLUS XT1641 32GB
+			\item Dispositivo 2: Xiaomi Redmi Note 4 64GB
 		\end{itemize}
-		
-\end{enumerate}
-
-Dado que el servidor posee más capacidad de cómputo y memoria que el clúster, la idea es verificar la escalabilidad del framework en este último y luego utilizar el servidor para las pruebas intensivas.
-
-%------------------------------------------------------------------
-\subsection{Bases de datos}
-%-------------------------------------------------------------------
-\label{cap5:sec:datos}
-
-Para las pruebas generales del framework (incluyendo las de \textit{unit testing} para la integración continua del software) se utilizaron conjuntos de datos que son muy recurridos para evaluar herramientas de aprendizaje maquinal:
-
-
-\begin{itemize}
-	\item \textit{Iris}\footnote{\label{ref-uci}\scriptsize{Extraído de UCI Machine Learning: \url{http://archive.ics.uci.edu/ml}}}: Siendo uno de los más conocidos en la literatura sobre reconocimiento de patrones, este conjunto de datos contiene 3 clases de plantas del tipo ``iris'' con 50 ejemplos de cada una. Una clase es linealmente separable de las otras dos, pero estas dos últimas no lo son entre sí.
-	
-	\textbf{Categoría:} Clasificación.
-	
-	\item \textit{Combined Cycle Power Plant} (CCPP)\textsuperscript{\ref{ref-uci}}: Es un conjunto de datos reales que consta de 9568 entradas colectadas de una central térmica de ciclo combinado a lo largo de 6 años (2006 - 2011). Sus características son todas variables numéricas y consisten en promedios por hora de ciertas variables medidas en el ambiente, y la variable a predecir es la cantidad de energía eléctrica producida por hora.
-
-	\textbf{Categoría:} Regresión.
-
-	\item \textit{MNIST}\footnote{\scriptsize{Extraído de DeepLearning.net: \url{http://deeplearning.net/tutorial/gettingstarted.html}}}: Siendo otra base de datos reconocida y altamente utilizada en la comunidad científica de visión computacional, MNIST contiene imágenes de digitos manuscritos en un total de 60.000 ejemplos de entrenamiento y 10.000 de prueba. Dichas imágenes se encuentran normalizadas y centradas en un tamaño con resolución fija.
-	
-	
-	
-	\textbf{Categoría:} Clasificación / Regresión (reconstrucción de imágenes).
-	
+	\item \underline{Criterio de aprobación:} Dado que en una aplicación real la valoración de un cluster puede ser subjetiva (es decir, el juicio depende mucho del usuario final), los niveles de aceptación en las métricas se relajan dado que el clustering final obtenido pretende ser únicamente una sugerencia de organización que el usuario puede modificar con menor esfuerzo que si lo hiciera con el conjunto total de imágenes. Por lo tanto, se establecen los siguientes criterios:
+		\begin{itemize}
+			\item Métricas:
+				\begin{itemize}
+					\item F1-Score > 0.4
+					\item Accuracy > 1 / (cantidad de clases tratadas)
+					\item Sorensen-Dice > 0.4
+					\item Silhouette > 0 
+				\end{itemize}
+%			\item Valoración subjetiva del clustering obtenido: para saber si le es útil al usuario en un caso real (entre 1 y 5 estrellas). Realizado por hasta 3 usuarios distintos.
+			\item En cuanto al desempeño en términos computacionales, se espera que el procesamiento total no lleve más de 150 segundos para las pruebas normales (entre 2 y 250 imágenes) y no más de 300 segundos para las pruebas de escalabilidad (entre 250 y 1000 imágenes).
+		\end{itemize}
 \end{itemize}
 
+\textbf{Importante:} Dado que no se tiene como objetivo tener un desempeño específico, en términos de la calidad de clustering, se establece que no es necesario realizar un análisis que se compare o compita con el estado del arte en dicha tarea ya que el motor de procesamiento no pretende más que sugerir grupos de imágenes que el usuario puede incluso modificar.
 
+\subsection{Pruebas realizadas}
 
-%------------------------------------------------------------------
-\section{Validación del framework}
-%-------------------------------------------------------------------
-\label{cap5:sec:validacion}
+A continuación se presentan pruebas que fueron aplicadas sobre el motor de procesamiento de imágenes. Las mismas son distintivas entre ellas y muestran diferentes casos de aplicación que podrían proporcionar los usuarios. Todas fueron realizadas con las configuraciones descriptas en el capítulo anterior donde se explicó el paso a paso por el que transitan las imágenes dentro del motor. La decisión de utilizar todos esos parámetros se debe a un protocolo de experimentación realizado durante la etapa de desarrollo, donde se realizaron diferentes pruebas modificándolos. A partir de allí se pudo notar que la configuraciones que mejor resultado arrojan son las elegidas. %Estas pruebas pueden verificarse en la ERS entregada durante los diferentes informes de avance.
 
-En base a los recursos descriptos, se llevaron a cabo las siguientes acciones para corroborar el correcto funcionamiento de las funcionalidades ofrecidas.
-
-% ============ SUBSECCION ELIMINADA =================
-
-\iffalse
-%------------------------------------------------------------------
-\subsection{Comparación con herramientas similares}
-%------------------------------------------------------------------
-\label{cap5:subsec:comparacion}
-
-A fines de conocer el desempeño del framework respecto a otros existentes, se procede a realizar un estudio comparativo entre distintas herramientas disponibles. Siguiendo el análisis y resultados de una publicación reciente que ya realizó este estudio \cite{bahrampour2015comparative}, se utilizan como base los siguientes aspectos:
-
-\begin{enumerate}[a)]
-	\item Extensibilidad: Their capability to incorporate different
-	types of deep learning architectures (convolutional,
-	fully-connected, and recurrent networks), different training
-	procedures (unsupervised layer-wise pre-training
-	and supervised learning), and different convolutional
-	algorithms (e.g. FFT-based algorithm).
-	
-	\item Uso de hardware: Their efficacy to incorporate hardware resources in either (multi-threaded) CPU or GPU
-	setting
-	
-	\item Velocidad de procesamiento: Their speed performance from both training and deployment perspectives.
-	
-\end{enumerate}
-
-\fi
-
-% =====================================================
-
-
-%\newcommand{\cmark}{\ding{51}}%
-%\newcommand{\xmark}{\ding{55}}%
-
-%\verb|\checkmark|: \checkmark \par
-%\verb|\cmark|: \cmark \par
-%\verb|\xmark|: \xmark
-
-%------------------------------------------------------------------
-\subsection{Testeo en integración continua}
-%-------------------------------------------------------------------
-\label{cap5:sec:qa-ci}
-
-De forma que todas las características del framework sean validadas en términos de funcionalidad, se procede a utilizar tecnologías que permitan testear cada uno de los módulos implementados y la integración de todos ellos. Esto es realizado con el fin de seguir buenas prácticas de ingeniería en software \cite{frameworkMClifton}, que permitan desarrollar un producto de software que asegure cierta calidad en su integración y despliegue. A partir de ello, se implementa un esquema de testeo automatizado realizando las siguientes acciones \cite{CIMFowler}:
-
+La primer prueba se realizó con un total de 164 imágenes, distribuidas en 5 clases diferentes:
 \begin{itemize}
-	\item \textbf{Prueba unitaria}: Mejor conocida en inglés como \textit{unit testing}, es una forma de comprobar el correcto funcionamiento de un módulo de forma aislada al resto de los componentes. Para ello se define un escenario para ejecutar las acciones de ese módulo en forma separada, y se corrobora obtener un cierto comportamiento esperado en la salida de cada una de ellas. La ejecución de todas las pruebas unitarias para el framework se realizan de forma automatizada mediante la librería de Python \textit{nose}. \footnote{\url{http://nose.readthedocs.io/en/latest/}}
-	
-	\item \textbf{Cobertura de código}: Mejor conocida en inglés como \textit{code coverage}, es una medida para cuantificar el grado o porcentaje de código fuente que se ejecuta en un conjunto de pruebas definido. La misma es utilizada para conocer la cantidad de código que es cubierta por las pruebas, lo cual es útil a la hora de depurar errores o malas definiciones en los módulos del software. Para implementarla en Learninspy, se utilizó el servicio de \textit{coveralls} \footnote{\url{https://coveralls.io/github/leferrad/learninspy}} que aprovecha el conjunto de pruebas unitarias definidas anteriormente para calcular el porcentaje deseado. 
-	
-	\item \textbf{Integración continua}: Es una práctica de la ingeniería de software por la cual todos los aportes desarrollados para un sistema dado se integran frecuentemente (por lo general, en forma diaria) sobre un entorno de integración que construye dicho sistema de forma automática (ejecutando todas las pruebas definidas), así se pueden detectar errores de integración lo antes posible. En el presente framework se utiliza TravisCI \footnote{\url{https://travis-ci.org/leferrad/learninspy}} para ello, que ofrece hosting del entorno de integración para poder ejecutar un build automático cada vez que se empuja un nuevo aporte en el repositorio.
-	
-	\item \textbf{Salud de código}: Mediante el servicio \textit{Landscape} se puede conocer una medida de la salud de un proyecto en Python en base a ciertas métricas definidas sobre el código fuente (e.g. errores, malas definiciones, malas prácticas de software, etc). 
-	
-\end{itemize}
+	\item Computadora: 40 imágenes
+	\item Documento: 50 imágenes
+	\item Bebida: 30 imágenes
+	\item Fiestas: 33 imágenes
+	\item Estadio: 11 imágenes
+\end{itemize} 
 
-A partir de implementar esto, se tiene definido un procedimiento para mantener y extender el framework asegurando que no se pierda la calidad del software en las integraciones que vayan ocurriendo. Para especificar la calidad esperada en este producto, por cada ejecución de un plan de integración se fijaron los siguientes criterios de aceptación:
-
-\begin{itemize}
-	\item La cobertura de código por \textit{coveralls} no debe ser inferior al 90\%.
-	\item La salud del código provista por \textit{Landscape} no deber ser inferior al 90\% .
-	\item El repositorio de código no puede permanecer en un estado de fallo respecto al building automático.
-	
-	
-\end{itemize}
-
-En la Figura \ref{fig:badges} se puede apreciar que en la versión actual de Learninspy se cubre un 95\% del código fuente, cuya salud es de un 92\%, y además el build automático se realiza sin fallos en TravisCI, lo cual se corrobora con los correspondientes \textit{badges} desde el repositorio en GitHub.
-
-
-\begin{figure}[t]
-	\begin{center}
-		\includegraphics[width=0.68\textwidth]%
-		{Imagenes/Bitmap/badges}
-		\caption{Captura de pantalla del README publicado en GitHub, donde se muestran los badges que certifican la aplicación correcta del esquema dado.}
-		\label{fig:badges}
-	\end{center}
-\end{figure}
-
-%------------------------------------------------------------------
-\subsection{Experimentos de validación}
-%-------------------------------------------------------------------
-\label{cap5:sec:experimentos}
-
-Dado que se quiere comparar funcionalidades con otros frameworks pero también validar aquellas que son nuevas, se define la siguiente lista de experimentos a realizar en la evaluación de desempeño sobre Learninspy:
-
-\begin{itemize}
-	\item Velocidad de procesamiento respecto a herramientas similares.
-	
-	\item Clasificación de imágenes con redes neuronales.
-	
-	\item Compresión y reconstrucción de imágenes con AutoEncoders.
-	
-	\item Configuración de la optimización en el entrenamiento distribuido.
-	
-	%\item Examinar diferencias en resultados con diferentes funciones de consenso.
-	
-\end{itemize}
-
-\hfil
-
-\textbf{Velocidad de procesamiento respecto a herramientas similares}
-
-En este experimento se replicó el procedimiento detallado en una publicación reciente \cite{bahrampour2015comparative}, donde se comparaba el desempeño de distintos frameworks en términos de velocidad de procesamiento. Específicamente, se medía la duración de las herramientas para producir dos tipos de cálculos: a) los gradientes involucrados en el algoritmo de retro-propagación, para dar idea de la duración de entrenamiento; b) la salida de una red ante una entrada, para conocer cuánto demora en realizar predicciones. 
-
-Siguiendo ello, se utilizó la misma configuración sobre Stacked AutoEncoders para poder comparar resultados con aquellos frameworks tratados. Por lo tanto, el SAE constaba de 3 AutoEncoders formando una arquitectura con las siguientes dimensiones: 784, 400, 200, 100, 10. El ajuste se realizó sobre los datos de MNIST, utilizando mini-batch de 64 ejemplos y sin  paralelismo de modelos en la optimización para que sea comparable al procedimiento original.
-
-Para la experimentación en Learninspy se utilizó el servidor de alta gama, cuya velocidad de procesamiento es menor que la del servidor utilizado en el trabajo de referencia (específicamente 35\% menor en la frecuencia de reloj de los procesadores). Es por ello que, para realizar una comparación más acertada, se normalizaron las unidades de tiempo de la siguiente forma: 
-
-
-\begin{equation}
- \texttt{duración (ciclos)  = duración (segundos) * velocidad (Hertz)} 
-\end{equation}
-
-%\sisetup{output-exponent-marker=\ensuremath{\mathrm{e}}}
-
-Por ejemplo, si una prueba dura 10 milisegundos utilizando el servidor de este trabajo, entonces en términos de ciclos computacionales la duración resulta:
-
-\begin{align*}
- d = 10 (ms) \cdot 2.3 (GHz) & = \SI{10e-3} (s) \cdot \num{2.3e9} (ciclos / s)  \\  & = \num{23e6} (ciclos) = 23 Mciclos
-\end{align*}
-
-
-Los resultados pueden apreciarse en los gráficos de barras presentados en las Figuras \ref{fig:comp-veloc-1hilo} y %\ref{fig:comp-veloc-6hilos} 
-\ref{fig:comp-veloc-12hilos} para la ejecución con 1 hilo y 12 hilos de procesamiento respectivamente. Allí se denota con el acrónimo ``GAE'' al cálculo referido a los gradientes en un AE dado durante el pre-entrenamiento, ``GSE'' al cálculo de gradientes para el ajuste fino de todo el SAE, y ``FSE'' para la salida producida por el SAE durante una predicción. 
-
-Se puede ver que el rendimiento de Learninspy es altamente inferior al de los frameworks Torch y Theano, pero respecto a TensorFlow la diferencia resulta menor. Esto se encuentra razonable debido a las siguientes cuestiones:
-
-\begin{itemize}
-	\item En cuanto a lenguajes de programación, Torch se encuentra desarrollado en Lua y Theano tiene gran parte de código hecho en C. Es bien sabido que dichos lenguajes son altamente óptimos en velocidad de cómputo respecto a Python, lenguaje con el que están mayormente hechos los frameworks TensorFlow y Learninspy. Por esta razón es que se denota una gran diferencia de rendimiento en todas las comparaciones. 
-	
-	\item Todos los frameworks utilizados para la comparación poseen una clase ``Tensor'' optimizada para realizar operaciones numéricas, que además consideran el núcleo por el cual logran la eficiencia de cómputo. Learninspy no posee esa ventaja ya que sólo utiliza rutinas de Python y el soporte de álgebra lineal está provisto únicamente por NumPy sin ninguna capa de optimización agregada.
-	
-	\item Debido a la cuestión anterior, cuando se manejan arreglos numéricos con alta dimensión (como el caso del modelo tratado en este experimento) va a reflejarse la ventaja computacional de los framework que tengan optimizadas sus rutinas algebraicas especialmente en el algoritmo de retropropagación que implica el cálculo de gradientes multidimensionales. Esto se corrobora en el gráfico donde se denota que, a medida que decrece la dimensionalidad manejada (i.e. desde el primer AE hasta el último), la duración para los gradientes disminuye importantemente a diferencia del resto de los frameworks.
-
-\end{itemize}
-
-Como conclusión general del experimento, se puede ver que Learninspy no se considera óptimo en términos de esta categoría analizada, lo cual deja abierto como trabajo futuro el hecho de mejorar tanto los módulos relacionados a cálculos algebraicos como los algoritmos que los aprovechan para el entrenamiento y las predicciones de una red neuronal. 
-
-\begin{figure}
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width  = 0.8*\textwidth,
-	height = 4cm,
-	major x tick style = transparent,
-	ybar=1*\pgflinewidth,
-	bar width=6pt,
-	ymajorgrids = true,
-	ylabel = {Duración (Mciclos)},
-	symbolic x coords={GAE1, GAE2, GAE3, GSE, FSE},
-	xtick = data,
-	scaled y ticks = false,
-	enlarge x limits=0.25,
-	ymin=0,
-	legend cell align=left,
-	legend style={
-		at={(1,1.05)},
-		anchor=south east,
-		column sep=1ex
-	}
-	]
-	
-	
-	% TORCH  
-	\addplot[style={bblue,fill=bblue,mark=none}]
-	coordinates {(GAE1,47.95) (GAE2,30.45) (GAE3,22.75) (GSE,28.7) (FSE,17.5)};
-	
-	% THEANO  
-	\addplot[style={ggreen,fill=ggreen,mark=none}]
-	coordinates {(GAE1,51.8) (GAE2,36.75) (GAE3,29.4) (GSE,28.7) (FSE,22.4)};
-	
-	% TENSOR FLOW   
-	\addplot[style={rred,fill=rred,mark=none}]
-	coordinates {(GAE1,113.4) (GAE2,125.65) (GAE3,164.85) (GSE,245.7) (FSE,181.65)};
-	
-	% LEARNINSPY 
-	\addplot[style={yellow,fill=yellow,mark=none}]
-	coordinates {(GAE1, 839.04) (GAE2,618.24) (GAE3,279.68) (GSE,559.36) (FSE,191.36)};
-	
-	\legend{Torch, Theano, TensorFlow, Learninspy}
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Comparación de frameworks de aprendizaje profundo en términos de la duración para realizar distintos tipos de salida, restringiendo la ejecución a 1 hilo de procesamiento }
-	\label{fig:comp-veloc-1hilo}
-\end{figure}
-
-\iffalse
-
-\begin{figure}
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width  = 0.8*\textwidth,
-	height = 4cm,
-	major x tick style = transparent,
-	ybar=1*\pgflinewidth,
-	bar width=6pt,
-	ymajorgrids = true,
-	ylabel = {Duración (Mciclos)},
-	symbolic x coords={GAE1, GAE2, GAE3, GSE, FSE},
-	xtick = data,
-	scaled y ticks = false,
-	enlarge x limits=0.25,
-	ymin=0,
-	legend cell align=left,
-	legend style={
-		at={(1,1.05)},
-		anchor=south east,
-		column sep=1ex
-	}
-	]
-	
-	% TORCH  
-	\addplot[style={bblue,fill=bblue,mark=none}]
-	coordinates {(GAE1,17.5) (GAE2,10.5) (GAE3,8.05) (GSE,11.55) (FSE,6.65)};
-	
-	% THEANO  
-	\addplot[style={ggreen,fill=ggreen,mark=none}]
-	coordinates {(GAE1,20.3) (GAE2,13.65) (GAE3,8.75) (GSE,9.1) (FSE,6.3)};
-	
-	% TENSOR FLOW   
-	\addplot[style={rred,fill=rred,mark=none}]
-	coordinates {(GAE1,65.45) (GAE2,99.4) (GAE3,144.2) (GSE,217.0) (FSE,162.4)};
-	
-	% LEARNINSPY 
-	\addplot[style={yellow,fill=yellow,mark=none}]
-	coordinates {(GAE1, 1000.96) (GAE2,471.04) (GAE3,250.24) (GSE,507.84) (FSE,161.92)};
-	
-	%\legend{Torch, Theano, TensorFlow, Learninspy}
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Comparación de frameworks de aprendizaje profundo en términos de la duración para realizar distintos tipos de salida, restringiendo la ejecución a 6 hilos de procesamiento }
-	\label{fig:comp-veloc-6hilos}
-\end{figure}
-
-\fi
-
-\begin{figure}
-	\centering
-	\begin{tikzpicture}
-	\begin{axis}[
-	width  = 0.8*\textwidth,
-	height = 4cm,
-	major x tick style = transparent,
-	ybar=1*\pgflinewidth,
-	bar width=6pt,
-	ymajorgrids = true,
-	ylabel = {Duración (Mciclos)},
-	symbolic x coords={GAE1, GAE2, GAE3, GSE, FSE},
-	xtick = data,
-	scaled y ticks = false,
-	enlarge x limits=0.25,
-	ymin=0,
-	legend cell align=left,
-	legend style={
-		at={(1,1.05)},
-		anchor=south east,
-		column sep=1ex
-	}
-	]
-	
-	% TORCH  
-	\addplot[style={bblue,fill=bblue,mark=none}]
-	coordinates {(GAE1,34.3) (GAE2,14.7) (GAE3,11.2) (GSE,13.3) (FSE,8.05)};
-	
-	% THEANO  
-	\addplot[style={ggreen,fill=ggreen,mark=none}]
-	coordinates {(GAE1,21.7) (GAE2,15.4) (GAE3,14.0) (GSE,12.95) (FSE,9.8)};
-	
-	% TENSOR FLOW   
-	\addplot[style={rred,fill=rred,mark=none}]
-	coordinates {(GAE1,63.0) (GAE2,98.0) (GAE3,143.15) (GSE,223.3) (FSE,162.05)};
-	
-	% LEARNINSPY 
-	\addplot[style={yellow,fill=yellow,mark=none}]
-	coordinates {(GAE1, 927.36) (GAE2,456.32) (GAE3,250.24) (GSE,500.48) (FSE,154.56)};
-	
-	%\legend{Torch, Theano, TensorFlow, Learninspy}
-	\end{axis}
-	\end{tikzpicture}
-	\caption{Comparación de frameworks de aprendizaje profundo en términos de la duración para realizar distintos tipos de salida, restringiendo la ejecución a 12 hilos de procesamiento }
-	\label{fig:comp-veloc-12hilos}
-\end{figure}
-
-\hfil
-
-\textbf{Clasificación de imágenes con redes neuronales}
-
-A fines de evaluar el desempeño en términos de resolución de problemas, se procede a utilizar los datos de MNIST para modelar un clasificador mediante las siguientes herramientas:
-
-\begin{itemize}
-	\item Regresión logística multi-clase mediante Spark MLlib.
-	\item Red neuronal profunda mediante Deeplearning4j.
-	\item Red neuronal profunda mediante Learninspy.
-\end{itemize}
-
-La idea entonces fue determinar una línea base de resultados para la clasificación mediante un clasificador básico (que fue explicado en la Sección \ref{cap2:subsec:reg-clasif}) y a partir de ello comparar el desempeño contra redes neuronales profundas, realizando a su vez también una comparación entre el framework de este trabajo y otro similar como Deeplearning4j. 
-
-Utilizando una configuración basada en la que está publicada en la web de Deeplearning4j \footnote{\url{http://deeplearning4j.org/mnist-for-beginners.html}}, se modeló una red con una sola capa oculta de 1000 unidades. Sus pesos sinápticos se regularizan mediante una norma L2 ponderada por un valor de 1e-4, y las activaciones están definidas por una ReLU. 
-
-Los resultados pueden apreciarse en la Tabla \ref{tab:mnist-clasificacion}, donde se refleja el desempeño en términos de duración del modelado y precisión obtenida en la clasificación. Se puede notar que el modelado con redes neuronales obtiene un desempeño mejor que con una regresión logística, y aunque los resultados entre ambos frameworks no son iguales debido a algunas diferencias (e.g. optimización utilizada, inicialización de pesos sinápticos) se considera que en ambos casos se logra buena precisión en la clasificación sin requerir una configuración compleja para ello.
-
-
+Lo que se quiso visualizar aquí es como se comporta la aplicación en una situación ``normal'' de uso, donde las imágenes a procesar no son demasiadas y las clases se encuentran bien distribuidas. Como se puede observar en la Tabla \ref{tab:prueba1}, los resultados fueron satisfactorios tanto para las métricas de clasificación, clustering y tiempo de proceso.
 
 \begin{table}[h!]
 	\begin{center}
-		\caption{Resultados de clasificación con datos de MNIST.}
-		\label{tab:mnist-clasificacion}
+		\caption{Resultados de la prueba 1.}
+		\label{tab:prueba1}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|l|c|c|c|c|}
+			\begin{tabular}{|l|c|c|c|c|c|}
 				\hline
-				\textbf{Modelo}  & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
-				\hline
-				
-				
-				\textbf{RegLog} & 0.9154 & 0.9144 & 0.9141 & 0.9142 \\
+				\textbf{Dispositivo}  & \textbf{F1-Score} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} & \textbf{Tiempo(s)} \\
 				\hline
 				
-				\textbf{DL4J-DNN} & 0.9710 & 0.9709 & 0.9707 & 0.9708 \\
+				
+				\textbf{1} & 0.5928 & 0.7177 & 0.5928 & 0.2256 & 116.55\\
 				\hline
 				
-				\textbf{LSPY-DNN} & 0.9410 & 0.9405 & 0.9408 & 0.9407 \\
+				\textbf{2} & 0.4740 & 0.6433 & 0.4740 & 0.2032 & 72.102\\
 				\hline
 				
 				
@@ -500,163 +129,37 @@ Los resultados pueden apreciarse en la Tabla \ref{tab:mnist-clasificacion}, dond
 
 \hfil
 
-\textbf{Compresión y reconstrucción de imágenes con autocodificadores}
+En una segunda prueba se utilizaron un total de 298 imágenes, pertenecientes a 5 distintas clases, las cuales se detallan a continuación:
 
-De forma que se valide el comportamiento esperado en un autocodificador, se realizó un experimento sobre los datos de MNIST para corroborar que se obtenga una buena reconstrucción de dichas imágenes en la salida de la red entrenada. Para ello se replicó la misma configuración detallada en el blog de Keras
-\footnote{Experimento ``Adding a sparsity constraint on the encoded representations'' detallado en \url{https://blog.keras.io/building-autoencoders-in-keras.html}}, el cual es un reconocido framework de aprendizaje profundo para Python. Los resultados se valoraron positivamente en dos formas: a) de forma objetiva, se obtuvo valores de $r^2$ mayores a 0.85 en la regresión de reconstrucción sobre los conjuntos de entrenamiento y prueba, lo cual indica un buen ajuste con generalización deseable; b) de forma subjetiva, en la Figura \ref{fig:mnist-ae} se puede apreciar visualmente la calidad de reconstrucción sobre algunas imágenes del conjunto de prueba, mostrando un buen desempeño en la tarea designada.
-
-
-\begin{figure}[t]
-	\begin{center}
-		\includegraphics[width=0.8\textwidth]%
-		{Imagenes/Bitmap/mnist2}
-		\caption{Reconstrucción de las imágenes de MNIST mediante un autocodificador. Arriba las imágenes originales, y abajo las reconstruidas.}
-		\label{fig:mnist-ae}
-	\end{center}
-\end{figure}
+\begin{itemize}
+	\item Gato: 15 imágenes
+	\item Computadora: 40 imágenes
+	\item Bebida: 30 imágenes
+	\item Memes: 68 imágenes
+	\item Screenshots: 145 imágenes
+\end{itemize} 
 
 
-\iffalse
-\textbf{Cantidad modelos replicados vs Epocas}
+El objetivo de esta prueba fue observar como se comporta el motor ante un aumento considerado de la cantidad de imágenes a procesar, además de que se encuentren muchas más imágenes de una sola categoría con respecto a las otras. Como se puede ver en la Tabla \ref{tab:prueba2}, se obtuvieron buenas métricas. Se puede observar que la \textit{Silhouette} en general fue baja, ya que el algoritmo creó muchos grupos de 2 o 3 imágenes, haciendo que esta métrica esté muy cercana al valor 0 (solapamiento entre grupos). Vale aclarar que dentro de estos clusters chicos, las imágenes tenían mucha relación entre sí, por lo que subjetivamente se podría considerar como una buena agrupación. 
 
-En este experimento lo que se quiere verificar empíricamente es cómo impacta el paralelismo implementado en el modelo sobre la duración del ajuste de modelos (i.e. número de modelos replicados contra duración total del entrenamiento). Para ello, se toman dos bases de datos (iris p/ clasif y boston p/ regres) y se prueban diferentes configuraciones: para cada una de ellos, se mide la cantidad de epocas necesarias para llegar a un treshold dado en la métrica (e.g. 0.8 de r2 en reg) y el tiempo en seg total del ajuste llevado a cabo. Con ello, se hacen dos gráficas: num modelos vs total epocas (linea 2d) y duracion total de modelado (histograma por modelo).
-\fi
+Otro punto a destacar, es cómo al aumentar la cantidad de imágenes a procesar, el tiempo en el celular de gama mayor se reduce casi en un 50\% respecto al celular de gama media.
 
-\hfil
-
-%\textbf{Relación entre optimización local y global en el entrenamiento distribuido}
-\textbf{Configuración de la optimización en el entrenamiento distribuido}
-
-Como se presentó en la Sección \ref{cap4:subsec:compdistrib}, la optimización de modelos en forma distribuida introduce ciertos parámetros a configurar para su ejecución.  De forma que se muestre empíricamente la relación entre algunos de ellos, se realizaron dos experimentos sobre todas las infraestructuras para conocer el impacto que tiene en la duración del modelado y sus resultados.
-
-\hfil
-
-\setlength{\parindent}{0in}
-\textit{1) Analizar sobre datos reales la relación entre los parámetros de optimización.}
-
-\setlength{\parindent}{1.5em}
-Básicamente el primer experimento consta de entrenar una red neuronal de 1 capa oculta sobre los datos de CCPP, y en cada prueba se fue variando un parámetro que define la optimización para evaluar cómo influye en todo el proceso. Específicamente, se fue aumentando en 10 unidades la cantidad máxima de iteraciones o épocas a realizar por cada modelo réplica durante el entrenamiento paralelizado. Además, el nivel de paralelismo (i.e. cantidad de modelos réplicas a ajustar en cada época global) se configuró de dos formas: valiendo 4 para las pruebas sobre el ordenador personal, y 10 para aquellas realizadas tanto en el servidor como en el clúster. El resto de la configuración se mantuvo fija, eligiendo 20 ejemplos para cada batch de datos, y se definió como criterio de corte para la optimización general el hecho de alcanzar un $R^2$ igual a 0.9 de ajuste sobre el conjunto de validación.  
-
-La idea entonces fue comparar la duración final del entrenamiento de un modelo (i.e. optimización global) al alcanzar el criterio de corte definido, respecto a la cantidad de iteraciones que se realizaban en forma paralela sobre cada batch de datos (i.e. optimización local). 
-
-
-\begin{figure}[t]
-	\begin{center}
-		\includegraphics[width=0.7\textwidth]%
-		{Imagenes/Bitmap/opt-global_vs_local}
-		\caption{Duración del modelado en épocas variando la configuración de su optimización, donde se distingue el paralelismo P utilizado y el tipo de duración}
-		\label{fig:opt-global_vs_local}
-	\end{center}
-\end{figure}
-
-
-\begin{figure}[t]
-	\begin{center}
-		\includegraphics[width=0.7\textwidth]%
-		{Imagenes/Bitmap/opt-tiempo_vs_local}
-		\caption{Duración del modelado por cada época en forma global, variando la configuración de su optimización}
-		\label{fig:opt-tiempo_vs_local}
-	\end{center}
-\end{figure}
-
-En la Figura \ref{fig:opt-global_vs_local} se presentan los resultados de variar la duración en épocas de la optimización local para el modelado de la red neuronal. Por cada configuración respecto al paralelismo, se muestra cuántas épocas comprendió tanto para la optimización global como para el total del proceso (i.e. producto de la cantidad local por la global). A partir de ello se percibe también la diferencia que introduce en el modelado la variación del nivel de paralelismo, en términos de la precisión obtenida en los resultados luego de cada época, que termina a su vez impactando en la duración total del experimento al alcanzar en menor o mayor tiempo el criterio de corte definido.
-
-\hfil
-
-\setlength{\parindent}{0in}
-\textit{2) Estudiar la duración resultante en los distintos tipos de infraestructura.}
-
-\setlength{\parindent}{1.5em}
-Por otro lado, en el segundo experimento se midió la duración del modelado en términos de tiempo comprendido por cada época local. Para esta prueba se quitó la restricción dada por el criterio de corte en la optimización, de forma que se estimen mejor los valores de duración mediante más muestras. Entonces, nuevamente variando la cantidad de épocas a realizar en forma local, se midió cuántos segundos demoraba cada época en la optimización dada sobre los tres tipos de infraestructura disponibles. 
-
-En la Figura \ref{fig:opt-tiempo_vs_local} se visualizan los resultados de esta prueba, donde para estimar la duración se utilizó tanto el promedio como la mediana de las muestras. La diferencia percibida entre ambos valores se debe a que generalmente las primeras épocas de la optimización en Learninspy demoran bastante más que el resto, y es porque Spark allí trata de optimizar el grafo de tareas a ejecutar para el trabajo involucrado hasta que luego se desempeña establemente. Esto se acentúa aún más cuando se realiza en un clúster, ya que el proceso incluye la coordinación de los nodos computacionales para realizar el conjunto de tareas necesario. Por ello se considera que la mediana es una buena estimación para conocer la duración de cada época en este proceso, y su evolución es lineal como puede apreciarse en el gráfico presentado.
-
-En base a estos dos experimentos realizados además se puede calcular la duración total de cada experimento multiplicando la cantidad de épocas realizadas por la correspondiente estimación de duración por época, y con ello deducir que el modelado de menor tiempo se realizaría utilizando 20 épocas de forma local cuando P=4 y mediante 50 épocas para P=10.
-
-
-\iffalse
-Compu personal:
-parallelism=4 (0.9)(log\_avg)
-10: 32 -> 320 * 1.05s = 336s
-20: 9 -> 180 * 1.27s = 228.6s
-30: 6 -> 180 * 1.51s = 271.8s
-40: 4 -> 160 * 1.62s = 259.2s
-50: 3 -> 150 * 1.84s = 276s
-60: 3 -> 180 * 2.01s = 361.8s
-70: 3 -> 210 * 2.21s = 464.1s
-80: 3 -> 240 * 2.40s = 576s
-
-Servidor
-parallelism=10 (0.9)(log\_avg)
-10: 45 -> 450 * 0.78s = 351s
-20: 10 -> 200 * 0.95s = 190s
-30: 6 -> 180 * 1.05s = 189s
-40: 4 -> 160 * 1.11s = 177.6s
-50: 3 -> 150 * 1.14s = 171s
-60: 3 -> 180 * 1.25s = 225s
-70: 2 -> 140 * 1.31s = 183.4s
-80: 2 -> 160 * 1.43s = 228.8s
-\fi
-
-
-
-% ======================= BORRADOR ================================
-\iffalse
-\begin{figure}
-	\centering
-	\begin{minipage}{.5\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{Imagenes/Bitmap/opt-global_vs_local}
-		\captionof{figure}{Duración del modelado en épocas variando la configuración de su optimización, donde se distingue el paralelismo P utilizado y el tipo de resultado presentado.}
-		\label{fig:opt-global_vs_local2}
-	\end{minipage}%
-	\hfill
-	\begin{minipage}{.5\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{Imagenes/Bitmap/opt-tiempo_vs_local}
-		\captionof{figure}{Duración del modelado por cada época en forma global, variando la configuración de su optimización}
-		\label{fig:opt-tiempo_vs_local2}
-	\end{minipage}
-\end{figure}
-\fi
-% ===========================================================
-
-En los experimentos anteriores, la función de consenso elegida fue siempre la misma (aquella con ponderación logarítmica) ya que al cambiarla se notaba que la cantidad de épocas resultantes también variaba. Esto se debe a que, al mezclar los modelos réplicas durante el entrenamiento distribuido, la precisión de los resultados de validación variaba de forma tal que por cada función se podía llegar en menor o mayor tiempo al criterio de corte definido. Para corroborar ello, en la Tabla \ref{tab:opt-consenso} se muestra cómo cambia el desempeño final del modelado con igual configuración variando sólo la función de consenso para la optimización.
 
 \begin{table}[h!]
 	\begin{center}
-		\caption{Resultados obtenidos variando las funciones de consenso para la optimización del modelo}
-		\label{tab:opt-consenso}
+		\caption{Resultados de la prueba 2.}
+		\label{tab:prueba2}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|l|c|c|c|c|c|c|}
+			\begin{tabular}{|l|c|c|c|c|c|}
 				\hline
-				\begin{tabular}{@{}c@{}}\textbf{Función de} \\ \textbf{consenso} \end{tabular}  & 
-				
-				$r^2_{train}$ & $r^2_{valid}$ & $r^2_{test}$ & 
-				
-				RMSE & RMAE & Exp Var\\
+				\textbf{Dispositivo}  & \textbf{F1-Score} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} & \textbf{Tiempo(s)} \\
 				\hline
 				
 				
-				\textbf{AVG} & 0.90947 & 0.91882 & 0.90860 &
-				
-				5.09933 & 2.01771 & 0.90866	
-				
-				\\
+				\textbf{1} & 0.8453 & 0.8489 & 0.8452 & 0.0101 & 215.24\\
 				\hline
 				
-				\textbf{W\_AVG} & 0.90955 & 0.91874 & 0.90869 &
-				
-				5.09683 & 2.01658 & 0.90869
-				
-				\\
-				\hline
-				
-				\textbf{LOG\_AVG} & 0.90943 & 0.91881 & 0.90855 &
-				
-				5.10081 & 2.01788 & 0.90857
-				
-				\\
+				\textbf{2} & 0.8444 & 0.8457 & 0.8443 & -0.0162 & 138.20\\
 				\hline
 				
 				
@@ -665,30 +168,137 @@ En los experimentos anteriores, la función de consenso elegida fue siempre la mi
 	\end{center}
 \end{table}
 
-\iffalse
 \hfil
 
-\textbf{Examinar diferencias en resultados con diferentes funciones de consenso}
+Por último, se muestra una prueba donde el objetivo fue elevar aún más el número de imágenes y clases, y así poder medir la escalabilidad del motor y su comportamiento en diferentes dispositivos. Las clases utilizadas fueron 11 con un total de 500 imágenes divididas de la siguiente manera:
 
+\begin{itemize}
+	\item Avión: 25 imágenes
+	\item Bicicleta: 50 imágenes
+	\item Pájaro: 35 imágenes
+	\item Bus: 30 imágenes
+	\item Automóvil: 70 imágenes
+	\item Gato: 15 imágenes
+	\item Computadora: 51 imágenes
+	\item Perro: 101 imágenes
+	\item Bebida: 30 imágenes
+	\item Memes: 90 imágenes
+	\item Fiestas: 33 imágenes
+\end{itemize}
 
-En los experimentos anteriores, la función de consenso elegida fue siempre la misma (aquella con ponderación logarítmica, denominada \textit{log\_avg}) ya que al cambiarla se notaba que la cantidad de épocas resultantes también variaba. Esto se debe a que, al mezclar los modelos réplicas durante el entrenamiento distribuido, la precisión de los resultados sobre el conjunto de validación variaba de forma tal que por cada función se podía llegar en menor o mayor tiempo al criterio de corte definido. 
+Como se puede observar en la Tabla \ref{tab:prueba3}, las métricas obtenidas en cuanto a clasificación y clustering son buenas. El inconveniente se encuentra en el tiempo de proceso, ya que fue bastante largo ($\approx$ 9 minutos para el dispositivo 1). Es por ello que fue necesario establecer un límite en relación a la cantidad de imágenes procesadas - tiempo, ya que para dispositivos gama baja/media es demasiado el tiempo que consume.
 
-Por lo tanto, en este experimento se tomó una de las configuraciones de la anterior prueba (cual?) y se optimizó un modelo con las 3 funciones de consenso disponibles en este framework. 
+\begin{table}[h!]
+	\begin{center}
+		\caption{Resultados de la prueba 3.}
+		\label{tab:prueba3}
+		\begin{adjustbox}{max width=\textwidth}
+			\begin{tabular}{|l|c|c|c|c|c|}
+				\hline
+				\textbf{Dispositivo}  & \textbf{F1-Score} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} & \textbf{Tiempo(s)} \\
+				\hline
+				
+				
+				\textbf{1} & 0.8123 & 0.804 & 0.8123 & 0.1581 & 515,38\\
+				\hline
+				
+				\textbf{2} & 0.8142 & 0.808 & 0.8143 & 0.1321 & 335.91\\
+				\hline
+				
+				
+			\end{tabular}
+		\end{adjustbox}
+	\end{center}
+\end{table}
 
+\hfil
 
+\section{Validación de la aplicación}
 
-Finalmente mediante el tercer experimento, para validar que estas funciones de consenso no sólo influyen en la duración del experimento sino también en la precisión de los resultados, se tomó una de las configuraciones anteriores y se optimizó un modelo con las 3 funciones hasta una cierta cant max de iter, configurando además que la red se quede finalmente con los parámetros que mejor resultados lograron en el conj de valid (keep\_best=True). 
+Con el objetivo de corroborar el correcto funcionamiento de todos los módulos que componen el sistema, verificando que actúan y responden según lo esperado, se definieron pruebas unitarias (mejor conocido en inglés como \textit{unit testing}), y un protocolo de validación donde se presentaron un conjunto de casos de prueba relacionadas a la experiencia de usuario. Todo será detallado a continuación.
 
-\fi
+\subsection{Pruebas unitarias}
 
+De forma que las características de la aplicación sean validadas en términos
+de funcionalidad, se procede a utilizar diferentes herramientas que permitan testear los módulos implementados. Esto es realizado con el fin de seguir buenas prácticas de ingeniería en software \cite{sommerville2007software}, que permitan desarrollar un producto que asegure cierta calidad en su integración y despliegue.
 
+Las pruebas unitarias son una forma de comprobar el correcto funcionamiento de un módulo de forma aislada al resto de los componentes. Para ello se define un escenario para ejecutar las acciones de ese módulo en forma separada, y se corrobora obtener un cierto comportamiento esperado en la salida de cada una de ellas \cite{learninspy2016tesis}. Mediante la utilización de los frameworks \textbf{JUnit} y \textbf{Mockito}, se llevaron adelante las pruebas de la aplicación de forma automatizada. Gracias a ellos se fue probando de a pequeñas porciones de código. Para esto se estableció un escenario posible con datos de entrada, ejecutando las acciones de cada módulo y corroborando el comportamiento esperado en las salida de cada uno de los casos.
 
+\subsection{Protocolo de validación}
 
+Con el objetivo de validar que todos los módulos que componen la aplicación responden y actúan según lo esperado, se definieron un conjunto de pruebas a realizar sobre la aplicación finalizada y aquí se muestran los resultados:
 
-% Variable local para emacs, para  que encuentre el fichero maestro de
-% compilación y funcionen mejor algunas teclas rápidas de AucTeX
-%%%
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: "../Tesis.tex"
-%%% End:
+\begin{itemize}
+	\item \textbf{\underline{Prueba Nº 1}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Seleccionar ícono de ingreso al sistema dentro del menú Android.
+		\item \underline{Criterio de aprobación:} Ingreso a la aplicación de forma directa sin ningún tipo de publicidad o presentación.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} Una vez que se aprieta el ícono representativo, se ingresa a la aplicación sin demoras ni errores.
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 2}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Acceder al menú de elección de directorios a procesar.
+		\item \underline{Criterio de aprobación:} Acceso al explorador de archivos, pudiendo visualizar el contenido dentro de cada carpeta.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} Se brinda la opción de seleccionar el directorio a procesar. Se visualizan directorios (en caso de que existan) dentro de la carpeta seleccionada, pero no su respectivo contenido (e.g imágenes, documentos, etc.)
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 3}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Verificar estado de procesamiento de las imágenes durante la ejecución.
+		\item \underline{Criterio de aprobación:} El sistema muestra en todo momento el grado de avance del procesamiento, calculado en base a la cantidad de imágenes procesadas y la cantidad total de imágenes a procesar.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} Durante el procesamiento de las imágenes se puede visualizar el porcentaje de procesamiento realizado en cada momento.
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 4}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Verificar informe de finalización de procesamiento de imágenes por parte del sistema.
+		\item \underline{Criterio de aprobación:} Deberá indicar el estado de finalización (éxito o error). En caso de que haya finalizado exitosamente, a continuación deberá presentar el menú de administración del resultado.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} Una vez finalizado el procesamiento, el sistema muestra la sugerencia de organización de las imágenes si finaliza de manera exitosa. En caso de finalizar con algún tipo de error, vuelve todo hacia atrás y solicita que el proceso vuelva a ejecutarse.
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 5}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Probar las diferentes opciones de administración de imágenes y directorios sugeridos por el resultado.
+		\item \underline{Criterio de aprobación:} La utilización de dichas opciones debe responder de manera fluida y realizar las tareas especificadas. Debe informar el éxito de cada tarea realizada de manera dinámica y rápida.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} Se corroboró que la aplicación responda adecuadamente con las distintas opciones de administración de directorios disponibles (e.g. renombrar, mover, eliminar, etc)
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 6}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Seleccionar el botón de confirmar el resultado final.
+		\item \underline{Criterio de aprobación:} El sistema deberá brindar al usuario la opción de mover de manera permanente o copiar el resultado final.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} La aplicación responde correctamente al presionar el botón confirmar, mostrando las diferentes opciones, ya sea copiar o mover el resultado final, o bien cancelar y volver a la pantalla anterior.
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 7}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Mover de manera permanente el resultado final hacia una nueva carpeta.
+		\item \underline{Criterio de aprobación:} La aplicación deberá mover las imágenes desde su ubicación original hacia la nueva carpeta generada.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} Los resultados se encuentran en la ubicación esperada luego de confirmarlos, y son eliminados de su ubicación anterior.
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 8}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Copiar el resultado final hacia una nueva carpeta.
+		\item \underline{Criterio de aprobación:} La aplicación deberá copiar (sin eliminar las imágenes desde su ubicación original) hacia la nueva carpeta generada.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} La aplicación copia los archivos de manera correcta a la ubicación indicada una vez que los resultados son confirmados.
+	\end{itemize}
+	\item \textbf{\underline{Prueba Nº 9}}
+	\begin{itemize}
+		\item \underline{Sujeto:} Ejecutor del proyecto
+		\item \underline{Tarea:} Seleccionar el botón de descartar el resultado final.
+		\item \underline{Criterio de aprobación:} La ubicación de cada imagen deberá permanecer inalterada y en el estado original previo a la utilización de la aplicación. Informar al usuario el éxito de la operación.
+		\item \underline{Estado:} APROBADO
+		\item \underline{Comentarios:} El estado original de las imágenes procesadas se conserva correctamente luego de descartar un resultado de agrupamiento.
+	\end{itemize}
+\end{itemize}
