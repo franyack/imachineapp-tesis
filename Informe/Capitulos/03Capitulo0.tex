@@ -1,85 +1,96 @@
 %---------------------------------------------------------------------
 %
-%                          Capítulo 6
+%                          Capítulo 5
 %
 %---------------------------------------------------------------------
 
-\chapter{Electroencefalografía}
+\chapter{Conclusiones generales}
 
 \begin{FraseCelebre}
-\begin{Frase}
-Todo hombre puede ser, si se lo propone, escultor de su propio cerebro.
-\end{Frase}
-\begin{Fuente}
-Santiago Ramón y Cajal
-\end{Fuente}
+	\begin{Frase}
+		Lo importante no es llegar, lo importante es el camino.
+	\end{Frase}
+	\begin{Fuente}
+		Fito Páez
+	\end{Fuente}
 \end{FraseCelebre}
 
 \begin{resumen}
-Este capítulo pretende introducir brevemente los conceptos manejados en cada caso de aplicación realizado. Específicamente, se puntualiza sobre la electroencefalografía y su uso para construir interfaces cerebro-humano, destacando así la motivación principal para llevar a cabo las aplicaciones del presente trabajo de tesis.
+	Este capítulo está destinado a plasmar conclusiones finales de todo el trabajo realizado. Las mismas se refieren al valor que se obtiene de este proyecto, así como las fortalezas y debilidades identificadas durante toda la ejecución. Aquí se validan los logros del trabajo respecto a lo planificado, y se discuten futuros trabajos posibles a realizar sobre el sistema generado.
 \end{resumen}
 
 
 %-------------------------------------------------------------------
-\section{Señales de electroencefalograma}
+\section{Conclusiones}
 %-------------------------------------------------------------------
-\label{cap6:sec:eeg}
 
-La electroencefalografía (\acs{EEG}) consiste en el registro de la actividad cerebral de un individuo, la cual es captada mediante electrodos como señales eléctricas producidas por un conjunto de neuronas en un período de tiempo. El primer registro de actividad espontánea cerebral fue realizado en 1875 por Richard Canton, quien mediante un galvanómetro pudo observar impulsos eléctricos medidos sobre la superficie del cerebro de un animal. En 1924, Hans Berger registra el primer electroencefalograma de un humano mediante el uso de tiras metálicas pegadas sobre el cuero cabelludo y utilizando también un galvanómetro como elemento de medida. Durante dicho procedimiento pudo medir el patrón irregular y de poca amplitud de la señal de electroencefalograma, generando las bases para el desarrollo de la electroencefalografía \cite{coretto2016imaginada}.
+En este proyecto se pretendía lograr un producto de software sobre la plataforma Android que, sin la necesidad de una conexión a Internet y a partir de imágenes almacenadas en el dispositivo, sugiera una estructura de directorios para organizar el conjunto, según una medida de similitud calculada entre los elementos. Además, se necesitaba que provea funcionalidades que le permitan al usuario la interacción con el resultado, para desempeñar distintas tareas de administración sobre el almacenamiento comprendido por las imágenes. 
 
-Existen dos modalidades en que se puede registrar la actividad del cerebro, según la técnica utilizada para la medición: invasiva y no invasiva \cite{abaitua2012procesado}. Las técnicas invasivas, como el electrocortigrama (ECoG), utilizan micro electrodos implantados en el cerebro que miden la actividad de las neuronas, individualmente consideradas. En cambio, la electroencefalografía es una técnica no invasiva que indica la actividad eléctrica del cerebro medida con electrodos superficiales colocados sobre el cuero cabelludo, con lo cual se proporciona información detallada sobre la actividad local de pequeñas regiones cerebrales. Se caracteriza por captar señales de pequeñísima amplitud y de gran variabilidad en el tiempo, así como por tener un valor pobre de relación señal/ruido o \ac{SNR}, y su instrumentación de adquisición es de fácil colocación y bajo costo.
+Un valor importante a destacar respecto al desarrollo de este trabajo es el aprendizaje de nuevas tecnologías, lenguajes de programación y arquitecturas que involucró: desde el lenguaje hasta las herramientas de software utilizadas para construir la aplicación (e.g. Java, conjunto de herramientas de desarrollo (SDK) Android), el patrón de programación necesario para que la aplicación funcione de manera correcta (MVP) y los algoritmos de extracción de características y \textit{clustering} implementados (APIs de TensorFlow, ImageNet, WordNet, MCL). 
 
-Generalmente el conjunto de electrodos que registran la señal de EEG se ubica en forma directa sobre el cuero cabelludo siguiendo el sistema internacional 10-20, denominado así porque los electrodos están espaciados entre el 10\% y el 20\% de la distancia total entre puntos reconocibles del cráneo. Actualmente se utilizan unos gorros que llevan incorporados los electrodos, a cada uno de los cuales se les introduce un gel conductor que facilita la recepción de la señal a través del cuero cabelludo. Los electrodos se unen en un conector
-y éste se conecta con el cabezal del EEG, lugar donde se recoge toda la actividad eléctrica y se envía al sistema de amplificadores para su trascripción a datos digitales.
-
-
-%-------------------------------------------------------------------
-\section{Interfaces Cerebro-Computadora}
-%-------------------------------------------------------------------
-\label{cap6:sec:icc}
-
-%Se puede usar esto http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3304110/
-
-Una interfaz cerebro-computadora o ICC (en inglés, conocida como \textit{Brain Computer Interface} o \acs{BCI}) es un sistema que permite a una persona la comunicación y control de su entorno sin necesidad de usar nervios o músculos. Esta registra la actividad cerebral de un sujeto para traducirla en comandos sobre una computadora. Es por ello que tiene gran utilidad en aplicaciones de robótica, videojuegos, y especialmente en salud neurológica al ser la única posibilidad de comunicarse para personas con discapacidades motrices. En cuanto a la toma de datos, los métodos no invasivos son más atractivos ya que son más fáciles de implementar en pacientes y además han demostrado tener efectividad comparable a la de aquellas interfaces con electrodos implantados cuando se utilizan algoritmos apropiados de aprendizaje maquinal \cite{wolpaw2004control}.
-
-Los sistemas \acs{BCI} no son lectores de mente. Están diseñados para reconocer patrones en datos extraídos del cerebro (e.g. pensamientos o estados mentales) y asociarlos con comandos, pero eso no significa que sea capaz de leer una mente. Según Forslund \cite{forslund2003neural}, no existe forma de que un sistema técnico pueda actualmente informar \textit{qué piensa una persona}, y hay varias razones para ello:
-\begin{enumerate}
-	\item Las técnicas de sensado que se usan para extraer información del cerebro son imprecisas, y pueden representar sólo una microscópica fracción del total de actividad cerebral.
-	\item Incluso si fuera posible extraer los estados de todas las células en el cerebro, esa información sería muy compleja de manejar, aún para la más poderosa súper computadora.
-	\item Los cerebros son únicos e individuales. Aunque dos personas piensen exactamente lo mismo, la actividad cerebral que se manifiesta es completamente diferente. 
-\end{enumerate}
-
-Aclarado esto, se puede entender a un sistema BCI como un traductor de actividad cerebral en ciertos comandos definidos, por lo cual se compone de los siguientes módulos:
-\begin{itemize}
-	\item Sensado de datos cerebrales en el sujeto y filtrado o mejora de la calidad de las señales.
-	\item Extracción de características relevantes para la tarea del sistema.
-	\item Clasificación del fenómeno registrado desde el cerebro.
-	\item Traducción en movimiento o control de un dispositivo, y retroalimentación al sujeto en cuestión.
-\end{itemize}
-
-\begin{figure}[t]
-	\begin{center}
-		\includegraphics[width=\textwidth]%
-		{Imagenes/Bitmap/diagrama-bci}
-		\caption{Diagrama en bloques del funcionamiento de un BCI.}
-		\label{fig:bci-neural}
-	\end{center}
+\begin{figure}
+	\centering
+	\begin{tikzpicture}
+	\pie[text=legend, radius=2.5]{40/Programación, 15/Software, 30/Aplicación, 15/Matemáticas}
+	\end{tikzpicture}
+	
+	\caption{Gráfico de torta con las contribuciones de cada área curricular hacia el proyecto desarrollado.}
+	\label{fig:pie-plot-asignaturas}
 \end{figure}
 
-En la Figura \ref{fig:bci-neural} se puede visualizar el diagrama en bloques descripto. Dado que en este trabajo los modelos se basan en redes neuronales profundas, se propone como parte de un único bloque a las tareas de extracción de características y clasificación, ya que este tipo de modelo se encargaría de todo esto tal como se ha anticipado en la Sección \ref{cap2:sec:deeplearning}. Es por ello que para los casos de aplicación tratados se propuso como alcance que los experimentos se realicen sobre datos crudos de electroencefalografía, sin ninguna extracción de características previa. Con ello se sigue la idea de otros trabajos en aprendizaje profundo \cite{bengio2009learning}\cite{le2013building}\cite{erhan2010does}, en donde se espera que la red neuronal sea capaz de aprender a extraer las características sobre la entrada. %(feature learning)
-% https://en.wikipedia.org/wiki/Feature_learning
-
-Por lo tanto, para estas aplicaciones se pretende probar el desempeño de los modelos construidos mediante el framework desarrollado, y así corroborar la aptitud para facilitar o resolver problemas complejos como el comprendido en construir sistemas BCI mediante electroencefalografía.
 
 
-\iffalse
+Para entender la concepción de IMachineApp como un auténtico proyecto de Ingeniería en Informática, se visualiza en la Figura \ref{fig:pie-plot-asignaturas} la contribución de cada área de asignaturas dictadas en la carrera hacia la ejecución del presente proyecto, las cuales son calculadas de forma subjetiva por el autor. Cada una de estas áreas se justifican de la siguiente forma:
 
- DE FONSOFT:
+\begin{enumerate}
+	\item \textbf{Programación:} Para implementar cada componente del sistema, combinando distintas tecnologías y herramientas. Las asignaturas destacadas en este área son: Fundamentos de Programación, Programación Orientada a Objetos, Algoritmos y Estructuras de Datos y Tecnologías de la Programación.
+	
+	\item \textbf{Software:} Para gestionar el proyecto, desde el diseño hasta la ejecución, así como también aplicar buenas prácticas para el desarrollo y mantenimiento de la aplicación. Aquí se consideran las contribuciones de las siguientes asignaturas: Ingeniería del Software I y II, y Administración de Proyectos de Software.
+	
+	\item \textbf{Aplicación:} Para entender conceptos fundamentales en los que se basa el diseño de la biblioteca utilizada para la extracción de características de las imágenes y el algorítmo de agrupamiento utilizado, así como también saber aprovecharlos de forma correcta a la hora de definir la experimentación. Se destacan en dicha área estas materias: Inteligencia Computacional, Procesamiento Digital de Señales y Procesamiento Digital de Imágenes.
+	
+	\item \textbf{Matemáticas:} Para entender a bajo nivel la teoría subyacente en las funcionalidades desarrolladas, lo cual es necesario conocer para poder entender que es lo que se está implementando. Algunas de las asignaturas más importantes son: Álgebra lineal, Cálculo I, Estadística y Matemática Básica.
+\end{enumerate}
 
-Actualmente para la construcción de ICC se invierte mucho tiempo y recursos en el procesamiento e interpretación de las señales electroencefalográficas, que luego es difícil de llevar a dispositivos para traducir dichas señales en comandos con la precisión requerida y en tiempo real. La ventaja de modelar ICC con redes neuronales profundas es que, una vez encontrado el mejor modelo, es muy sencillo trasladarlo a un dispositivo (mediante chips electrónicos, o de forma más sencilla con Arduino) y el funcionamiento en tiempo real que logra hace posible maximizar la tasa de transferencia de información entre este y el usuario
+Respecto a los objetivos definidos en la Sección \ref{cap1:sec:objetivos}, se considera que se pudo cumplir con lo planificado, ya que la aplicación desarrollada tiene la capacidad de sugerir una organización de directorios contenedores de imágenes similares entre sí, y a su vez brindar opciones al usuario para que pueda refinar esta sugerencia por parte del sistema según sus preferencias. Específicamente, esto se manifiesta de la siguiente manera:
 
+\begin{itemize}
+	\item Se logró implementar un motor de procesamiento de imágenes, el cual recibe un lote de ellas y las devuelve organizadas según una medida de similitud que se computa entre las mismas.
+	
+	\item Se definió un conjunto de imágenes a utilizar en experimentos, las cuales son lo más fiel posible a la problemática tratada en el marco de dispositivos móviles.
+	
+	\item Se pudo ejecutar la experimentación planteada y se logró obtener un buen desempeño respecto a métricas utilizadas en problemas de clasificación. 
+	
+	\item Al realizar la aplicación Android que incluye el motor de procesamiento de las imágenes, se logró que la misma sea intuitiva y fácil de utilizar por parte del usuario, permitiéndole configurar el idioma según crea conveniente, además de dar la posibilidad de personalizar el resultado obtenido según su criterio.
+	
+	\item Cumplimiento de todos los requisitos que fueron especificados en la ERS del proyecto.
+\end{itemize}
 
-\fi
+%-------------------------------------------------------------------
+\section{Trabajos futuros}
+%-------------------------------------------------------------------
+
+A partir de todo el trabajo realizado, también se concluye que el software desarrollado tiene diversos aspectos a perfeccionar en términos de desempeño y utilidad, los cuales fueron presentados en la Sección \ref{cap1:subsec:evolucion}. Específicamente, se consideran las siguientes cuestiones a mejorar en un futuro:
+
+\begin{itemize}
+	\item Incorporación de nuevas características que ayuden a describir mejor las imágenes, con el objetivo de obtener mejores resultados.
+	
+	\item En base a lo realizado en la Sección \ref{cap2:sec:experimentos}, se concluye que los tiempos de proceso para celulares de gama baja/media son un cuello de botella importante, por lo que se deberían estudiar nuevas formas o metodologías para poder aumentar el número de imágenes a procesar a la vez.
+	
+	\item Reducir el consumo de almacenamiento durante la etapa del proceso, guardando las rutas de las imágenes afectadas y no haciendo una copia de las mismas como hace la aplicación hasta el momento.
+	
+	\item Darle la posibilidad al usuario de que configure ciertos parámetros con el objetivo de ``jugar'' con la aplicación y hacer más personalizada la sugerencia de organización de las imágenes.
+	
+	\item Ofrecer la posibilidad al usuario de separar y diferenciar aquellas imágenes catalogadas como ``memes'', con el objetivo de que sea más fácil identificarlas y borrarlas.
+	
+	\item Darle un nombre representativo a cada carpeta, basándose en aquel \textit{tag} que más ocurrencias presente al formar la matriz de afinidad gramatical.
+	
+	\item Implementar un proceso de integración continua para mejorar los mecanismos de pruebas y despliegue de la aplicación.
+	
+	\item Que el motor de procesamiento de las imágenes pueda ser utilizado en otro ambiente, como por ejemplo otro sistema operativo \textit{mobile}, una aplicación \textit{desktop},o bien como un servicio alojado en la nube y consumido a través de diferentes proyectos web.
+\end{itemize}
+
+Dado que las tecnologías comprendidas por la aplicación se siguen desarrollando y mejorando cada vez más, logrando con ello diversas aplicaciones de forma exitosa, se puede concluir finalmente que IMachineApp provee las bases que necesita una aplicación Android para realizar procesamiento y agrupación sobre un conjunto de imágenes, y puede seguir mejorando sus capacidades para ser una herramienta flexible de personalizar y simple de utilizar en tareas complejas.
 
 % Variable local para emacs, para  que encuentre el fichero maestro de
 % compilación y funcionen mejor algunas teclas rápidas de AucTeX
