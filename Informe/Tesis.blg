@@ -10,56 +10,55 @@ A level-1 auxiliary file: Capitulos/01Capitulo2.aux
 A level-1 auxiliary file: Capitulos/Parte2.aux
 A level-1 auxiliary file: Capitulos/02Capitulo1.aux
 A level-1 auxiliary file: Capitulos/02Capitulo2.aux
+A level-1 auxiliary file: Capitulos/Parte3.aux
+A level-1 auxiliary file: Capitulos/03Capitulo0.aux
 A level-1 auxiliary file: Cascaras/bibliografia.aux
 The style file: abbrv.bst
 Database file #1: citasCapitulo1.bib
 Database file #2: citasCapitulo2.bib
 Database file #3: citasCapitulo4.bib
-Warning--I didn't find a database entry for "karau2015learning"
-Warning--I didn't find a database entry for "tuningJavaGCspark"
-Warning--I didn't find a database entry for "frameworkMClifton"
-Warning--I didn't find a database entry for "CIMFowler"
-Warning--I didn't find a database entry for "bahrampour2015comparative"
+Warning--empty journal in dongen2000cluster
 Warning--empty school in van2000graph
-You've used 52 entries,
+Warning--empty journal in van2014analysis
+You've used 58 entries,
             2118 wiz_defined-function locations,
-            800 strings with 12557 characters,
-and the built_in function-call counts, 14190 in all, are:
-= -- 1393
-> -- 595
+            821 strings with 13054 characters,
+and the built_in function-call counts, 15442 in all, are:
+= -- 1513
+> -- 637
 < -- 7
-+ -- 246
-- -- 190
-* -- 712
-:= -- 2389
-add.period$ -- 181
-call.type$ -- 52
-change.case$ -- 239
++ -- 265
+- -- 202
+* -- 759
+:= -- 2619
+add.period$ -- 200
+call.type$ -- 58
+change.case$ -- 262
 chr.to.int$ -- 0
-cite$ -- 53
-duplicate$ -- 537
-empty$ -- 1244
-format.name$ -- 190
-if$ -- 3032
+cite$ -- 61
+duplicate$ -- 596
+empty$ -- 1356
+format.name$ -- 202
+if$ -- 3289
 int.to.chr$ -- 0
-int.to.str$ -- 52
-missing$ -- 33
-newline$ -- 286
-num.names$ -- 104
-pop$ -- 392
+int.to.str$ -- 58
+missing$ -- 39
+newline$ -- 317
+num.names$ -- 116
+pop$ -- 426
 preamble$ -- 1
-purify$ -- 196
+purify$ -- 214
 quote$ -- 0
-skip$ -- 398
+skip$ -- 439
 stack$ -- 0
-substring$ -- 594
-swap$ -- 104
+substring$ -- 625
+swap$ -- 108
 text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 192
-warning$ -- 1
-while$ -- 135
-width$ -- 54
-write$ -- 581
-(There were 6 warnings)
+type$ -- 214
+warning$ -- 3
+while$ -- 147
+width$ -- 60
+write$ -- 642
+(There were 3 warnings)

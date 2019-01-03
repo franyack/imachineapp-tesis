@@ -22,41 +22,41 @@
 \contentsline {subsubsection}{\numberline {2.2.1.1}Ingeligencia Artificial}{13}{subsubsection.2.2.1.1}
 \contentsline {subsubsection}{\numberline {2.2.1.2}Aprendizaje Maquinal}{14}{subsubsection.2.2.1.2}
 \contentsline {subsubsection}{\numberline {2.2.1.3}Redes neuronales}{15}{subsubsection.2.2.1.3}
-\contentsline {subsubsection}{\numberline {2.2.1.4}Aprendizaje Supervisado}{16}{subsubsection.2.2.1.4}
-\contentsline {subsubsection}{\numberline {2.2.1.5}Aprendizaje Profundo}{17}{subsubsection.2.2.1.5}
-\contentsline {section}{\numberline {2.3}[DONE] Aprendizaje profundo aplicado en problemas de visi\'on computacional}{17}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}TensorFlow}{19}{subsection.2.3.1}
-\contentsline {subsubsection}{\numberline {2.3.1.1}MobileNets}{20}{subsubsection.2.3.1.1}
-\contentsline {section}{\numberline {2.4}[DONE] An\'alisis de agrupamiento}{20}{section.2.4}
-\contentsline {subsection}{\numberline {2.4.1}Agrupamiento basado en grafos}{21}{subsection.2.4.1}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Algor\IeC {\'\i }tmo de agrupamiento de Markov}{21}{subsubsection.2.4.1.1}
-\contentsline {part}{II\hspace {1em}IMachineApp}{23}{part.2}
-\contentsline {chapter}{\numberline {3}Descripci\'on del sistema}{24}{chapter.3}
-\contentsline {section}{\numberline {3.1}Dise\~no del sistema}{24}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}[DONE] Metodolog\IeC {\'\i }a de trabajo}{25}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}[WIP] Patr\'on de programaci\'on seleccionado}{27}{subsection.3.1.2}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Modelo-Vista-Presentador}{28}{subsubsection.3.1.2.1}
-\contentsline {section}{\numberline {3.2}[WIP] Motor de procesamiento de las im\'agenes}{30}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Etapa 1: Pre-procesamiento y Extracci\'on de Caracter\IeC {\'\i }sticas}{30}{subsection.3.2.1}
-\contentsline {subsubsection}{\numberline {3.2.1.1}Pre-procesamiento de las im\'agenes}{32}{subsubsection.3.2.1.1}
-\contentsline {subsubsection}{\numberline {3.2.1.2}Extracci\'on de caracter\IeC {\'\i }sticas}{33}{subsubsection.3.2.1.2}
-\contentsline {subsection}{\numberline {3.2.2}Etapa 2: Medici\'on de similitud entre las im\'agenes}{34}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Etapa 3: Ejecuci\'on del algor\IeC {\'\i }tmo de clustering}{35}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Etapa 4: Post-proceso}{36}{subsection.3.2.4}
-\contentsline {section}{\numberline {3.3}[WIP] Aplicaci\'on Android}{36}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Estructura del proyecto}{37}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Interfaz de Usuario}{38}{subsection.3.3.2}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Flujo principal}{40}{subsubsection.3.3.2.1}
-\contentsline {subsubsection}{\numberline {3.3.2.2}Otras caracter\IeC {\'\i }sticas de la aplicaci\'on}{42}{subsubsection.3.3.2.2}
-\contentsline {chapter}{\numberline {4}Evaluaci\'on de desempe\~no}{50}{chapter.4}
-\contentsline {section}{\numberline {4.1}Conjuntos de datos para experimentaci\'on}{50}{section.4.1}
-\contentsline {section}{\numberline {4.2}Protocolo de Experimentaci\'on}{51}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Pruebas realizadas}{52}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Validaci\'on de la aplicaci\'on}{55}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Pruebas unitarias}{55}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Protocolo de validaci\'on}{55}{subsection.4.3.2}
-\contentsline {part}{III\hspace {1em}Conclusiones y desarrollos futuros}{58}{part.3}
-\contentsline {chapter}{\numberline {5}Conclusiones generales}{59}{chapter.5}
-\contentsline {section}{\numberline {5.1}Conclusiones}{59}{section.5.1}
-\contentsline {section}{\numberline {5.2}Trabajos futuros}{61}{section.5.2}
-\contentsline {part}{Bibliograf\IeC {\'\i }a}{63}{appendix*.46}
+\contentsline {subsubsection}{\numberline {2.2.1.4}Aprendizaje Supervisado}{17}{subsubsection.2.2.1.4}
+\contentsline {subsubsection}{\numberline {2.2.1.5}Aprendizaje Profundo}{18}{subsubsection.2.2.1.5}
+\contentsline {section}{\numberline {2.3}[DONE] Aprendizaje profundo aplicado en problemas de visi\'on computacional}{19}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}TensorFlow}{20}{subsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.1.1}MobileNets}{21}{subsubsection.2.3.1.1}
+\contentsline {section}{\numberline {2.4}[DONE] An\'alisis de agrupamiento}{21}{section.2.4}
+\contentsline {subsection}{\numberline {2.4.1}Agrupamiento basado en grafos}{22}{subsection.2.4.1}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Algor\IeC {\'\i }tmo de agrupamiento de Markov}{22}{subsubsection.2.4.1.1}
+\contentsline {part}{II\hspace {1em}IMachineApp}{25}{part.2}
+\contentsline {chapter}{\numberline {3}Descripci\'on del sistema}{26}{chapter.3}
+\contentsline {section}{\numberline {3.1}Dise\~no del sistema}{26}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}[DONE] Metodolog\IeC {\'\i }a de trabajo}{27}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}[WIP] Patr\'on de programaci\'on seleccionado}{29}{subsection.3.1.2}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Modelo-Vista-Presentador}{30}{subsubsection.3.1.2.1}
+\contentsline {section}{\numberline {3.2}[WIP] Motor de procesamiento de las im\'agenes}{32}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Etapa 1: Pre-procesamiento y Extracci\'on de Caracter\IeC {\'\i }sticas}{32}{subsection.3.2.1}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Pre-procesamiento de las im\'agenes}{34}{subsubsection.3.2.1.1}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Extracci\'on de caracter\IeC {\'\i }sticas}{35}{subsubsection.3.2.1.2}
+\contentsline {subsection}{\numberline {3.2.2}Etapa 2: Medici\'on de similitud entre las im\'agenes}{36}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Etapa 3: Ejecuci\'on del algor\IeC {\'\i }tmo de clustering}{37}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Etapa 4: Post-proceso}{38}{subsection.3.2.4}
+\contentsline {section}{\numberline {3.3}[WIP] Aplicaci\'on Android}{38}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Estructura del proyecto}{39}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Interfaz de Usuario}{40}{subsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Flujo principal}{42}{subsubsection.3.3.2.1}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Otras caracter\IeC {\'\i }sticas de la aplicaci\'on}{44}{subsubsection.3.3.2.2}
+\contentsline {chapter}{\numberline {4}Evaluaci\'on de desempe\~no}{52}{chapter.4}
+\contentsline {section}{\numberline {4.1}Conjuntos de datos para experimentaci\'on}{52}{section.4.1}
+\contentsline {section}{\numberline {4.2}Protocolo de Experimentaci\'on}{53}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Pruebas realizadas}{54}{subsection.4.2.1}
+\contentsline {section}{\numberline {4.3}Validaci\'on de la aplicaci\'on}{57}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Pruebas unitarias}{57}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Protocolo de validaci\'on}{57}{subsection.4.3.2}
+\contentsline {part}{III\hspace {1em}Conclusiones y desarrollos futuros}{60}{part.3}
+\contentsline {chapter}{\numberline {5}Conclusiones generales}{61}{chapter.5}
+\contentsline {section}{\numberline {5.1}Conclusiones}{61}{section.5.1}
+\contentsline {section}{\numberline {5.2}Trabajos futuros}{63}{section.5.2}
+\contentsline {part}{Bibliograf\IeC {\'\i }a}{65}{appendix*.46}

@@ -9,8 +9,7 @@ M.~Abadi, P.~Barham, J.~Chen, Z.~Chen, A.~Davis, J.~Dean, M.~Devin,
 \bibitem{mvp2017guide}
 J.~Ali.
 \newblock {Essential Guide For Designing Your Android App Architecture}.
-\newblock
-  \url{https://blog.mindorks.com/essential-guide-for-designing-your-android-app-architecture-mvp-part-1-74efaf1cda40}.
+\newblock \url{https://bit.ly/2IY6FqL}.
 \newblock Accedido: 02/04/2018.
 
 \bibitem{alpaydin2009introduction}
@@ -96,6 +95,11 @@ P.~Beynon-Davies, C.~Carne, H.~Mackay, and D.~Tudhope.
 \newblock Rapid application development (rad): an empirical review.
 \newblock {\em European Journal of Information Systems}, 8(3):211--223, 1999.
 
+\bibitem{bishop2006pattern}
+C.~M. Bishop.
+\newblock Pattern recognition.
+\newblock {\em Machine Learning}, 128, 2006.
+
 \bibitem{burns1985selecting}
 R.~N. Burns and A.~R. Dennis.
 \newblock Selecting the appropriate application development methodology.
@@ -118,6 +122,11 @@ F.~Chollet.
 \bibitem{dimarzio2008programmer}
 J.~DiMarzio and A.~Android.
 \newblock Programmers guide, 2008.
+
+\bibitem{dongen2000cluster}
+S.~Dongen.
+\newblock A cluster algorithm for graphs.
+\newblock 2000.
 
 \bibitem{estivill2002so}
 V.~Estivill-Castro.
@@ -150,6 +159,12 @@ V.~Gonzalez.
   2018.
 \newblock Online, Accedido: 15/09/2018.
 
+\bibitem{LossFunction}
+P.~Grover.
+\newblock {5 Regression Loss Functions All Machine Learners Should Know}.
+\newblock \url{https://bit.ly/2o0BK3a}, 2018.
+\newblock Online, Accedido: 11/11/2018.
+
 \bibitem{haseman2009android}
 C.~Haseman.
 \newblock {\em Android Essentials}.
@@ -174,6 +189,11 @@ A.~G. Howard, M.~Zhu, B.~Chen, D.~Kalenichenko, W.~Wang, T.~Weyand,
 \newblock Mobilenets: Efficient convolutional neural networks for mobile vision
   applications.
 \newblock {\em arXiv preprint arXiv:1704.04861}, 2017.
+
+\bibitem{izenman2008modern}
+A.~J. Izenman.
+\newblock Modern multivariate statistical techniques.
+\newblock {\em Regression, classification and manifold learning}, 2008.
 
 \bibitem{ByteBuffer}
 Java.
@@ -239,6 +259,11 @@ L.~redaccion.
 \newblock
   \url{https://www.lanacion.com.ar/1900814-android-vs-ios-quien-gana-la-batalla}.
 \newblock Accedido: 07/04/2017.
+
+\bibitem{rojas2013neural}
+R.~Rojas.
+\newblock {\em Neural networks: a systematic introduction}.
+\newblock Springer Science \& Business Media, 2013.
 
 \bibitem{rosenberg2007v}
 A.~Rosenberg and J.~Hirschberg.
@@ -317,6 +342,11 @@ Y.~Taigman, M.~Yang, M.~Ranzato, and L.~Wolf.
 S.~M. Van~Dongen.
 \newblock {\em Graph clustering by flow simulation}.
 \newblock PhD thesis, 2000.
+
+\bibitem{van2014analysis}
+J.~van Doorn.
+\newblock Analysis of deep convolutional neural network architectures.
+\newblock 2014.
 
 \bibitem{wagstaff2001constrained}
 K.~Wagstaff, C.~Cardie, S.~Rogers, S.~Schr{\"o}dl, et~al.
