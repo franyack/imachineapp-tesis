@@ -17,7 +17,7 @@
 \end{FraseCelebre}
 
 \begin{resumen}
-En este capítulo se describe en primer lugar el diseño elegido para el sistema, explicando cada uno de sus componentes y justificando su composición. Luego, se explican todas las cuestiones técnicas relacionadas al motor de procesamiento, ya que se trata del \textit{core} de la aplicación: como se caracterizan las imágenes, la manera en que se mide la similitud entre ellas, como se aplica el algoritmo MCL para obtener los grupos, etc. Por último, se presentan las interfaces de usuario y las herramientas con las que cuenta tanto para su experiencia durante la utilización de la aplicación como para administrar el resultado final.
+En este capítulo se describe en primer lugar el diseño elegido para el sistema, explicando cada uno de sus componentes y justificando su composición. Luego, se explican todas las cuestiones técnicas relacionadas al motor de procesamiento, ya que se trata del \textit{core} de la aplicación: cómo se caracterizan las imágenes, la manera en que se mide la similitud entre ellas, como se aplica el algoritmo MCL para obtener los grupos, etc. Por último, se presentan las interfaces de usuario y las herramientas con las que cuenta tanto para su experiencia durante la utilización de la aplicación como para administrar el resultado final.
 \end{resumen}
 
 \begin{figure}[t]
@@ -31,29 +31,29 @@ En este capítulo se describe en primer lugar el diseño elegido para el sistema, 
 	\end{center}
 \end{figure}
 
-El producto desarrollado en este proyecto se identifica como \emph{IMachineApp}, donde la I al inicio de su nombre simboliza las imágenes a procesar, la palabra \textit{Machine} hace referencia a la ``Máquina'' por la cual pasan las mismas para poder obtener el resultado. Por último, la sigla App deja en claro que el producto está destinado a ser desplegado en dispositivos móviles (ver Figura \ref{fig:imachinapp-logo}).
+El producto desarrollado en este proyecto se identifica como \textbf{IMachineApp}, donde la I al inicio de su nombre simboliza las imágenes a procesar, la palabra \textit{Machine} hace referencia a la ``Máquina'' por la cual pasan las mismas para poder obtener el resultado. Por último, la sigla App deja en claro que el producto está destinado a ser desplegado en dispositivos móviles (ver Figura \ref{fig:imachinapp-logo}).
 
 
 
 
 
 %-------------------------------------------------------------------
-\section{Diseño del sistema}
+\section{[DONE] Diseño del sistema}
 %-------------------------------------------------------------------
 \label{cap3:sec:estructura}
 
-En esta tesis se desarrolló un software que se conoce como aplicación móvil. La misma fue diseñada para ser ejecutada en teléfonos inteligentes y \textit{tablets}, y permite al usuario elegir un directorio (o un conjunto de ellos) con imágenes y luego de un procesamiento por el que pasan las mismas, sugerirle una estructura organizacional, basándose en el rango de similitud o contexto que tengan entre ellas. A su vez, cuando finaliza el proceso, tiene la posibilidad de administrar el resultado, según su criterio para obtener así el resultado esperado, o bien deshacer todos los cambios y volver las imágenes hacia su estado original.
+En esta tesis se desarrolló un software que se conoce como aplicación móvil. La misma fue diseñada para ser ejecutada en teléfonos inteligentes y \textit{tablets}, permitiendo al usuario elegir un directorio (o un conjunto de ellos) con imágenes. A partir de allí, gracias a un procesamiento asistido por visión artificial, se obtiene una organización basándose en el rango de similitud o contexto que exista entre ellas. A su vez, cuando finaliza el proceso, el usuario tiene la posibilidad de administrar dicha estructura organizacional según su criterio para obtener así el resultado esperado, o bien deshacer todos los cambios y volver las imágenes hacia su estado original.
 
 La aplicación, fue diseñada para que todo el proceso ocurra en 4 etapas:
 
 \begin{enumerate}
-	\item \underline{Elección del/los directorio/s a procesar:} consiste en elegir algún directorio del dispositivo que cuente con imágenes a procesar, como por ejemplo donde quedan alojadas aquellas fotos que fueron tomadas por las cámaras del dispositivo.
+	\item \textbf{Elección del/los directorio/s a procesar:} consiste en elegir algún directorio del dispositivo que cuente con imágenes a procesar, como por ejemplo donde quedan alojadas aquellas fotos que fueron tomadas por las cámaras del dispositivo.
 	
-	\item \underline{Procesamiento de las imágenes a través del motor:} esta etapa cuenta con una serie de pasos que se encarga de extraer las características de las imágenes, procesar las mismas afín de medir su similitud y poder obtener un conjunto de grupos donde en cada uno de ellos estarán las imágenes que más relación tengan entre sí. Esta  etapa constituye el \textit{core} de la aplicación.
+	\item \textbf{Procesamiento de las imágenes a través del motor:} esta etapa cuenta con una serie de pasos que se encarga de extraer las características de las imágenes, procesar las mismas a fin de medir su similitud y poder obtener un conjunto de grupos donde en cada uno de ellos estarán las imágenes que más relación tengan entre sí. Esta  etapa constituye el \textit{core} de la aplicación.
 	
-	\item \underline{Administración del resultado arrojado por el procesamiento:} una vez que el motor terminó con el proceso de las imágenes y encontró una estructura de organización sugerida, en esta etapa el usuario podrá realizar tareas típicas como eliminar, mover o copiar imágenes entre directorios, o bien eliminar un directorio completo, moverlo hacia otra ubicación, etc.
+	\item \textbf{Administración del resultado arrojado por el procesamiento:} una vez que el motor terminó con el procesamiento de las imágenes y encontró una estructura de organización sugerida, en esta etapa el usuario podrá realizar tareas típicas como eliminar, mover o copiar imágenes entre directorios, o bien eliminar un directorio completo, moverlo hacia otra ubicación, etc.
 	
-	\item \underline{Administración del resultado final:} luego de que la etapa de administracón de las carpetas sugeridas por el proceso ha finalizado, el usuario tendrá la posibilidad de tomar diferentes decisiones respecto al resultado obtenido: descartar todos los cambios y volver las imágenes a su versión original, moverlas hacia una nueva carpeta creada por el programa, o copiarlas y mantenerla en dos lugares diferentes.
+	\item \textbf{Administración del resultado final:} luego de que la etapa de administración de las carpetas sugeridas por el proceso ha finalizado, el usuario tendrá la posibilidad de tomar diferentes decisiones respecto al resultado obtenido: descartar todos los cambios y volver las imágenes a su versión original, moverlas hacia una nueva carpeta creada por el programa, o copiarlas y mantenerla en dos lugares diferentes.
 \end{enumerate}
 
 \subsection{[DONE] Metodología de trabajo}
@@ -73,7 +73,7 @@ Para el cumplimiento óptimo de todos los objetivos del proyecto, se implementó e
 
 Se consideró a RAD el tipo de metodología que mejor se adaptaba al proyecto, en base a las diferentes etapas que lo conformaban y a la manera en que se trabajaría en cada una de ellas. Esta decisión se debe a que el proyecto tuvo una componente fundamental que fue la experiencia de usuario, y como se ha podido observar en publicaciones académicas que comparan diferentes metodologías para llevar adelante proyectos de software, se considera que aquellas de desarrollo lineal (como el modelo en cascada, por ejemplo) no son apropiadas \cite{burns1985selecting}. Principalmente se debe a que los requerimientos de diseño se cumplieron de forma iterativa e incremental y no estrictamente en una única fase del proyecto, a fin de verdaderamente hacer lo que se solicitaba. En base a los estudios señalados anteriormente, los componentes relacionados a la experiencia de usuario se fueron incorporando y mejorando de forma iterativa gracias a la retroalimentación o \textit{feedback} que se obtuvo por parte de los \textit{stakeholders}. 
  
-Una vez definida la ERS (Especificación de los requerimientos del software), el producto se realizó en cuatro versiones de manera incremental, donde en cada una de ellas se entregaron avances, sujetos a lo especificado en el documento predefinido. Al término de cada versión, se obtuvo un prototipo del producto, para luego poder refinar y evaluar qué cosas eran necesarias cambiar, agregar o quitar, con el objetivo de que se cumplan exitosamente los criterios de aceptación de los entregables que conformaban el proyecto. Cada versión estaba compuesta por una parte de diseño, implementación y testeo, y son denominadas por la metodología como \textit{time boxing} \cite{beynon1999rapid}. La finalización de todas las versiones conformó el producto buscado.
+Una vez definida la ERS (Especificación de los requerimientos del software), el producto se realizó en cuatro versiones de manera incremental, donde en cada una de ellas se entregaron avances, sujetos a lo especificado en el documento predefinido. Al término de cada versión, se obtuvo un prototipo del producto, para luego poder refinar y evaluar qué cosas eran necesarias cambiar, agregar o quitar, con el objetivo de que se cumplan exitosamente los criterios de aceptación de los entregables que conformaban el proyecto. Cada versión, denominada por la metodología como \textit{time boxing}, estaba compuesta por una parte de diseño, una de implementación y una de testeo \cite{beynon1999rapid}. La finalización de todas las versiones conformó el producto buscado.
 
 A continuación, se explicitan cada uno de los prototipos que conformaron la realización del proyecto, especificando lo que se realizó en cada uno de ellos. Cabe aclarar una vez más que el producto cuenta con dos bloques principales a diseñar e implementar. El primero de ellos es la parte encargada de la extracción de características de las imágenes, procesamiento de las mismas y agrupamiento, y el otro bloque está conformado por la aplicación, encargada de realizar la gestión y administración del resultado obtenido luego del procesamiento.
 
@@ -82,7 +82,7 @@ A continuación, se explicitan cada uno de los prototipos que conformaron la real
 	\begin{itemize}
 		\item \underline{Sistema Android:} La tarea que debió cumplir fue mostrar al usuario un conjunto de directorios, pero siempre eligiendo uno por defecto. Este directorio ingresaba al motor de procesamiento. Después de que se ejecutaba el motor, debía mostrar por pantalla que el proceso había sido exitoso.
 		
-		\item \underline{Motor de procesamiento:} debía levantar la biblioteca TensorFlow y leer las imágenes ingresadas por la aplicación, devolviendo una simulación de grupos resultado para el conjunto de imágenes procesadas.
+		\item \underline{Motor de procesamiento:} debía cargar la biblioteca TensorFlow y leer las imágenes ingresadas por la aplicación, devolviendo una simulación de grupos resultado para el conjunto de imágenes procesadas.
 	\end{itemize}
 	
 	\item \textbf{Prototipo 2:} Agregación de nuevas características al sistema e implementación de la metodología de clustering en el motor.
@@ -108,9 +108,9 @@ A continuación, se explicitan cada uno de los prototipos que conformaron la real
 	\end{itemize}
 \end{itemize}
 
-\subsection{[WIP] Patrón de programación seleccionado}
+\subsection{[DONE] Patrón de programación seleccionado}
 
-Como se dijo en la Sección \ref{cap2:sec:dispositivos-moviles}, la aplicación será desarrollada para el sistema operativo Android, de manera nativa, afín de aprovechar todas las ventajas que las librerías proveen para los desarrolladores. El framework Android, no recomienda ninguna forma específica de diseñar e implementar aplicaciones. Eso, de alguna manera, hace a los desarrolladores más poderosos y vulnerables, al mismo tiempo \cite{mvp2017guide}.
+Como se dijo en la Sección \ref{cap2:sec:dispositivos-moviles}, la aplicación será desarrollada para el sistema operativo Android, de manera nativa, a fin de aprovechar todas las ventajas que las librerías proveen para los desarrolladores. El framework Android, no recomienda ninguna forma específica de diseñar e implementar aplicaciones. Eso, de alguna manera, hace a los desarrolladores más poderosos y vulnerables, al mismo tiempo \cite{mvp2017guide}.
 
 Las aplicaciones, pasan por muchos ciclos de vida donde se van agregando/extrayendo características, lo cual podría producir estragos si la misma no se diseña adecuadamente con una ``separación de preocupaciones''. No es una buena práctica cargar de lógica a las actividades que se encargan de interactuar con el usuario, sino mas bien deberían ser clases por las cuales simplemente la información que interactúa entre el sistema y el usuario fluye, desligándose de cualquier tipo de lógica de negocio. Es por ello, que se decidió seguir el desarrollo de la aplicación bajo un patrón de diseño Modelo-Vista-Presentador (\textbf{MVP}).
 
@@ -136,15 +136,13 @@ Definidos cada uno de los componentes, MVP establece algunas reglas básicas para
 	\item El Modelo es el responsable de realizar toda la lógica de negocio requerida, como por ejemplo obtener los datos desde el servidor, la base de datos o el sistema de archivos.
 \end{itemize}
 
-A modo de resumen, cada Vista tendrá una relación 1 a 1 con un Presentador, el cual se encargará de llevar y traer toda la información, indicándole a la Vista que acción y en qué momento se debe ejecutar. Dicha comunicación se establece a través de Interfaces, las cuales servirán como \textit{contratos} para dejar pre-establecidos que medios de comunicación existirán entre ellos. De manera similar y bajo el mismo criterio, el Presentador se comunicará con el Modelo a través de Interfaces, pero sin la necesidad de que la relación entre ellos sea estrictamente 1 a 1, ya que el modelo podría modularizarse tanto como se requiera. De esta manera, el Modelo se desentiende de los eventos y sólo es llamado cuando se lo requiere (ver Figura \ref{fig:mvp-pattern}).
+A modo de resumen, cada Vista tendrá una relación 1 a 1 con un Presentador, el cual se encargará de llevar y traer toda la información, indicándole a la Vista que acción y en qué momento se debe ejecutar. Dicha comunicación se establece a través de Interfaces, las cuales servirán como \textit{contratos} para dejar pre-establecidos qué medios de comunicación existirán entre ellos. De manera similar y bajo el mismo criterio, el Presentador se comunicará con el Modelo a través de Interfaces, pero sin la necesidad de que la relación entre ellos sea estrictamente 1 a 1, ya que el modelo podría modularizarse tanto como se requiera. De esta manera, el Modelo se desentiende de los eventos y sólo es llamado cuando se lo requiere (ver Figura \ref{fig:mvp-pattern}).
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.7}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/mvp-pattern}
-		}
-		\caption{Patrón de diseño Modelo-Vista-Controlador}
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/mvp-pattern}
+		\caption{Patrón de diseño Modelo-Vista-Controlador. Recuperado de \cite{mvp2017guide}}
 		\label{fig:mvp-pattern}
 	\end{center}
 \end{figure}
@@ -153,10 +151,8 @@ La aplicación fue pensada en dos bloques diferentes. El primero se corresponde a
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.7}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/IMachineAppMVP}
-		}
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/IMachineAppMVP}
 		\caption{Diseño de la aplicación IMachineApp}
 		\label{fig:IMachineAppMVP}
 	\end{center}
@@ -164,37 +160,49 @@ La aplicación fue pensada en dos bloques diferentes. El primero se corresponde a
 
 Como conclusión y aprendizaje, la arquitectura es en lo primero que se debe trabajar para cualquier software. Una arquitectura cuidadosamente diseñada, minimizará muchas repeticiones en el futuro, a la vez que proporcionará la facilidad de escalabilidad. La mayor parte de proyectos se desarrollan hoy en día en equipo, por lo que la legibilidad y la modularidad del código deben considerarse como elementos sumamente importantes de la arquitectura. También, se depende en gran medida de bibliotecas de terceros, cambiando entre alternativas, debido a casos de uso, errores o soporte. 
 
-\section{[WIP] Motor de procesamiento de las imágenes}
+\section{[DONE] Motor de procesamiento de las imágenes}
 
 En esta sección se detallará el paso a paso por el que transita el conjunto de imágenes para que se puedan obtener los grupos sugeridos por la aplicación, ordenándolas según el grado de similitud o contexto que tengan entre ellas.
 
-El motor de procesamiento de las imágenes se llama \textbf{CIEngine}. El nombre está compuesto por las letras C, haciendo referencia a la palabra \textit{Clustering} (agrupamiento en inglés), la letra I de \textit{Images}, y por último la palabra \textit{Engine}, que en inglés significa motor. El mismo fue pensado y realizado como un módulo aparte de la aplicación propiamente dicha, y agregado a través de un paquete. Esto tiene como beneficios que sea independiente, por lo que la mantenibilidad y testeo se realizan sin depender exclusivamente de la aplicación, además de que se puede pensar como trabajo a futuro en la adaptación a otros ambientes, como puede ser en un programa escritorio, un servicio alojado en la nube, una aplicación nativa para otros sistemas operativos utilizados en dispositivos móviles, etc.
+El motor de procesamiento de las imágenes se llama \textbf{CIEngine}. El nombre está compuesto por las letras C, haciendo referencia a la palabra \textit{Clustering} (agrupamiento en inglés), la letra I de \textit{Images}, y por último la palabra \textit{Engine}, que en inglés significa motor. El mismo fue pensado y realizado como un módulo aparte de la aplicación propiamente dicha, y agregado a través de un paquete. Esto tiene como beneficios que sea independiente, por lo que la mantenibilidad y testeo se realizan sin depender exclusivamente de la aplicación, además de que se puede pensar como trabajo a futuro en la adaptación a otros ambientes, como puede ser en un programa de escritorio, un servicio alojado en la nube, una aplicación nativa para otros sistemas operativos utilizados en dispositivos móviles, etc.
 
-En la Figura \ref{fig:CIEngineStep-by-step} se puede observar el camino que recorren las imágenes dentro del motor, desde la lectura de todas ellas hasta la conformación de cada uno de los grupos resultantes. Las tareas fueron divididas en etapas, afín de que el trabajo esté estructurado y sea más entendible, localizando en cada una de ellas diferentes técnicas, relacionadas entre sí. A continuación, se describe en detalle cada uno de los pasos.
+%\begin{figure}[t]
+%	\begin{center}
+%		\includegraphics[width=1\textwidth]%
+%		{Imagenes/Bitmap/CIEngineStep-by-step2}
+%		\caption{Diseño del motor de procesamiento}
+%		\label{fig:CIEngineStep-by-step}
+%	\end{center}
+%\end{figure}
 
-\begin{figure}[t]
+En la Figura \ref{fig:CIEngineStep-by-step} se puede observar el camino que recorren las imágenes dentro del motor, desde la lectura de todas ellas hasta la conformación de cada uno de los grupos resultantes. Las tareas fueron divididas en etapas, a fin de que el trabajo esté estructurado y sea más entendible, localizando en cada una de ellas diferentes técnicas, relacionadas entre sí. A continuación, se describe en detalle cada uno de los pasos.
+
+\newpage
+\vfill
+\begin{figure}[!hb]
 	\begin{center}
-		\scalebox{0.9}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/CIEngineStep-by-step}
-		}
+		%		\scalebox{0.9}{
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/CIEngineStep-by-step2}
+		%		}
 		\caption{Diseño del motor de procesamiento}
 		\label{fig:CIEngineStep-by-step}
 	\end{center}
 \end{figure}
 
+\vfill
+\clearpage
+
 \subsection{Etapa 1: Pre-procesamiento y Extracción de Características}
 
-Como se dijo en el capítulo anterior, se utiliza la biblioteca TensorFlow, específicamente un modelo de red neuronal denominado MobileNet, para realizar la descripción y extracción de características de las imágenes. Se eligió este tipo de modelo ya que se encuentran preparados y optimizados para ser utilizados en dispositivos móviles, logrando buenos resultados en ambientes productivos ya que son hoy por hoy el estado del arte en lo que corresponde a problemas de clasificación de imágenes \cite{introCNN}. El modelo tiene un tamaño total de 16.9MB, ideal para el uso en una aplicación móvil, ya que se busca que la misma no ocupe tanto espacio, destacando la no necesidad de una conexión a Internet, haciendo todo el proceso \textit{on premise}, es decir, explotando los recursos del dispositivo.
+Como se dijo en el capítulo anterior, se utiliza la biblioteca TensorFlow, específicamente un modelo de red neuronal denominado MobileNet, para realizar la descripción y extracción de características de las imágenes. Se eligió este tipo de modelo ya que se encuentran preparados y optimizados para ser utilizados en dispositivos móviles, logrando buenos resultados en ambientes productivos ya que son el estado del arte en lo que corresponde a problemas de clasificación de imágenes \cite{introCNN}. El modelo tiene un tamaño total de 16.9MB, ideal para el uso en una aplicación móvil, ya que se busca que la misma no ocupe tanto espacio, destacando la no necesidad de una conexión a Internet, haciendo todo el proceso \textit{on premise}, es decir, explotando los recursos del dispositivo.
 
 La red utilizada en este proyecto fue entrenada con 1001 grupos pertenecientes a la base de datos de imágenes \textit{ImageNet}. Esta base pertenece a un proyecto que fue diseñado para el uso de sistemas relacionados al reconocimiento de objetos, ya que cuenta con más de 14 millones de URL's de imágenes que han sido anotadas a mano por personas para indicar qué son los objetos que se encuentran en cada una de las imágenes. La base de datos cuenta con más de 20.000 categorías, y si bien las anotaciones de las imágenes realizadas por los colaboradores está disponible de manera gratuita, las imágenes reales no son propiedad de \textit{ImageNet} \cite{ImageNet}.
 
-\begin{figure}[t]
+\begin{figure}[!hb]
 	\begin{center}
-		\scalebox{0.7}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/MobileNet2}
-		}
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/MobileNet2}
 		\caption{Ejemplo de aplicación de una MobileNet}
 		\label{fig:MobileNet}
 	\end{center}
@@ -206,10 +214,8 @@ A su vez, estos grupos están organizados acordes a la jerarquía de etiquetas o \
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.7}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/WordNetExample}
-		}
+		\includegraphics[width=0.8\textwidth]%
+		{Imagenes/Bitmap/WordNetExample}
 		\caption{Ejemplo del uso de etiquetas - WordNet}
 		\label{fig:WordNetExample}
 	\end{center}
@@ -224,15 +230,13 @@ A su vez, estos grupos están organizados acordes a la jerarquía de etiquetas o \
 %Se escala la imagen para lograr la misma de 224 x 224
 %Se manda la imagen a extraer las caracteristicas (ver si es necesario explicar BitMap -> ByteBuffer)
 
-Para que las imágenes puedan ser interpretadas por la red neuronal, deben pasar por un pre-procesamiento. Debido a una restricción que se tuvo cuando entrenaron los distintos modelos que componen el grupo MobileNet, la red que obtiene mejores resultados en términos de clasificación fue entrenada con imágenes cuyo tamaño fue de 224x224 píxeles, por lo tanto, para poder utilizarla, las imágenes de entrada al motor de procesamiento deben tener este tamaño también. Para lograr ello, las imágenes son cargadas en memoria a través de un objeto que provee Android denominado Bitmap, el cual permite realizar distintas operaciones sobre ellas \cite{Bitmap}. Con el objetivo de reducir los recursos computacionales utilizados, las mismas son cargadas en memoria bajando su resolución a un tamaño en el cual su ancho y/o alto es de 224 píxeles, adaptando la otra medida afín de que la imágen siga siendo proporcional. Una vez realizado esto, luego si es estrictamente re-escalada al tamaño solicitado por la red. Entonces, una vez que ya se encuentra en memoria la imagen con una resolución de 224x224 píxeles lista para ser procesada por la CNN, se convierte en un objeto java denominado ByteBuffer \cite{ByteBuffer}, el cual es necesario en este formato ya que así lo solicita la implementación de TensorFlow para su utilización (ver Figura \ref{fig:preProcessing}).     
+Para que las imágenes puedan ser interpretadas por la red neuronal, deben pasar por un pre-procesamiento. Debido a una restricción que se tuvo cuando entrenaron los distintos modelos que componen el grupo \textit{MobileNet}, la red que obtiene mejores resultados en términos de clasificación fue entrenada con imágenes cuyo tamaño fue de 224x224 píxeles, por lo tanto, para poder utilizarla, las imágenes de entrada al motor de procesamiento deben tener este tamaño también. Para lograr ello, las imágenes son cargadas en memoria a través de un objeto que provee Android denominado Bitmap, el cual permite realizar distintas operaciones sobre ellas \cite{Bitmap}. Con el objetivo de reducir los recursos computacionales utilizados, las mismas son cargadas en memoria bajando su resolución a un tamaño en el cual su ancho y/o alto es de 224 píxeles, adaptando la otra medida a fin de que la imágen siga siendo proporcional. Una vez realizado esto, luego si es estrictamente re-escalada al tamaño solicitado por la red. Entonces, una vez que ya se encuentra en memoria la imagen con una resolución de 224x224 píxeles lista para ser procesada por la CNN, se convierte en un objeto Java denominado ByteBuffer \cite{ByteBuffer}, el cual es necesario en este formato ya que así lo solicita la implementación de TensorFlow para su utilización (ver Figura \ref{fig:preProcessing}).     
  
  
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.7}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/preProcessing}
-		}
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/preProcessing}
 		\caption{Pre-procesamiento de las imágenes}
 		\label{fig:preProcessing}
 	\end{center}
@@ -253,11 +257,11 @@ Una vez que la imagen pasa por la red neuronal, se obtienen como predicciones do
 	La segunda salida que se obtiene de la red es un indicador sobre cómo se activó cada neurona en la última capa antes de que se realice la clasificación. Esta última capa tiene como nombre \textit{embeddings} y es utilizada en el proceso como una caracterización de la imagen por parte de la red. Los \textit{embeddings} son importantes para el aprendizaje maquinal, ya que se convierten datos a una representación de características donde ciertas propiedades pueden ser representadas por nociones de distancia. Un modelo entrenado para clasificar imágenes puede permitir convertir una imagen en un vector de números, de manera que otra imagen similar tenga una distancia (por ejemplo, euclidiana) pequeña \cite{Embeddings}.  
 \end{enumerate}
 
-Como conclusión, se obtiene por cada una de las imágenes a procesar un conjunto de etiquetas y probabilidades de correspondencia, y un vector con valores numéricos que indica como la red neuronal caracterizó a la imagen. A continuación, se explicará la etapa 2, en donde se realiza la medición de similitudes entre las imágenes.
+Como conclusión, se obtiene por cada una de las imágenes a procesar un conjunto de etiquetas y probabilidades de correspondencia, y un vector con valores numéricos que indica cómo la red neuronal caracterizó a la imagen. A continuación, se explicará la etapa 2, en donde se realiza la medición de similitudes entre las imágenes.
 
 \subsection{Etapa 2: Medición de similitud entre las imágenes}
 \label{cap3:subsec:affinity}
-Una vez que fue recolectada toda la información que se describió durante la sección anterior, se procede a medir el grado de similitud que existe entre cada par de imágenes, basándose en las etiquetas y probabilidades que se obtuvo de cada una de ellas, como así también del vector de características provisto por la capa de \textit{embeddings}. Al final de esta etapa, se obtendrá una matriz que será utilizada por el algoritmo de \textit{clustering}. Esta matriz, está conformada por dos matrices que reciben el nombre de \underline{matrices de afinidad}, las cuales se describen a continuación:
+Una vez que fue recolectada toda la información que se describió durante la sección anterior, se procede a medir el grado de similitud que existe entre cada par de imágenes, basándose en las etiquetas y probabilidades que se obtuvo de cada una de ellas, como así también del vector de características provisto por la capa de \textit{embeddings}. Al final de esta etapa, se obtendrá una matriz que será utilizada por el algoritmo de \textit{clustering}. Esta matriz, es el resultado de una suma ponderada de dos matrices que reciben el nombre de \emph{matrices de afinidad}, las cuales se describen a continuación:
 
 \begin{enumerate}
 	\item \textbf{Matriz de afinidad gramatical:} 
@@ -268,7 +272,7 @@ Una vez que fue recolectada toda la información que se describió durante la secc
 	
 	De esta manera, se logra un vector normalizado por cada una de las imágenes, por lo que resta medir la similitud que existe entre cada una de ellas. Para obtener dicha medida, se utiliza el \textbf{coeficiente de correlación de Pearson}, un índice estadístico que puede utilizarse para medir el grado de correlación que tienen dos vectores \cite{benesty2009pearson}. El valor puede variar entre [-1,1], siendo 1 una correlación perfecta. El criterio que se tomó en este proyecto es quedarse solamente con aquellas correlaciones que superan un umbral de 0.65, y en cualquier otro caso directamente se toma como inexistente una correlación entre ambas imágenes. De esta manera, se llega a la obtención de la matriz de afinidad gramatical entre las imágenes.
 	
-	\item \textbf{Matriz de afinidad según embeddings:} 
+	\item \textbf{Matriz de afinidad según \textit{embeddings}:} 
 	
 	De manera similar a como se obtuvo la matriz de afinidad gramatical, se procesan cada uno de los vectores que se obtuvieron por caracterizar a la matriz gracias a la capa de \textit{embeddings}. Por cada imagen existe un vector de 1024 números (cantidad de neuronas que conforman la capa), el cual es normalizado y medido de a pares a través del coeficiente de Pearson, con el objetivo de obtener una nueva matriz de NxN, similar a la obtenida anteriormente. 
 \end{enumerate}
@@ -291,17 +295,17 @@ El algoritmo depende de 4 parámetros a configurar, los cuales se describen a con
 	\item \textbf{Cantidad máxima de iteraciones:} variable definida con el objetivo de	poner un freno a la cantidad de iteraciones del algoritmo en caso de que el umbral de corte nunca llegue a ser menor o igual al establecido.
 \end{itemize}
 
-Si bien se recomienda que los mismos sean configurados entre ciertos valores, la realidad es que se terminan definiendo con el correr de las pruebas, es decir de una manera estocástica, ya que se ajustan según la problemática a tratar y el protocolo de experimentación que se siguió durante el desarrollo.  
+Si bien se recomienda que los mismos sean configurados entre ciertos valores, la realidad es que se terminan definiendo con el correr de las pruebas, es decir de una manera heurística, ya que se ajustan según la problemática a tratar y el protocolo de experimentación que se siguió durante el desarrollo.  
 
 Pasando ahora a describir el algoritmo, éste realiza dos operaciones algebraicas simples en matrices, y no requiere ningún tipo de instrucción para unir, ensamblar o dividir los grupos. A continuación, se explica paso a paso: 
 
 \begin{enumerate}
 	\item \underline{Paso 1:} Una vez que recibe la matriz, llena la diagonal con valores 1. Este ejercicio se denomina \textit{self-loop} o ``auto-bucle'' y asegura que el nodo se agrupe consigo mismo, ya que siempre hay una ruta mas corta desde un nodo hacia sí mismo. Se supone que el algoritmo funciona sin él, pero se obtendrían efectos poco comunes para nodos que no se encuentran en vecindarios con un alto coeficiente de agrupación. Luego, una vez realizado el auto-bucle, se normaliza la matriz.
 	
-	\item \underline{Paso 2:} mientras que el algoritmo \underline{no converja} o llegue al \underline{máximo de iteraciones de corte}, se aplican las dos operaciones mencionadas arriba:
+	\item \underline{Paso 2:} mientras que el algoritmo \emph{no converja} o llegue al \emph{máximo de iteraciones de corte}, se aplican las dos operaciones mencionadas arriba:
 	\begin{enumerate}
-		\item \textbf{Etapa de expansión:} se aplica una potencia a la matriz elevándola por el coeficiente de expansión \textit{e}. 
-		\item \textbf{Etapa de inflación:} A la matriz resultado de la etapa anterior, se le elevan todos los valores (i,j) por el coeficiente de inflación \textit{p} definido. Esta operación es conocida como una potencia de Hadamard. Una vez finalizado esto, se vuelve a aplicar una normalización.
+		\item \textbf{Etapa de expansión:} se aplica una potencia a la matriz \textbf{M} elevándola por el coeficiente de expansión \textit{e}: $M_i = M_i ^ e$ 
+		\item \textbf{Etapa de inflación:} A la matriz \textbf{M}, resultado de la etapa anterior, se le elevan todos los valores (i,j) por el coeficiente de inflación \textit{p} definido: $M_{ij} = M_{ij}^p$ Esta operación es conocida como una potencia de Hadamard. Una vez finalizado esto, se vuelve a aplicar una normalización.
 		\item Por último, se compara la matriz actual contra la matriz en la iteración anterior, y se repite el proceso hasta que haya \textit{convergido} o bien supere la \textit{cantidad máxima de iteraciones.} 
 	\end{enumerate} 
 	
@@ -325,16 +329,14 @@ El procedimiento que se sigue para estos casos es el de detectar aquellas imágen
 
 En caso de no existir dentro de la matriz ninguna imagen con la que tenga afinidad, se pondrá dentro de una carpeta destinada a aquellas imágenes que no tengan ningún parecido, y así evitar agrupaciones con una sola imagen.
  
-\section{[WIP] Aplicación Android}
+\section{[DONE] Aplicación Android}
 
-En esta sección se aborda todo lo relativo al desarrollo y diseño de las interfaces de usuario de la aplicación en cuestión. Primero, se mencionan algunas nociones relacionadas a Android en cuanto a la estructura, características y configuraciones que tienen el proyecto. Luego, se interioriza sobre las interfaces de usuario diseñadas y el flujo principal que sigue la aplicación para obtener de ella su uso óptimo. Por último, se mencionan algunas características relevantes con las que cuenta.
+En esta sección se aborda todo lo relativo al desarrollo y diseño de las interfaces de usuario de la aplicación en cuestión. Primero, se mencionan algunas nociones relacionadas a Android en cuanto a la estructura, características y configuraciones que tiene el proyecto. Luego, se interioriza sobre las interfaces de usuario diseñadas y el flujo principal que sigue la aplicación para obtener de ella su uso óptimo. Por último, se menciona sus características más relevantes.
 
-\begin{figure}[t]
+\begin{figure}[!hb]
 	\begin{center}
-		\scalebox{0.7}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/estructura-proyecto}
-		}
+		\includegraphics[width=0.7\textwidth]%
+		{Imagenes/Bitmap/estructura-proyecto}
 		\caption{Estructura del proyecto}
 		\label{fig:estructura-proyecto}
 	\end{center}
@@ -346,27 +348,23 @@ En la Figura \ref{fig:estructura-proyecto} se puede ver la estructura típica de 
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{1}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/app-permisos}
-		}
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/app-permisos}
 		\caption{Permisos declarados en el \textit{AndroidManifest.xml}}
 		\label{fig:app-permisos}
 	\end{center}
 \end{figure}
 
-Siguiendo se encuentra la estructura de paquetes Java donde están las clases programadas. Dentro de este directorio se puede definir la estructura de paquetes que se quiera junto con las clases, interfaces y cualquier elemento que podemos identificar en Java. Además de toda esta estructura, como se dijo en el capítulo anterior, para todo proyecto se debe definir una actividad principal o \textit{MainActivity}. Una actividad es una clase que establece una interfaz en dónde se pueden definir elementos para que el usuario interactúe. El \textit{MainActivityView} es la primer actividad que se ejecuta cuando se inicia la aplicación.
+Seguido se encuentra la estructura de paquetes Java donde están las clases programadas. Dentro de este directorio se puede definir la estructura de paquetes que se quiera junto con las clases, interfaces y cualquier elemento que podemos identificar en Java. Además de toda esta estructura, como se dijo en el capítulo anterior, para todo proyecto se debe definir una actividad principal o \textit{MainActivity}. Una actividad es una clase que establece una interfaz en dónde se pueden definir elementos para que el usuario interactúe. El \textit{MainActivityView} es la primer actividad que se ejecuta cuando se inicia la aplicación.
 
 Después se puede encontrar el directorio \textit{assets}. Aquí es donde se guardan aquellos archivos externos que serán utilizados por la aplicación. En este caso, se alojan la MobileNet ya entrenada, y dos documentos: aquel que contiene los diferentes \textit{tags} y el que guarda la relación que existe entre ellos, todos usados durante el procesamiento de las imágenes por parte del motor.
 
-Luego vienen los recursos o \textit{resources}. Allí se pueden definir todos aquellos recursos que podamos necesitar en nuestro proyecto, como ser imágenes, layout, archivos XML y valores predefinidos para utilizar en toda la aplicación. Por ejemplo, todos los iconos e imágenes como el logo de la aplicación están contenidos en el directorio \textit{drawable}. Por otro lado, en la carpeta \textit{layout} se encuentran todos los componentes que definen las pantallas de la aplicación (ver Figura \ref{fig:res-folder}). También es importante el directorio \textit{values}, donde se puede definir todo tipo de valores, como ser cadenas de texto o colores a utilizar, que luego son llamadas desde cualquier punto de la aplicación de forma tal que siempre se esté usando el mismo valor y, si se quisiera realizar un cambio, solo se debe hacer el cambio en el recurso definido en esta carpeta, y ese cambio impactará en toda la aplicación. Por ejemplo, dentro de \textit{res/values/colors.xml} se define un conjunto de colores como se puede ver en la Figura \ref{fig:res-values-color}. Cada vez que se necesite utilizar alguno de esos colores, se pueden llamar a través de sus nombres y aplicarlos.
+Luego vienen los recursos o \textit{resources}. Allí se pueden definir todos aquellos recursos que pueda necesitar un proyecto, como imágenes, layout, archivos XML y valores predefinidos para utilizar en toda la aplicación. Por ejemplo, todos los iconos e imágenes como el logo de la aplicación están contenidos en el directorio \textit{drawable}. Por otro lado, en la carpeta \textit{layout} se encuentran todos los componentes que definen las pantallas de la aplicación (ver Figura \ref{fig:res-folder}). También es importante el directorio \textit{values}, donde se puede definir todo tipo de valores, como ser cadenas de texto o colores a utilizar, que luego son llamadas desde cualquier punto de la aplicación de forma tal que siempre se esté usando el mismo valor y, si se quisiera realizar un cambio, solo se debe hacer el cambio en el recurso definido en esta carpeta, y ese cambio impactará en toda la aplicación. Por ejemplo, dentro de \textit{res/values/colors.xml} se define un conjunto de colores como se puede ver en la Figura \ref{fig:res-values-color}. Cada vez que se necesite utilizar alguno de esos colores, se pueden llamar a través de sus nombres y aplicarlos.
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.7}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/res-folder}
-		}
+		\includegraphics[width=0.5\textwidth]%
+		{Imagenes/Bitmap/res-folder}
 		\caption{Carpeta \textit{resources} perteneciente al proyecto IMachineApp}
 		\label{fig:res-folder}
 	\end{center}
@@ -376,10 +374,8 @@ Luego vienen los recursos o \textit{resources}. Allí se pueden definir todos aqu
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{1}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/res-values-color}
-		}
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/res-values-color}
 		\caption{Diferentes gamas de colores con los que cuenta la aplicación}
 		\label{fig:res-values-color}
 	\end{center}
@@ -387,10 +383,8 @@ Luego vienen los recursos o \textit{resources}. Allí se pueden definir todos aqu
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{1}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/app-gradle}
-		}
+		\includegraphics[width=1\textwidth]%
+		{Imagenes/Bitmap/app-gradle}
 		\caption{Archivo de configuración de la aplicación}
 		\label{fig:app-gradle}
 	\end{center}
@@ -411,30 +405,26 @@ Particularmente para este proyecto se optó por utilizar plantillas XML en blanco
 
 \subsubsection{Flujo principal}
 
-Cuando se inicia la aplicación por primera vez en un dispositivo móvil, solicita permisos requeridos al usuario para poder obtener información sobre los archivos que se alojan allí. Como se explico arriba, un permiso es una restricción que limita el acceso a una parte del código o a datos en el dispositivo. La limitación se impone para proteger datos y códigos claves que podrían usarse incorrectamente para distorsionar o afectar la experiencia del usuario. Por lo tanto, si no estaría de acuerdo en darle los permisos pertinentes a la aplicación, la misma se cierra automáticamente.
+Cuando se inicia la aplicación por primera vez en un dispositivo móvil, solicita permisos requeridos al usuario para poder obtener información sobre los archivos que se alojan allí. Como se explicó más arriba, un permiso es una restricción que limita el acceso a una parte del código o a datos en el dispositivo. La limitación se impone para proteger datos y códigos claves que podrían usarse incorrectamente para distorsionar o afectar la experiencia del usuario. Por lo tanto, si no estaría de acuerdo en darle los permisos pertinentes a la aplicación, la misma se cierra automáticamente.
 
-La pantalla inicial del sistema presenta la aplicación con una imagen y botones referidos a las diferentes opciones de uso que provee. El usuario puede decidir entre seleccionar una carpeta en específico, o las imágenes que se encuentran en la carpeta que contiene las fotos tomadas por la cámara del dispositivo, para ser enviadas a procesar. Además, se pueden visualizar resultados anteriores en caso de que no se haya finalizado con la edición aún de un lote de imágenes anterior. En la Figura \ref{fig:imachineapp1} se muestra la pantalla inicial del sistema.
+La pantalla inicial del sistema presenta la aplicación con una imagen y botones referidos a las diferentes opciones de uso que provee. El usuario puede decidir entre seleccionar una carpeta específica, o las imágenes que se encuentran en la carpeta que contiene las fotos tomadas por la/s cámara/s del dispositivo, para ser enviadas a procesar. Además, se pueden visualizar resultados anteriores en caso de que no se haya finalizado con la edición aún de un lote de imágenes anterior. En la Figura \ref{fig:imachineapp1} se muestra la pantalla inicial del sistema.
 
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp1}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp1}
 		\caption{Pantalla inicial de la aplicación}
 		\label{fig:imachineapp1}
 	\end{center}
 \end{figure}
 
-En las Figuras \ref{fig:imachineapp2}, \ref{fig:imachineapp3} y \ref{fig:imachineapp4} se puede visualizar la secuencia de pantallas que van surgiendo cuando se opta por elegir una carpeta en específico. La primera de ellas muestra cómo se dá la opción de elegir entre el almacenamiento interno o externo del dispositivo (en este caso, contaba únicamente con almacenamiento interno). La segunda, muestra como se permite navegar por los diferentes directorios y seleccionar el que se busca, y por último, una vez seleccionado, se vuelve a la pantalla inicial mostrando la ruta que se eligió para que se procesen las imágenes que allí se encuentran.
+En las Figuras \ref{fig:imachineapp2}, \ref{fig:imachineapp3} y \ref{fig:imachineapp4} se puede visualizar la secuencia de pantallas que van surgiendo cuando se opta por elegir una carpeta específica. La primera de ellas muestra cómo se dá la opción de elegir entre el almacenamiento interno o externo del dispositivo (en este caso, contaba únicamente con almacenamiento interno). La segunda, muestra cómo se permite navegar por los diferentes directorios y seleccionar el que se busca, y por último, una vez seleccionado, se vuelve a la pantalla inicial mostrando la ruta que se eligió para que se procesen las imágenes que allí se encuentran.
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp2}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp2}
 		\caption{Selección de la memoria interna o externa}
 		\label{fig:imachineapp2}
 	\end{center}
@@ -442,10 +432,8 @@ En las Figuras \ref{fig:imachineapp2}, \ref{fig:imachineapp3} y \ref{fig:imachin
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp3}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp3}
 		\caption{Selección de la carpeta a procesar}
 		\label{fig:imachineapp3}
 	\end{center}
@@ -453,24 +441,20 @@ En las Figuras \ref{fig:imachineapp2}, \ref{fig:imachineapp3} y \ref{fig:imachin
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp4}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp4}
 		\caption{Carpeta seleccionada, listo para procesar}
 		\label{fig:imachineapp4}
 	\end{center}
 \end{figure}
 
-En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge después de pulsar el botón de procesar (Figura \ref{fig:imachineapp4}), la cual estará presente el tiempo que dure el motor de procesamiento en agrupar todas las imágenes, mostrando y actualizando el porcentaje de progreso. Una vez finalizada esta etapa, en la Figura \ref{fig:imachineapp6} se puede ver la pantalla que surge cuando el proceso termina. Lo que se hace es crear una carpeta temporal donde se aloja el resultado. Desde aquí en adelante, en caso de que el usuario lo necesite, comienzan las tareas de administración y edición, tanto de las carpetas como de los archivos. Se puede ver en las Figuras \ref{fig:imachineapp7} y \ref{fig:imachineapp8}, diferentes opciones que se pueden realizar sobre las carpetas y en la Figura \ref{fig:imachineapp9} se visualiza como se muestra el conjunto de imágenes agrupadas por el proceso dentro de una carpeta. Al hacer clic sobre una de las imágenes, se ve en pantalla (Figura \ref{fig:imachineapp10}). Por último, en la Figura \ref{fig:imachineapp11}, se pueden ver las diferentes opciones de administración que se permite realizar a cada una de las imágenes resultantes.
+En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge después de pulsar el botón de procesar (Figura \ref{fig:imachineapp4}), la cual estará presente el tiempo que dure el motor de procesamiento en agrupar todas las imágenes, mostrando y actualizando el porcentaje de progreso. Una vez finalizada esta etapa, en la Figura \ref{fig:imachineapp6} se puede ver la pantalla que surge cuando el proceso termina. Lo que se hace es crear una carpeta temporal donde se aloja el resultado. Desde aquí en adelante, en caso de que el usuario lo necesite, comienzan las tareas de administración y edición, tanto de las carpetas como de los archivos. Se puede ver en las Figuras \ref{fig:imachineapp7} y \ref{fig:imachineapp8}, diferentes opciones que se pueden realizar sobre las carpetas y en la Figura \ref{fig:imachineapp9} se visualiza como se muestra el conjunto de imágenes agrupadas por el proceso dentro de una carpeta. Al tocar sobre una de las imágenes, se ve en pantalla (Figura \ref{fig:imachineapp10}). Por último, en la Figura \ref{fig:imachineapp11}, se pueden observar las diferentes opciones de administración que se permite realizar a cada una de las imágenes resultantes.
 
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp5}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp5}
 		\caption{Pantalla que muestra el progreso del procesamiento de las imágenes}
 		\label{fig:imachineapp5}
 	\end{center}
@@ -480,10 +464,8 @@ En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge d
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp6}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp6}
 		\caption{Visualización de las diferentes carpetas obtenidas del proceso}
 		\label{fig:imachineapp6}
 	\end{center}
@@ -491,10 +473,8 @@ En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge d
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp7}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp7}
 		\caption{Opciones de administración de carpetas}
 		\label{fig:imachineapp7}
 	\end{center}
@@ -502,10 +482,8 @@ En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge d
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp8}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp8}
 		\caption{Ejemplo donde se renombra una carpeta}
 		\label{fig:imachineapp8}
 	\end{center}
@@ -513,10 +491,8 @@ En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge d
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp9}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp9}
 		\caption{Visualización de las diferentes imágenes dentro de una carpeta seleccionada}
 		\label{fig:imachineapp9}
 	\end{center}
@@ -524,10 +500,8 @@ En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge d
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp10}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp10}
 		\caption{Visualización de una imagen en la aplicación}
 		\label{fig:imachineapp10}
 	\end{center}
@@ -535,53 +509,45 @@ En la Figura \ref{fig:imachineapp5}, se puede visualizar la pantalla que surge d
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp11}
-		}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp11}
 		\caption{Opciones de administración sobre una imagen}
 		\label{fig:imachineapp11}
 	\end{center}
 \end{figure}
 
-En la Figura \ref{fig:imachineapp12}, se percibe el evento que surge de pulsar el botón \textbf{+}, presente durante todas las interfaces de administración. Allí, además de poder crear una nueva carpeta y seguir con la administración, se puede salir de la edición y pasar a la pantalla representada en la Figura \ref{fig:imachineapp13}. Ahí la aplicación permite decidir qué hacer con el resultado final, ya sea confirmando los resultados, descartándolos, o bien volver a la edición de carpetas. Si se decide confirmar los resultados (Figura \ref{fig:imachineapp14}) se puede ver que el sistema permite o bien mover el resultado final (esto significa eliminar las imágenes de su ubicación original para que pasen a una ubicación nueva, brindada por la aplicación), o bien copiarlo, simplemente creando un nuevo directorio con toda la estructura tal cual quedó en la etapa de edición.
+En la Figura \ref{fig:imachineapp12}, se percibe el evento que surge de pulsar el botón \textbf{+}, presente durante todas las interfaces de administración. Allí, además de poder crear una nueva carpeta y seguir con la administración, se puede salir de la edición y pasar a la pantalla representada en la Figura \ref{fig:imachineapp13}. Allí la aplicación permite decidir qué hacer con el resultado final, ya sea confirmando los resultados, descartándolos, o bien volver a la edición de carpetas. Si se decide confirmar los resultados (Figura \ref{fig:imachineapp14}) se puede ver que el sistema permite o bien mover el resultado final (esto significa eliminar las imágenes de su ubicación original para que pasen a una ubicación nueva, brindada por la aplicación), o bien copiarlo, simplemente creando un nuevo directorio con toda la estructura tal cual quedó en la etapa de edición.
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp12}
-		}
-		\caption{Visualización de las diferentes imágenes dentro de una carpeta seleccionada}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp12}
+		\caption{Opción para finalizar la edición}
 		\label{fig:imachineapp12}
 	\end{center}
 \end{figure}
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp13}
-		}
-		\caption{Visualización de una imagen en la aplicación}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp13}
+		\caption{Visualización de las opciones finales}
 		\label{fig:imachineapp13}
 	\end{center}
 \end{figure}
 
 \begin{figure}[t]
 	\begin{center}
-		\scalebox{0.5}{
-			\includegraphics[width=0.8\textwidth]%
-			{Imagenes/Bitmap/imachineapp14}
-		}
-		\caption{Opciones de administración sobre una imagen}
+		\includegraphics[width=0.4\textwidth]%
+		{Imagenes/Bitmap/imachineapp14}
+		\caption{Opciones al presionar ``Confirmar resultado final''}
 		\label{fig:imachineapp14}
 	\end{center}
 \end{figure}
 
 \subsubsection{Otras características de la aplicación}
 
-Hasta aquí se detallaron todas las cuestiones relacionadas a las interfaces de usuario de la aplicación y al flujo principal que tiene el usuario en su experiencia. Además de todo ello, es necesario destacar que la aplicación está preparada para ayudarlo con diferentes mensajes indicadores ante aquellos escenarios donde se produzcan excepciones o comportamientos inadecuados. Los mismos son detallados a continuación:
+Hasta aquí se detallaron todas las cuestiones relacionadas a las interfaces de usuario de la aplicación y al flujo principal que tiene el usuario en su experiencia. Además de todo ello, es necesario destacar que la aplicación está preparada para ayudar al usuario con diferentes mensajes indicadores ante aquellos escenarios donde se produzcan excepciones o comportamientos inadecuados. Los mismos son detallados a continuación:
 
 \begin{itemize}
 	\item Si se presiona el botón procesar y no se eligió ningún directorio, la aplicación informará este hecho y no realizará nada.
@@ -590,7 +556,9 @@ Hasta aquí se detallaron todas las cuestiones relacionadas a las interfaces de u
 	
 	\item Cuando se elige un directorio a procesar, la aplicación primero realiza un control para saber si cuenta con imágenes adentro. En el caso de que esto sea negativo, informa el evento a través de un mensaje y permite al usuario elegir otro directorio.
 	
-	\item Una vez finalizado el proceso, se crea una carpeta temporal donde se alojan todos los grupos con las imágenes adentro, para luego permitir al usuario realizar las tareas de administración. Previamente, se verifica si el dispositivo cuenta con el espacio suficiente para poder realizar esta copia desde la ubicación original hacia la temporal. Si no es así, avisa al usuario y el proceso no empieza.
+	\item Una vez finalizado el proceso, se crea una carpeta temporal donde se alojan todos los grupos con las imágenes dentro, para luego permitir al usuario realizar las tareas de administración. Previamente, se verifica si el dispositivo cuenta con el espacio suficiente para poder realizar esta copia desde la ubicación original hacia la temporal. Si no es así, avisa al usuario y el proceso no empieza.
+	
+	\item Al crearse la carpeta temporal con la sugerencia organizacional de las imágenes, el usuario podría elegir un nuevo lote de imágenes a procesar, independientemente de si el proceso anterior fue confirmado o descartado. Al navegar sobre las carpetas, se vería dicha carpeta temporal y el usuario podría seleccionarla para mandar a procesar, creando inconsistencias. Es por ello que la aplicación está preparada para informar esta excepción y permanecer de manera inalterada hasta que se elija otra carpeta a procesar.
 	
 	\item Hasta el momento la aplicación está preparada para procesar 400 imágenes a la vez como máximo. Si se elige un directorio el cual contiene más de esa cantidad, se informa al usuario que sólo se procesará ese número de imágenes.
 \end{itemize} 

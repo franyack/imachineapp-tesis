@@ -20,14 +20,14 @@
 En este capítulo se describen las acciones ejecutadas para validar el correcto funcionamiento del motor de procesamiento y de la aplicación. Para ello, se llevan adelante distintos protocolos donde se definieron experimentos y validaciones sobre ciertas funcionalidades desarrolladas en este trabajo. Se detallan los recursos utilizados y las configuraciones implementadas sobre ellos para llevar a cabo estas tareas de evaluación.
 \end{resumen}
 
-\section{Conjuntos de datos para experimentación}
+\section{[WIP]Conjuntos de datos para experimentación}
 
 Con el objetivo de validar la utilidad y potencialidad del software, se define un conjunto de base de datos de prueba compuesto por diversas imágenes que provienen de lugares diferentes y bajo normativas distintas. La primera de ellas consiste en la carpeta de imágenes de WhatsApp del ejecutor del proyecto, que contando con un total de 1600 imágenes aproximadamente, se considera representativa para cualquier usuario promedio. La segunda, 2000 imágenes pertenecientes al portal de internet 9GAG\footnote{\url{https://9gag.com/}}, sitio donde la comunidad participe sube imágenes de todo tipo de temática, todos los días. Por último, se utilizó también una base de datos denominada VOC\footnote{\url{http://host.robots.ox.ac.uk/pascal/VOC}}, la cual cuenta con diversos grupos de imágenes estandarizadas y se utiliza para medir algoritmos de clasificación de imágenes en diferentes competencias que se realizan año a año, sumarizando más de 17.000 imágenes.
 
 Sumando todos los directorios, se contabilizan más de 19.000 imágenes pertenecientes a la base de datos de prueba.
 
 %-------------------------------------------------------------------
-\section{Protocolo de Experimentación}
+\section{[WIP]Protocolo de Experimentación}
 %-------------------------------------------------------------------
 \label{cap2:sec:experimentos}
 El objetivo de esta sección es mostrar las pruebas que fueron ejecutadas sobre el motor de procesamiento, con el fin de validar que la calidad de agrupamiento de imágenes obtenida en su uso es aceptable como para ser de utilidad en la tarea de organización de las mismas.
@@ -35,13 +35,13 @@ El objetivo de esta sección es mostrar las pruebas que fueron ejecutadas sobre e
 Como fue definido en la Especificación de Requisitos del Software (ERS), la experimentación abarcó diferentes aspectos:
 
 \begin{itemize}
-	\item \underline{Datos:} se utilizaron 959 imágenes, obtenidas de las diferentes bases de datos definidas con anterioridad, como lo son:
+	\item \underline{Datos:} se utilizaron imágenes obtenidas de las diferentes bases de datos definidas con anterioridad, como lo son:
 		\begin{itemize}
-			\item Carpeta de imágenes de WhatsApp del ejecutor del proyecto, obtenidas entre febrero y septiembre de 2017: 649 imágenes.
+			\item Carpeta de imágenes de WhatsApp del ejecutor del proyecto, obtenidas entre febrero y septiembre de 2017.
 			
-			\item Imágenes descargadas del sitio 9GAG (con el objetivo de detectar posibles imágenes catalogadas como ``memes''): 100 imágenes.
+			\item Imágenes descargadas del sitio 9GAG (con el objetivo de detectar posibles imágenes catalogadas como ``memes'').
 			
-			\item Base de datos VOC, muy popular ya que cuenta con diversos grupos de imágenes proveniente de distintas categorías, utilizadas para medir algoritmos de clasificación de imágenes en diferentes competencias: 210 imágenes.
+			\item Base de datos VOC, muy popular ya que cuenta con diversos grupos de imágenes proveniente de distintas categorías, utilizadas para medir algoritmos de clasificación de imágenes en diferentes competencias.
 		\end{itemize}
 	
 	\item \underline{Métricas:} debido a que los datos de prueba se encuentran relacionados a clases (e.g perro, memes, comida, etc.), se aprovechó dicha información para poder validar los experimentos de manera supervisada, planteando un problema de clasificación para poder considerar medidas como la tasa de aciertos en el análisis y complementar a las medidas de calidad de los clusters en la evaluación del desempeño.
@@ -89,7 +89,7 @@ Como fue definido en la Especificación de Requisitos del Software (ERS), la expe
 
 \textbf{Importante:} Dado que no se tiene como objetivo tener un desempeño específico, en términos de la calidad de clustering, se establece que no es necesario realizar un análisis que se compare o compita con el estado del arte en dicha tarea ya que el motor de procesamiento no pretende más que sugerir grupos de imágenes que el usuario puede incluso modificar.
 
-\subsection{Pruebas realizadas}
+\subsection{[WIP]Pruebas realizadas}
 
 A continuación se presentan pruebas que fueron aplicadas sobre el motor de procesamiento de imágenes. Las mismas son distintivas entre ellas y muestran diferentes casos de aplicación que podrían proporcionar los usuarios. Todas fueron realizadas con las configuraciones descriptas en el capítulo anterior donde se explicó el paso a paso por el que transitan las imágenes dentro del motor. La decisión de utilizar todos esos parámetros se debe a un protocolo de experimentación realizado durante la etapa de desarrollo, donde se realizaron diferentes pruebas modificándolos. A partir de allí se pudo notar que la configuraciones que mejor resultado arrojan son las elegidas. %Estas pruebas pueden verificarse en la ERS entregada durante los diferentes informes de avance.
 
@@ -213,7 +213,7 @@ Como se puede observar en la Tabla \ref{tab:prueba3}, las métricas obtenidas en 
 
 \hfil
 
-\section{Validación de la aplicación}
+\section{[WIP]Validación de la aplicación}
 
 Con el objetivo de corroborar el correcto funcionamiento de todos los módulos que componen el sistema, verificando que actúan y responden según lo esperado, se definieron pruebas unitarias (mejor conocido en inglés como \textit{unit testing}), y un protocolo de validación donde se presentaron un conjunto de casos de prueba relacionadas a la experiencia de usuario. Todo será detallado a continuación.
 
@@ -222,7 +222,7 @@ Con el objetivo de corroborar el correcto funcionamiento de todos los módulos qu
 De forma que las características de la aplicación sean validadas en términos
 de funcionalidad, se procede a utilizar diferentes herramientas que permitan testear los módulos implementados. Esto es realizado con el fin de seguir buenas prácticas de ingeniería en software \cite{sommerville2007software}, que permitan desarrollar un producto que asegure cierta calidad en su integración y despliegue.
 
-Las pruebas unitarias son una forma de comprobar el correcto funcionamiento de un módulo de forma aislada al resto de los componentes. Para ello se define un escenario para ejecutar las acciones de ese módulo en forma separada, y se corrobora obtener un cierto comportamiento esperado en la salida de cada una de ellas \cite{learninspy2016tesis}. Mediante la utilización de los frameworks \textbf{JUnit} y \textbf{Mockito}, se llevaron adelante las pruebas de la aplicación de forma automatizada. Gracias a ellos se fue probando de a pequeñas porciones de código. Para esto se estableció un escenario posible con datos de entrada, ejecutando las acciones de cada módulo y corroborando el comportamiento esperado en las salida de cada uno de los casos.
+Las pruebas unitarias son una forma de comprobar el correcto funcionamiento de un módulo de forma aislada al resto de los componentes. Para ello se define un escenario para ejecutar las acciones de ese módulo en forma separada, y se corrobora obtener un cierto comportamiento esperado en la salida de cada una de ellas \cite{learninspy2016tesis}. Mediante la utilización de los frameworks \textbf{JUnit}\footnote{\url{https://junit.org}} y \textbf{Mockito}\footnote{\url{https://site.mockito.org/}}, se llevaron adelante las pruebas de la aplicación de forma automatizada. Gracias a ellos se fue probando de a pequeñas porciones de código. Para esto se estableció un escenario posible con datos de entrada, ejecutando las acciones de cada módulo y corroborando el comportamiento esperado en las salida de cada uno de los casos.
 
 \subsection{Protocolo de validación}
 

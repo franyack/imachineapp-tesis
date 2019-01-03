@@ -16,7 +16,7 @@
 \end{FraseCelebre}
 
 \begin{resumen}
-	Este capítulo está destinado a plasmar conclusiones finales de todo el trabajo realizado. Las mismas se refieren al valor que se obtiene de este proyecto, así como las fortalezas y debilidades identificadas durante toda la ejecución. Aquí se validan los logros del trabajo respecto a lo planificado, y se discuten futuros trabajos posibles a realizar sobre el sistema generado.
+	Este capítulo tiene como objetivo plasmar conclusiones finales de todo el trabajo realizado. Las mismas se refieren al valor que se obtiene de este proyecto, así como las fortalezas y debilidades identificadas durante toda la ejecución. Aquí se validan los logros del trabajo respecto a lo planificado, y se discuten futuros trabajos posibles a realizar sobre el sistema generado.
 \end{resumen}
 
 
@@ -31,7 +31,7 @@ Un valor importante a destacar respecto al desarrollo de este trabajo es el apre
 \begin{figure}
 	\centering
 	\begin{tikzpicture}
-	\pie[text=legend, radius=2.5]{40/Programación, 15/Software, 30/Aplicación, 15/Matemáticas}
+	\pie[text=legend, radius=2.5]{35/Programación, 20/Software, 30/Aplicación, 15/Matemáticas}
 	\end{tikzpicture}
 	
 	\caption{Gráfico de torta con las contribuciones de cada área curricular hacia el proyecto desarrollado.}
@@ -55,13 +55,15 @@ Para entender la concepción de IMachineApp como un auténtico proyecto de Ingenie
 Respecto a los objetivos definidos en la Sección \ref{cap1:sec:objetivos}, se considera que se pudo cumplir con lo planificado, ya que la aplicación desarrollada tiene la capacidad de sugerir una organización de directorios contenedores de imágenes similares entre sí, y a su vez brindar opciones al usuario para que pueda refinar esta sugerencia por parte del sistema según sus preferencias. Específicamente, esto se manifiesta de la siguiente manera:
 
 \begin{itemize}
-	\item Se logró implementar un motor de procesamiento de imágenes, el cual recibe un lote de ellas y las devuelve organizadas según una medida de similitud que se computa entre las mismas.
+	\item Se logró implementar un motor de procesamiento de imágenes, el cual recibe un lote y las devuelve organizadas según una medida de similitud que se computa entre las mismas.
 	
 	\item Se definió un conjunto de imágenes a utilizar en experimentos, las cuales son lo más fiel posible a la problemática tratada en el marco de dispositivos móviles.
 	
 	\item Se pudo ejecutar la experimentación planteada y se logró obtener un buen desempeño respecto a métricas utilizadas en problemas de clasificación. 
 	
 	\item Al realizar la aplicación Android que incluye el motor de procesamiento de las imágenes, se logró que la misma sea intuitiva y fácil de utilizar por parte del usuario, permitiéndole configurar el idioma según crea conveniente, además de dar la posibilidad de personalizar el resultado obtenido según su criterio.
+	
+	\item La aplicación es lo suficientemente robusta como para manejar excepciones y situaciones que son consideradas fuera de lo normal, informado al usuario cual es el error e indicándole que debe realizar para continuar.
 	
 	\item Cumplimiento de todos los requisitos que fueron especificados en la ERS del proyecto.
 \end{itemize}
@@ -87,7 +89,7 @@ A partir de todo el trabajo realizado, también se concluye que el software desar
 	
 	\item Implementar un proceso de integración continua para mejorar los mecanismos de pruebas y despliegue de la aplicación.
 	
-	\item Que el motor de procesamiento de las imágenes pueda ser utilizado en otro ambiente, como por ejemplo otro sistema operativo \textit{mobile}, una aplicación \textit{desktop},o bien como un servicio alojado en la nube y consumido a través de diferentes proyectos web.
+	\item Que el motor de procesamiento de las imágenes pueda ser utilizado en otro ambiente, como por ejemplo otro sistema operativo \textit{mobile}, una aplicación \textit{desktop}, o bien como un servicio alojado en la nube y consumido a través de diferentes proyectos web.
 \end{itemize}
 
 Dado que las tecnologías comprendidas por la aplicación se siguen desarrollando y mejorando cada vez más, logrando con ello diversas aplicaciones de forma exitosa, se puede concluir finalmente que IMachineApp provee las bases que necesita una aplicación Android para realizar procesamiento y agrupación sobre un conjunto de imágenes, y puede seguir mejorando sus capacidades para ser una herramienta flexible de personalizar y simple de utilizar en tareas complejas.
