@@ -38,7 +38,7 @@ El producto desarrollado en este proyecto se identifica como \textbf{IMachineApp
 
 
 %-------------------------------------------------------------------
-\section{[DONE] Diseño del sistema}
+\section{Diseño del sistema}
 %-------------------------------------------------------------------
 \label{cap3:sec:estructura}
 
@@ -56,7 +56,7 @@ La aplicación, fue diseñada para que todo el proceso ocurra en 4 etapas:
 	\item \textbf{Administración del resultado final:} luego de que la etapa de administración de las carpetas sugeridas por el proceso ha finalizado, el usuario tendrá la posibilidad de tomar diferentes decisiones respecto al resultado obtenido: descartar todos los cambios y volver las imágenes a su versión original, moverlas hacia una nueva carpeta creada por el programa, o copiarlas y mantenerla en dos lugares diferentes.
 \end{enumerate}
 
-\subsection{[DONE] Metodología de trabajo}
+\subsection{Metodología de trabajo}
 
 Para el cumplimiento óptimo de todos los objetivos del proyecto, se implementó el ciclo de vida del software siguiendo un modelo iterativo denominado Desarrollo Rápido de Aplicaciones (\textbf{RAD} del inglés, \textit{Rapid Application Development}). Fue creado en 1980 por James Martin, siguiendo el modelo tradicional de desarrollo de software en cascada \cite{beynon1999rapid}. El modelo está compuesto por cuatro etapas, donde en la primera de ellas se realiza la definición de requerimientos, siguiendo por el diseño del sistema, el desarrollo del mismo y por último la etapa donde el producto está listo para ser enviado a producción. Si bien tiene un grado de similitud al modelo en cascada, en las etapas de diseño e implementación se trabaja de forma iterativa e incremental hasta cumplir con los criterios de aceptación dispuestos (ver Figura \ref{fig:rad-model}).
 
@@ -108,7 +108,7 @@ A continuación, se explicitan cada uno de los prototipos que conformaron la real
 	\end{itemize}
 \end{itemize}
 
-\subsection{[DONE] Patrón de programación seleccionado}
+\subsection{Patrón de programación seleccionado}
 
 Como se dijo en la Sección \ref{cap2:sec:dispositivos-moviles}, la aplicación será desarrollada para el sistema operativo Android, de manera nativa, a fin de aprovechar todas las ventajas que las librerías proveen para los desarrolladores. El framework Android, no recomienda ninguna forma específica de diseñar e implementar aplicaciones. Eso, de alguna manera, hace a los desarrolladores más poderosos y vulnerables, al mismo tiempo \cite{mvp2017guide}.
 
@@ -160,7 +160,7 @@ La aplicación fue pensada en dos bloques diferentes. El primero se corresponde a
 
 Como conclusión y aprendizaje, la arquitectura es en lo primero que se debe trabajar para cualquier software. Una arquitectura cuidadosamente diseñada, minimizará muchas repeticiones en el futuro, a la vez que proporcionará la facilidad de escalabilidad. La mayor parte de proyectos se desarrollan hoy en día en equipo, por lo que la legibilidad y la modularidad del código deben considerarse como elementos sumamente importantes de la arquitectura. También, se depende en gran medida de bibliotecas de terceros, cambiando entre alternativas, debido a casos de uso, errores o soporte. 
 
-\section{[DONE] Motor de procesamiento de las imágenes}
+\section{Motor de procesamiento de las imágenes}
 
 En esta sección se detallará el paso a paso por el que transita el conjunto de imágenes para que se puedan obtener los grupos sugeridos por la aplicación, ordenándolas según el grado de similitud o contexto que tengan entre ellas.
 
@@ -250,7 +250,7 @@ Una vez que la imagen pasa por la red neuronal, se obtienen como predicciones do
 \begin{enumerate}
 	\item \textbf{Resultado 1: etiquetas y probabilidades}
 	
-	La primer salida que se obtiene de la red es una lista de las 5 mayores etiquetas o \textit{tags} (en caso de que existan) cuya probabilidad de similitud sea mayor o igual a un umbral establecido. Una vez que se obtienen dichos \textit{tags}, se busca por cada uno de ellos las 4 etiquetas ``padres'' (utilizando la jerarquía definida por \textit{WordNet}) asignándoles la misma probabilidad que la etiqueta ``hija'' o inicial.
+	La primer salida que se obtiene de la red es una lista de las 5 etiquetas o \textit{tags} con las probabilidades más altas, siempre y cuando estas probabilidades sean mayores a un umbral establecido. Una vez que se obtienen dichos \textit{tags}, se busca por cada uno de ellos las 4 etiquetas ``padres'' (utilizando la jerarquía definida por \textit{WordNet}) asignándoles la misma probabilidad que la etiqueta ``hija'' o inicial.
 	
 	\item \textbf{Resultado 2: caracterización de la imagen}
 	
@@ -259,7 +259,7 @@ Una vez que la imagen pasa por la red neuronal, se obtienen como predicciones do
 
 Como conclusión, se obtiene por cada una de las imágenes a procesar un conjunto de etiquetas y probabilidades de correspondencia, y un vector con valores numéricos que indica cómo la red neuronal caracterizó a la imagen. A continuación, se explicará la etapa 2, en donde se realiza la medición de similitudes entre las imágenes.
 
-\subsection{Etapa 2: Medición de similitud entre las imágenes}
+\subsection{[WIP] Etapa 2: Medición de similitud entre las imágenes}
 \label{cap3:subsec:affinity}
 Una vez que fue recolectada toda la información que se describió durante la sección anterior, se procede a medir el grado de similitud que existe entre cada par de imágenes, basándose en las etiquetas y probabilidades que se obtuvo de cada una de ellas, como así también del vector de características provisto por la capa de \textit{embeddings}. Al final de esta etapa, se obtendrá una matriz que será utilizada por el algoritmo de \textit{clustering}. Esta matriz, es el resultado de una suma ponderada de dos matrices que reciben el nombre de \emph{matrices de afinidad}, las cuales se describen a continuación:
 
@@ -278,7 +278,7 @@ Una vez que fue recolectada toda la información que se describió durante la secc
 	
 	\item \textbf{Matriz de afinidad según \textit{embeddings}:} 
 	
-	De manera similar a como se obtuvo la matriz de afinidad gramatical, se procesan cada uno de los vectores que se obtuvieron por caracterizar a la matriz gracias a la capa de \textit{embeddings}. Por cada imagen existe un vector de 1024 números (cantidad de neuronas que conforman la capa), el cual es normalizado y medido de a pares a través del coeficiente de Pearson, con el objetivo de obtener una nueva matriz de NxN, similar a la obtenida anteriormente. 
+	De manera similar a como se obtuvo la matriz de afinidad gramatical, se procesan cada uno de los vectores que se obtuvieron por caracterizar a la matriz gracias a la capa de \textit{embeddings}. Por cada imagen existe un vector de 1024 coeficientes (cantidad de neuronas que conforman la capa), el cual es normalizado y medido de a pares a través del coeficiente de Pearson, con el objetivo de obtener una nueva matriz de NxN, similar a la obtenida anteriormente. 
 \end{enumerate}
 
 Una vez que se obtienen estas dos matrices cuadradas del mismo tamaño que la cantidad de imágenes que se están procesando, lo que se hace es una ponderación 50/50 (es decir, se suman los valores \textit{(i,j)} de cada una y se divide por 2), logrando una única matriz de afinidad de las imágenes. Finalizada esta etapa, el proceso se encuentra en condiciones de pasar a la etapa 3, en la cual se utiliza el algoritmo de \textit{clustering}.
@@ -333,9 +333,9 @@ El procedimiento que se sigue para estos casos es el de detectar aquellas imágen
 
 En caso de no existir dentro de la matriz ninguna imagen con la que tenga afinidad, se pondrá dentro de una carpeta destinada a aquellas imágenes que no tengan ningún parecido, y así evitar agrupaciones con una sola imagen.
  
-\section{[DONE] Aplicación Android}
+\section{Aplicación Android}
 
-En esta sección se aborda todo lo relativo al desarrollo y diseño de las interfaces de usuario de la aplicación en cuestión. Primero, se mencionan algunas nociones relacionadas a Android en cuanto a la estructura, características y configuraciones que tiene el proyecto. Luego, se interioriza sobre las interfaces de usuario diseñadas y el flujo principal que sigue la aplicación para obtener de ella su uso óptimo. Por último, se menciona sus características más relevantes.
+En esta sección se aborda todo lo relativo al desarrollo y diseño de las interfaces de usuario de la aplicación en cuestión. Primero, se mencionan algunas nociones relacionadas a Android en cuanto a la estructura, características y configuraciones que tiene el proyecto. Luego, se interioriza sobre las interfaces de usuario diseñadas y el flujo principal que sigue la aplicación para obtener de ella su uso óptimo. Por último, se mencionan sus características más relevantes.
 
 \begin{figure}[!hb]
 	\begin{center}

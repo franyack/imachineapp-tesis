@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  5 FEB 2019 14:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.18)  10 FEB 2019 09:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2604,92 +2604,96 @@ File: Imagenes/Bitmap/neuron_model.png Graphic file (type png)
 Package pdftex.def Info: Imagenes/Bitmap/neuron_model.png  used on input line 2
 41.
 (pdftex.def)             Requested size: 241.49895pt x 137.78517pt.
-LaTeX Info: Redefining \. on input line 250.
-LaTeX Info: Redefining \% on input line 250.
+LaTeX Info: Redefining \. on input line 248.
+LaTeX Info: Redefining \% on input line 248.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 250.
+(babel)             in language  on input line 248.
  [15 <./Imagenes/Bitmap/machinelearningnewparadigm.png>]
 <Imagenes/Bitmap/arq-mlp.png, id=611, 890.32625pt x 611.28375pt>
 File: Imagenes/Bitmap/arq-mlp.png Graphic file (type png)
 <use Imagenes/Bitmap/arq-mlp.png>
-Package pdftex.def Info: Imagenes/Bitmap/arq-mlp.png  used on input line 256.
+Package pdftex.def Info: Imagenes/Bitmap/arq-mlp.png  used on input line 254.
 (pdftex.def)             Requested size: 293.2521pt x 201.34183pt.
-LaTeX Info: Redefining \. on input line 263.
-LaTeX Info: Redefining \% on input line 263.
+LaTeX Info: Redefining \. on input line 261.
+LaTeX Info: Redefining \% on input line 261.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 263.
+(babel)             in language  on input line 261.
  [16 <./Imagenes/Bitmap/neuron_model.png>]
-LaTeX Info: Redefining \. on input line 269.
-LaTeX Info: Redefining \% on input line 269.
+LaTeX Info: Redefining \. on input line 267.
+LaTeX Info: Redefining \% on input line 267.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 269.
+(babel)             in language  on input line 267.
  [17 <./Imagenes/Bitmap/arq-mlp.png>]
+Overfull \hbox (0.17914pt too wide) in paragraph at lines 284--284
+|[]\T1/cmr/bx/n/14.4 Aprendizaje pro-fun-do apli-ca-do en pro-ble-mas
+ []
+
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 284.
 Package babel Info: Redefining spanish shorthand >>
@@ -2728,22 +2732,15 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 289.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 289.
- [18]
-<Imagenes/Bitmap/deepRepresentation.png, id=648, 136.1085pt x 77.3289pt>
-File: Imagenes/Bitmap/deepRepresentation.png Graphic file (type png)
-<use Imagenes/Bitmap/deepRepresentation.png>
-Package pdftex.def Info: Imagenes/Bitmap/deepRepresentation.png  used on input 
-line 297.
-(pdftex.def)             Requested size: 276.00105pt x 156.82378pt.
+[18]
+<Imagenes/Bitmap/deepRepresentation3.png, id=648, 271.4943pt x 147.1899pt>
+File: Imagenes/Bitmap/deepRepresentation3.png Graphic file (type png)
+<use Imagenes/Bitmap/deepRepresentation3.png>
+Package pdftex.def Info: Imagenes/Bitmap/deepRepresentation3.png  used on input
+ line 297.
+(pdftex.def)             Requested size: 345.0pt x 187.0571pt.
 LaTeX Info: Redefining \. on input line 304.
 LaTeX Info: Redefining \% on input line 304.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.0pt): 
- Make it at least 23.0982pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 304.
 Package babel Info: Redefining spanish shorthand >>
@@ -2768,8 +2765,8 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 304.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 304.
-[19 <./Imagenes/Bitmap/deepRepresentation.png>]
-<Imagenes/Bitmap/convolutionalneuralnetwork.png, id=661, 409.7709pt x 166.10056
+ [19 <./Imagenes/Bitmap/deepRepresentation3.png>]
+<Imagenes/Bitmap/convolutionalneuralnetwork.png, id=660, 409.7709pt x 166.10056
 pt>
 File: Imagenes/Bitmap/convolutionalneuralnetwork.png Graphic file (type png)
 <use Imagenes/Bitmap/convolutionalneuralnetwork.png>
@@ -2790,13 +2787,6 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 326.
 LaTeX Info: Redefining \. on input line 329.
 LaTeX Info: Redefining \% on input line 329.
-
-
-Package Fancyhdr Warning: \headheight is too small (14.0pt): 
- Make it at least 23.0982pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 329.
 Package babel Info: Redefining spanish shorthand >>
@@ -2821,7 +2811,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 329.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 329.
-[20 <./Imagenes/Bitmap/convolutionalneuralnetwork.png>]
+ [20 <./Imagenes/Bitmap/convolutionalneuralnetwork.png>]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 340.
 Package babel Info: Redefining spanish shorthand >>
@@ -4940,14 +4930,21 @@ LaTeX Info: Redefining \% on input line 25.
 (./Apendices/ParteAnexos.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
-Package rerunfilecheck Info: File `Tesis.out' has not changed.
-(rerunfilecheck)             Checksum: 2F49E0C72FDC67A59D85CCF15514F59B;4148.
+
+
+Package rerunfilecheck Warning: File `Tesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Tesis.out':
+(rerunfilecheck)             Before: 2CA4440A93AF554432C9FDFE9869E773;4112
+(rerunfilecheck)             After:  19FB6311953411771C5D31289F677AC2;4105.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 205.
  ) 
 Here is how much of TeX's memory you used:
  44526 strings out of 492982
- 995362 string characters out of 6134895
- 1130841 words of memory out of 5000000
+ 995367 string characters out of 6134895
+ 1130828 words of memory out of 5000000
  46747 multiletter control sequences out of 15000+600000
  557210 words of font info for 82 fonts, out of 8000000 for 9000
  1379 hyphenation exceptions out of 8191
@@ -4975,7 +4972,7 @@ sr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts
 /type1/public/cm-super/sftt0800.pfb></usr/share/texmf/fonts/type1/public/cm-sup
 er/sftt1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfxc0900.pfb></us
 r/share/texmf/fonts/type1/public/cm-super/sfxc1000.pfb>
-Output written on Tesis.pdf (80 pages, 5042236 bytes).
+Output written on Tesis.pdf (80 pages, 5697055 bytes).
 PDF statistics:
  1287 PDF objects out of 1440 (max. 8388607)
  1087 compressed objects within 11 object streams
