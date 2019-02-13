@@ -21,14 +21,14 @@
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de aplicaci\'on de una MobileNet\relax }}{34}{figure.caption.20}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo del uso de etiquetas - WordNet\relax }}{35}{figure.caption.21}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Pre-procesamiento de las im\'agenes\relax }}{36}{figure.caption.22}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Estructura del proyecto\relax }}{40}{figure.caption.23}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Permisos declarados en el \textit {AndroidManifest.xml}\relax }}{41}{figure.caption.24}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Carpeta \textit {resources} perteneciente al proyecto IMachineApp\relax }}{42}{figure.caption.25}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Diferentes gamas de colores con los que cuenta la aplicaci\'on\relax }}{43}{figure.caption.26}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Archivo de configuraci\'on de la aplicaci\'on\relax }}{43}{figure.caption.27}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Pantalla inicial de la aplicaci\'on\relax }}{44}{figure.caption.28}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Selecci\'on de la memoria interna o externa\relax }}{45}{figure.caption.29}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Selecci\'on de la carpeta a procesar\relax }}{46}{figure.caption.30}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Estructura del proyecto\relax }}{41}{figure.caption.23}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Permisos declarados en el \textit {AndroidManifest.xml}\relax }}{42}{figure.caption.24}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Carpeta \textit {resources} perteneciente al proyecto IMachineApp\relax }}{43}{figure.caption.25}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Diferentes gamas de colores con los que cuenta la aplicaci\'on\relax }}{44}{figure.caption.26}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Archivo de configuraci\'on de la aplicaci\'on\relax }}{44}{figure.caption.27}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Pantalla inicial de la aplicaci\'on\relax }}{45}{figure.caption.28}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Selecci\'on de la memoria interna o externa\relax }}{46}{figure.caption.29}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Selecci\'on de la carpeta a procesar\relax }}{47}{figure.caption.30}
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Carpeta seleccionada, listo para procesar\relax }}{47}{figure.caption.31}
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Pantalla que muestra el progreso del procesamiento de las im\'agenes\relax }}{48}{figure.caption.32}
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Visualizaci\'on de las diferentes carpetas obtenidas del proceso\relax }}{48}{figure.caption.33}
@@ -41,5 +41,7 @@
 \contentsline {figure}{\numberline {3.26}{\ignorespaces Visualizaci\'on de las opciones finales\relax }}{52}{figure.caption.40}
 \contentsline {figure}{\numberline {3.27}{\ignorespaces Opciones al presionar ``Confirmar resultado final''\relax }}{52}{figure.caption.41}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tarea realizada para poder obtener m\'etricas de clasificaci\'on y clustering\relax }}{55}{figure.caption.42}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplo de una imagen perteneciente a la categor\IeC {\'\i }a ``Memes''.\relax }}{60}{figure.caption.50}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Gr\'afico de torta con las contribuciones de cada \'area curricular hacia el proyecto desarrollado.\relax }}{63}{figure.caption.45}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Gr\'afico de torta con las contribuciones de cada \'area curricular hacia el proyecto desarrollado.\relax }}{68}{figure.caption.57}
