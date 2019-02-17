@@ -261,7 +261,9 @@ Como conclusión, se obtiene por cada una de las imágenes a procesar un conjunto 
 
 \subsection{[WIP] Etapa 2: Medición de similitud entre las imágenes}
 \label{cap3:subsec:affinity}
-Una vez que fue recolectada toda la información que se describió durante la sección anterior, se procede a medir el grado de similitud que existe entre cada par de imágenes, basándose en las etiquetas y probabilidades que se obtuvo de cada una de ellas, como así también del vector de características provisto por la capa de \textit{embeddings}. Al final de esta etapa, se obtendrá una matriz que será utilizada por el algoritmo de \textit{clustering}. Esta matriz, es el resultado de una suma ponderada de dos matrices que reciben el nombre de \emph{matrices de afinidad}, las cuales se describen a continuación:
+Una vez que fue recolectada toda la información que se describió durante la sección anterior, se procede a medir el grado de similitud que existe entre cada par de imágenes, basándose en las etiquetas y probabilidades que se obtuvo de cada una de ellas, como así también del vector de características provisto por la capa de \textit{embeddings}. La idea es en el primer caso aprovechar la información relacionada a los ``objetos'' (i.e. animales, vasos, árboles, etc), personas o lo que sea que se encuentre en la imagen desde un punto de vista gramatical, considerando clases de objetos que puedan estar relacionados. Y en segundo lugar, a través de los \textit{embeddings}, lo que se busca es usar la información de más bajo nivel, encontrando similitudes que puedan tener las imágenes en cuanto a magnitudes físicas entre sí.
+
+Al final de esta etapa, se obtendrá una matriz que será utilizada por el algoritmo de \textit{clustering}. Dicha matriz, es el resultado de una suma ponderada de dos matrices que reciben el nombre de \emph{matrices de afinidad}, las cuales se describen a continuación:
 
 \begin{enumerate}
 	\item \textbf{Matriz de afinidad gramatical:} 
