@@ -17,7 +17,7 @@ Henry Ford
 
 \begin{resumen}
 %Este capítulo pretende refrescar conocimientos, e introducir otros, para entender las bases teóricas utilizadas en todo el trabajo realizado. Inicialmente, se exhibe la noción de aprendizaje maquinal en sistemas de regresión y clasificación, desde la forma supervisada hasta la no supervisada, y cómo las redes neuronales se utilizan para componer dichos sistemas. Finalmente se profundiza en aspectos del aprendizaje profundo, lo cual en conjunto con todos los fundamentos presentados abarcan las características implementadas para este trabajo.
-En este capítulo se presenta al sistema operativo Android, plataforma en la que se realizó el desarrollo y despliegue de la aplicación. También, se expondrán los fundamentos del aprendizaje profundo referido al enfoque utilizado en este proyecto respecto a visión computacional. Por último, se introducirán contenidos acerca de algoritmos de clustering, en especial conceptos que abarcan las características del algoritmo utilizado en este trabajo.
+En este capítulo se presenta al sistema operativo Android, plataforma en la que se realizó el desarrollo y despliegue de la aplicación. También, se exponen los fundamentos del aprendizaje profundo referido al enfoque utilizado en este proyecto respecto a visión computacional. Por último, se introducen contenidos acerca de algoritmos de clustering, en especial conceptos que abarcan las características del algoritmo utilizado en este trabajo.
 
 \end{resumen}
  
@@ -97,7 +97,7 @@ Existen cinco componentes con los que se puede crear una aplicación Android, y e
 	
 	Para construir la interfaz gráfica, existen componentes denominados \textit{Views} (vistas) con los que se dispone de numerosos controles básicos, como por ejemplo, botones, listas desplegables o cuadros de texto, pudiendo extender la funcionalidad de estos controles o crear otros personalizados.
 	
-	Por lo general, una aplicación está formada por diferentes \textit{activities}, que están más o menos relacionadas entre sí. Siempre existe la Actividad Principal, quien es la encargada de iniciar la aplicación. Para crear una nueva actividad, se debe crear una nueva clase la cual heredará de la clase Activity, definiendo su propia interfaz de usuario y las funcionalidades que esta aportará a la aplicación.
+	Por lo general, una aplicación está formada por diferentes \textit{activities}, que están más o menos relacionadas entre sí. Siempre existe la Actividad Principal, quien es la encargada de iniciar la aplicación. %Para crear una nueva actividad, se debe crear una nueva clase la cual heredará de la clase Activity, definiendo su propia interfaz de usuario y las funcionalidades que esta aportará a la aplicación. 
 	
 	Por último, es importante mencionar que existen componentes que funcionan dentro del ámbito de una Activity, denominados \textit{Fragments}, los cuales amplían y enriquecen las posibilidades de interacción con el usuario.
 	
@@ -107,16 +107,14 @@ Existen cinco componentes con los que se puede crear una aplicación Android, y e
 	
 	Las intent están formados por un paquete de información. Contienen detalle de interés para el componente que las recibe, como la acción que será ejecutada y los datos necesarios, más información de interés para el sistema Android, como la categoría del componente que maneja el intent y las intrucciones de cómo lanzar la Activity.
 	
-	\item \textbf{Content Provider:} es un objeto destinado a compartir datos entre aplicaciones. Dichos datos pueden ser almacenados en el sistema de archivos, en una base de datos o en cualquier otro lugar que sea accesible desde la aplicación.
-	
-	Un ejemplo de Content Provider es el que utiliza Android para gestionar la información de un contacto, mediante el cual cualquier otra aplicación podrá acceder a ellos haciendo una petición sobre la interfaz que gestiona dicha herramienta (\textit{ContentResolver})
+	\item \textbf{Content Provider:} es un objeto destinado a compartir datos entre aplicaciones. Dichos datos pueden ser almacenados en el sistema de archivos, en una base de datos o en cualquier otro lugar que sea accesible desde la aplicación. Un ejemplo de Content Provider es el que utiliza Android para gestionar la información de un contacto, mediante el cual cualquier otra aplicación podrá acceder a ellos haciendo una petición sobre la interfaz que gestiona dicha herramienta (\textit{ContentResolver})
 	
 	\item \textbf{Broadcast Receiver:} es un componente que detecta y reacciona frente a mensajes globales del sistema, como puede ser batería baja, SMS recibido, llamada perdida, etc. Además de esto, una aplicación puede iniciar un Broadcast Receiver (por ejemplo, para saber si se han descargado datos al dispositivo y poder ser usados por esa aplicación). Al igual que ocurre con los Services, un Broadcast Receiver tampoco muestra ninguna interfaz gráfica.
 \end{itemize}
 
 
 %------------------------------------------------------------------
-\subsection{Aplicaciones: actividades y ciclo de vida}
+\subsection{Ciclo de vida de una aplicación}
 %-------------------------------------------------------------------
 \label{cap2:subsec:activity-lifecycle}
 
@@ -130,7 +128,7 @@ Administrar el ciclo de vida de las actividades mediante la implementación de mé
 
 Una actividad puede existir básicamente en tres estados:
 \begin{itemize}
-	\item \textbf{Reanudada:} La actividad se encuentra en el primer plano de la pantalla y tiene la atención del usuario. (A veces, este estado también se denomina en ejecución).
+	\item \textbf{Reanudada:} La actividad se encuentra en el primer plano de la pantalla y tiene la atención del usuario. A veces, este estado también se denomina en ejecución.
 	
 	\item \textbf{Pausada:} Otra actividad se encuentra en el primer plano y tiene la atención del usuario, pero ésta todavía está visible. Es decir, otra actividad está por encima de ésta y esa actividad es parcialmente transparente o no cubre toda la pantalla. Una actividad pausada está completamente "viva" (el objeto \textit{activity} se conserva en la memoria, mantiene toda la información de estado y miembro y continúa anexado al administrador de ventanas), pero el sistema puede eliminarla en situaciones en que la memoria sea extremadamente baja.
 	
@@ -168,7 +166,7 @@ A continuación, se explicarán brevemente cada uno de estos métodos:
 
 
 %-------------------------------------------------------------------
-\section{Ingeligencia Artificial, Aprendizaje Maquinal y Aprendizaje Profundo}
+\section{Inteligencia Artificial, Aprendizaje Maquinal y Aprendizaje Profundo}
 %-------------------------------------------------------------------
 \label{cap2:sec:deeplearning}
 
@@ -182,7 +180,7 @@ En esta sección, se realiza una introducción sobre conceptos relacionados a rede
 %-------------------------------------------------------------------
 \label{cap2:subsec:ai-ml-dl}
 
-Para comenzar, se debe definir claramente de que se está hablando cuando se menciona a la inteligencia artificial. ¿De qué se tratan los conceptos de inteligencia artificial (\textbf{AI}, del inglés \textit{``Artificial Intelligence''}), aprendizaje maquinal (\textbf{ML}, del inglés \textit{``Machine Learning''}) y aprendizaje profundo (\textbf{DL}, del inglés \textit{``Deep Learning''}) ¿Cómo están relacionados entre ellos? (ver Figura \ref{fig:ai-ml-dl})
+Para comenzar, se debe definir claramente de que se está hablando cuando se menciona a la inteligencia artificial. ¿De qué se tratan los conceptos de inteligencia artificial (\textbf{AI}, del inglés \textit{``Artificial Intelligence''}), aprendizaje maquinal y aprendizaje profundo (\textbf{DL}, del inglés \textit{``Deep Learning''})? ¿Cómo están relacionados entre ellos? (ver Figura \ref{fig:ai-ml-dl})
 
 \begin{figure}[t]
 	\begin{center}
@@ -194,7 +192,7 @@ Para comenzar, se debe definir claramente de que se está hablando cuando se menc
 \end{figure}
 
 %-------------------------------------------------------------------
-\subsubsection{Ingeligencia Artificial}
+\subsubsection{Inteligencia Artificial}
 %-------------------------------------------------------------------
 \label{cap2:subsec:inteligencia-artificial}
 
@@ -267,7 +265,7 @@ El fin de entrenar una red neuronal mediante aprendizaje supervisado es el de mi
 
 Existen diferentes funciones que se utilizan para minimizar el error en las neuronas, denominadas funciones de ``costo'' o ``penalización''. El objetivo es ir reduciendo, iteración a iteración durante el entrenamiento, dicho error hasta que se estabilice. El método más comúnmente utilizado para encontrar el punto mínimo es el del \textit{gradiente descendiente} \cite{bishop2006pattern}. Se debe pensar a la función como una montaña ondulada y el descenso por gradiente es como deslizarse por la montaña para alcanzar el punto más bajo. No hay una sola función de ``costo'' que funcione para todo tipo de datos, ya que depende de una serie de factores como la problemática a tratar, la elección del algoritmo de ML, la eficiencia en el tiempo del descenso por gradiente y la confianza en las predicciones. Algunos de los métodos más utilizados son: Error Cuadrático Medio, \textit{cross-entropy}, \textit{Hinge}, entre otros \cite{LossFunction}. 
 
-La importancia de este proceso consiste en que, a medida que se entrena la red, las neuronas de las capas intermedias se organicen a sí mismas de tal modo que aprenden a reconocer distintas características del espacio total de entrada. La meta es conseguir un modelo que pueda \underline{generalizar} a partir de los datos con los que fue entrenado, con el objetivo de no sobre-entrenarlo, y que sepa de ``memoria'' detalles de los datos de entrenamiento. Este fenómeno es conocido como \textit{overfitting}, donde se ve cómo el modelo reconoce toda la información relevante de los datos de entrenamiento, pero falla considerablemente cuando se le presentan nuevos ejemplos.
+La importancia de este proceso consiste en que, a medida que se entrena la red, las neuronas de las capas intermedias se organicen a sí mismas de tal modo que aprenden a reconocer distintas características del espacio total de entrada. La meta es conseguir un modelo que pueda \textbf{generalizar} a partir de los datos con los que fue entrenado, con el objetivo de no sobre-entrenarlo, y que sepa de ``memoria'' detalles de los datos de entrenamiento. Este fenómeno es conocido como \textit{overfitting}, donde se ve cómo el modelo reconoce toda la información relevante de los datos de entrenamiento, pero falla considerablemente cuando se le presentan nuevos ejemplos.
 
 Lo principal es que después del entrenamiento, cuando se les presente un patrón arbitrario de entrada que contenga ruido o que esté incompleto, las neuronas de la capa oculta de la red respondan con una salida activa si la nueva entrada contiene características que se asemeje a aquellas que las neuronas individuales hayan aprendido a reconocer \cite{rojas2013neural}. 
 
@@ -331,7 +329,7 @@ Entre sus distintas soluciones se puede encontrar TensorFlow Lite, la cual es de
 
 \subsubsection{MobileNets}
 
-Son una familia de modelos de redes neuronales profundas utilizadas en problemas de visión computacional, diseñados para maximizar la precisión de forma efectiva, teniendo en cuenta los recursos restringidos para una aplicación integrada en un dispositivo móvil. Son modelos pequeños, de baja latencia y baja potencia, parametrizados para satisfacer las limitaciones de recursos de una gran variedad de casos de uso. Se pueden utilizar para la clasificación, detección, incrustación y segmentación de imágenes \cite{howard2017mobilenets}. Las MobileNet son similares a los modelos Inception V3, un tipo de CNN entrenadas para clasificar imágenes entre 1001 clases, pero más pequeñas y con un desempeño un poco más bajo \cite{MobileNetInceptionV3}. Estos modelos pueden ser descargados y ajustados a proyectos de manera libre y gratuita, y existen diferentes tipos, variando sobretodo en la optimización que se necesite para cada caso de aplicación. En el siguiente capítulo se ahondará sobre el uso particular que tiene en este proyecto final de carrera. 
+Son una familia de modelos de redes neuronales profundas utilizadas en problemas de visión computacional, diseñados para maximizar la precisión de forma efectiva, teniendo en cuenta los recursos restringidos para una aplicación integrada en un dispositivo móvil. Son modelos pequeños, de baja latencia y baja potencia, parametrizados para satisfacer las limitaciones de recursos de una gran variedad de casos de uso. Se pueden utilizar para la clasificación, detección, incrustación y segmentación de imágenes \cite{howard2017mobilenets}. Las MobileNet son similares a los modelos Inception V3 (un tipo de CNN desarrolladas por Google, utilizadas para resolver problemas de clasificación de imágenes bajo un concepto denominado ``transferencia de aprendizaje'' logrando muy buenas métricas \cite{xia2017inception}), pero más pequeñas y con un desempeño un poco más bajo \cite{MobileNetInceptionV3}. Estos modelos pueden ser descargados y ajustados a proyectos de manera libre y gratuita, y existen diferentes tipos, variando sobretodo en la optimización que se necesite para cada caso de aplicación. En el siguiente capítulo se ahondará sobre el uso particular que tiene en este proyecto final de carrera. 
 
 
 

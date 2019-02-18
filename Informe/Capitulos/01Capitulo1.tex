@@ -32,7 +32,7 @@ Hace ya unos años, la industria de la información y la tecnología (IT) está vivi
 
 Una disciplina que pertenece al aprendizaje maquinal, la cual incluye métodos para adquirir, procesar, analizar y comprender las imágenes del mundo real con el fin de producir información numérica o simbólica para que puedan ser tratados por un ordenador, se denomina visión artificial (\textbf{CV}, del inglés, \textit{computer vision}). Tal y como los humanos usamos nuestros ojos y cerebros para comprender el mundo que nos rodea, la CV trata de producir el mismo efecto para que los ordenadores puedan percibir y comprender una imagen o secuencia de imágenes y actuar según convenga en una determinada situación \cite{gonzalezWoods}. Esta comprensión se consigue gracias a distintos campos como la geometría, la estadística, la física y otras disciplinas.
 
-El auge de las aplicaciones para dispositivos móviles ha traído consigo la necesidad de incorporar este tipo de tecnologías. La evolución de los teléfonos inteligentes y su uso masivo, hicieron que empresas de desarrollo de software se acoplen a esta demanda, ofreciendo productos y servicios para que todas las personas puedan utilizarlos en sus propios dispositivos \cite{AImobileTechnology}. El área que comprende el procesamiento de imágenes y aprendizaje maquinal no escapa a esta ola tecnológica, por lo que un conjunto de bibliotecas que permiten el procesamiento de imágenes, empezaron a estar disponibles para su uso y adaptabilidad de una manera optimizada y preparada para que dispositivos de todo tipo de gama puedan aprovechar de sus beneficios. A continuación, se listan algunas aplicaciones destacadas que utilizan procesamiento de imágenes e inteligencia computacional:
+El auge de las aplicaciones para dispositivos móviles ha traído consigo la necesidad de incorporar este tipo de tecnologías mencionadas. La evolución de los teléfonos inteligentes y su uso masivo, hicieron que empresas de desarrollo de software se acoplen a esta demanda, ofreciendo productos y servicios para que todas las personas puedan utilizarlos en sus propios dispositivos \cite{AImobileTechnology}. El área que comprende el procesamiento de imágenes y aprendizaje maquinal no escapa a esta ola tecnológica, por lo que un conjunto de bibliotecas que permiten el procesamiento de imágenes, empezaron a estar disponibles para su uso y adaptabilidad de una manera optimizada y preparada para que dispositivos de todo tipo de gama puedan aprovechar de sus beneficios. A continuación, se listan algunas aplicaciones destacadas que utilizan procesamiento de imágenes e inteligencia computacional:
 
 \begin{itemize}
 	
@@ -42,12 +42,12 @@ El auge de las aplicaciones para dispositivos móviles ha traído consigo la neces
 	
 	\item Google, a través de su producto \textit{Google Photos}, ofrece una solución denominada \textit{Organize}, la cual realiza tareas de organización sobre las imágenes de sus usuarios. Ésta proporciona distintos conjuntos de imágenes basándose en características u objetos que tengan en común, como pueden ser perros, autos, el cielo, etc \cite{organize2017google}.
 	
-	\item La aplicación fotos, perteneciente al sistema operativo Windows 10, permite buscar texto en las imágenes. La misma utiliza una tecnología denominada OCR \cite{ocr2007recognition} (reconocimiento óptico de caracteres), la cual permite detectar no sólo a la palabra, sino también la posición que tiene en la imagen. 
+	\item La aplicación ``Fotos'', perteneciente al sistema operativo Windows 10, permite buscar texto en las imágenes. La misma utiliza una tecnología denominada OCR \cite{ocr2007recognition} (reconocimiento óptico de caracteres), la cual permite detectar no sólo a la palabra, sino también la posición que tiene en la imagen. 
 	
 	
 \end{itemize}
 
-Todos los ejemplos enumerados y la gran mayoría de soluciones, realizan el procesamiento de la información (texto, imágenes o videos) aprovechando los recursos que ofrece la ``nube'' (\textit{cloud}). Para el usuario final, esto tiene un costo no menor, el cual significa aceptar que su información será compartida (y quizás utilizada) con la compañía que le esté brindando el servicio. Es por ello que una restricción principal para este proyecto fue decidir que la misma será \textit{on premise}, lo que significa que el procesamiento de la información se realizará exclusivamente en el dispositivo, sin la necesidad de establecer una conexión a Internet para poder aprovechar alguna de sus funcionalidades.
+El propósito de este trabajo final de carrera, es brindar a los usuarios de dispositivos móviles Android una aplicación que organice las imágenes almacenadas allí de una forma automática e ``inteligente'', aprovechando el contenido visual de las mismas mediante la utilización de técnicas pertenecientes al campo de CV. Todos los ejemplos enumerados anteriormente, y la gran mayoría de soluciones, realizan el procesamiento de la información (texto, imágenes o videos) aprovechando los recursos que ofrece la ``nube'' (\textit{cloud}). Para el usuario final, esto tiene un costo no menor, el cual significa aceptar que su información será compartida (y quizás utilizada) con la compañía que le esté brindando el servicio. Es por ello que una restricción principal para este proyecto fue decidir que la misma será \textit{on premise}, lo que significa que el procesamiento de la información se realizará exclusivamente en el dispositivo, sin la necesidad de establecer una conexión a Internet para poder aprovechar alguna de sus funcionalidades.
 
 %-------------------------------------------------------------------
 \section{Justificación}
@@ -112,8 +112,8 @@ Se realizó la documentación de la Especificación de Requisitos del Software (ERS
 	\item \textbf{Paradigmas de programación}: 
 	\begin{itemize}
 		\item Orientado a objetos
-		\item Funcional
-		\item Imperativo
+%		\item Funcional
+%		\item Imperativo
 	\end{itemize}
 	\item \textbf{IDE}: Android Studio 3.0.1
 	\item \textbf{Dependencias externas}:
@@ -143,11 +143,13 @@ Se realizó la documentación de la Especificación de Requisitos del Software (ERS
 Se prevén las siguientes cuestiones tecnológicas a mejorar o integrar en el futuro del producto:
 
 \begin{itemize}
-	\item Incorporar otras características que complementen la descripción de las imágenes para el procesamiento, afín de que ayuden a obtener mejores resultados de agrupamiento. 
+	\item Incorporar otras características que complementen la descripción de las imágenes para el procesamiento, a fin de que ayuden a obtener mejores resultados de agrupamiento. 
 	\item Agilizar la reorganización de imágenes en los grupos obtenidos, agregando nuevas funcionalidades a la hora de tratar el resultado final las cuales mejoren la experiencia de usuario.
 	\item Mejorar el proceso de la aplicación, con el objetivo de ahorrar espacio en disco mientras el usuario mantenga los resultados temporales sin confirmar (de momento, duplica las imágenes mientras no se confirmen o descarten los resultados temporales). 
 	\item Ofrecer al usuario la posibilidad de configurar ciertos parámetros que incidirán en el resultado del agrupamiento, según sus preferencias.
+	\item Mejorar el límite máximo de imágenes a procesar aumentándolo, ya que hoy por hoy es de 400 imágenes por proceso.
 	\item Implementar un proceso de integración continua para mejorar los mecanismos de pruebas y despliegue de la aplicación.
+	\item Incrementar la cantidad de pruebas unitarias (\textit{unit testing}) sobre los diferentes métodos/componentes de la aplicación.
 \end{itemize}
 
 % TODO!!! Anexar el anteproyecto entregado.

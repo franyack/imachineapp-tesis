@@ -14,51 +14,52 @@ A level-1 auxiliary file: Capitulos/Parte3.aux
 A level-1 auxiliary file: Capitulos/03Capitulo0.aux
 A level-1 auxiliary file: Cascaras/bibliografia.aux
 The style file: abbrv.bst
+A level-1 auxiliary file: Apendices/ParteAnexos.aux
 Database file #1: citasCapitulo1.bib
 Database file #2: citasCapitulo2.bib
 Database file #3: citasCapitulo4.bib
 Warning--empty journal in dongen2000cluster
 Warning--empty school in van2000graph
 Warning--empty journal in van2014analysis
-You've used 58 entries,
+You've used 59 entries,
             2118 wiz_defined-function locations,
-            821 strings with 13054 characters,
-and the built_in function-call counts, 15442 in all, are:
-= -- 1513
-> -- 637
-< -- 7
-+ -- 265
-- -- 202
-* -- 759
-:= -- 2619
-add.period$ -- 200
-call.type$ -- 58
-change.case$ -- 262
+            827 strings with 13252 characters,
+and the built_in function-call counts, 15938 in all, are:
+= -- 1567
+> -- 655
+< -- 8
++ -- 272
+- -- 208
+* -- 789
+:= -- 2689
+add.period$ -- 204
+call.type$ -- 59
+change.case$ -- 268
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 596
-empty$ -- 1356
-format.name$ -- 202
-if$ -- 3289
+cite$ -- 62
+duplicate$ -- 619
+empty$ -- 1397
+format.name$ -- 208
+if$ -- 3405
 int.to.chr$ -- 0
-int.to.str$ -- 58
-missing$ -- 39
-newline$ -- 317
-num.names$ -- 116
-pop$ -- 426
+int.to.str$ -- 59
+missing$ -- 40
+newline$ -- 322
+num.names$ -- 118
+pop$ -- 435
 preamble$ -- 1
-purify$ -- 214
+purify$ -- 219
 quote$ -- 0
-skip$ -- 439
+skip$ -- 457
 stack$ -- 0
-substring$ -- 625
-swap$ -- 108
-text.length$ -- 7
+substring$ -- 662
+swap$ -- 119
+text.length$ -- 8
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 214
+type$ -- 218
 warning$ -- 3
-while$ -- 147
-width$ -- 60
-write$ -- 642
+while$ -- 152
+width$ -- 61
+write$ -- 654
 (There were 3 warnings)

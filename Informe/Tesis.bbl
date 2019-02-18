@@ -353,4 +353,10 @@ K.~Wagstaff, C.~Cardie, S.~Rogers, S.~Schr{\"o}dl, et~al.
 \newblock Constrained k-means clustering with background knowledge.
 \newblock In {\em ICML}, volume~1, pages 577--584, 2001.
 
+\bibitem{xia2017inception}
+X.~Xia, C.~Xu, and B.~Nan.
+\newblock Inception-v3 for flower classification.
+\newblock In {\em 2017 2nd International Conference on Image, Vision and
+  Computing (ICIVC)}, pages 783--787. IEEE, 2017.
+
 \end{thebibliography}
