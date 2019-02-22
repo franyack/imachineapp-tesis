@@ -259,7 +259,7 @@ Una vez que la imagen pasa por la red neuronal, se obtienen como predicciones do
 
 Como conclusión, se obtiene por cada una de las imágenes a procesar un conjunto de etiquetas y probabilidades de correspondencia, y un vector con valores numéricos que indica cómo la red neuronal caracterizó a la imagen. A continuación, se explicará la etapa 2, en donde se realiza la medición de similitudes entre las imágenes.
 
-\subsection{[WIP] Etapa 2: Medición de similitud entre las imágenes}
+\subsection{Etapa 2: Medición de similitud entre las imágenes}
 \label{cap3:subsec:affinity}
 Una vez que fue recolectada toda la información que se describió durante la sección anterior, se procede a medir el grado de similitud que existe entre cada par de imágenes, basándose en las etiquetas y probabilidades que se obtuvo de cada una de ellas, como así también del vector de características provisto por la capa de \textit{embeddings}. La idea es en el primer caso aprovechar la información relacionada a los ``objetos'' (i.e. animales, vasos, árboles, etc), personas o lo que sea que se encuentre en la imagen desde un punto de vista gramatical, considerando clases de objetos que puedan estar relacionados. Y en segundo lugar, a través de los \textit{embeddings}, lo que se busca es usar la información de más bajo nivel, encontrando similitudes que puedan tener las imágenes en cuanto a magnitudes físicas entre sí.
 
@@ -276,7 +276,7 @@ Al final de esta etapa, se obtendrá una matriz que será utilizada por el algorit
 %	
 %	2- no es un problema de histogramas, entonces no se pueden utilizar ese mundo de medidas
 	
-	De esta manera, se logra un vector normalizado por cada una de las imágenes, por lo que resta medir la similitud que existe entre cada una de ellas. Para obtener dicha medida, se utiliza el \textbf{coeficiente de correlación de Pearson}, un índice estadístico que puede utilizarse para medir el grado de correlación que tienen dos vectores \cite{benesty2009pearson}. El valor puede variar entre [-1,1], siendo 1 una correlación perfecta. El criterio que se tomó en este proyecto es quedarse solamente con aquellas correlaciones que superan un umbral de 0.65, y en cualquier otro caso directamente se toma como inexistente una correlación entre ambas imágenes. De esta manera, se llega a la obtención de la matriz de afinidad gramatical entre las imágenes.
+	De esta manera, se logra un vector normalizado por cada una de las imágenes, por lo que resta medir la similitud que existe entre cada una de ellas. Para obtener dicha medida, se utiliza el coeficiente de correlación de Pearson, un índice estadístico que puede utilizarse para medir el grado de correlación que tienen dos vectores \cite{benesty2009pearson}. El valor puede variar entre [-1,1], siendo 1 una correlación perfecta. El criterio que se tomó en este proyecto es quedarse solamente con aquellas correlaciones que superan un umbral de 0.65, y en cualquier otro caso directamente se toma como inexistente una correlación entre ambas imágenes. De esta manera, se llega a la obtención de la matriz de afinidad gramatical entre las imágenes.
 	
 	\item \textbf{Matriz de afinidad según \textit{embeddings}:} 
 	

@@ -20,7 +20,7 @@
 En este capítulo se describen las acciones ejecutadas para validar el correcto funcionamiento del motor de procesamiento y de la aplicación. Para ello, se siguieron distintos protocolos donde se definieron experimentos y validaciones sobre ciertas funcionalidades desarrolladas en este trabajo. Se detallan los recursos utilizados y las configuraciones implementadas sobre ellos para llevar a cabo estas tareas de evaluación.
 \end{resumen}
 
-\section{[DONE]Conjuntos de datos para experimentación}
+\section{Conjuntos de datos para experimentación}
 
 Con el objetivo de validar la utilidad y potencialidad del software, se define un conjunto de datos de prueba compuesto por diversas imágenes que provienen de fuentes diferentes y bajo normativas distintas. La primera de ellas consiste en la carpeta de imágenes de WhatsApp del ejecutor del proyecto, que contando con un total de 1600 imágenes aproximadamente, se considera representativa para cualquier usuario promedio. La segunda, 2000 imágenes pertenecientes al portal de internet 9GAG\footnote{\url{https://9gag.com/}}, sitio donde la comunidad partícipe sube imágenes de todo tipo de temática, todos los días. Por último, se utilizó también una base de datos denominada VOC\footnote{\url{http://host.robots.ox.ac.uk/pascal/VOC}}, la cual cuenta con diversos grupos de imágenes estandarizadas y se utiliza para medir algoritmos de clasificación de imágenes en diferentes competencias que se realizan año a año, sumarizando más de 17.000 imágenes. 
 
@@ -29,7 +29,7 @@ Si bien desde la última fuente de datos (VOC) es de donde se obtienen la mayoría
 Sumando todos los directorios, se contabilizan más de 19.000 imágenes pertenecientes a la base de datos de prueba.
 
 %-------------------------------------------------------------------
-\section{[DONE]Protocolo de Experimentación}
+\section{Protocolo de Experimentación}
 %-------------------------------------------------------------------
 \label{cap2:sec:experimentos}
 El objetivo de esta sección es mostrar las pruebas que fueron ejecutadas sobre el motor de procesamiento, con el fin de validar que la calidad de agrupamiento de imágenes obtenida en su uso es aceptable como para ser de utilidad en la tarea de organización de las mismas. Dado que no se tiene como objetivo tener un desempeño específico, en términos de la calidad de clustering, se establece que no es necesario realizar un análisis que se compare o compita con el estado del arte en dicha tarea, ya que el motor de procesamiento no pretende más que sugerir grupos de imágenes que el usuario puede incluso modificar.
@@ -107,7 +107,7 @@ Como fue definido en la Especificación de Requisitos del Software (ERS), la expe
 %		\end{itemize}
 \end{itemize}
 
-\subsection{[DONE]Pruebas realizadas}
+\subsection{Pruebas realizadas}
 
 A continuación se presentan pruebas que fueron aplicadas sobre el motor de procesamiento de imágenes. Las mismas son distintivas entre ellas y muestran diferentes casos de aplicación que podrían proporcionar los usuarios. Todas fueron realizadas con las configuraciones descriptas en el capítulo anterior, donde se explicó el paso a paso por el que transitan las imágenes dentro del motor. La decisión de utilizar todos esos parámetros se debe a un protocolo de experimentación realizado durante la etapa de desarrollo, donde se realizaron diferentes pruebas modificándolos a fin de obtener la configuración que mejor se ajuste a la problemática planteada en esta tesis. A continuación, se presenta un nuevo conjunto de pruebas definidas con otro lote de imágenes, y así validar la performance alcanzada con dichos parámetros. %Estas pruebas pueden verificarse en la ERS entregada durante los diferentes informes de avance.
 
@@ -115,39 +115,33 @@ Resulta \textbf{importante} recordar que no fue necesario entrenar la CNN utiliz
 
 \subsubsection{Prueba 1}
 
-La primer prueba se realizó con un total de 184 imágenes, distribuidas en 6 clases diferentes:
-\begin{itemize}
-	\item Avión: 25 imágenes
-	\item Computadora: 35 imágenes
-	\item Documento: 50 imágenes
-	\item Bebida: 30 imágenes
-	\item Fiestas: 33 imágenes
-	\item Estadio: 11 imágenes
-\end{itemize} 
+La primer prueba se realizó con un total de 184 imágenes, distribuidas en 6 clases diferentes. Lo que se quiso visualizar aquí es como se comporta la aplicación en una situación ``normal'' de uso, donde las imágenes a procesar no son demasiadas y las clases se encuentran bien distribuidas. 
 
-Lo que se quiso visualizar aquí es como se comporta la aplicación en una situación ``normal'' de uso, donde las imágenes a procesar no son demasiadas y las clases se encuentran bien distribuidas. Como se puede observar en la Tabla \ref{tab:prueba1}, los resultados fueron satisfactorios para las métricas de clasificación.
+El \textbf{accuracy} logrado para esta primera prueba es de un 83.69\%. Además, como se puede observar en la Tabla \ref{tab:prueba1}, los resultados respecto a las demás medidas de clasificación fueron satisfactorios. Para poder obtener una entendimiento global de las mismas, se toma el promedio de cada una de ellas (\textit{Precision, Recall y F1-Score}). Este método se denomina ``macro-averaging'' y es útil cuando se desea saber cómo funcionan los sistemas en general para todos los conjuntos de datos \cite{macroaveraging}.
 
-\begin{table}[h!]
+\begin{table}[t]
 	\begin{center}
 		\caption{Resultados de la prueba 1  - Clasificación.}
 		\label{tab:prueba1}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|}
+			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				\textbf{Categoría} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
 				\hline
 				
-				Avión & 0.9583 & 0.9583 & 0.9583\\
+				Avión & 25 & 0.9583 & 0.9583 & 0.9583\\
 				\hline
-				Computadora & 0.8285 & 0.8529 & 0.8406\\
+				Computadora & 35 & 0.8285 & 0.8529 & 0.8406\\
 				\hline
-				Documento & 0.8653 & 0.9183 & 0.8911\\
+				Documento & 50 & 0.8653 & 0.9183 & 0.8911\\
 				\hline
-				Bebida & 0.6667 & 0.6207 & 0.6429\\
+				Bebida & 30 & 0.6667 & 0.6207 & 0.6429\\
 				\hline
-				Fiestas & 0.8889 & 1 & 0.9412\\
+				Fiestas & 33 & 0.8889 & 1 & 0.9412\\
 				\hline
-				Estadio & 0.7 & 0.7 & 0.7\\
+				Estadio & 11 & 0.7 & 0.7 & 0.7\\
+				\hline
+				Macro-averaging & 184 & 0.8179 & 0.8417 & 0.829\\
 				\hline
 				
 			\end{tabular}
@@ -155,25 +149,12 @@ Lo que se quiso visualizar aquí es como se comporta la aplicación en una situaci
 	\end{center}
 \end{table}
 
-Además, se pueden observar en la Tabla \ref{tab:prueba1-averaging} las métricas de clasificación utilizando ``Macro-Averaging'', además de la Exactitud (del ingles: \textit{Accuracy}) que logra en términos de clasificación, como así también las métricas obtenidas en términos de clustering (Sorensen-Dice y \textit{Silhouette}). 
+En términos de \textit{clustering} se obtuvieron buenas métricas, por lo que se puede decir que el motor de procesamiento agrupó a las imágenes de una manera aceptable. Las mismas, se pueden observar a continuación:
 
-\begin{table}[h!]
-	\begin{center}
-		\caption{Resultados de la prueba 1.}
-		\label{tab:prueba1-averaging}
-		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|c|}
-				\hline
-				\textbf{Precision MA} & \textbf{Recall MA} & \textbf{F1-Score MA} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} \\
-				\hline
-				
-				0.8179 & 0.8417 & 0.829 & 0.8369 & 0.8290 & 0.2522\\
-				\hline
-				
-			\end{tabular}
-		\end{adjustbox}
-	\end{center}
-\end{table}
+\begin{itemize}
+	\item \textbf{Silhouette:} 0.2522
+	\item \textbf{Sorensen-Dice:} 0.8290
+\end{itemize}
 
 En cuanto a los tiempos de proceso, se puede ver en la Tabla \ref{tab:tiempo1} cómo van disminuyendo, conforme la gama del dispositivo va aumentando. Esto está directamente relacionado a los recursos (hardware) con los que cuenta cada uno. 
 
@@ -201,40 +182,32 @@ En cuanto a los tiempos de proceso, se puede ver en la Tabla \ref{tab:tiempo1} c
 
 \subsubsection{Prueba 2}
 
-En una segunda prueba se utilizaron un total de 298 imágenes, pertenecientes a 5 clases distintas, las cuales se detallan a continuación:
+En una segunda prueba se utilizaron un total de 298 imágenes, pertenecientes a 5 clases distintas. El objetivo de este experimento fue observar cómo se comporta el motor ante un aumento considerado en la cantidad de imágenes a procesar, además de que se encuentren muchas más imágenes de una categoría con respecto a las otras (clase ``Screenshots''). 
 
-\begin{itemize}
-	\item Gato: 15 imágenes
-	\item Computadora: 40 imágenes
-	\item Bebida: 30 imágenes
-	\item Memes: 68 imágenes
-	\item Screenshots: 145 imágenes
-\end{itemize} 
-
-
-El objetivo de esta prueba fue observar cómo se comporta el motor ante un aumento considerado de la cantidad de imágenes a procesar, además de que se encuentren muchas más imágenes de una categoría con respecto a las otras (clase Screenshots). Como se puede ver en la Tabla \ref{tab:prueba2}, se obtuvieron métricas aceptables en términos de clasificación. Se puede notar que la categoría ``Memes'' es la que obtiene las medidas más bajas. Al revisar el resultado, se encontraron varias imágenes de esta clase agrupadas con imágenes pertenecientes a la categoría ``Screenshots''.
+El \textit{accuracy} logrado es de 55.7\% y como se puede ver en la Tabla \ref{tab:prueba2}, si bien se obtuvieron métricas aceptables en términos de clasificación, hubo una baja considerable en todas las medidas respecto a la prueba anterior. Por ejemplo, se observa que la categoría ``Memes'' es la que obtiene las medidas más bajas. Al revisar el resultado, se encontraron varias imágenes de esta clase agrupadas con imágenes pertenecientes a la categoría ``Screenshots''.
 
 \begin{table}[h!]
 	\begin{center}
 		\caption{Resultados de la prueba 2  - Clasificación.}
 		\label{tab:prueba2}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|}
+			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				\textbf{Categoría} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
-				\hline
-				
-				Gato & 0.7647 & 0.9286 & 0.8687\\
-				\hline
-				Computadora & 0.5434 & 0.6410 & 0.5882\\
-				\hline
-				Bebida & 0.5 & 0.5862 & 0.5396\\
-				\hline
-				Memes & 0.3787 & 0.3731 & 0.3759\\
-				\hline
-				Screenshots & 0.6370 & 0.5972 & 0.6164\\
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
 				\hline
 				
+				Gato & 15 & 0.7647 & 0.9286 & 0.8687\\
+				\hline
+				Computadora & 40 & 0.5434 & 0.6410 & 0.5882\\
+				\hline
+				Bebida & 30 & 0.5 & 0.5862 & 0.5396\\
+				\hline
+				Memes & 68 & 0.3787 & 0.3731 & 0.3759\\
+				\hline
+				Screenshots & 145 & 0.6370 & 0.5972 & 0.6164\\
+				\hline
+				Macro-averaging & 298 & 0.5648 & 0.6252 & 0.5918\\
+				\hline
 			\end{tabular}
 		\end{adjustbox}
 	\end{center}
@@ -242,27 +215,14 @@ El objetivo de esta prueba fue observar cómo se comporta el motor ante un aument
 
 \hfil
 
-Por otro lado, en la tabla \ref{tab:prueba2-averaging} se puede observar que la \textit{Silhouette} en general fue baja, ya que el algoritmo creó muchos grupos de 2 o 3 imágenes, haciendo que esta métrica esté muy cercana al valor 0 (solapamiento entre grupos). Vale aclarar que dentro de estos clusters chicos, las imágenes tenían mucha relación entre sí, por lo que subjetivamente se podría considerar como una buena agrupación. 
+Las medidas de \textit{clustering} obtenidas son las siguientes: 
 
-\begin{table}[h!]
-	\begin{center}
-		\caption{Resultados de la prueba 2.}
-		\label{tab:prueba2-averaging}
-		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|c|}
-				\hline
-				\textbf{Precision MA} & \textbf{Recall MA} & \textbf{F1-Score MA} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} \\
-				\hline
-				
-				0.5648 & 0.6252 & 0.5918 & 0.5570 & 0.5879 & 0.0101\\
-				\hline
-				
-			\end{tabular}
-		\end{adjustbox}
-	\end{center}
-\end{table}
+\begin{itemize}
+	\item \textbf{Silhouette:} 0.0101
+	\item \textbf{Sorensen-Dice:} 0.5879
+\end{itemize}
 
-\hfil
+Se puede observar que la \textit{Silhouette} en general fue baja, ya que el algoritmo creó muchos grupos de 2 o 3 imágenes, haciendo que esta métrica esté muy cercana al valor 0 (solapamiento entre grupos). Vale aclarar que dentro de estos \textit{clusters} chicos, las imágenes tenían mucha relación entre sí, por lo que subjetivamente se podría considerar como una buena agrupación.
 
 Otro punto a destacar, es cómo al aumentar la cantidad de imágenes a procesar, el tiempo en los celulares de mayor gama se reduce casi en un 50\% respecto al celular de gama media/baja.
 
@@ -290,54 +250,42 @@ Otro punto a destacar, es cómo al aumentar la cantidad de imágenes a procesar, e
 
 \subsubsection{Prueba 3}
 
-Por último, se muestra una prueba donde el objetivo fue elevar aún más el número de imágenes y clases, y así poder medir la escalabilidad del motor y su comportamiento en diferentes dispositivos. Las clases utilizadas fueron 10 con un total de 500 imágenes divididas de la siguiente manera:
+Por último, se muestra una prueba donde el objetivo fue elevar aún más el número de imágenes y clases, y así poder medir la escalabilidad del motor y su comportamiento en diferentes dispositivos. Las clases utilizadas fueron 10 con un total de 500 imágenes y como se puede observar en la Tabla \ref{tab:prueba3}, las métricas obtenidas en cuanto a clasificación por cada una de las categorías utilizadas son buenas, logrando además un \textit{accuracy} global de 63\%. 
 
-\begin{itemize}
-	\item Avión: 25 imágenes
-	\item Bicicleta: 50 imágenes
-	\item Pájaro: 35 imágenes
-	\item Bus: 30 imágenes
-	\item Automóvil: 70 imágenes
-	\item Gato: 15 imágenes
-	\item Computadora: 51 imágenes
-	\item Perro: 101 imágenes
-	\item Memes: 90 imágenes
-	\item Fiestas: 33 imágenes
-\end{itemize}
-
-Como se puede observar en la Tabla \ref{tab:prueba3}, las métricas obtenidas en cuanto a clasificación por cada una de las clases utilizadas son buenas. Es necesario aclarar que algunas categorías obtuvieron un F1-Score cercano al 50\%, como por ejemplo la clase ``Memes''. Lo que sucede allí, al observar las imágenes utilizadas en la experimentación, es que en esta categoría en realidad existen imágenes de cualquier tipo y temática, por lo que el indicio de que esas imágenes debe pertenecer a dicha categoría es bastante bajo.
+Es necesario aclarar que algunas obtuvieron un F1-Score cercano al 50\%, como por ejemplo la clase ``Memes''. Lo que sucede allí, al observar las imágenes utilizadas en la experimentación, es que en esta categoría en realidad existen imágenes de cualquier tipo y temática, por lo que el indicio de que esas imágenes deben pertenecer a dicha categoría es bastante bajo.
 
 \begin{table}[h!]
 	\begin{center}
 		\caption{Resultados de la prueba 1  - Clasificación.}
 		\label{tab:prueba3}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|}
+			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				\textbf{Categoría} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
-				\hline
-				
-				Avión & 0.5769 & 0.625 & 0.5999\\
-				\hline
-				Bicicleta & 0.5625 & 0.7346 & 0.6371\\
-				\hline
-				Pájaro & 0.7179 & 0.8235 & 0.7671\\
-				\hline
-				Bus & 0.6563 & 0.7241 & 0.6885\\
-				\hline
-				Automóvil & 0.5740 & 0.4493 & 0.5040\\
-				\hline
-				Gato & 0.8125 & 0.9285 & 0.8666\\
-				\hline
-				Computadora & 0.5490 & 0.56 & 0.5544\\
-				\hline
-				Perro & 0.7657 & 0.85 & 0.8057\\
-				\hline
-				Memes & 0.5555 & 0.4494 & 0.4968\\
-				\hline
-				Fiestas & 0.5142 & 0.5625 & 0.5373\\
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
 				\hline
 				
+				Avión & 25 & 0.5769 & 0.625 & 0.5999\\
+				\hline
+				Bicicleta & 50 & 0.5625 & 0.7346 & 0.6371\\
+				\hline
+				Pájaro & 35 & 0.7179 & 0.8235 & 0.7671\\
+				\hline
+				Bus & 30 & 0.6563 & 0.7241 & 0.6885\\
+				\hline
+				Automóvil & 70 & 0.5740 & 0.4493 & 0.5040\\
+				\hline
+				Gato & 15 & 0.8125 & 0.9285 & 0.8666\\
+				\hline
+				Computadora & 51 & 0.5490 & 0.56 & 0.5544\\
+				\hline
+				Perro & 101 & 0.7657 & 0.85 & 0.8057\\
+				\hline
+				Memes & 90 & 0.5555 & 0.4494 & 0.4968\\
+				\hline
+				Fiestas & 33 & 0.5142 & 0.5625 & 0.5373\\
+				\hline
+				Macro-averaging & 500 & 0.6284 & 0.6707 & 0.6459\\
+				\hline
 			\end{tabular}
 		\end{adjustbox}
 	\end{center}
@@ -345,7 +293,7 @@ Como se puede observar en la Tabla \ref{tab:prueba3}, las métricas obtenidas en 
 
 \hfil
 
-La Imagen \ref{fig:ninegag-to-dog} representa un ejemplo que pertenece a la categoría ``Memes'', pero la misma contiene la cabeza de un perro, por lo que se supone que la red a la hora de caracterizarla toma como más relevante esta información (superando a los dedos, e incluso al texto en  la parte de arriba) y en el resultado final se visualiza junto a un grupo de imágenes pertenecientes a la categoría ``Perro''.
+La Imagen \ref{fig:ninegag-to-dog} representa un ejemplo que pertenece a la categoría ``Memes'', pero la misma contiene la cabeza de un perro, por lo que se supone que el proceso a la hora de caracterizarla toma como más relevante esta información (superando a los dedos, e incluso al texto en  la parte de arriba) y en el resultado final se visualiza junto a un grupo de imágenes pertenecientes a la categoría ``Perro''. Como este ejemplo, pueden existir muchas imágenes donde la clase es bastante ambigua. En efecto, una imagen podría pertenecer a muchas categorías a la vez, por lo que ocasionalmente el motor terminará agrupándola con imágenes que quizás para el usuario no tienen mucha relación. Allí es donde se detecta la necesidad de contar en la aplicación con herramientas que le permitan interactuar y modificar el resultado sugerido por el procesamiento.
 
 
 \begin{figure}[!hb]
@@ -359,25 +307,12 @@ La Imagen \ref{fig:ninegag-to-dog} representa un ejemplo que pertenece a la cate
 
 \hfil
 
-En relación a las métricas de clustering como las de clasificación, también se pueden considerar como positivas cuando se escala a la aplicación tanto hacia una mayor diversidad de grupos como a una cantidad más grandes de imágenes a procesar.
+En relación a las métricas de clustering, así como sucedió con las de clasificación, se pueden considerar como positivas cuando se escala a la aplicación tanto hacia una mayor diversidad de grupos como a una cantidad más grandes de imágenes a procesar. Las mismas se pueden ver a continuación:
 
-\begin{table}[h!]
-	\begin{center}
-		\caption{Resultados de la prueba 3.}
-		\label{tab:prueba3-averaging}
-		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|c|}
-				\hline
-				\textbf{Precision MA} & \textbf{Recall MA} & \textbf{F1-Score MA} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} \\
-				\hline
-				
-				0.6284 & 0.6707 & 0.6459 & 0.63 & 0.6390 & 0.1581\\
-				\hline
-				
-			\end{tabular}
-		\end{adjustbox}
-	\end{center}
-\end{table}
+\begin{itemize}
+	\item \textbf{Silhouette:} 0.1581
+	\item \textbf{Sorensen-Dice:} 0.639
+\end{itemize}
 
 El inconveniente se encuentra en el tiempo de proceso, ya que fue bastante largo ($\approx$ 9 minutos para el dispositivo 1). Es por ello que fue necesario establecer un límite en relación a la cantidad de imágenes procesadas - tiempo, ya que para dispositivos gama baja/media es demasiado el tiempo que consume.
 
@@ -409,109 +344,91 @@ La finalidad de esta prueba es mostrar los resultados que se obtienen si solamen
 
 Las pruebas realizadas a continuación utilizan los mismos datos que la Prueba Nº 1 (ver Tabla \ref{tab:prueba1}), sólo qué en una primera instancia el proceso es llevado a cabo únicamente por la matriz de afinidad gramatical, y en una segunda instancia se utiliza únicamente la matriz de afinidad según \textit{embeddings}.
 
-En la Tabla \ref{tab:prueba4-aff-gra} se pueden ver las métricas obtenidas en términos de clasificación cuando solamente se utiliza la matriz de afinidad gramatical. Es notorio el descenso en el rendimiento, comparado con la Prueba Nº 1. 
+En el primero experimento, el \textit{accuracy} obtenido es de 57.6\%. En la Tabla \ref{tab:prueba4-aff-gra} se pueden ver las demás métricas en términos de clasificación, cuando solamente se utiliza la matriz de afinidad gramatical. Es notorio el descenso en el rendimiento, comparado con la Prueba Nº 1 (se reducen en un 30\% aproximadamente). 
 
 \begin{table}[h!]
 	\begin{center}
 		\caption{Resultados de la prueba 1  - Clasificación - Afinidad Gramatical.}
 		\label{tab:prueba4-aff-gra}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|}
+			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				\textbf{Categoría} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
-				\hline
-				
-				Avión & 0.9130 & 0.875 & 0.8936\\
-				\hline
-				Computadora & 0.5 & 0.4705 & 0.4848\\
-				\hline
-				Documento & 0.5517 & 0.6530 & 0.5981\\
-				\hline
-				Bebida & 0.5714 & 0.5517 & 0.5614\\
-				\hline
-				Fiestas & 0.4848 & 0.5 & 0.4923\\
-				\hline
-				Estadio & 0.5 & 0.5 & 0.5\\
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
 				\hline
 				
+				Avión & 25 & 0.9130 & 0.875 & 0.8936\\
+				\hline
+				Computadora & 35 & 0.5 & 0.4705 & 0.4848\\
+				\hline
+				Documento & 50 & 0.5517 & 0.6530 & 0.5981\\
+				\hline
+				Bebida & 30 & 0.5714 & 0.5517 & 0.5614\\
+				\hline
+				Fiestas & 33 & 0.4848 & 0.5 & 0.4923\\
+				\hline
+				Estadio & 11 & 0.5 & 0.5 & 0.5\\
+				\hline
+				Macro-averaging & 184 & 0.5868 & 0.5917 & 0.5883\\
+				\hline
 			\end{tabular}
 		\end{adjustbox}
 	\end{center}
 \end{table}
 
-Por otra parte, se pueden notar en la Tabla \ref{tab:prueba4-averaging-aff-gra} que las métricas que representan qué tan bien se dividieron los grupos de imágenes no fueron tan satisfactorias como se esperaría. Además, aquellas medidas que muestran los resultados generales obtenidos en términos de clasificación, se reducen en un 30\% aproximadamente.
+Por otra parte, las métricas que representan qué tan bien se dividieron los grupos de imágenes fueron mucho más bajas que las obtenidas cuando se utiliza una ponderación de ambas matrices de afinidad:
 
-\begin{table}[h!]
-	\begin{center}
-		\caption{Resultados de la prueba 1 - Afinidad Gramatical.}
-		\label{tab:prueba4-averaging-aff-gra}
-		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|c|}
-				\hline
-				\textbf{Precision MA} & \textbf{Recall MA} & \textbf{F1-Score MA} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} \\
-				\hline
-				
-				0.5868 & 0.5917 & 0.5883 & 0.5760 & 0.5883 & 0.001\\
-				\hline
-				
-			\end{tabular}
-		\end{adjustbox}
-	\end{center}
-\end{table}
+\begin{itemize}
+	\item \textbf{Silhouette:} 0.001
+	\item \textbf{Sorensen-Dice:} 0.5883
+\end{itemize}
 
-Siguiendo ahora con la prueba utilizando únicamente la matriz de afinidad gramatical según \textit{embeddings}, se puede observar que en la Tabla \ref{tab:prueba4-aff-emb} que las métricas obtenidas son aceptables, pero tampoco se comparan con aquellas logradas en la prueba Nº 1. Un dato no menor es el alto porcentaje de clasificación que obtuvo la clase ``Fiestas''. Al revisar dichas imágenes, fueron todas capturadas en un ambiente oscuro, con luces brillantes y de colores, por lo que tiene sentido que la red las caracterice de manera similar. 
+Siguiendo ahora con la prueba utilizando únicamente la matriz de afinidad según \textit{embeddings}, se puede observar que en la Tabla \ref{tab:prueba4-aff-emb} las métricas obtenidas son aceptables, pero tampoco se comparan con aquellas logradas en la prueba Nº 1. Para esta ocasión, el \textit{accuracy} obtenido es de 68.91\%. 
+
+Un dato no menor es el alto porcentaje de clasificación que obtuvo la clase ``Fiestas''. Al revisar dichas imágenes, fueron todas capturadas en un ambiente oscuro, con luces brillantes y de colores, por lo que tiene sentido que el motor las caracterice de manera similar. 
 
 \begin{table}[h!]
 	\begin{center}
 		\caption{Resultados de la prueba 1  - Clasificación - Afinidad según \textit{embeddings}.}
 		\label{tab:prueba4-aff-emb}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|}
+			\begin{tabular}{|c|c|c|c|c|}
 				\hline
-				\textbf{Categoría} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
-				\hline
-				
-				Avión & 0.7727 & 0.7083 & 0.7391\\
-				\hline
-				Computadora & 0.7222 & 0.3823 & 0.5\\
-				\hline
-				Documento & 0.6716 & 0.9183 & 0.7758\\
-				\hline
-				Bebida & 0.5714 & 0.6896 & 0.625\\
-				\hline
-				Fiestas & 0.9117 & 0.9687 & 0.9393\\
-				\hline
-				Estadio & 0.625 & 0.5 & 0.5555\\
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
 				\hline
 				
+				Avión & 25 & 0.7727 & 0.7083 & 0.7391\\
+				\hline
+				Computadora & 35 & 0.7222 & 0.3823 & 0.5\\
+				\hline
+				Documento & 50 & 0.6716 & 0.9183 & 0.7758\\
+				\hline
+				Bebida & 30 & 0.5714 & 0.6896 & 0.625\\
+				\hline
+				Fiestas & 33 & 0.9117 & 0.9687 & 0.9393\\
+				\hline
+				Estadio & 11 & 0.625 & 0.5 & 0.5555\\
+				\hline
+				Macro-averaging & 184 & 0.7124 & 0.5917 & 0.6946\\
+				\hline
 			\end{tabular}
 		\end{adjustbox}
 	\end{center}
 \end{table}
 
-En la Tabla \ref{tab:prueba4-averaging-aff-emb} se puede ver que las métricas correspondientes al clustering son satisfactorias, como así también las que se corresponden a la clasificación. De todas maneras, igual a lo explicado en la Tabla anterior, no alcanza a lograr los resultados que se obtienen cuando se utilizan ambas matrices como caracterización de las imágenes.
+Al observar las métricas correspondientes al \textit{clustering}, se puede concluir que son satisfactorias, aunque para la \textit{Silhouette}, por ejemplo, la medida disminuye más de un 50\% respecto a la que se obtuvo en la Prueba Nº 1:
 
-\begin{table}[h!]
-	\begin{center}
-		\caption{Resultados de la prueba 1 - Afinidad según \textit{embeddings}.}
-		\label{tab:prueba4-averaging-aff-emb}
-		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|c|}
-				\hline
-				\textbf{Precision MA} & \textbf{Recall MA} & \textbf{F1-Score MA} & \textbf{Accuracy} & \textbf{Sorensen-Dice} & \textbf{Silhouette} \\
-				\hline
-				
-				0.7124 & 0.5917 & 0.6945 & 0.6891 & 0.6876 & 0.1\\
-				\hline
-				
-			\end{tabular}
-		\end{adjustbox}
-	\end{center}
-\end{table}
+\begin{itemize}
+	\item \textbf{Silhouette:} 0.1
+	\item \textbf{Sorensen-Dice:} 0.6876
+\end{itemize}
+
+De todas maneras, igual a lo explicado en el experimento anterior, no alcanza a lograr los resultados que se obtienen cuando se utilizan ambas matrices como caracterización de las imágenes. 
 
 \hfil
 
-\section{[DONE]Validación de la aplicación}
+Se puede ver a partir de estos experimentos, que la propuesta de combinar ambas matrices de características permite mejorar significativamente los resultados respecto a utilizar sólo una de ellas. Incluso en un futuro, podrían estudiarse nuevas maneras de obtener características y ver como reacciona el motor al agregarlas al proceso. 
+
+\section{Validación de la aplicación}
 
 Con el objetivo de corroborar el correcto funcionamiento de todos los módulos que componen el sistema, verificando que actúan y responden según lo esperado, se definieron pruebas unitarias (mejor conocido en inglés como \textit{unit testing}), y un protocolo de validación donde se presentaron un conjunto de casos de prueba relacionadas a la experiencia de usuario. Todo será detallado a continuación.
 

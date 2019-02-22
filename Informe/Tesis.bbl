@@ -32,12 +32,6 @@ Android.
   2018.
 \newblock Online, Accedido: 02/05/2018.
 
-\bibitem{androidRuntimeART}
-Android.
-\newblock {ART and Dalvik}.
-\newblock \url{https://source.android.com/devices/tech/dalvik}, 2018.
-\newblock Online, Accedido: 14/05/2018.
-
 \bibitem{appFundamentals}
 Android.
 \newblock Aspectos fundamentales de la aplicacion.
@@ -222,24 +216,19 @@ Q.~V. Le.
 \bibitem{organize2017google}
 M.~Lewontin.
 \newblock How google photos uses machine learning to create customized albums.
-\newblock
-  \url{https://www.csmonitor.com/Technology/2016/0324/How-Google-Photos-uses-machine-learning-to-create-customized-albums/}.
+\newblock \url{https://bit.ly/2SiNWZZ}.
 \newblock Accedido: 02/10/2018.
 
 \bibitem{boomML}
 S.~Lohr.
 \newblock Ibm is counting on its bet on watson, and paying big money for it.
-\newblock
-  \url{https://www.nytimes.com/2016/10/17/technology/ibm-is-counting-on-its-bet-on-watson-and-paying-big-money-for-it.html},
-  2016.
+\newblock \url{https://nyti.ms/2zbCc1E}, 2016.
 \newblock Online, Accedido: 01/11/2018.
 
 \bibitem{AImobileTechnology}
 M.~Malhotra.
 \newblock How artificial intelligence (ai) is transforming mobile technology?
-\newblock
-  \url{https://hackernoon.com/how-artificial-intelligence-ai-is-transforming-mobile-technology-9f810d734d35},
-  2018.
+\newblock \url{https://bit.ly/2SxvVro}, 2018.
 \newblock Online, Accedido: 13/08/2018.
 
 \bibitem{meyer2004comparison}
@@ -284,6 +273,12 @@ P.~J. Rousseeuw.
 S.~E. Schaeffer.
 \newblock Graph clustering.
 \newblock {\em Computer science review}, 1(1):27--64, 2007.
+
+\bibitem{macroaveraging}
+R.~Shams.
+\newblock {Micro and Macro-average of Precision, Recall and F-Score}.
+\newblock \url{https://bit.ly/2JDon6a}, 2011.
+\newblock Online, Accedido: 13/10/2018.
 
 \bibitem{ocr2007recognition}
 R.~Smith.

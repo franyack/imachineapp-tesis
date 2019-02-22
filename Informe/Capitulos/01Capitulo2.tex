@@ -64,26 +64,26 @@ A continuación, se mencionan algunas de las características más destacables de l
 
 
 %------------------------------------------------------------------
-\subsection{Entorno de ejecución ART}
+%\subsection{Entorno de ejecución ART}
 %-------------------------------------------------------------------
-\label{cap2:subsec:maquinavirtual-ART}
+%\label{cap2:subsec:maquinavirtual-ART}
 
-Android Runtime (ART) es el entorno actual de ejecución de aplicaciones utilizado por el sistema operativo móvil Android. ART reemplaza a Dalvik, que es la máquina virtual utilizada originalmente por Android, y lleva a cabo la transformación de la aplicación en instrucciones de máquina, que luego son ejecutadas por el entorno de ejecución nativo del dispositivo.
-
-A diferencia de Dalvik, que utiliza \textit{just-in-time} (JIT) para compilar el código cada vez que se inicia una aplicación, ART introduce el uso de \textit{ahead-of-time} (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación \cite{androidRuntimeART}. Este archivo es utilizado al abrir la aplicación, por lo que se evita que la aplicación se compile continuamente, cada vez que ésta es ejecutada. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería. Al mismo tiempo, ART trae mejoras en el rendimiento, tales como la recolección de basura, aplicaciones de depuración y perfilado \cite{androidRuntimeART}.
-
-Para mantener la compatibilidad con versiones anteriores, ART utiliza el mismo código de bytes de entrada que Dalvik. En la Figura \ref{fig:dalvikvsART} se pueden apreciar las diferencias que existe entre la compilación que se hacía con la maquina virtual \textit{Dalvik} y como se hace hoy en día con \textit{Android Runtime}
-
-\begin{figure}[t]
-	\begin{center}
-		\scalebox{1.3}{
-		\includegraphics[width=0.8\textwidth]%
-		{Imagenes/Bitmap/DalvikVSART}
-		}
-		\caption{Compilación con Dalvik-VM y compilación con ART-VM. Recuperado de: \url{https://es.wikipedia.org/wiki/Android_Runtime}}
-		\label{fig:dalvikvsART}
-	\end{center}
-\end{figure}
+%Android Runtime (ART) es el entorno actual de ejecución de aplicaciones utilizado por el sistema operativo móvil Android. ART reemplaza a Dalvik, que es la máquina virtual utilizada originalmente por Android, y lleva a cabo la transformación de la aplicación en instrucciones de máquina, que luego son ejecutadas por el entorno de ejecución nativo del dispositivo.
+%
+%A diferencia de Dalvik, que utiliza \textit{just-in-time} (JIT) para compilar el código cada vez que se inicia una aplicación, ART introduce el uso de \textit{ahead-of-time} (AOT), que crea un archivo de compilación posterior a la instalación de la aplicación \cite{androidRuntimeART}. Este archivo es utilizado al abrir la aplicación, por lo que se evita que la aplicación se compile continuamente, cada vez que ésta es ejecutada. Al reducir la cantidad global de compilaciones realizadas por cada aplicación, el uso del procesador del dispositivo móvil se reduce y aumenta la duración de la batería. Al mismo tiempo, ART trae mejoras en el rendimiento, tales como la recolección de basura, aplicaciones de depuración y perfilado \cite{androidRuntimeART}.
+%
+%Para mantener la compatibilidad con versiones anteriores, ART utiliza el mismo código de bytes de entrada que Dalvik. En la Figura \ref{fig:dalvikvsART} se pueden apreciar las diferencias que existe entre la compilación que se hacía con la maquina virtual \textit{Dalvik} y como se hace hoy en día con \textit{Android Runtime}
+%
+%\begin{figure}[t]
+%	\begin{center}
+%		\scalebox{1.3}{
+%		\includegraphics[width=0.8\textwidth]%
+%		{Imagenes/Bitmap/DalvikVSART}
+%		}
+%		\caption{Compilación con Dalvik-VM y compilación con ART-VM. Recuperado de: \url{https://es.wikipedia.org/wiki/Android_Runtime}}
+%		\label{fig:dalvikvsART}
+%	\end{center}
+%\end{figure}
 
 %------------------------------------------------------------------
 \subsection{Componentes básicos de una aplicación Android}
@@ -257,7 +257,7 @@ Para modelar una red neuronal artificial las neuronas se agrupan en capas, de fo
 
 Siguiendo el modelo matemático de un perceptrón simple, los pesos sinápticos ahora pueden expresarse en conjunto de forma vectorial como matrices, así como también el sesgo se representa como un vector. Por lo tanto, dada un vector de entrada \textbf{x}, la suma ponderada efectuada en una capa se expresa como un producto entre la matriz de pesos sinápticos $W$ y dicha entrada \textbf{x}, en la cual también se suma el vector de sesgo o \textit{bias} \textit{\textbf{b}}. Al resultado de esto se le aplica la función de activación, con lo cual se produce la salida final de la capa. En la Figura \ref{fig:mlp} se representa la arquitectura de un perceptrón multicapa, mostrando las interacciones que tienen sus unidades desde la entrada hasta su salida \cite{learninspy2016tesis}. 
 
-\subsubsection{[DONE] Aprendizaje Supervisado}
+\subsubsection{Aprendizaje Supervisado}
 
 En el aprendizaje supervisado, los datos de entrenamiento consisten de pares de objetos: una componente del par son los datos de entrada y el otro, los resultados deseados. La salida de la función puede ser un valor numérico (como en los problemas de regresión) o una etiqueta de clase (como en los de clasificación). El objetivo del aprendizaje supervisado es el de crear una función capaz de predecir el valor correspondiente a cualquier objeto de entrada válido después de haber visto una serie de ejemplos: los datos de entrenamiento. Para ello, tiene que generalizar a partir de los datos presentados a las situaciones no vistas previamente \cite{izenman2008modern}.
 
