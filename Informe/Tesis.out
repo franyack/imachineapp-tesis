@@ -1,54 +1,56 @@
 \BOOKMARK [0][-]{titulo.0}{P\341gina de T\355tulo}{}% 1
-\BOOKMARK [0][-]{chapter*.1}{Resumen}{}% 2
-\BOOKMARK [0][-]{indices.0}{\315ndices}{}% 3
-\BOOKMARK [1][-]{tabla de contenidos.1}{Tabla de contenidos}{indices.0}% 4
-\BOOKMARK [1][-]{indice de figuras.1}{\315ndice de figuras}{indices.0}% 5
-\BOOKMARK [1][-]{indice de tablas.1}{\315ndice de tablas}{indices.0}% 6
-\BOOKMARK [-1][-]{part.1}{I Conceptos b\341sicos}{}% 7
-\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{part.1}% 8
-\BOOKMARK [1][-]{section.1.1}{Motivaci\363n}{chapter.1}% 9
-\BOOKMARK [1][-]{section.1.2}{Justificaci\363n}{chapter.1}% 10
-\BOOKMARK [1][-]{section.1.3}{Objetivos}{chapter.1}% 11
-\BOOKMARK [2][-]{subsection.1.3.1}{Objetivos generales}{section.1.3}% 12
-\BOOKMARK [2][-]{subsection.1.3.2}{Objetivos espec\355ficos}{section.1.3}% 13
-\BOOKMARK [1][-]{section.1.4}{Alcance}{chapter.1}% 14
-\BOOKMARK [1][-]{section.1.5}{Tecnolog\355as utilizadas}{chapter.1}% 15
-\BOOKMARK [2][-]{subsection.1.5.1}{Restricciones}{section.1.5}% 16
-\BOOKMARK [2][-]{subsection.1.5.2}{Evoluci\363n previsible}{section.1.5}% 17
-\BOOKMARK [0][-]{chapter.2}{Fundamentos te\363ricos}{part.1}% 18
-\BOOKMARK [1][-]{section.2.1}{Programaci\363n en dispositivos m\363viles}{chapter.2}% 19
-\BOOKMARK [2][-]{subsection.2.1.1}{Plataforma Android}{section.2.1}% 20
-\BOOKMARK [2][-]{subsection.2.1.2}{Componentes b\341sicos de una aplicaci\363n Android}{section.2.1}% 21
-\BOOKMARK [2][-]{subsection.2.1.3}{Ciclo de vida de una aplicaci\363n}{section.2.1}% 22
-\BOOKMARK [1][-]{section.2.2}{Inteligencia Artificial, Aprendizaje Maquinal y Aprendizaje Profundo}{chapter.2}% 23
-\BOOKMARK [2][-]{subsection.2.2.1}{Definiciones}{section.2.2}% 24
-\BOOKMARK [1][-]{section.2.3}{Aprendizaje profundo aplicado en problemas de visi\363n computacional}{chapter.2}% 25
-\BOOKMARK [2][-]{subsection.2.3.1}{TensorFlow}{section.2.3}% 26
-\BOOKMARK [1][-]{section.2.4}{An\341lisis de agrupamiento}{chapter.2}% 27
-\BOOKMARK [2][-]{subsection.2.4.1}{Agrupamiento basado en grafos}{section.2.4}% 28
-\BOOKMARK [-1][-]{part.2}{II IMachineApp}{}% 29
-\BOOKMARK [0][-]{chapter.3}{Descripci\363n del sistema}{part.2}% 30
-\BOOKMARK [1][-]{section.3.1}{Dise\361o del sistema}{chapter.3}% 31
-\BOOKMARK [2][-]{subsection.3.1.1}{Metodolog\355a de trabajo}{section.3.1}% 32
-\BOOKMARK [2][-]{subsection.3.1.2}{Patr\363n de programaci\363n seleccionado}{section.3.1}% 33
-\BOOKMARK [1][-]{section.3.2}{Motor de procesamiento de las im\341genes}{chapter.3}% 34
-\BOOKMARK [2][-]{subsection.3.2.1}{Etapa 1: Pre-procesamiento y Extracci\363n de Caracter\355sticas}{section.3.2}% 35
-\BOOKMARK [2][-]{subsection.3.2.2}{Etapa 2: Medici\363n de similitud entre las im\341genes}{section.3.2}% 36
-\BOOKMARK [2][-]{subsection.3.2.3}{Etapa 3: Ejecuci\363n del algor\355tmo de clustering}{section.3.2}% 37
-\BOOKMARK [2][-]{subsection.3.2.4}{Etapa 4: Post-proceso}{section.3.2}% 38
-\BOOKMARK [1][-]{section.3.3}{Aplicaci\363n Android}{chapter.3}% 39
-\BOOKMARK [2][-]{subsection.3.3.1}{Estructura del proyecto}{section.3.3}% 40
-\BOOKMARK [2][-]{subsection.3.3.2}{Interfaz de Usuario}{section.3.3}% 41
-\BOOKMARK [0][-]{chapter.4}{Evaluaci\363n de desempe\361o}{part.2}% 42
-\BOOKMARK [1][-]{section.4.1}{Conjuntos de datos para experimentaci\363n}{chapter.4}% 43
-\BOOKMARK [1][-]{section.4.2}{Protocolo de Experimentaci\363n}{chapter.4}% 44
-\BOOKMARK [2][-]{subsection.4.2.1}{Pruebas realizadas}{section.4.2}% 45
-\BOOKMARK [1][-]{section.4.3}{Validaci\363n de la aplicaci\363n}{chapter.4}% 46
-\BOOKMARK [2][-]{subsection.4.3.1}{Pruebas unitarias}{section.4.3}% 47
-\BOOKMARK [2][-]{subsection.4.3.2}{Protocolo de validaci\363n}{section.4.3}% 48
-\BOOKMARK [-1][-]{part.3}{III Conclusiones y desarrollos futuros}{}% 49
-\BOOKMARK [0][-]{chapter.5}{Conclusiones generales}{part.3}% 50
-\BOOKMARK [1][-]{section.5.1}{Conclusiones}{chapter.5}% 51
-\BOOKMARK [1][-]{section.5.2}{Trabajos futuros}{chapter.5}% 52
-\BOOKMARK [-1][-]{appendix*.52}{Bibliograf\355a}{}% 53
-\BOOKMARK [-1][-]{part.4}{IV Anexos}{}% 54
+\BOOKMARK [0][-]{dedicatoria.0}{Dedicatoria}{}% 2
+\BOOKMARK [0][-]{chapter*.1}{Agradecimientos}{}% 3
+\BOOKMARK [0][-]{chapter*.2}{Resumen}{}% 4
+\BOOKMARK [0][-]{indices.0}{\315ndices}{}% 5
+\BOOKMARK [1][-]{tabla de contenidos.1}{Tabla de contenidos}{indices.0}% 6
+\BOOKMARK [1][-]{indice de figuras.1}{\315ndice de figuras}{indices.0}% 7
+\BOOKMARK [1][-]{indice de tablas.1}{\315ndice de tablas}{indices.0}% 8
+\BOOKMARK [-1][-]{part.1}{I Conceptos b\341sicos}{}% 9
+\BOOKMARK [0][-]{chapter.1}{Introducci\363n}{part.1}% 10
+\BOOKMARK [1][-]{section.1.1}{Motivaci\363n}{chapter.1}% 11
+\BOOKMARK [1][-]{section.1.2}{Justificaci\363n}{chapter.1}% 12
+\BOOKMARK [1][-]{section.1.3}{Objetivos}{chapter.1}% 13
+\BOOKMARK [2][-]{subsection.1.3.1}{Objetivos generales}{section.1.3}% 14
+\BOOKMARK [2][-]{subsection.1.3.2}{Objetivos espec\355ficos}{section.1.3}% 15
+\BOOKMARK [1][-]{section.1.4}{Alcance}{chapter.1}% 16
+\BOOKMARK [1][-]{section.1.5}{Tecnolog\355as utilizadas}{chapter.1}% 17
+\BOOKMARK [2][-]{subsection.1.5.1}{Restricciones}{section.1.5}% 18
+\BOOKMARK [2][-]{subsection.1.5.2}{Evoluci\363n previsible}{section.1.5}% 19
+\BOOKMARK [0][-]{chapter.2}{Fundamentos te\363ricos}{part.1}% 20
+\BOOKMARK [1][-]{section.2.1}{Programaci\363n en dispositivos m\363viles}{chapter.2}% 21
+\BOOKMARK [2][-]{subsection.2.1.1}{Plataforma Android}{section.2.1}% 22
+\BOOKMARK [2][-]{subsection.2.1.2}{Componentes b\341sicos de una aplicaci\363n Android}{section.2.1}% 23
+\BOOKMARK [2][-]{subsection.2.1.3}{Ciclo de vida de una aplicaci\363n}{section.2.1}% 24
+\BOOKMARK [1][-]{section.2.2}{Inteligencia Artificial, Aprendizaje Maquinal y Aprendizaje Profundo}{chapter.2}% 25
+\BOOKMARK [2][-]{subsection.2.2.1}{Definiciones}{section.2.2}% 26
+\BOOKMARK [1][-]{section.2.3}{Aprendizaje profundo aplicado en problemas de visi\363n computacional}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.3.1}{TensorFlow}{section.2.3}% 28
+\BOOKMARK [1][-]{section.2.4}{An\341lisis de agrupamiento}{chapter.2}% 29
+\BOOKMARK [2][-]{subsection.2.4.1}{Agrupamiento basado en grafos}{section.2.4}% 30
+\BOOKMARK [-1][-]{part.2}{II IMachineApp}{}% 31
+\BOOKMARK [0][-]{chapter.3}{Descripci\363n del sistema}{part.2}% 32
+\BOOKMARK [1][-]{section.3.1}{Dise\361o del sistema}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.1.1}{Metodolog\355a de trabajo}{section.3.1}% 34
+\BOOKMARK [2][-]{subsection.3.1.2}{Patr\363n de programaci\363n seleccionado}{section.3.1}% 35
+\BOOKMARK [1][-]{section.3.2}{Motor de procesamiento de las im\341genes}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.2.1}{Etapa 1: Pre-procesamiento y Extracci\363n de Caracter\355sticas}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.2}{Etapa 2: Medici\363n de similitud entre las im\341genes}{section.3.2}% 38
+\BOOKMARK [2][-]{subsection.3.2.3}{Etapa 3: Ejecuci\363n del algor\355tmo de clustering}{section.3.2}% 39
+\BOOKMARK [2][-]{subsection.3.2.4}{Etapa 4: Post-proceso}{section.3.2}% 40
+\BOOKMARK [1][-]{section.3.3}{Aplicaci\363n Android}{chapter.3}% 41
+\BOOKMARK [2][-]{subsection.3.3.1}{Estructura del proyecto}{section.3.3}% 42
+\BOOKMARK [2][-]{subsection.3.3.2}{Interfaz de Usuario}{section.3.3}% 43
+\BOOKMARK [0][-]{chapter.4}{Evaluaci\363n de desempe\361o}{part.2}% 44
+\BOOKMARK [1][-]{section.4.1}{Conjuntos de datos para experimentaci\363n}{chapter.4}% 45
+\BOOKMARK [1][-]{section.4.2}{Protocolo de Experimentaci\363n}{chapter.4}% 46
+\BOOKMARK [2][-]{subsection.4.2.1}{Pruebas realizadas}{section.4.2}% 47
+\BOOKMARK [1][-]{section.4.3}{Validaci\363n de la aplicaci\363n}{chapter.4}% 48
+\BOOKMARK [2][-]{subsection.4.3.1}{Pruebas unitarias}{section.4.3}% 49
+\BOOKMARK [2][-]{subsection.4.3.2}{Protocolo de validaci\363n}{section.4.3}% 50
+\BOOKMARK [-1][-]{part.3}{III Conclusiones y desarrollos futuros}{}% 51
+\BOOKMARK [0][-]{chapter.5}{Conclusiones generales}{part.3}% 52
+\BOOKMARK [1][-]{section.5.1}{Conclusiones}{chapter.5}% 53
+\BOOKMARK [1][-]{section.5.2}{Trabajos futuros}{chapter.5}% 54
+\BOOKMARK [-1][-]{appendix*.53}{Bibliograf\355a}{}% 55
+\BOOKMARK [-1][-]{part.4}{IV Anexos}{}% 56

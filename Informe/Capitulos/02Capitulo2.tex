@@ -124,26 +124,25 @@ El \textbf{accuracy} logrado para esta primera prueba es de un 83.69\%. Además, 
 		\caption{Resultados de la prueba 1  - Clasificación.}
 		\label{tab:prueba1}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|}
+			\begin{tabular}{l|c|c|c|c}
 				\hline
-				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
 				\hline
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision[\%]} & \textbf{Recall[\%]} & \textbf{F1-Score[\%]} \\
+				\hline
+				Avión & 25 & 95.83 & 95.83 & 95.83\\
 				
-				Avión & 25 & 0.9583 & 0.9583 & 0.9583\\
-				\hline
-				Computadora & 35 & 0.8285 & 0.8529 & 0.8406\\
-				\hline
-				Documento & 50 & 0.8653 & 0.9183 & 0.8911\\
-				\hline
-				Bebida & 30 & 0.6667 & 0.6207 & 0.6429\\
-				\hline
-				Fiestas & 33 & 0.8889 & 1 & 0.9412\\
-				\hline
-				Estadio & 11 & 0.7 & 0.7 & 0.7\\
-				\hline
-				Macro-averaging & 184 & 0.8179 & 0.8417 & 0.829\\
-				\hline
+				Computadora & 35 & 82.85 & 85.29 & 84.06\\
 				
+				Documento & 50 & 86.53 & 91.83 & 89.11\\
+				
+				Bebida & 30 & 66.67 & 62.07 & 64.29\\
+				
+				Fiestas & 33 & 88.89 & 1 & 94.12\\
+				
+				Estadio & 11 & 70 & 70 & 70\\
+				
+				Macro-averaging &  & \textbf{81.79} & \textbf{84.17} & \textbf{82.90}\\
+				\hline	
 			\end{tabular}
 		\end{adjustbox}
 	\end{center}
@@ -163,14 +162,15 @@ En cuanto a los tiempos de proceso, se puede ver en la Tabla \ref{tab:tiempo1} c
 		\caption{Tiempos de proceso - Prueba 1.}
 		\label{tab:tiempo1}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|}
+			\begin{tabular}{l|c}
+				\hline
 				\hline
 				\textbf{Dispositivo} & \textbf{Tiempo de proceso (segundos)}\\
 				\hline
 				Moto G4 Plus & 142.75\\
-				\hline
+				
 				Xiaomi Redmi 4 & 88.31\\
-				\hline
+				
 				Samsung Galaxy S9 & 35.86\\
 				\hline
 			\end{tabular}
@@ -191,22 +191,23 @@ El \textit{accuracy} logrado es de 55.7\% y como se puede ver en la Tabla \ref{t
 		\caption{Resultados de la prueba 2  - Clasificación.}
 		\label{tab:prueba2}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|}
+			\begin{tabular}{l|c|c|c|c}
 				\hline
-				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+				\hline
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision[\%]} & \textbf{Recall\%} & \textbf{F1-Score\%} \\
 				\hline
 				
-				Gato & 15 & 0.7647 & 0.9286 & 0.8687\\
+				Gato & 15 & 76.47 & 92.86 & 86.87\\
 				\hline
-				Computadora & 40 & 0.5434 & 0.6410 & 0.5882\\
-				\hline
-				Bebida & 30 & 0.5 & 0.5862 & 0.5396\\
-				\hline
-				Memes & 68 & 0.3787 & 0.3731 & 0.3759\\
-				\hline
-				Screenshots & 145 & 0.6370 & 0.5972 & 0.6164\\
-				\hline
-				Macro-averaging & 298 & 0.5648 & 0.6252 & 0.5918\\
+				Computadora & 40 & 54.34 & 64.10 & 58.82\\
+				
+				Bebida & 30 & 50 & 58.62 & 53.96\\
+				
+				Memes & 68 & 37.87 & 37.31 & 37.59\\
+				
+				Screenshots & 145 & 63.70 & 59.72 & 61.64\\
+				
+				Macro-averaging &  & \textbf{56.48} & \textbf{62.52} & \textbf{59.18}\\
 				\hline
 			\end{tabular}
 		\end{adjustbox}
@@ -231,14 +232,15 @@ Otro punto a destacar, es cómo al aumentar la cantidad de imágenes a procesar, e
 		\caption{Tiempos de proceso - Prueba 2.}
 		\label{tab:tiempo2}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|}
+			\begin{tabular}{l|c}
+				\hline
 				\hline
 				\textbf{Dispositivo} & \textbf{Tiempo de proceso (segundos)}\\
 				\hline
 				Moto G4 Plus & 215.24\\
-				\hline
+				
 				Xiaomi Redmi 4 & 138.20\\
-				\hline
+				
 				Samsung Galaxy S9 & 62.25\\
 				\hline
 			\end{tabular}
@@ -259,32 +261,33 @@ Es necesario aclarar que algunas obtuvieron un F1-Score cercano al 50\%, como po
 		\caption{Resultados de la prueba 1  - Clasificación.}
 		\label{tab:prueba3}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|}
+			\begin{tabular}{l|c|c|c|c}
 				\hline
-				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+				\hline
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision[\%]} & \textbf{Recall[\%]} & \textbf{F1-Score[\%]} \\
 				\hline
 				
-				Avión & 25 & 0.5769 & 0.625 & 0.5999\\
-				\hline
-				Bicicleta & 50 & 0.5625 & 0.7346 & 0.6371\\
-				\hline
-				Pájaro & 35 & 0.7179 & 0.8235 & 0.7671\\
-				\hline
-				Bus & 30 & 0.6563 & 0.7241 & 0.6885\\
-				\hline
-				Automóvil & 70 & 0.5740 & 0.4493 & 0.5040\\
-				\hline
-				Gato & 15 & 0.8125 & 0.9285 & 0.8666\\
-				\hline
-				Computadora & 51 & 0.5490 & 0.56 & 0.5544\\
-				\hline
-				Perro & 101 & 0.7657 & 0.85 & 0.8057\\
-				\hline
-				Memes & 90 & 0.5555 & 0.4494 & 0.4968\\
-				\hline
-				Fiestas & 33 & 0.5142 & 0.5625 & 0.5373\\
-				\hline
-				Macro-averaging & 500 & 0.6284 & 0.6707 & 0.6459\\
+				Avión & 25 & 57.69 & 62.50 & 59.99\\
+				
+				Bicicleta & 50 & 56.25 & 73.46 & 63.71\\
+				
+				Pájaro & 35 & 71.79 & 82.35 & 76.71\\
+				
+				Bus & 30 & 65.63 & 72.41 & 68.85\\
+				
+				Automóvil & 70 & 57.40 & 44.93 & 50.40\\
+				
+				Gato & 15 & 81.25 & 92.85 & 86.66\\
+				
+				Computadora & 51 & 54.90 & 56 & 55.44\\
+				
+				Perro & 101 & 76.57 & 85 & 80.57\\
+				
+				Memes & 90 & 55.55 & 44.94 & 49.68\\
+				
+				Fiestas & 33 & 51.42 & 56.25 & 53.73\\
+				
+				Macro-averaging &  & \textbf{62.84} & \textbf{67.07} & \textbf{64.59}\\
 				\hline
 			\end{tabular}
 		\end{adjustbox}
@@ -321,14 +324,15 @@ El inconveniente se encuentra en el tiempo de proceso, ya que fue bastante largo
 		\caption{Tiempos de proceso - Prueba 3.}
 		\label{tab:tiempo3}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|}
+			\begin{tabular}{l|c}
+				\hline
 				\hline
 				\textbf{Dispositivo} & \textbf{Tiempo de proceso (segundos)}\\
 				\hline
-				Moto G4 Plus & 515,38\\
-				\hline
+				Moto G4 Plus & 515.38\\
+				
 				Xiaomi Redmi 4 & 335.91\\
-				\hline
+				
 				Samsung S9 & 170.25\\
 				\hline
 			\end{tabular}
@@ -351,24 +355,25 @@ En el primero experimento, el \textit{accuracy} obtenido es de 57.6\%. En la Tab
 		\caption{Resultados de la prueba 1  - Clasificación - Afinidad Gramatical.}
 		\label{tab:prueba4-aff-gra}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|}
+			\begin{tabular}{l|c|c|c|c}
 				\hline
-				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+				\hline
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision[\%]} & \textbf{Recall[\%]} & \textbf{F1-Score[\%]} \\
 				\hline
 				
-				Avión & 25 & 0.9130 & 0.875 & 0.8936\\
-				\hline
-				Computadora & 35 & 0.5 & 0.4705 & 0.4848\\
-				\hline
-				Documento & 50 & 0.5517 & 0.6530 & 0.5981\\
-				\hline
-				Bebida & 30 & 0.5714 & 0.5517 & 0.5614\\
-				\hline
-				Fiestas & 33 & 0.4848 & 0.5 & 0.4923\\
-				\hline
-				Estadio & 11 & 0.5 & 0.5 & 0.5\\
-				\hline
-				Macro-averaging & 184 & 0.5868 & 0.5917 & 0.5883\\
+				Avión & 25 & 91.30 & 87.50 & 89.36\\
+
+				Computadora & 35 & 50 & 47.05 & 48.48\\
+
+				Documento & 50 & 55.17 & 65.30 & 59.81\\
+
+				Bebida & 30 & 57.14 & 55.17 & 56.14\\
+
+				Fiestas & 33 & 48.48 & 50 & 49.23\\
+
+				Estadio & 11 & 50 & 50 & 50\\
+
+				Macro-averaging &  & \textbf{58.68} & \textbf{59.17} & \textbf{58.83}\\
 				\hline
 			\end{tabular}
 		\end{adjustbox}
@@ -391,24 +396,25 @@ Un dato no menor es el alto porcentaje de clasificación que obtuvo la clase ``Fi
 		\caption{Resultados de la prueba 1  - Clasificación - Afinidad según \textit{embeddings}.}
 		\label{tab:prueba4-aff-emb}
 		\begin{adjustbox}{max width=\textwidth}
-			\begin{tabular}{|c|c|c|c|c|}
+			\begin{tabular}{l|c|c|c|c}
 				\hline
-				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision} & \textbf{Recall} & \textbf{F1-Score} \\
+				\hline
+				\textbf{Categoría} & \textbf{Cant. Ejemplos} & \textbf{Precision[\%]} & \textbf{Recall[\%]} & \textbf{F1-Score[\%]} \\
 				\hline
 				
-				Avión & 25 & 0.7727 & 0.7083 & 0.7391\\
-				\hline
-				Computadora & 35 & 0.7222 & 0.3823 & 0.5\\
-				\hline
-				Documento & 50 & 0.6716 & 0.9183 & 0.7758\\
-				\hline
-				Bebida & 30 & 0.5714 & 0.6896 & 0.625\\
-				\hline
-				Fiestas & 33 & 0.9117 & 0.9687 & 0.9393\\
-				\hline
-				Estadio & 11 & 0.625 & 0.5 & 0.5555\\
-				\hline
-				Macro-averaging & 184 & 0.7124 & 0.5917 & 0.6946\\
+				Avión & 25 & 77.27 & 70.83 & 73.91\\
+
+				Computadora & 35 & 72.22 & 38.23 & 50\\
+
+				Documento & 50 & 67.16 & 91.83 & 77.58\\
+
+				Bebida & 30 & 57.14 & 68.96 & 62.50\\
+
+				Fiestas & 33 & 91.17 & 96.87 & 93.93\\
+
+				Estadio & 11 & 62.50 & 50 & 55.55\\
+
+				Macro-averaging &  & \textbf{71.24} & \textbf{59.17} & \textbf{69.46}\\
 				\hline
 			\end{tabular}
 		\end{adjustbox}
