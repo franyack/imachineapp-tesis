@@ -110,7 +110,7 @@ A continuación, se explicitan cada uno de los prototipos que conformaron la real
 
 \subsection{Patrón de programación seleccionado}
 
-Como se dijo en la Sección \ref{cap2:sec:dispositivos-moviles}, la aplicación será desarrollada para el sistema operativo Android, de manera nativa, a fin de aprovechar todas las ventajas que las librerías proveen para los desarrolladores. El framework Android, no recomienda ninguna forma específica de diseñar e implementar aplicaciones. Eso, de alguna manera, hace a los desarrolladores más poderosos y vulnerables, al mismo tiempo \cite{mvp2017guide}.
+Como se dijo en la Sección \ref{cap2:sec:dispositivos-moviles}, la aplicación fue desarrollada para el sistema operativo Android, de manera nativa, a fin de aprovechar todas las ventajas que las librerías proveen para los desarrolladores. El framework Android, no recomienda ninguna forma específica de diseñar e implementar aplicaciones. Eso, de alguna manera, hace a los desarrolladores más poderosos y vulnerables, al mismo tiempo \cite{mvp2017guide}.
 
 Las aplicaciones, pasan por muchos ciclos de vida donde se van agregando/extrayendo características, lo cual podría producir estragos si la misma no se diseña adecuadamente con una ``separación de preocupaciones''. No es una buena práctica cargar de lógica a las actividades que se encargan de interactuar con el usuario, sino mas bien deberían ser clases por las cuales simplemente la información que interactúa entre el sistema y el usuario fluye, desligándose de cualquier tipo de lógica de negocio. Es por ello, que se decidió seguir el desarrollo de la aplicación bajo un patrón de diseño Modelo-Vista-Presentador (\textbf{MVP}).
 
@@ -121,7 +121,7 @@ Este patrón de diseño es un conjunto de pautas que, si se siguen de manera corre
 \begin{enumerate}
 	\item \textbf{Modelo:} es el responsable de manejar todo lo que corresponda a la lógica de negocio de la aplicación, procesando la información y tomando decisiones.
 	
-	\item \textbf{Vista:} es la responsable presentar las vistas al usuario e interactuar con el mismo.
+	\item \textbf{Vista:} es la responsable de presentar las vistas al usuario e interactuar con el mismo.
 	
 	\item \textbf{Presentador:} es un puente que conecta al modelo con la vista. Además, actúa como un instructor para la vista.
 \end{enumerate}
@@ -164,7 +164,7 @@ Como conclusión y aprendizaje, la arquitectura es en lo primero que se debe trab
 
 En esta sección se detallará el paso a paso por el que transita el conjunto de imágenes para que se puedan obtener los grupos sugeridos por la aplicación, ordenándolas según el grado de similitud o contexto que tengan entre ellas.
 
-El motor de procesamiento de las imágenes se llama \textbf{CIEngine}. El nombre está compuesto por las letras C, haciendo referencia a la palabra \textit{Clustering} (agrupamiento en inglés), la letra I de \textit{Images}, y por último la palabra \textit{Engine}, que en inglés significa motor. El mismo fue pensado y realizado como un módulo aparte de la aplicación propiamente dicha, y agregado a través de un paquete. Esto tiene como beneficios que sea independiente, por lo que la mantenibilidad y testeo se realizan sin depender exclusivamente de la aplicación, además de que se puede pensar como trabajo a futuro en la adaptación a otros ambientes, como puede ser en un programa de escritorio, un servicio alojado en la nube, una aplicación nativa para otros sistemas operativos utilizados en dispositivos móviles, etc.
+El motor de procesamiento de las imágenes se llama \textbf{CIEngine}. El nombre está compuesto por las letras C, haciendo referencia a la palabra \textit{Clustering} (agrupamiento en inglés), la letra I de \textit{Images}, y por último la palabra \textit{Engine}, que en inglés significa motor. El mismo fue pensado como un módulo aparte de la aplicación propiamente dicha, para en un futuro ser agregado a través de un paquete. Esto tiene como beneficios que sea independiente, por lo que la mantenibilidad y testeo se realizan sin depender exclusivamente de la aplicación, además de que se puede pensar como trabajo a futuro en la adaptación a otros ambientes, como puede ser en un programa de escritorio, un servicio alojado en la nube, una aplicación nativa para otros sistemas operativos utilizados en dispositivos móviles, etc.
 
 %\begin{figure}[t]
 %	\begin{center}
@@ -280,7 +280,7 @@ Al final de esta etapa, se obtendrá una matriz que será utilizada por el algorit
 	
 	\item \textbf{Matriz de afinidad según \textit{embeddings}:} 
 	
-	De manera similar a como se obtuvo la matriz de afinidad gramatical, se procesan cada uno de los vectores que se obtuvieron por caracterizar a la matriz gracias a la capa de \textit{embeddings}. Por cada imagen existe un vector de 1024 coeficientes (cantidad de neuronas que conforman la capa), el cual es normalizado y medido de a pares a través del coeficiente de Pearson, con el objetivo de obtener una nueva matriz de NxN, similar a la obtenida anteriormente. 
+	De manera similar a como se obtuvo la matriz de afinidad gramatical, se procesan cada uno de los vectores que se obtuvieron por caracterizar a la matriz gracias a la capa de \textit{embeddings}. Por cada imagen existe un vector de 1024 coeficientes (cantidad de neuronas que conforman la capa), el cual es normalizado y medido de a pares a través del coeficiente de Pearson, con el objetivo de obtener una nueva matriz de NxN, similar a la realizado anteriormente. 
 \end{enumerate}
 
 Una vez que se obtienen estas dos matrices cuadradas del mismo tamaño que la cantidad de imágenes que se están procesando, lo que se hace es una ponderación 50/50 (es decir, se suman los valores \textit{(i,j)} de cada una y se divide por 2), logrando una única matriz de afinidad de las imágenes. Finalizada esta etapa, el proceso se encuentra en condiciones de pasar a la etapa 3, en la cual se utiliza el algoritmo de \textit{clustering}.
