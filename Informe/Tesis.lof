@@ -3,45 +3,45 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Ciclo de vida de una actividad.}}{12}{figure.caption.6}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Inteligencia artificial, aprendizaje maquinal y aprendizaje profundo\relax }}{13}{figure.caption.7}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Aprendizaje maquinal: nuevo paradigma de programaci\'on\relax }}{14}{figure.caption.8}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Modelo matem\'atico de una neurona.}}{16}{figure.caption.9}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Arquitectura b\'asica de un MLP con 4 capas.}}{17}{figure.caption.10}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Representaci\'on de un modelo de aprendizaje profundo, para clasificaci\'on de d\IeC {\'\i }gitos manuscritos.}}{19}{figure.caption.11}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces Red neuronal convolucional (CNN)\relax }}{20}{figure.caption.12}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Agrupamiento basado en grafos\relax }}{22}{figure.caption.13}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces Representaci\'on gr\'afica de la evoluci\'on del resultado de MCL\relax }}{23}{figure.caption.14}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Ciclo de vida de una actividad.}}{11}{figure.caption.6}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Inteligencia artificial, aprendizaje maquinal y aprendizaje profundo\relax }}{12}{figure.caption.7}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Aprendizaje maquinal: nuevo paradigma de programaci\'on\relax }}{13}{figure.caption.8}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Modelo matem\'atico de una neurona.}}{15}{figure.caption.9}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Arquitectura b\'asica de un MLP con 4 capas.}}{16}{figure.caption.10}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Representaci\'on de un modelo de aprendizaje profundo, para clasificaci\'on de d\IeC {\'\i }gitos manuscritos.}}{18}{figure.caption.11}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Red neuronal convolucional (CNN)\relax }}{19}{figure.caption.12}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Agrupamiento basado en grafos\relax }}{21}{figure.caption.13}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Representaci\'on gr\'afica de la evoluci\'on del resultado de MCL\relax }}{22}{figure.caption.14}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces \'Icono de la aplicaci\'on desarrollada.\relax }}{27}{figure.caption.15}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Modelo RAD\relax }}{28}{figure.caption.16}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Patr\'on de dise\~no Modelo-Vista-Controlador.}}{31}{figure.caption.17}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Dise\~no de la aplicaci\'on IMachineApp\relax }}{32}{figure.caption.18}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Dise\~no del motor de procesamiento\relax }}{33}{figure.caption.19}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de aplicaci\'on de una MobileNet\relax }}{34}{figure.caption.20}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo del uso de etiquetas - WordNet\relax }}{35}{figure.caption.21}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Pre-procesamiento de las im\'agenes\relax }}{36}{figure.caption.22}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Estructura del proyecto\relax }}{41}{figure.caption.23}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Permisos declarados en el \textit {AndroidManifest.xml}\relax }}{42}{figure.caption.24}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Carpeta \textit {resources} perteneciente al proyecto IMachineApp\relax }}{43}{figure.caption.25}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Diferentes gamas de colores con los que cuenta la aplicaci\'on\relax }}{44}{figure.caption.26}
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Archivo de configuraci\'on de la aplicaci\'on\relax }}{44}{figure.caption.27}
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Pantalla inicial de la aplicaci\'on\relax }}{45}{figure.caption.28}
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Selecci\'on de la memoria interna o externa\relax }}{46}{figure.caption.29}
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Selecci\'on de la carpeta a procesar\relax }}{47}{figure.caption.30}
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Carpeta seleccionada, listo para procesar\relax }}{47}{figure.caption.31}
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Pantalla que muestra el progreso del procesamiento de las im\'agenes\relax }}{48}{figure.caption.32}
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Visualizaci\'on de las diferentes carpetas obtenidas del proceso\relax }}{48}{figure.caption.33}
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Opciones de administraci\'on de carpetas\relax }}{49}{figure.caption.34}
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Ejemplo donde se renombra una carpeta\relax }}{49}{figure.caption.35}
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Visualizaci\'on de las diferentes im\'agenes dentro de una carpeta seleccionada\relax }}{50}{figure.caption.36}
-\contentsline {figure}{\numberline {3.23}{\ignorespaces Visualizaci\'on de una imagen en la aplicaci\'on\relax }}{50}{figure.caption.37}
-\contentsline {figure}{\numberline {3.24}{\ignorespaces Opciones de administraci\'on sobre una imagen\relax }}{51}{figure.caption.38}
-\contentsline {figure}{\numberline {3.25}{\ignorespaces Opci\'on para finalizar la edici\'on\relax }}{51}{figure.caption.39}
-\contentsline {figure}{\numberline {3.26}{\ignorespaces Visualizaci\'on de las opciones finales\relax }}{52}{figure.caption.40}
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Opciones al presionar ``Confirmar resultado final''\relax }}{52}{figure.caption.41}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \'Icono de la aplicaci\'on desarrollada.\relax }}{26}{figure.caption.15}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Modelo RAD\relax }}{27}{figure.caption.16}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Patr\'on de dise\~no Modelo-Vista-Controlador.}}{30}{figure.caption.17}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Dise\~no de la aplicaci\'on IMachineApp\relax }}{31}{figure.caption.18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Dise\~no del motor de procesamiento\relax }}{32}{figure.caption.19}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ejemplo de aplicaci\'on de una MobileNet\relax }}{33}{figure.caption.20}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ejemplo del uso de etiquetas - WordNet\relax }}{34}{figure.caption.21}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Pre-procesamiento de las im\'agenes\relax }}{35}{figure.caption.22}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Estructura del proyecto\relax }}{40}{figure.caption.23}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Permisos declarados en el \textit {AndroidManifest.xml}\relax }}{41}{figure.caption.24}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Carpeta \textit {resources} perteneciente al proyecto IMachineApp\relax }}{42}{figure.caption.25}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Diferentes gamas de colores con los que cuenta la aplicaci\'on\relax }}{43}{figure.caption.26}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Archivo de configuraci\'on de la aplicaci\'on\relax }}{43}{figure.caption.27}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Pantalla inicial de la aplicaci\'on\relax }}{44}{figure.caption.28}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Selecci\'on de la memoria interna o externa\relax }}{45}{figure.caption.29}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Selecci\'on de la carpeta a procesar\relax }}{46}{figure.caption.30}
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Carpeta seleccionada, listo para procesar\relax }}{46}{figure.caption.31}
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Pantalla que muestra el progreso del procesamiento de las im\'agenes\relax }}{47}{figure.caption.32}
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Visualizaci\'on de las diferentes carpetas obtenidas del proceso\relax }}{47}{figure.caption.33}
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Opciones de administraci\'on de carpetas\relax }}{48}{figure.caption.34}
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Ejemplo donde se renombra una carpeta\relax }}{48}{figure.caption.35}
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Visualizaci\'on de las diferentes im\'agenes dentro de una carpeta seleccionada\relax }}{49}{figure.caption.36}
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Visualizaci\'on de una imagen en la aplicaci\'on\relax }}{49}{figure.caption.37}
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Opciones de administraci\'on sobre una imagen\relax }}{50}{figure.caption.38}
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Opci\'on para finalizar la edici\'on\relax }}{50}{figure.caption.39}
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Visualizaci\'on de las opciones finales\relax }}{51}{figure.caption.40}
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Opciones al presionar ``Confirmar resultado final''\relax }}{51}{figure.caption.41}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Tarea realizada para poder obtener m\'etricas de clasificaci\'on y clustering\relax }}{55}{figure.caption.42}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplo de una imagen perteneciente a la categor\IeC {\'\i }a ``Memes''.\relax }}{59}{figure.caption.48}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Tarea realizada para poder obtener m\'etricas de clasificaci\'on y clustering\relax }}{54}{figure.caption.42}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Ejemplo de una imagen perteneciente a la categor\IeC {\'\i }a ``Memes''.\relax }}{58}{figure.caption.48}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Gr\'afico de torta con las contribuciones de cada \'area curricular hacia el proyecto desarrollado.\relax }}{67}{figure.caption.52}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Gr\'afico de torta con las contribuciones de cada \'area curricular hacia el proyecto desarrollado.\relax }}{66}{figure.caption.52}
