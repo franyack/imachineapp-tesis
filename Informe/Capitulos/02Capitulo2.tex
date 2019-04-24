@@ -24,7 +24,7 @@ En este capítulo se describen las acciones ejecutadas para validar el correcto f
 
 Con el objetivo de validar la utilidad y potencialidad del software, se define un conjunto de datos de prueba compuesto por diversas imágenes que provienen de fuentes diferentes y bajo normativas distintas. La primera de ellas consiste en la carpeta de imágenes de WhatsApp del ejecutor del proyecto, que contando con un total de 1600 imágenes aproximadamente, se considera representativa para cualquier usuario promedio. La segunda, 2000 imágenes pertenecientes al portal de internet 9GAG\footnote{\url{https://9gag.com/}}, sitio donde la comunidad partícipe sube imágenes de todo tipo de temática, todos los días. Por último, se utilizó también una base de datos denominada VOC\footnote{\url{http://host.robots.ox.ac.uk/pascal/VOC}}, la cual cuenta con diversos grupos de imágenes estandarizadas y se utiliza para medir algoritmos de clasificación de imágenes en diferentes competencias que se realizan año a año, sumarizando más de 17.000 imágenes. 
 
-Si bien desde la última fuente de datos (VOC) es de donde se obtienen la mayoría de las imágenes que componen el conjunto para la experimentación, la realidad es que dicho conjunto es bastante genérico y puede no reflejar de manera correcta el contexto para el cual debe ser evaluado el motor. Allí es donde las 1600 imágenes de la carpeta de WhatsApp del ejecutor del proyecto como las 2000 imágenes recolectadas del sitio 9GAG toman relevancia. La primera de ellas intenta reflejar aquellas imágenes que un usuario ``normal'' recibe en el día a día en su teléfono, mientras que con la segunda se quiere evaluar la respuesta del motor ante un tipo de imagen muy famosa a la hora de ser enviada de un dispositivo a otro, que son las de tipo ``memes'' \footnote{\url{https://tecnologia-informatica.com/que-es-un-meme-como-hacerlos/}}.
+Si bien desde la última fuente de datos (VOC) es de donde se obtienen la mayoría de las imágenes que componen el conjunto para la experimentación, la realidad es que dicho conjunto es bastante genérico y puede no reflejar de manera correcta el contexto para el cual debe ser evaluado el motor. Allí es donde las 1600 imágenes de la carpeta de WhatsApp del ejecutor del proyecto como las 2000 imágenes recolectadas del sitio 9GAG toman relevancia. La primera de ellas intenta reflejar aquellas imágenes que un usuario ``normal'' recibe en el día a día en su teléfono, mientras que con la segunda se quiere evaluar la respuesta del motor ante un tipo de imágenes conocidas como ``memes'' \footnote{\url{https://tecnologia-informatica.com/que-es-un-meme-como-hacerlos/}}.
 
 Sumando todos los directorios, se contabilizan más de 19.000 imágenes pertenecientes a la base de datos de prueba.
 
@@ -443,7 +443,7 @@ Con el objetivo de corroborar el correcto funcionamiento de todos los módulos qu
 De forma que las características de la aplicación sean validadas en términos
 de funcionalidad, se procede a utilizar diferentes herramientas que permitan testear los módulos implementados. Esto es realizado con el fin de seguir buenas prácticas de ingeniería en software \cite{sommerville2007software}, que permitan desarrollar un producto que asegure cierta calidad en su integración y despliegue.
 
-Las pruebas unitarias son una forma de comprobar el correcto funcionamiento de un módulo de forma aislada al resto de los componentes. Para ello se define un escenario para ejecutar las acciones de ese módulo en forma separada, y se corrobora obtener un cierto comportamiento esperado en la salida de cada una de ellas \cite{learninspy2016tesis}. Mediante la utilización de los frameworks \textbf{JUnit}\footnote{\url{https://junit.org}}, \textbf{Espresso}\footnote{\url{https://developer.android.com/training/testing/espresso/}} y \textbf{PowerMock}\footnote{\url{https://github.com/powermock/powermock}}, se llevaron adelante las pruebas de la aplicación de forma automatizada. Gracias a ellos se fue probando de a pequeñas porciones de código. Para esto se estableció un escenario posible con datos de entrada, ejecutando las acciones de cada módulo y corroborando el comportamiento esperado en las salida de cada uno de los casos.
+Las pruebas unitarias son una forma de comprobar el correcto funcionamiento de un módulo de forma aislada al resto de los componentes. Para ello se define un escenario para ejecutar las acciones de ese módulo en forma separada, y se corrobora obtener un cierto comportamiento esperado en la salida de cada una de ellas \cite{learninspy2016tesis}. Mediante la utilización de los frameworks \textbf{JUnit}\footnote{\url{https://junit.org}}, \textbf{Espresso}\footnote{\url{https://developer.android.com/training/testing/espresso/}} y \textbf{PowerMock}\footnote{\url{https://github.com/powermock/powermock}}, se llevaron adelante las pruebas de la aplicación de forma automatizada. Para esto se estableció un escenario posible con datos de entrada, ejecutando las acciones de cada módulo y corroborando el comportamiento esperado en las salida de cada uno de los casos.
 
 \subsection{Protocolo de validación}
 
@@ -452,7 +452,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 \begin{itemize}
 	\item \textbf{\underline{Prueba Nº 1}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Seleccionar ícono de ingreso al sistema dentro del menú Android.
 		\item \textbf{Criterio de aprobación:} Ingreso a la aplicación de forma directa sin ningún tipo de publicidad o presentación.
 		\item \textbf{Estado:} APROBADO
@@ -460,7 +459,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 	\end{itemize}
 	\item \textbf{\underline{Prueba Nº 2}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Acceder al menú de elección de directorios a procesar.
 		\item \textbf{Criterio de aprobación:} Acceso al explorador de archivos, pudiendo visualizar el contenido dentro de cada carpeta.
 		\item \textbf{Estado:} APROBADO
@@ -475,7 +473,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 	\end{itemize}
 	\item \textbf{\underline{Prueba Nº 4}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Verificar informe de finalización de procesamiento de imágenes por parte del sistema.
 		\item \textbf{Criterio de aprobación:} Deberá indicar el estado de finalización (éxito o error). En caso de que haya finalizado exitosamente, a continuación deberá presentar el menú de administración del resultado.
 		\item \textbf{Estado:} APROBADO
@@ -483,7 +480,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 	\end{itemize}
 	\item \textbf{\underline{Prueba Nº 5}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Probar las diferentes opciones de administración de imágenes y directorios sugeridos por el resultado.
 		\item \textbf{Criterio de aprobación:} La utilización de dichas opciones debe responder de manera fluida y realizar las tareas especificadas. Debe informar el éxito de cada tarea realizada de manera dinámica y rápida.
 		\item \textbf{Estado:} APROBADO
@@ -491,7 +487,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 	\end{itemize}
 	\item \textbf{\underline{Prueba Nº 6}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Seleccionar el botón de confirmar el resultado final.
 		\item \textbf{Criterio de aprobación:} El sistema deberá brindar al usuario la opción de mover de manera permanente o copiar el resultado final.
 		\item \textbf{Estado:} APROBADO
@@ -499,7 +494,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 	\end{itemize}
 	\item \textbf{\underline{Prueba Nº 7}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Mover de manera permanente el resultado final hacia una nueva carpeta.
 		\item \textbf{Criterio de aprobación:} La aplicación deberá mover las imágenes desde su ubicación original hacia la nueva carpeta generada.
 		\item \textbf{Estado:} APROBADO
@@ -507,7 +501,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 	\end{itemize}
 	\item \textbf{\underline{Prueba Nº 8}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Copiar el resultado final hacia una nueva carpeta.
 		\item \textbf{Criterio de aprobación:} La aplicación deberá copiar (sin eliminar las imágenes desde su ubicación original) hacia la nueva carpeta generada.
 		\item \textbf{Estado:} APROBADO
@@ -515,7 +508,6 @@ Con el objetivo de validar que todos los módulos que componen la aplicación resp
 	\end{itemize}
 	\item \textbf{\underline{Prueba Nº 9}}
 	\begin{itemize}
-		\item \textbf{Sujeto:} Ejecutor del proyecto
 		\item \textbf{Tarea:} Seleccionar el botón de descartar el resultado final.
 		\item \textbf{Criterio de aprobación:} La ubicación de cada imagen deberá permanecer inalterada y en el estado original previo a la utilización de la aplicación. Informar al usuario el éxito de la operación.
 		\item \textbf{Estado:} APROBADO
