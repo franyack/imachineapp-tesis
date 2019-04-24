@@ -292,11 +292,11 @@ Tal como se dijo en el capítulo anterior, el algoritmo elegido para realizar el 
 El algoritmo depende de 4 parámetros a configurar, los cuales se describen a continuación:
 
 \begin{itemize}
-	\item \textbf{Potencia de expansión:} valor que varía entre 2 y 3, el cual indica cuánto deben explorarse los grafos obtenidos a partir de la matriz de afinidad.
+	\item \textbf{Potencia de expansión:} indica cuánto deben explorarse los grafos obtenidos a partir de la matriz de afinidad. El valor a elegir se recomienda que varíe entre 2 y 3\footnote{\url{http://dogdogfish.com/mathematics/markov-clustering-what-is-it-and-why-use-it/}}.
 	
-	\item \textbf{Potencia de inflación:} valor que varía entre 2 y 4. A medida que se aumenta este valor, crece la cantidad de grupos que se obtendrán.
+	\item \textbf{Potencia de inflación:} A medida que se aumenta este valor, crece la cantidad de grupos que se obtendrán. De manera similar al concepto anterior, el valor a utilizar se recomienda que varíe entre 2 y 4.
 	
-	\item \textbf{Umbral de corte:} diferencia máxima que debe existir entre la matriz de agrupamiento actual contra la matriz de agrupamiento en la iteración anterior, para que el algoritmo converja y devuelva el resultado.
+	\item \textbf{Umbral de corte:} diferencia máxima que debe existir entre la suma de los valores absolutos de los elementos de la matriz actual contra la suma de los valores absolutos de los elementos de la matriz en la iteración anterior.
 	
 	\item \textbf{Cantidad máxima de iteraciones:} variable definida con el objetivo de	poner un freno a la cantidad de iteraciones del algoritmo en caso de que el umbral de corte nunca llegue a ser menor o igual al establecido.
 \end{itemize}
